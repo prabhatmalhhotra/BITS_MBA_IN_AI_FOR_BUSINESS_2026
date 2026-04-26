@@ -158,44 +158,7 @@ Instructors: Prof. Atul Kumar, Prof. Sagar Venkateswar
 
 ---
 
-# Semester 2 — Functional Core + AI On-ramp ⚠️ partially built
-
-## 2.1 Corporate Finance — `MBA ZG541` (placeholder code, awaiting handout)
-
-📋 [Syllabus](./sem_2/01_corporate_finance/00_syllabus.md) · 📒 [Notes](./sem_2/01_corporate_finance/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_2/01_corporate_finance/02_short_questions.md) · 📝 [Long Qs](./sem_2/01_corporate_finance/03_long_questions.md) · 🗂 [PYQ Bank](./sem_2/01_corporate_finance/04_pyq_bank.md) · ⚡ [Revision](./sem_2/01_corporate_finance/05_revision_quick_sheet.md)
-
-> Chapter-wise table will be added once Sem 2 handouts are uploaded into `sem_2/handouts/`.
-
-## 2.2 Operations Management — `QM ZG526` ⏳
-
-## 2.3 AI Applications & Ecosystem — `AIB ZG511` ⏳
-
-## 2.4 Applied Data Science — `DSE ZG514` ⏳
-
----
-
-# Semester 3 — Strategy + Advanced AI ⏳ pending
-
-| # | Subject | BITS code (likely) | Status |
-|--:|---------|--------------------|--------|
-| 1 | Managerial Economics | ECON ZG511 | ⏳ Pending |
-| 2 | Strategic Management & Business Policy | MBA ZG631 | ⏳ Pending |
-| 3 | Applied Machine Learning & Deep Learning | AIB ZG521 | ⏳ Pending |
-| 4 | Domain Elective – 1 | varies | ⏳ Pending |
-
----
-
-# Semester 4 — Specialisation + Capstone ⏳ pending
-
-| # | Subject | BITS code (likely) | Status |
-|--:|---------|--------------------|--------|
-| 1 | Domain Elective – 2 | varies | ⏳ Pending |
-| 2 | Domain Elective – 3 / GM Elective | varies | ⏳ Pending |
-| 3 | Project / Dissertation | MBA ZG628T | ⏳ Pending |
-
-**Pool of Domain Electives** (pick 2–3 across Sem 3 & 4): AI in Finance · AI in Marketing · AI in Operations & Supply Chain · AI in HRM · FinOps for AI · Computer Vision for Business · NLP & GenAI for Business · Management of AI Products · AI Strategy, Ethics & Governance · Human-centric AI · Disruptive Applications of AI
-
-**Pool of GM Electives**: Advanced Marketing Mgmt · AI for Competitive Advantage · Business Environment, Laws & Ethics · Business Research Methods · Data Visualization · Decision Analysis · Entrepreneurship & New Ventures · Entrepreneurial Finance · Enterprise Risk Mgmt · Indian Ethos in Mgmt · International Business · Leadership & Managing Change · Management Control Systems · Project Management · Strategic HRM · Tech Mgmt in Business
+> **Sem 2-4** content will be built when those handouts are released. Currently, this vault is **focused exclusively on Sem 1**. Programme-wide context (electives pool, future course codes) is preserved in commit history if you need to restore it later.
 
 ---
 
@@ -222,4 +185,4 @@ Instructors: Prof. Atul Kumar, Prof. Sagar Venkateswar
 
 **Sem 1 content** is now strictly aligned to the **official BITS Pilani WILP S2-25 course handouts** for `MBACC ZG501/502/503/511`, stored locally in `sem_1/handouts/`. Exam dates, weights, textbooks (T1/T2), references (R1-R4), HSTalks videos, IIMA cases and the 16-session learning plan match the handouts verbatim.
 
-**Sem 2-4 content** is still synthesised from the public programme overview + standard textbooks + community resources, pending official handouts. Once you upload them into `sem_X/handouts/`, the same alignment process can be applied.
+**Sem 2-4 content** will be added once those handouts are released. When you receive them, drop the `.docx` files into a new `sem_X/handouts/` folder and we can apply the same handout-strict alignment process.
