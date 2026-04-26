@@ -150,12 +150,17 @@
 - HSTalks Business: https://hstalks.com/business/
 - 8 specific titles tabulated in `00_syllabus.md` (HST1-HST8).
 
-### Mandatory case discussions (Pearson Indian Cases)
-- Case 6 — Consumer Behaviour: Wide Facts, Deep Implications (S3)
-- Case 9 — Mahindra XYLO + Kellogg's (S4, S6)
-- Case 10 — Product management (S7)
-- Case 17 — Oreo IMC (S12)
-- Case 21 — Amazon India (S16)
+### Mandatory case discussions (R1 — Pearson "Marketing Management — Indian Cases", 2018)
+*(Per `MBACC ZG503` handout: case is **discussed** in one session, the corresponding R1 chapter often appears as **reading material** in the next session.)*
+
+| R1 Case # | Title | Discussed in | R1 reading listed in |
+|----:|-------|:------------:|:-------------------:|
+| Case 1 | MTR Foods — A Marketing Marvel | S8 | S9 |
+| Case 6 | Consumer Behaviour — Wide Facts, Deep Implications | S3 | S3 |
+| Case 9 | Who Will Buy XYLO — Mahindra & Mahindra | S4 | S5 |
+| Case 10 | Kellogg's Cornflakes in India — Finding a Platform that Connects | S6 | S7 |
+| Case 17 | Oreo in India — Launching and Establishing a Global Brand using IMC | S12 | S12 |
+| Case 21 | Amazon.com Adopts its Retail Business in India | S16 | S16 |
 
 ### Cesim Marketing Simulation (mandatory per handout)
 - https://www.cesim.com/simulations/cesim-simbrand-marketing-management-simulation

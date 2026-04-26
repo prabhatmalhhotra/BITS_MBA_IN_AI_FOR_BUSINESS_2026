@@ -1,15 +1,15 @@
 # Business Statistics — PYQ-Style Question Bank (handout-aligned)
 
 > **Aligned to `MBACC ZG501` (S2-25 batch, v4.0).**
-> Mid-Sem (closed book, 90 min) draws from Sessions 1-8.
-> Comprehensive (open book, 150 min) covers Sessions 1-16.
+> Mid-Sem (closed book, **2 hrs**, 30 %) draws from Sessions 1-8.
+> Comprehensive (open book, **2 hrs**, 40 %) covers Sessions 1-16. *(Bus Stats EC-3 is 2 hrs per S2-25 handout — shorter than the 2.5 hrs of the other 3 Sem-1 courses.)*
 > Compiled from publicly leaked BITS WILP MBA Stats / Quantitative Methods papers (Scribd, GitHub WILP-KB) + standard MBA stats exam conventions, **filtered to topics that exist in the new handout**. Dropped: time-series decomposition, index numbers, SQC control charts (no longer in syllabus). Added: LP, non-parametric tests, regression diagnostics.
 
 ---
 
 ## Mid-Sem papers (closed book, Sessions 1-8)
 
-### Mid-Sem Paper A — 90 minutes, 60 marks
+### Mid-Sem Paper A — 2 hours, 60 marks
 
 **Section 1 — Short answer (4 × 5 = 20 marks)**
 
@@ -34,7 +34,7 @@
 
 ---
 
-### Mid-Sem Paper B — 90 minutes, 50 marks
+### Mid-Sem Paper B — 2 hours, 50 marks
 
 1. (5 m) State Bayes' theorem. A bank knows from past experience that 5 % of credit-card transactions are fraudulent. Its detection model raises an alert with 90 % probability for fraudulent and 8 % probability for legitimate transactions. Find the probability that an alerted transaction is genuinely fraudulent.
 
@@ -63,7 +63,7 @@
 
 ## Comprehensive papers (open book, Sessions 1-16)
 
-### Comprehensive Paper A — 150 minutes, 100 marks
+### Comprehensive Paper A — 2 hours, 100 marks
 
 **Section A — Short answer (5 × 4 = 20 marks)**
 1. Distinguish between parameter and statistic with one example each.
@@ -111,7 +111,7 @@
 
 ---
 
-### Comprehensive Paper B — 150 minutes, 80 marks
+### Comprehensive Paper B — 2 hours, 80 marks
 
 1. (10 m) Explain probability sampling techniques with examples. When would you choose stratified over cluster sampling?
 

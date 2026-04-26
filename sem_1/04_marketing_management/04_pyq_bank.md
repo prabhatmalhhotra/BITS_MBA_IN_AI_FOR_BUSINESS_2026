@@ -40,7 +40,7 @@
 3. (8 m) Compare consumer (B2C) and industrial (B2B) marketing on five dimensions.
 4. (8 m) Discuss bases for consumer market segmentation. Apply to Indian quick-service restaurant (QSR) industry.
 5. (10 m) Explain the 5 product levels (Kotler). Apply to a smartwatch.
-6. (14 m) **Mini-case** — *Kellogg's Cornflakes in India* (Pearson Indian Cases, Case 9). Critically analyse Kellogg's positioning challenges. Apply POP/POD. Recommend a refined positioning statement.
+6. (14 m) **Mini-case** — *Kellogg's Cornflakes in India* (Pearson Indian Cases, **Case 10**). Critically analyse Kellogg's positioning challenges. Apply POP/POD. Recommend a refined positioning statement.
 
 ---
 
@@ -51,7 +51,7 @@
 3. (8 m) Discuss the EKB model of consumer behaviour. Tie to Pearson Indian Cases Case 6 (Consumer Behaviour: Wide Facts and Deep Implications).
 4. (8 m) Discuss Value Proposition Canvas with components. Build one for a fintech BNPL service for Tier-2 cities.
 5. (10 m) Apply Product Life Cycle to Indian two-wheeler market. Map current products of Hero, Bajaj, TVS.
-6. (15 m) **Mini-case** — *MTR Foods: A Marketing Marvel* (Pearson Indian Cases). Discuss services vs goods marketing-mix transition. Apply 7Ps.
+6. (15 m) **Mini-case** — *MTR Foods: A Marketing Marvel* (Pearson Indian Cases, **Case 1**). Discuss services vs goods marketing-mix transition. Apply 7Ps.
 
 ---
 

@@ -55,7 +55,7 @@ Ledger balances of Acme Pvt Ltd as on 31 March 2026:
 
 | Account | Balance (₹) |
 |---------|-------------:|
-| Capital | 6,00,000 (Cr) |
+| Capital | 7,00,000 (Cr) |
 | Drawings | 50,000 (Dr) |
 | Sales | 12,40,000 (Cr) |
 | Purchases | 8,60,000 (Dr) |
@@ -89,13 +89,13 @@ Prepare a trial balance.
 | Debtors | 3,40,000 | |
 | Plant & Machinery | 4,00,000 | |
 | Furniture | 1,00,000 | |
-| Capital | | 6,00,000 |
+| Capital | | 7,00,000 |
 | Sales | | 12,40,000 |
 | Purchase returns | | 15,000 |
 | Creditors | | 1,80,000 |
 | Outstanding expenses | | 18,000 |
 | Bank loan | | 1,55,000 |
-| **Total** | **22,08,000** | **22,08,000** |
+| **Total** | **23,08,000** | **23,08,000** |
 
 Trial balance tallies → arithmetical accuracy of ledger postings is verified.
 
@@ -137,10 +137,10 @@ Prepare Trading & P&L Account and Balance Sheet for the year ended 31 Mar 2026.
 
 | Liabilities | ₹ | Assets | ₹ |
 |-------------|---:|--------|---:|
-| Capital | 6,00,000 | Plant & Machinery | 4,00,000 |
+| Capital | 7,00,000 | Plant & Machinery | 4,00,000 |
 | Add: Net profit | 2,53,000 | Less: Depn 10 % | (40,000) |
 | Less: Drawings | (50,000) | | 3,60,000 |
-|  | 8,03,000 | Furniture | 1,00,000 |
+|  | 9,03,000 | Furniture | 1,00,000 |
 | Bank loan | 1,55,000 | Less: Depn 15 % | (15,000) |
 | Creditors | 1,80,000 | | 85,000 |
 | Outstanding salaries | 15,000 | Closing stock | 1,75,000 |
@@ -148,7 +148,7 @@ Prepare Trading & P&L Account and Balance Sheet for the year ended 31 Mar 2026.
 |  | | Cash | 90,000 |
 |  | | Bank | 2,15,000 |
 |  | | Prepaid rent | 6,000 |
-| **Total** | **11,71,000** | **Total** | **11,71,000** |
+| **Total** | **12,71,000** | **Total** | **12,71,000** |
 
 **Common mistakes**: forgetting to ADD outstanding to expense and SUBTRACT prepaid; depreciation goes to P&L AND reduces asset on B/S; closing stock appears on credit side of trading + asset side of B/S.
 
