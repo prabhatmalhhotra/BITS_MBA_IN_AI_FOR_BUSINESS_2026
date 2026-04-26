@@ -18,7 +18,9 @@
 | eLearn portal | https://elearn.bits-pilani.ac.in |
 | EC-3 open-book guidelines | [Google Doc](https://docs.google.com/document/d/1DJvlhVzOaIw4njc9g30MlBuu0DqTzeIL/) |
 
-**File icon legend** — 📋 Syllabus · 📒 Notes (session-wise) · ❓ Short Qs · 📝 Long Qs · 🗂 PYQ Bank · ⚡ Revision Sheet · 📑 Official handout
+**File icon legend** — 📋 Syllabus · 📒 Notes (session-wise) · ❓ Short Qs · 📝 Long Qs · 🗂 PYQ Bank · ⚡ Revision Sheet · 🧮 Worked Problems · 📑 Official handout · 📚 Books CSV
+
+📚 [Sem 1 books — handout-canonical list with Amazon links](./sem_1/books/booklinks(Sheet1).csv)
 
 ---
 
@@ -39,7 +41,7 @@
 
 ## 1.1 Business Statistics — `MBACC ZG501`
 
-📋 [Syllabus](./sem_1/01_business_statistics/00_syllabus.md) · 📒 [Notes](./sem_1/01_business_statistics/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/01_business_statistics/02_short_questions.md) · 📝 [Long Qs](./sem_1/01_business_statistics/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/01_business_statistics/04_pyq_bank.md) · ⚡ [Revision](./sem_1/01_business_statistics/05_revision_quick_sheet.md) · 📑 [Official handout](./sem_1/handouts/Business%20Statistics%20%28S2-25_MBACCZG501%29COURSE%20HANDOUT.docx)
+📋 [Syllabus](./sem_1/01_business_statistics/00_syllabus.md) · 📒 [Notes](./sem_1/01_business_statistics/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/01_business_statistics/02_short_questions.md) · 📝 [Long Qs](./sem_1/01_business_statistics/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/01_business_statistics/04_pyq_bank.md) · ⚡ [Revision](./sem_1/01_business_statistics/05_revision_quick_sheet.md) · 🧮 [Worked Problems](./sem_1/01_business_statistics/06_worked_problems.md) · 📑 [Official handout](./sem_1/handouts/Business%20Statistics%20%28S2-25_MBACCZG501%29COURSE%20HANDOUT.docx)
 
 Instructor: Prof. Sandeep Kayastha
 - **T1**: David M Levine, Kathryn A Szabat, David F Stephan, PK Viswanathan — *Business Statistics*, Pearson, **7e (2019)**
@@ -71,7 +73,7 @@ Instructor: Prof. Sandeep Kayastha
 
 ## 1.2 Managerial Accounting — `MBACC ZG502`
 
-📋 [Syllabus](./sem_1/02_managerial_accounting/00_syllabus.md) · 📒 [Notes](./sem_1/02_managerial_accounting/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/02_managerial_accounting/02_short_questions.md) · 📝 [Long Qs](./sem_1/02_managerial_accounting/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/02_managerial_accounting/04_pyq_bank.md) · ⚡ [Revision](./sem_1/02_managerial_accounting/05_revision_quick_sheet.md) · 📑 [Official handout](./sem_1/handouts/Managerial%20Accounting%20%28S2-25_MBACCZG502%29%20COURSE%20HANDOUT.docx)
+📋 [Syllabus](./sem_1/02_managerial_accounting/00_syllabus.md) · 📒 [Notes](./sem_1/02_managerial_accounting/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/02_managerial_accounting/02_short_questions.md) · 📝 [Long Qs](./sem_1/02_managerial_accounting/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/02_managerial_accounting/04_pyq_bank.md) · ⚡ [Revision](./sem_1/02_managerial_accounting/05_revision_quick_sheet.md) · 🧮 [Worked Problems](./sem_1/02_managerial_accounting/06_worked_problems.md) · 📑 [Official handout](./sem_1/handouts/Managerial%20Accounting%20%28S2-25_MBACCZG502%29%20COURSE%20HANDOUT.docx)
 
 Instructors: Prof. Abhishek Sinha, Prof. Ankita Nagpal
 - **T1**: **S.N. Maheswari & S.K. Maheswari** — *Financial and Management Accounting*, Sultan Chand & Sons, **6e (2022)**
