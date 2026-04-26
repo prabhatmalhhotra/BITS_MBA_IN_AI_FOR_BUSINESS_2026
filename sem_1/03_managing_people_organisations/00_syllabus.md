@@ -1,154 +1,140 @@
-# Managing People and Organisations (MPO) — Syllabus
+# Managing People and Organizations — Official Syllabus
 
-> Likely BITS code: **MBA ZG511 / MBA ZC418**. Confirm on Taxila handout.
+> **Source:** Course handout `S2-25_MBACCZG511` v4, dated 12 July 2025.
+> Local copy: `sem_1/handouts/Managing People and Organization (S2-25_MBACCZG511) COURSE HANDOUT.docx`
+> Faithful transcription of the official handout. **Do not edit unless the handout itself is updated.**
 
-## Course objective
+## Part A — Course identity
 
-Develop the perspective and tools required to understand, motivate, lead and develop people in modern organisations. Provides the OB + HRM foundation needed to lead AI-driven change.
+| Field | Detail |
+|-------|--------|
+| Course title | Managing People and Organizations |
+| Course code | **MBACC ZG511** |
+| Credit units | 4 |
+| Credit model | 3-0-1 (Lecture-Tutorial-Practical/ELC) |
+| Instructors | **Anjani Srikanth Koka** (Lead), Sandya Sarangarajan |
+| Course owner | Anjani Srikanth Koka |
+| Handout version | 4 |
+| Handout date | 12 July 2025 |
+| Semester | 2nd Semester 2025-2026 |
 
-## Modules / units
+## Course description (verbatim)
 
-### Module 1 — Introduction to Organisational Behaviour (OB)
-- Meaning, scope, importance of OB
-- Disciplines contributing to OB (psychology, sociology, anthropology, political science)
-- Models of OB (autocratic, custodial, supportive, collegial, system)
-- Challenges & opportunities (workforce diversity, globalisation, technology, gig economy, AI in workplace)
+Fundamental concepts and principles of management as applied to a variety of organisations; elementary study of managerial roles, styles, activities and decision making; relationship with organisational effectiveness; basic concepts relating to planning activities, manpower development; basic concepts relating to organisational behaviour.
 
-### Module 2 — Individual Behaviour
-- **Personality**: Big Five (OCEAN), MBTI, Self-monitoring, Locus of control
-- **Perception**: process, attribution theory, common biases (fundamental attribution error, halo, stereotyping, projection, contrast)
-- **Learning**: classical, operant, social learning theory; reinforcement schedules
-- **Values & Attitudes**: Schwartz's values; job satisfaction, organisational commitment
-- **Emotions & Moods**: Affective Events Theory; emotional labour; emotional intelligence
+## Course objectives
 
-### Module 3 — Motivation
-- Early theories: Maslow's Hierarchy, McGregor's X & Y, Herzberg's Two-Factor, McClelland's Acquired Needs (nAch, nAff, nPow)
-- Contemporary theories: Self-Determination Theory, Goal-Setting Theory (Locke), Expectancy Theory (Vroom), Equity Theory (Adams), Job Characteristics Model (Hackman & Oldham), Reinforcement Theory
-- Application in workplace: rewards, recognition, job design, intrinsic vs extrinsic motivation
+| No | Objective |
+|----|-----------|
+| CO1 | Understand the key principles of managing individuals and groups in organisations |
+| CO2 | Analyse the impact of leadership styles and organisational culture on performance |
+| CO3 | Apply motivational theories to enhance employee engagement |
+| CO4 | Develop strategies for effective communication and conflict resolution |
+| CO5 | Explore the influence of global and ethical considerations in managing people |
 
-### Module 4 — Group & Team Dynamics
-- Difference between group and team
-- Stages of group development (Tuckman's: Forming, Storming, Norming, Performing, Adjourning)
-- Group properties: roles, norms, status, size, cohesiveness
-- Group decision-making: groupthink, groupshift, polarisation
-- Team effectiveness model
-- Virtual teams (highly relevant for WILP students)
+## Learning outcomes
 
-### Module 5 — Communication
-- Communication process; channels (formal, informal, grapevine)
-- Barriers to communication
-- Cross-cultural communication
-- Digital communication & remote work
+| LO | Statement |
+|----|-----------|
+| LO1 | Analyse and interpret organisational behaviour principles |
+| LO2 | Apply OB concepts to everyday workplace context |
+| LO3 | Apply theories of motivation in organisational contexts |
+| LO4 | Demonstrate effective communication and team management skills |
+| LO5 | Apply frameworks for managing talent at the workplace |
 
-### Module 6 — Leadership
-- Trait theories
-- Behavioural theories: Ohio State (Initiating Structure, Consideration), Michigan, Managerial Grid (Blake & Mouton)
-- Contingency theories: Fiedler, Hersey-Blanchard Situational, Path-Goal (House)
-- Contemporary: Transformational vs Transactional, Charismatic, Authentic, Servant, Ethical, e-leadership
+## Textbooks
 
-### Module 7 — Power, Politics & Conflict
-- Sources of power (French & Raven: legitimate, reward, coercive, expert, referent)
-- Organisational politics: causes, individual & organisational antecedents
-- Conflict: types, process, conflict-management styles (Thomas-Kilmann: competing, collaborating, compromising, avoiding, accommodating)
-- Negotiation: distributive vs integrative
+| Code | Reference | Use |
+|:-----|-----------|-----|
+| **T1** | **Stephen P. Robbins, Timothy A. Judge & Neharika Vohra**. *Organizational Behavior*. **Updated 18th Edition**. Pearson Education. **2022**. | OB |
+| **T2** | **K. Aswathappa & Sadhna Dash**. *Human Resource Management — Text and Cases*. **10th Edition**. Tata McGraw Hill. **2023**. | HRM |
 
-### Module 8 — Organisational Structure & Design
-- Six elements: work specialisation, departmentalisation, chain of command, span of control, centralisation, formalisation
-- Common designs: simple, functional, divisional, matrix, network, virtual, flat, holacratic
-- Mechanistic vs Organic structures
-- Determinants: strategy, size, technology, environment
+## Reference books
 
-### Module 9 — Organisational Culture
-- Definition; how culture is created, sustained, transmitted (Schein's three levels: artefacts, espoused values, basic assumptions)
-- Strong vs weak culture
-- Functions and dysfunctions of culture
-- Hofstede's cultural dimensions (Power distance, Individualism-Collectivism, Masculinity-Femininity, Uncertainty Avoidance, Long-term Orientation, Indulgence)
+| Code | Reference |
+|:-----|-----------|
+| R1 | Richard L. Daft. *Understanding the Theory and Design of Organizations*. Cengage India. 10th Edition. 2013. |
+| R2 | Dessler & Varkkey. *Human Resource Management*. Pearson Education. 16th Edition. 2020. |
+| R3 | Goleman, D. (2013). *Emotional Intelligence: Why It Can Matter More Than IQ*. Bantam Books. |
 
-### Module 10 — Organisational Change & Development
-- Forces of change
-- Resistance to change (individual & organisational sources)
-- Lewin's 3-step model (Unfreeze-Change-Refreeze)
-- Kotter's 8-step model
-- ADKAR model
-- Organisational Development (OD) interventions
-- Managing AI-driven transformation
+## HSTalks digital resources (mandatory)
 
-### Module 11 — Human Resource Management Foundations
-- HRM functions (acquisition, development, motivation, maintenance)
-- Job analysis → job description + job specification
-- Recruitment & Selection
-- Training & Development
-- Performance Management
-- Compensation & Benefits
-- Employee engagement & retention
-- HR Analytics (link to AI)
+| # | Title | URL |
+|---|-------|-----|
+| HST1 | Positive organizational behavior | https://hstalks.com/t/2339/positive-organizational-behavior/?business |
+| HST2 | Managing strategy and HRM | https://hstalks.com/t/2036/managing-strategy-and-hrm/?business |
+| HST3 | Diversity and inclusion in organizations | https://hstalks.com/t/3534/diversity-and-inclusion-in-organizations/?business |
+| HST4 | Building high performing teams | https://hstalks.com/t/4775/building-high-performing-teams/?business |
+| HST5 | What makes for a great team? | https://hstalks.com/t/2595/what-makes-for-a-great-team/?business |
+| HST6 | What is leadership? | https://hstalks.com/t/4732/what-is-leadership/?business |
+| HST7 | Leadership versus management | https://hstalks.com/t/4739/leadership-versus-management/?business |
+| HST8 | An overview and history of leadership and leadership development | https://hstalks.com/t/1777/an-overview-and-history-of-leadership-and-leadersh/?business |
+| HST9 | Emotional intelligence: your success as a leader depends on it | https://hstalks.com/t/4139/emotional-intelligence-your-success-as-a-leader-de/?business |
+| HST10 | Managing cultures | https://hstalks.com/t/1757/managing-cultures/?business |
 
-### Module 12 — Stress, Wellbeing & Organisational Effectiveness
-- Sources & consequences of stress
-- Coping & wellbeing programmes
-- Work-life integration
-- Diversity, Equity & Inclusion
-- Ethics in OB / HR
+## Modular Content Structure
 
----
+| # | Module | Major topics |
+|:-:|--------|-------------|
+| 1 | Introduction to OB | What is OB?; Interpersonal Skills; Managerial Functions, Roles & Skills; Challenges & Opportunities in OB |
+| 2 | Introduction to HRM | Nature & Scope of HRM; Context of HRM |
+| 3 | The Individual | Diversity; Attitudes & Job Satisfaction; Personality & Values; Perception & Decision Making; Emotions & Moods; Motivation |
+| 4 | The Group | Groups; Teams; Communication; Leadership |
+| 5 | The Organization | Structure; Culture; Change |
+| 6 | Decision Making in HRM | Recruitment and Selection |
+| 7 | Managing the existing workforce | Compensation Management; Managing & Appraising Performance |
 
-## Recommended textbooks
+## Part B — Learning Plan (16 contact sessions)
 
-| Type | Title | Author |
-|------|-------|--------|
-| **T1** | Organizational Behavior | Stephen P. Robbins, Timothy A. Judge |
-| T2 | Organizational Behavior | Fred Luthans |
-| T3 | Human Resource Management | Gary Dessler |
-| R1 | Behaviour in Organisations | Greenberg & Baron |
-| R2 | Personnel and Human Resource Management | P. Subba Rao |
+| CS # | Topic | Sub-topics | Reference |
+|:----:|-------|-----------|-----------|
+| 1 | Introduction to OB | Definition, importance, key concepts | T1 Ch. 1 |
+| 2 | Introduction to HRM | Nature & scope; Context of HRM | T2 Ch. 1 & 2 |
+| 3 | The Individual | Attitudes & Job Satisfaction; Diversity in Organisations | T1 Ch. 2 & 3 |
+| 4 | The Individual | Personality and Values | T1 Ch. 4 |
+| 5 | The Individual | Perception and Individual Decision Making | T1 Ch. 5 |
+| 6 | The Individual | Emotions and Moods | T1 Ch. 6 |
+| 7 | The Individual | Motivation Concepts | T1 Ch. 7 |
+| 8 | The Individual | Motivation: From concepts to applications | T1 Ch. 8 |
+| 9 | The Group | Foundations of Group Behaviour; Group Formation, Roles, Norms | T1 Ch. 9 |
+| 10 | The Group | Understanding Work Teams; Communication: Barriers, Channels, Effectiveness | T1 Ch. 10 & 12 |
+| 11 | The Group | Leadership concepts; Trait/Behavioural/Contingency theories; Emotional Intelligence in Leadership | T1 Ch. 13 |
+| 12 | The Organization | Foundations of organisation structure | T1 Ch. 14 |
+| 13 | The Organization | Organisational Culture; Organisational Change | T1 Ch. 15 & 16 |
+| 14 | Decision Making in HRM | Recruiting Talent; Selecting Right Talent | T2 Ch. 6 & 7 |
+| 15 | Managing existing workforce — 1 | Compensation Management | T2 Ch. 12 |
+| 16 | Managing existing workforce — 2 | Appraising and Managing Performance | T2 Ch. 9 |
 
----
+## Experiential Learning Component
 
-## Evaluation pattern (typical)
+**In-class**: Examples & case studies for OB and HR topics.
 
-| Component | Weight | Format |
-|-----------|------:|--------|
-| EC-1 | 25–30% | LMS quizzes (concepts) + 1 case-analysis assignment (3,000-word write-up) |
-| EC-2 Mid-Sem | 30% | 2-hour, descriptive + short cases |
-| EC-3 Comprehensive | 40–45% | 2-hour, descriptive + 1 long case |
+**Individual ELC assignment**:
+Identify an HR/OB problem in your **real organisation** (no fictitious company), apply theoretical concepts from the course to explain its causes, and document the actions/initiatives/policies/programs the organisation implemented. Use the format:
 
-## Sources for cases (build a private library)
+1. Background
+2. Problem Statement
+3. Theoretical Causes of Problem
+4. Initiatives of company (to solve the problem)
+5. Conclusion
+6. References (URLs of news/magazine articles or company website — Google itself is NOT a reference)
 
-- Harvard Business Review (HBR) — case classics
-- IIM Ahmedabad case bank
-- ICMR Cases, Hyderabad (Indian context)
-- Stanford GSB case studies
+## Evaluation Scheme
 
----
+| EC | Component | Type | Weight | Duration | Date / Session |
+|----|-----------|------|-------:|----------|---------------|
+| EC-1 | Quiz I | Online | 5 % | — | TBA |
+| EC-1 | Quiz II | Online | 5 % | — | TBA |
+| EC-1 | Assignment | Online | 15 % | — | TBA |
+| **EC-2** | **Mid-Semester Test** | **Closed Book** | **35 %** | **2 hours** | **21-06-2026 (FN)** |
+| **EC-3** | **Comprehensive Exam** | **Open Book** | **40 %** | **2 ½ hours** | **06-09-2026 (FN)** |
 
-## References & Sources
+> **Note:** MPO has **35 % EC-2 weight** (highest in Sem 1) and **2.5-hour EC-3** — different from the other three Sem 1 subjects.
 
-### Official BITS Pilani WILP
-- Programme page: https://bits-pilani-wilp.ac.in/mba/mba-in-ai-for-business.php
-- WILP Education Policy: https://bits-pilani-wilp.ac.in/resource/education-policy.php
-- BITS Library textbooks portal: https://library.bits-pilani.ac.in/services/textbooks/
+- **Mid-Sem syllabus**: Lecture Sessions **1–8**.
+- **Comprehensive syllabus**: All 16 sessions.
 
-### Course-code traces (community / non-official)
-- MBA ZG511 handout (Scribd): https://www.scribd.com/document/517119145/MBA-ZG511-COURSE-HANDOUT
-- MPO answer sheet sample (Scribd): https://www.scribd.com/document/876301607/Mba-Mpo-Answersheet2-Sep16-Ver1
-- MBA WILP question paper aggregator: https://github.com/Akhilsudh/BITS-WILP-Knowledge-Base
+## Important links
 
-### Recommended textbooks
-- Robbins & Judge — *Organizational Behavior*, Pearson (18th ed.): https://www.pearson.com/store/p/organizational-behavior/P200000005816
-- Luthans — *Organizational Behavior: An Evidence-Based Approach*, McGraw Hill: https://www.mheducation.com/highered/product/organizational-behavior-evidence-based-approach-luthans-luthans/M9781793530608.html
-- Dessler & Varkkey — *Human Resource Management*, Pearson (Indian ed.): https://www.pearson.com/store/p/human-resource-management/P100000133923
-- Greenberg & Baron — *Behavior in Organizations*, PHI / Pearson.
-- Aswathappa — *Organisational Behaviour*, Himalaya Publishing.
-
-### Indian regulatory / context
-- POSH Act 2013 (Sexual Harassment of Women at Workplace): https://wcd.nic.in/sites/default/files/Sexual-Harassment-at-Workplace-Act.pdf
-- Industrial Disputes Act 1947: https://labour.gov.in/sites/default/files/the_industrial_disputes_act_1947.pdf
-- Code on Wages 2019: https://labour.gov.in/sites/default/files/THE_CODE_ON_WAGES_2019_No._29_of_2019.pdf
-- Diversity & inclusion (NHRC India): https://nhrc.nic.in/
-
-### Open educational resources
-- MIT OCW 15.668 — People & Organizations: https://ocw.mit.edu/courses/15-668-people-and-organizations-fall-2010/
-- Coursera — Organizational Behavior (Macquarie): https://www.coursera.org/specializations/organisational-behaviour
-- HBR — Organizational Behavior topic page: https://hbr.org/topic/organizational-behavior
-- McKinsey — Organization practice: https://www.mckinsey.com/business-functions/people-and-organizational-performance/our-insights
-- Hofstede Insights (cultural dimensions): https://www.hofstede-insights.com/country-comparison-tool
+- eLearn portal: https://elearn.bits-pilani.ac.in
+- EC-3 open-book guidelines: https://docs.google.com/document/d/1DJvlhVzOaIw4njc9g30MlBuu0DqTzeIL/

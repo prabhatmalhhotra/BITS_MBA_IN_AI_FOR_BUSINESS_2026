@@ -1,159 +1,208 @@
-# Managerial Accounting — One-Page Revision Sheet
+# Managerial Accounting — One-Page Revision Sheet (handout-aligned)
 
-## Accounting equation
-**Assets = Liabilities + Equity**
-
-## Debit / credit (DEAD CLIC)
-DEBIT ↑ Expenses, Assets, Drawings.
-CREDIT ↑ Liabilities, Income, Capital.
-
-## GAAP highlights
-Business entity · Going concern · Accrual · Matching · Consistency · Conservatism · Materiality · Full disclosure · Money measurement · Dual aspect.
-
-## Final accounts skeleton
-
-**Trading**: Sales − COGS = Gross profit
-COGS = Opening stock + Purchases + Direct expenses − Closing stock
-
-**P&L**: GP + Other income − Operating expenses − Depreciation − Interest = PBT
-PBT − Tax = NP
-
-**Balance sheet**: Assets = Equity + Liabilities (Schedule III)
-
-## Common adjustments
-
-| Item | P&L | Balance Sheet |
-|------|-----|---------------|
-| Closing stock | Cr (Trading) | Asset |
-| Outstanding expense | Add to expense (Dr) | Current liability |
-| Prepaid expense | Deduct from expense | Current asset |
-| Accrued income | Add to income (Cr) | Current asset |
-| Income received in advance | Deduct from income | Current liability |
-| Depreciation | Dr (P&L) | Less from asset |
-| Provision for doubtful debts | Dr (P&L) | Less from debtors |
-
-## Depreciation
-- SLM = (Cost − Scrap) / Life
-- WDV: Year n book value = Cost × (1 − rate)ⁿ
-
-## Inventory (Ind AS 2)
-Lower of cost & NRV. FIFO or Weighted Average. (LIFO disallowed.)
-
-## Ratio cheat-sheet
-
-### Liquidity
-- Current = CA / CL (1.5–2)
-- Quick = (CA − Inventory − Prepaid) / CL (≥ 1)
-- Cash = Cash / CL
-
-### Solvency
-- D/E = LT Debt / Equity
-- Interest coverage = EBIT / Interest
-- Debt to assets = Total debt / Total assets
-
-### Profitability
-- GP margin = GP / Sales × 100
-- NP margin = NP / Sales × 100
-- ROCE = EBIT / (Equity + LT Debt) × 100
-- ROE = NP / Equity × 100
-- ROA = NP / Total assets × 100
-
-### Efficiency
-- Inventory turnover = COGS / Avg inventory
-- Debtors turnover = Credit sales / Avg debtors
-- Days Sales Outstanding = 365 / Debtors turnover
-- Asset turnover = Sales / Total assets
-
-### Du Pont
-ROE = Net margin × Asset turnover × Equity multiplier
-
-## CVP
-- Contribution = Sales − VC
-- P/V = Contribution / Sales
-- BEP units = FC / Contribution per unit
-- BEP ₹ = FC / P/V
-- Sales for target profit = (FC + Profit) / Contribution per unit
-- MoS = Actual sales − BEP sales
-- DOL = Contribution / Operating profit
-
-## Marginal vs absorption
-- Production > Sales → Absorption profit > Marginal
-- Production < Sales → Absorption profit < Marginal
-- Difference = Δstock × Fixed OH per unit
-
-## Decision rules
-- Special order: Accept if price ≥ VC and no spare capacity issue
-- Make/Buy: Buy if external price ≤ relevant make cost (variable + avoidable fixed)
-- Drop product: Drop only if segment contribution < 0
-- Process further: Process if incremental revenue > incremental cost
-- Limiting factor: Maximise contribution per unit of limiting factor
-
-## Variance formulas
-
-| Variance | Formula |
-|----------|---------|
-| Material Cost | SQ × SP − AQ × AP |
-| Material Price | AQ × (SP − AP) |
-| Material Usage | SP × (SQ − AQ) |
-| Labour Cost | SH × SR − AH × AR |
-| Labour Rate | AH × (SR − AR) |
-| Labour Efficiency | SR × (SH − AH) |
-
-(F) = favourable when actual < standard cost; (A) = adverse when actual > standard.
-
-## Budgets
-- Master = sum of functional budgets
-- Flexible budget adjusts for activity level
-- Cash budget = receipts − payments per month
-- ZBB = justify every expense from zero
-
-## Capital budgeting
-- Payback = Investment / Annual cash inflow
-- ARR = Avg profit / Avg investment
-- NPV = Σ CFt/(1+r)^t − Initial investment (>0 → accept)
-- IRR = r where NPV = 0 (> cost of capital → accept)
-- PI = PV inflows / Investment (>1 → accept)
-- For mutually exclusive projects, prefer NPV.
-
-## Performance metrics
-
-| Centre | Measure |
-|--------|---------|
-| Cost | Variance |
-| Revenue | Sales achieved vs target |
-| Profit | NP, contribution |
-| Investment | ROI, RI, EVA |
-
-- ROI = Operating profit / Investment
-- RI = Operating profit − (Investment × Required return)
-- EVA = NOPAT − (Capital × WACC)
-
-## Balanced Scorecard
-Financial · Customer · Internal Process · Learning & Growth.
-
-## Last-minute mental checks
-1. Does the trial balance balance? (debits = credits)
-2. Are all adjustments posted twice?
-3. Did closing stock land in BOTH Trading A/c and BS?
-4. Variance: marked F or A clearly?
-5. Capital budgeting: discounted at correct rate?
-6. Ratios: averages or year-end figures? Be consistent.
+> Aligned to `MBACC ZG502` 16-session plan. Print this. Carry it for the **open-book Comprehensive** exam.
 
 ---
 
-## References & Sources
+## Accounting equation & rules
 
-### Quick-reference resources
-- AccountingCoach formula reference: https://www.accountingcoach.com/managerial-accounting/explanation
-- CFI cheat sheets (CVP, ABC, Variances): https://corporatefinanceinstitute.com/resources/accounting/
-- AccountingFormanagement.org formulas: https://www.accountingformanagement.org/
-- Investopedia formula glossary: https://www.investopedia.com/accounting-4427790
+- **Accounting equation**: Assets = Liabilities + Equity
+- **DEAD CLIC**: **D**ebit increases **E**xpenses, **A**ssets, **D**rawings; **C**redit increases **L**iabilities, **I**ncome, **C**apital.
 
-### Indian regulatory cheat sheets
-- ICAI Cost Accounting Standards (CAS 1–24, brief): https://icmai.in/icmai/CAS.php
-- Schedule III pocket guide (Deloitte): https://www2.deloitte.com/in/en/pages/audit/articles/schedule-iii-companies-act-2013-pocket-guide.html
-- Ind AS pocket guide (KPMG): https://kpmg.com/in/en/home/insights/2023/09/ind-as-overview.html
+## Concepts (short)
 
-### Excel templates
-- Microsoft templates (budgeting, variance, CVP): https://create.microsoft.com/en-us/templates/budget
-- CFI free Excel templates: https://corporatefinanceinstitute.com/resources/templates/excel-modeling/
+| Concept | One-line |
+|---------|----------|
+| Business Entity | Owner ≠ business |
+| Going Concern | Indefinite continuity → historical cost |
+| Money Measurement | Only money-quantifiable txns |
+| Cost (historical) | Asset at acquisition cost |
+| Dual Aspect | Every Dr has equal Cr |
+| Accounting Period | Periodic reporting |
+| Realisation | Revenue when earned |
+| Matching | Expenses with related revenue |
+| Accrual | Record when economic event happens |
+| Prudence | Anticipate losses, not gains |
+| Consistency | Same methods across periods |
+
+## IFRS / IAS quick map (handout focus)
+
+| Standard | One-line |
+|----------|----------|
+| IFRS S1 | Material sustainability disclosures |
+| IFRS S2 | Climate disclosures (physical + transition) |
+| IFRS 5 | Non-current assets held for sale; discontinued ops |
+| IFRS 7 | Financial instruments — risk disclosures |
+| IFRS 8 | Operating segments (management approach) |
+| IFRS 13 | Fair value: 3-level hierarchy |
+| IFRS 15 | Revenue: 5-step model |
+| IAS 2 | Inventory: lower of cost and NRV; LIFO **prohibited** |
+| IAS 16 | PPE: cost or revaluation; component depreciation |
+| IAS 38 | Intangibles: research expensed, **development capitalised** if PIRATE met |
+
+US GAAP vs IFRS on R&D: GAAP expenses all; IFRS capitalises development → IFRS firms show higher assets/EBITDA.
+
+## Final accounts (Schedule III India order)
+
+```
+TRADING A/c   →  Gross Profit
+P&L A/c       →  Operating + Non-operating →  Net Profit
+BALANCE SHEET →  Equity & Liabilities (top), then Assets
+CASH FLOW     →  Operating + Investing + Financing
+```
+
+## CFO indirect method (skeleton)
+
+```
+PAT
++ Non-cash (Depreciation, Amortisation, Provisions, Deferred Tax)
+± Working capital changes
+   - Increase in CA → subtract
+   - Decrease in CA → add
+   - Increase in CL → add
+   - Decrease in CL → subtract
+- Tax paid
+= Cash from Operating Activities
+```
+
+## Ratio cheat sheet
+
+### Liquidity
+- Current Ratio = CA / CL  (norm 1.5-2.0)
+- Quick Ratio = (CA − Inv − Prepaid) / CL  (norm ≥ 1.0)
+- Cash Ratio = (Cash + MS) / CL
+- Working Capital = CA − CL
+
+### Solvency / Leverage
+- Debt-Equity = LTD / Equity
+- Debt Ratio = TD / TA
+- Interest Coverage = EBIT / Interest  (≥ 3 comfortable)
+- Equity Multiplier = TA / Equity
+
+### Profitability
+- Gross Margin = GP / Sales
+- Operating Margin = EBIT / Sales
+- Net Margin = PAT / Sales
+- ROA = PAT / TA
+- ROE = PAT / Equity
+- ROCE = EBIT / Capital Employed (Equity + LTD)
+
+### Efficiency
+- Inventory T/O = COGS / Avg Inv;  DSI = 365/IT
+- Receivable T/O = Credit Sales / Avg Rec;  DSO = 365/RT
+- Payable T/O = Credit Purchases / Avg Pay;  DPO = 365/PT
+- **CCC = DSI + DSO − DPO**
+- Asset T/O = Sales / TA
+
+### DuPont
+- 3-step ROE = Net Margin × Asset T/O × Equity Multiplier
+- 5-step ROE = Tax Burden × Interest Burden × EBIT Margin × Asset T/O × Equity Multiplier
+
+## CVP formulas
+
+| Quantity | Formula |
+|----------|---------|
+| Contribution per unit | SP − VC |
+| P/V Ratio | (Contribution / Sales) × 100 |
+| BEP (units) | Fixed Cost / Contribution per unit |
+| BEP (₹) | Fixed Cost / P/V Ratio |
+| Margin of Safety | Actual Sales − BE Sales |
+| MoS % | MoS / Actual Sales × 100 |
+| Sales for Target Profit | (FC + Target Profit) / CM per unit |
+| Operating Leverage (DOL) | Contribution / EBIT |
+| Financial Leverage (DFL) | EBIT / (EBIT − Interest) |
+
+## Decision-making rules
+
+| Decision | Accept if |
+|----------|----------|
+| Special order | Price ≥ Variable Cost AND spare capacity AND no impact on regular customers |
+| Make-or-buy | Make if relevant cost of making (VC + avoidable FC) < buy price |
+| Product mix (limited capacity) | Maximise Contribution per unit of constrained resource |
+| Drop product line | Drop if avoidable costs > revenue lost (CM contribution) |
+
+## Budgets (handout)
+
+- **Master Budget** — consolidated set
+- **Operating Budget** — Sales, Production, Material, Labour, OH, S&D, Admin
+- **Capital Budget** — capex (NPV/IRR)
+- **Financial Budget** — Cash, Capex, Projected B/S
+- **Zero-Based Budget (ZBB)** — every expense justified from zero
+- Fixed vs Flexible; Long-term vs Short-term
+
+## Variance formulas
+
+### Material
+| Variance | Formula |
+|----------|---------|
+| Cost (MCV) | (SQ × SP) − (AQ × AP) |
+| Price (MPV) | AQ × (SP − AP) |
+| Usage (MUV) | SP × (SQ − AQ) |
+
+### Labour
+| Variance | Formula |
+|----------|---------|
+| Cost (LCV) | (SH × SR) − (AH × AR) |
+| Rate (LRV) | AH × (SR − AR) |
+| Efficiency (LEV) | SR × (SH − AH) |
+
+### Overhead (variable)
+- VOH Cost = Recovered − Actual
+- VOH Expenditure = (BR × AH) − Actual VOH
+- VOH Efficiency = BR × (SH − AH)
+
+### Sales (CM basis)
+- Sales Volume Variance = (AQ − BQ) × Std CM
+- Sales Price Variance = (AP − SP) × AQ
+
+**F (Favourable)** when actual better than standard. **A (Adverse)** when worse.
+
+## Industry tell-tale ratios
+
+| Industry | Tell-tale |
+|----------|----------|
+| FMCG | Low margin, high asset T/O, low DSO |
+| Pharma / Tech | High margin, high R&D (capitalised under IFRS), low asset T/O |
+| Banking | EM 12-15×, NIM 2-4 % |
+| Power / Infra | High PPE, high D/E, ICR low |
+| E-commerce | Negative WC, low margin, high revenue growth |
+| Retail | Inventory T/O critical; gross margin 25-40 % |
+
+## Red flags checklist
+
+- [ ] PAT growing but OCF flat / declining → quality of earnings
+- [ ] Receivable / Inventory days rising sharply → channel stuffing / obsolescence
+- [ ] Recurring "one-time" charges → big bath / earnings management
+- [ ] R&D capitalisation rising > revenue growth → aggressive capitalisation
+- [ ] Off-balance-sheet financing → SPVs, operating leases
+- [ ] Related-party transactions on non-arm's-length terms
+- [ ] Sudden auditor change / KAM concerns
+- [ ] Sustainability disclosures (IFRS S1/S2) inadequate
+
+## Common-size & Comparative
+
+- **Common-size P&L** — items as % of Revenue
+- **Common-size B/S** — items as % of Total Assets
+- **Comparative** — YoY absolute and % changes
+- **Trend** — Index numbers (base year = 100)
+- **5-year CAGR** = (End/Start)^(1/n) − 1
+
+## Open-book exam tactics (Comprehensive)
+
+1. Tab **Maheswari T1** by chapter (1, 12-17 ratios, 22-23 CVP, 25 budgeting).
+2. Carry: this revision sheet + IFRS/IAS quick-look + CVP & variance formulas.
+3. Time = 1.5 min/mark; allow 15 min upfront to read & sequence.
+4. State formula → substitute → compute → **interpret in business language**.
+5. For ratios, always benchmark vs industry / trend.
+6. For CVP, draw the BEP graph if asked for "interpretation".
+
+---
+
+## References
+
+- Maheswari & Maheswari, *Financial and Management Accounting*, Sultan Chand 6e (2022).
+- IFRS Foundation: https://www.ifrs.org/issued-standards/list-of-standards/
+- IFRS S1 & S2: https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/
+- Deloitte Ind-AS Pocket Guide: https://www2.deloitte.com/in/en/pages/audit/articles/ind-as-pocket-guide.html
+- CFI accounting hub: https://corporatefinanceinstitute.com/resources/accounting/
+- Investopedia: https://www.investopedia.com/accounting-4427790

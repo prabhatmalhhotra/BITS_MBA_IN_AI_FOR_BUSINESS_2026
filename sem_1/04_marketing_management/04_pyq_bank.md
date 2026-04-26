@@ -1,146 +1,191 @@
-# Marketing Management — Previous-Year Style Question Bank
+# Marketing Management — PYQ-Style Question Bank (handout-aligned)
 
-> Compiled from leaked BITS WILP MBA Marketing papers (Scribd MBA-ZG521 references) and standard MBA marketing exam patterns.
+> **Aligned to `MBACC ZG503` (S2-25 batch, v1.0).**
+> Mid-Sem (closed book, 2 hrs, 30 %): Sessions 1-8.
+> Comprehensive (open book, 2.5 hrs, 40 %): all 16 sessions including mandatory case discussions and Cesim simulation reflection.
+> Synthesised from leaked BITS WILP MBA Marketing papers + IGNOU MMPC-006 + Kotler instructor pool, **filtered to topics in the new handout**.
 
 ---
 
-## Mid-Semester papers
+## Mid-Sem papers (closed book, Sessions 1-8)
 
 ### Mid-Sem Paper A — 2 hours, 60 marks
 
-**Section A — Short answer (5 × 4 = 20)**
-1. Define marketing. Differentiate selling and marketing.
-2. State the four dimensions of holistic marketing.
-3. List five bases of segmentation with one example each.
-4. Differentiate B2B and B2C buying behaviour on at least three dimensions.
-5. Explain the five-stage consumer decision process.
+**Section 1 — Short answer (5 × 4 = 20 marks)**
 
-**Section B — Medium answer (3 × 8 = 24)**
-6. Discuss the marketing environment using PESTEL. Apply to a sector of your choice.
-7. Explain Porter's Five Forces. Use them to assess the Indian e-commerce industry.
-8. Discuss the Theory of Planned Behaviour. Apply to predict adoption of EVs in India.
+1. Define marketing per Kotler. State the difference between marketing concept and selling concept.
+2. List the 4 Ps and the additional 3 Ps for services. Give one example of each.
+3. State the 5 stages of consumer decision-making process.
+4. Explain effective segmentation criteria with one example each.
+5. Define Customer Value Proposition (CVP). State its components.
 
-**Section C — Case (1 × 16 = 16)**
-9. Mini-case: A premium chocolate brand entering Indian Tier-2/3 cities. Apply STP framework to recommend launch strategy.
+**Section 2 — Application / short essay (3 × 8 = 24 marks)**
 
----
+6. Discuss how Maslow's need hierarchy can be used to design marketing strategy for (a) bottled water, (b) electric two-wheelers, (c) family planning services.
 
-### Mid-Sem Paper B — 50 marks
+7. Explain Porter's 5 forces. Apply to the Indian premium smartphone market.
 
-1. (5 m) Define value in marketing.
-2. (5 m) Explain the Marketing Information System.
-3. (8 m) Discuss the buying-centre roles in B2B with examples.
-4. (8 m) Differentiate qualitative and quantitative research with examples.
-5. (10 m) Apply STP to a digital banking app launch.
-6. (14 m) **Case**: Critique the marketing strategy of a recent Indian product launch (Nothing Phone, Ola Electric, Cred Mint, etc.).
+8. Discuss the 4 distinctive characteristics of services. Use SERVQUAL (RATER) to analyse a hospital chain in your city.
+
+**Section 3 — Long answer / mini-case (1 × 16 = 16 marks)**
+
+9. **Mini-case** — *Mahindra XYLO* (Pearson Indian Cases, Case 9). Discuss STP decisions in launching XYLO. What worked, what could have been improved? Recommend a refreshed positioning.
 
 ---
 
-## Comprehensive papers
+### Mid-Sem Paper B — 2 hours, 50 marks
 
-### Comprehensive Paper A — 2 hours, 100 marks
-
-**Section A — Short answer (5 × 4 = 20)**
-1. List five product levels (Kotler).
-2. Differentiate skimming and penetration pricing.
-3. List 7Ps of services marketing.
-4. State Aaker's five dimensions of brand equity.
-5. Define ROAS.
-
-**Section B — Medium (4 × 10 = 40)**
-6. Discuss the Product Life Cycle and recommend marketing strategies for a product in maturity stage.
-7. Compare cost-plus, value-based and dynamic pricing.
-8. Explain SERVQUAL gap model. Apply to diagnose service quality at an Indian airline / hotel.
-9. Design an IMC plan for a new electric scooter targeting urban millennials.
-
-**Section C — Case (1 × 25 = 25)**
-10. **Long case (~700 words)**: A leading FMCG company is launching a healthier breakfast cereal. Brief covers consumer insights, competitive landscape, distribution challenges, regulatory constraints (FSSAI labelling), and budget constraints (₹50 cr year 1).
-   (a) STP recommendation (8 m)
-   (b) 4P strategy (10 m)
-   (c) IMC and channel plan with KPIs (7 m)
-
-**Section D — Theory long answer (1 × 15 = 15)**
-11. "AI is rewriting every P of the marketing mix." Discuss with examples across product, price, place, promotion.
+1. (5 m) Distinguish needs, wants, and demand with one example each. State three demand states (Kotler).
+2. (5 m) Discuss 5-stage consumer buying decision process. Explain cognitive dissonance with one example.
+3. (8 m) Compare consumer (B2C) and industrial (B2B) marketing on five dimensions.
+4. (8 m) Discuss bases for consumer market segmentation. Apply to Indian quick-service restaurant (QSR) industry.
+5. (10 m) Explain the 5 product levels (Kotler). Apply to a smartwatch.
+6. (14 m) **Mini-case** — *Kellogg's Cornflakes in India* (Pearson Indian Cases, Case 9). Critically analyse Kellogg's positioning challenges. Apply POP/POD. Recommend a refined positioning statement.
 
 ---
 
-### Comprehensive Paper B — 80 marks
+### Mid-Sem Paper C — Practice paper aligned to S2-25
 
-1. (10 m) Discuss Keller's CBBE pyramid. Apply to Apple / Royal Enfield / Tata.
-2. (10 m) Discuss channel design and intensity. Recommend channels for a D2C skincare brand and an industrial robotics manufacturer.
-3. (10 m) Discuss CLV and how it is computed. Why is it the central metric in subscription businesses?
-4. (10 m) Discuss the Ansoff growth matrix. Apply to a mid-sized B2B SaaS firm.
-5. (15 m) **Case**: Premium hotel brand losing share to Airbnb-style aggregators. Apply consumer behaviour, services-marketing 7Ps and STP frameworks.
-6. (10 m) Discuss the role of digital marketing channels — SEO, SEM, social, influencer, content, email, affiliate. Which give best ROI for which stage of funnel?
-7. (15 m) **Case**: Indian D2C beauty brand competing with Korean (K-Beauty) and global (Sephora) brands — propose 12-month strategic marketing plan.
-
----
-
-## Topic-frequency map
-
-| Topic | Mid-Sem | Comprehensive |
-|-------|--------:|--------------:|
-| Core concepts (need/want/value) | 5/6 | 1/6 |
-| Environment (PESTEL/Porter) | 4/6 | 2/6 |
-| Consumer behaviour | 5/6 | 4/6 |
-| B2B buying | 1/6 | 2/6 |
-| Segmentation/Targeting/Positioning | 6/6 | 5/6 |
-| Product / PLC / NPD | 2/6 | 6/6 |
-| Branding (Aaker/CBBE) | 1/6 | 5/6 |
-| Pricing strategies | 0/6 | 5/6 |
-| Distribution / channels | 0/6 | 4/6 |
-| IMC + Digital | 1/6 | 6/6 |
-| Services marketing | 0/6 | 4/6 |
-| CLV / CRM / Loyalty | 0/6 | 4/6 |
-| Strategic frameworks (Ansoff, BCG) | 1/6 | 4/6 |
-| Cases | 6/6 | 6/6 |
-
-**Implication**: Mid-sem heavy on STP + consumer behaviour. Comprehensive heavy on 4P + IMC + cases.
+1. (4 m) Define market demand and demand forecasting. List three forecasting methods.
+2. (5 m) Personas: define and explain why they help marketers. Cite the HSTalk by Dr. Annmarie Hanlon.
+3. (8 m) Discuss the EKB model of consumer behaviour. Tie to Pearson Indian Cases Case 6 (Consumer Behaviour: Wide Facts and Deep Implications).
+4. (8 m) Discuss Value Proposition Canvas with components. Build one for a fintech BNPL service for Tier-2 cities.
+5. (10 m) Apply Product Life Cycle to Indian two-wheeler market. Map current products of Hero, Bajaj, TVS.
+6. (15 m) **Mini-case** — *MTR Foods: A Marketing Marvel* (Pearson Indian Cases). Discuss services vs goods marketing-mix transition. Apply 7Ps.
 
 ---
 
-## Cases worth studying (publicly available)
+## Comprehensive papers (open book, Sessions 1-16)
 
-1. **Cred** — building a brand for HNI millennials.
-2. **Nykaa** — D2C beauty marketplace.
-3. **boAt** — challenger brand with audio.
-4. **Zomato + Blinkit** — food + quick commerce playbooks.
-5. **Tata Tea — Jaago Re** — cause marketing.
-6. **HUL Pureit** — bottom-of-pyramid water purification.
-7. **OnePlus** — community-led marketing.
-8. **Apple** — premium positioning + ecosystem.
-9. **Jio** — penetration pricing dominance.
-10. **Patagonia** — sustainability as positioning.
+### Comprehensive Paper A — 2.5 hours, 100 marks
+
+**Section A — Short answer (5 × 4 = 20 marks)**
+1. Define marketing communications mix (Kotler's 8 modes).
+2. State 5 Ms of advertising.
+3. Distinguish penetration vs skimming pricing.
+4. List 4 channel functions and define VMS types.
+5. State Indian marketing regulators (any 4) and one role each.
+
+**Section B — Numericals / Application (4 × 10 = 40 marks)**
+
+6. Develop a pricing decision for a smart-home robot vacuum launching in India. Apply Kotler's 6-step process. Recommend penetration or skimming with rationale. Discuss likely competitor response.
+
+7. Develop an IMC plan for a Tier-2 restaurant chain entering Tier-1 cities. Cover target audience, objectives, message, channels mix, budget approach, and measurement.
+
+8. Design a multi-channel strategy for a D2C beauty brand expanding to offline. Address omnichannel, channel conflict, and conflict-resolution. Reference HSTalk on Omni-channel marketing.
+
+9. Apply Webster & Wind's buying-centre concept to a B2B SaaS sale to an Indian bank. Identify all roles. Recommend an account-based marketing plan.
+
+**Section C — Long answer / Case (2 × 15 = 30 marks)**
+
+10. **Case** — *Oreo in India* (Pearson Indian Cases, Case 17). Critically analyse how Oreo built the brand using IMC. Apply 5 Ms of advertising and discuss IMC integration across channels.
+
+11. **Case** — *Amazon India* (Pearson Indian Cases, Case 21). Discuss how Amazon adapted its global retail playbook. Apply Ansoff matrix, BCG matrix, and STP. What lessons for global brands entering India?
+
+**Section D — Application (1 × 10 = 10 marks)**
+
+12. Reflect on your **Cesim Marketing Simulation** experience (1 practice + 3 actual rounds). Discuss your team's strategy, decisions that worked, lessons applicable to real marketing. Tie to Kotler frameworks.
 
 ---
 
-## Common mistakes to avoid
+### Comprehensive Paper B — 2.5 hours, 80 marks
 
-1. Stating frameworks without applying them.
-2. STP without specifying *which* segment is targeted.
-3. Pricing recommendation with no reference to value or competition.
-4. IMC plan with no measurement section.
-5. Generic case answer without using facts from the case.
-6. Forgetting digital channels in IMC for digital-native businesses.
+1. (10 m) Discuss Kotler's 8-mode communication mix. For an FMCG launch, design a mix and justify.
+
+2. (10 m) Compare AIDA and Hierarchy-of-effects models. Discuss budgeting methods (affordable, % of sales, competitive parity, objective-and-task) — recommend the best with reasoning.
+
+3. (12 m) Channel design: A premium audio brand wants to enter India. Recommend channel structure (own retail + online + modern trade + speciality). Address conflict and omnichannel integration.
+
+4. (12 m) Discuss e-commerce, m-commerce, and quick-commerce evolution in India. Implications for traditional retail.
+
+5. (12 m) Discuss ASCI and CCPA roles in regulating Indian marketing. Highlight three recent areas (greenwashing, influencer disclosure, AI-generated content). Recommend a brand self-regulation framework.
+
+6. (12 m) Industrial (B2B) marketing — discuss 5 unique characteristics. Apply buying-centre concept to a heavy-equipment sale (CNC machine to MSME).
+
+7. (12 m) **Strategic Marketing Plan** — for an Indian D2C jewellery brand. Cover SWOT, STP, marketing mix, action programs, budget, control. Apply Ansoff matrix.
+
+---
+
+### Comprehensive Paper C — Practice paper aligned to S2-25
+
+1. (8 m) Discuss the 6 steps in setting price. Apply to a luxury sedan launch.
+2. (10 m) Discuss IMC. State 8 modes of communication. Build an IMC plan for a sustainability-focused FMCG launch (HSTalk on Sustainable Advertising).
+3. (10 m) Channel conflict — define types (vertical/horizontal/multichannel). Suggest 3 conflict-management techniques.
+4. (12 m) Discuss BCG matrix and GE matrix. Apply BCG to ITC's portfolio (Cigarettes, FMCG, Hotels, Paperboards, Agri).
+5. (12 m) Mini-case: A new EV charging network (B2B + B2C) — design STP, marketing mix, and channel strategy for India.
+6. (14 m) Cesim simulation review (open question — your team's experience).
+7. (14 m) Diversity in markets: discuss culture as a consumer force using HSTalk on Yoga and "glocalisation". Apply to a wellness brand entering a new geography.
+
+---
+
+## Topic-frequency map (filtered to handout topics)
+
+| Topic | Mid-Sem appearances | Comprehensive appearances |
+|-------|--------------------:|--------------------------:|
+| Marketing definition & evolution | 5/6 | 1/6 |
+| Need-want-demand & demand estimation | 4/6 | 1/6 |
+| Consumer behaviour (5-stage, EKB) | 6/6 | 3/6 |
+| Competitive behaviour (Porter) | 3/6 | 2/6 |
+| Segmentation & Targeting | 5/6 | 3/6 |
+| Positioning & POP/POD | 4/6 | 4/6 |
+| Product management & PLC | 3/6 | 4/6 |
+| Services marketing & SERVQUAL | 3/6 | 3/6 |
+| Pricing strategies (skim/penetration) | n/a | 5/6 |
+| Marketing communications & IMC | n/a | 5/6 |
+| Advertising 5 Ms & sales promotion | n/a | 4/6 |
+| Channel design & VMS | n/a | 4/6 |
+| E/M-commerce & omnichannel | n/a | 3/6 (NEW emphasis) |
+| Marketing regulation (ASCI, CCPA) | n/a | 3/6 (NEW emphasis) |
+| Market research & B2B / Buying centre | n/a | 4/6 |
+| Marketing strategy (BCG, GE, Ansoff) | n/a | 5/6 |
+| **Mandatory case discussions** | 2/6 (S4 XYLO, S6 Kellogg's, S8 MTR) | 4/6 (S12 Oreo, S16 Amazon) |
+| **Cesim Simulation reflection** | n/a | 2/6 (NEW per S2-25) |
+
+> **Implication**:
+> - **Mid-Sem**: drill marketing fundamentals, consumer behaviour, STP, positioning, services, **and the 3 mid-sem case discussions** (XYLO S4, Kellogg's S6, MTR S8).
+> - **Comprehensive**: master pricing, IMC, channels, regulation, B2B, marketing strategy, **and the 2 comprehensive cases** (Oreo S12, Amazon S16) plus **Cesim simulation reflection**.
+
+---
+
+## Open-book exam tactics (Comprehensive)
+
+- Tab Kotler 16e by chapter (Ch 1, 2, 3, 6, 7, 8, 11, 12, 13, 15, 16).
+- Carry: this revision sheet + summaries of all 5 mandatory case discussions + Cesim notes.
+- For HSTalks tie-in questions, mention specific HSTalk title.
+- Time = 1.5 min/mark; case answers should follow Background → Diagnosis (using framework) → Recommendations → Implementation steps.
+- Always cite Indian + global examples for variety.
+
+## Mid-Sem (closed book, 2 hrs)
+1. Memorise: Kotler's marketing definition, 4Ps + 7Ps, consumer behaviour stages, STP framework, segmentation criteria, CVP components, POP/POD, PLC stages, SERVQUAL.
+2. For each mandatory case (XYLO, Kellogg's, MTR), prep a 1-pager: context → marketing problem → decisions → outcomes → lessons.
 
 ---
 
 ## References & Sources
 
-### PYQ leak / aggregator sources used
-- BITS WILP MBA Marketing Management leaked notes & questions:
-  - WILP MBA blog: http://bitswilpmba.blogspot.com/2017/05/?m=1
-  - Search "MBA ZG611 BITS" or "Marketing Management BITS WILP" on https://www.scribd.com/
-- BITS WILP question paper aggregator (community):
-  - https://akhilsudh.github.io/BITS-WILP-Knowledge-Base/Knowledge%20Base/All%20Semesters/QuestionPapers.html
-  - GitHub repo: https://github.com/Akhilsudh/BITS-WILP-Knowledge-Base
-- Crack BITS WILP — exam-pattern blog: https://crackbitswilp.in/
+### Primary text alignment
+- **T1**: Kotler, Keller, Chernev, Sheth & Shaineesh, *Marketing Management*, Pearson **16/e (2022)**.
+- *Marketing Management — Indian Cases*, Pearson 2018 (Cases 1, 6, 9, 10, 17, 21).
+- HSTalks: https://hstalks.com/business/
 
-### Standard MBA Marketing PYQs (additional practice)
-- IGNOU MBA — MMPC-009 (Marketing Management) past papers: http://www.ignou.ac.in/ignou/aboutignou/school/soms/programmes
-- NMIMS Distance Learning — Marketing Management PYQs: https://www.nmims.edu/
-- Sikkim Manipal MBA Marketing question banks: https://smude.edu.in/
-- Symbiosis Distance MBA — Marketing question bank: https://www.scdl.net/
+### PYQ aggregator sources
+- BITS WILP knowledge base: https://akhilsudh.github.io/BITS-WILP-Knowledge-Base/Knowledge%20Base/All%20Semesters/QuestionPapers.html
+- Crack BITS WILP: https://crackbitswilp.in/
+- Scribd Marketing search: https://www.scribd.com/search?query=BITS%20WILP%20MBA%20Marketing%20Management
+
+### Practice question banks
+- IGNOU MMPC-006 Marketing Management: http://egyankosh.ac.in/handle/123456789/30391
+- IGNOU MS-6 Marketing for Managers (legacy): http://egyankosh.ac.in/
+- NMIMS Distance Learning Marketing PYQs: https://www.nmims.edu/
+- Kotler instructor support pool: https://www.pearson.com/
+
+### Quick-reference
+- AMA marketing definitions: https://www.ama.org/topics/marketing-definition/
+- HBR Marketing topic: https://hbr.org/topic/marketing
+- Marketing91 framework index: https://www.marketing91.com/
+- ASCI India: https://www.ascionline.in/
+- CCPA / Consumer Affairs India: https://consumeraffairs.nic.in/
+- Cesim Marketing simulation: https://www.cesim.com/simulations/cesim-simbrand-marketing-management-simulation
 
 ### Caveat
-BITS WILP does not publish official MBA past papers. Patterns above synthesised from leaked uploads + standard MBA Marketing exam conventions. Cross-check with the actual handout from your batch on Taxila LMS.
+BITS WILP does not publish official MBA past papers. Above is synthesised from leaked uploads + standard MBA Marketing patterns, **filtered to S2-25 `MBACC ZG503` handout** (Kotler 16e, Cesim mandatory, 5 mandatory case discussions integrated). Always cross-check with the actual handout on Taxila LMS.

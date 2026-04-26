@@ -1,539 +1,690 @@
-# Marketing Management — Chapter-wise Notes
+# Marketing Management — Session-wise Notes (handout-aligned)
 
-> Anchored to Kotler & Keller (T1) with South-Asian context (Koshy, Jha).
+> Built from the official `MBACC ZG503` handout (S2-25, v1.0).
+> Primary text **T1** = Kotler, Keller, Chernev, Sheth & Shaineesh, *Marketing Management*, **Pearson 16/e (2022)**.
+> Reference **R1** = *Marketing Management — Indian Cases*, Pearson, 2018 (case discussions in 8 sessions are mandatory).
+> 16 contact sessions. Mid-Sem (Closed Book, 30 %) covers sessions 1-8; Comprehensive (Open Book, 2.5 hrs, 40 %) covers all 16.
 
----
+## Quick session map
 
-## Chapter 1 — Introduction to Marketing
-
-### 1.1 What is marketing?
-The activity, set of institutions and processes for creating, communicating, delivering and exchanging offerings that have value for customers, clients, partners, and society at large (AMA).
-
-Kotler in one line: "Marketing is the art and science of choosing target markets and getting, keeping and growing customers through creating, delivering and communicating superior customer value."
-
-### 1.2 Core concepts
-- **Need** — basic human requirement (food, safety).
-- **Want** — need shaped by culture and personality (preference for biryani vs pizza).
-- **Demand** — want backed by ability and willingness to pay.
-- **Product** — anything offered to satisfy a need or want; includes goods, services, experiences, events, persons, places, properties, organisations, information, ideas.
-- **Value** — benefits ÷ costs (functional, emotional, social, monetary, time, effort).
-- **Customer satisfaction** — extent to which a product's performance matches the buyer's expectations.
-- **Exchange** — voluntary trade of value between parties.
-- **Relationship** — long-term mutually beneficial connection.
-- **Market** — set of actual and potential buyers.
-
-### 1.3 Evolution of marketing
-
-| Era | Orientation |
-|-----|-------------|
-| Production | Make available, focus on production efficiency (Ford Model T) |
-| Product | Make superior, focus on product features |
-| Selling | Aggressive selling/promotion (insurance, encyclopaedias) |
-| Marketing | Customer needs first; integrated marketing |
-| Societal | Consider customer + society + sustainability |
-| Holistic / Digital / AI-first | Integrated, data-driven, personalised at scale |
-
-### 1.4 Marketing vs selling
-
-| Marketing | Selling |
-|-----------|--------|
-| Starts with customer needs | Starts with existing product |
-| Outside-in perspective | Inside-out perspective |
-| Profit through satisfaction | Profit through volume |
-| Long-term focus | Short-term focus |
-
-### 1.5 Holistic marketing dimensions
-- **Relationship marketing**: long-term mutually satisfying relationships with customers, partners.
-- **Integrated marketing**: 4Ps work together; consistent value to customers.
-- **Internal marketing**: hiring, training, motivating employees.
-- **Performance marketing**: financial accountability + societal/ethical accountability.
-
-### 60-second recap
-Marketing = creating + delivering + communicating value. The product is what you build; the offering is the value you create. Modern marketing is holistic, customer-first, data-driven, and increasingly AI-augmented.
+| # | Session | Source | Case discussion | Mid-Sem? |
+|--:|---------|--------|-----------------|:--------:|
+| 1 | [Introduction to Marketing](#session-1--introduction-to-marketing) | T1 Ch. 1, 2 | — | ✅ |
+| 2 | [Needs, Wants, Demand & Consumer Behaviour](#session-2--needs-wants-demand--consumer-behaviour) | T1 Ch. 2 | — | ✅ |
+| 3 | [Consumer characteristics & Competitive behaviour](#session-3--consumer-characteristics--competitive-behaviour) | T1 Ch. 3 + R1 Case 6 | CB Wide Facts | ✅ |
+| 4 | [Segmentation & Targeting](#session-4--segmentation--targeting) | T1 Ch. 6 | Mahindra XYLO | ✅ |
+| 5 | [CVP and Positioning intro](#session-5--cvp-and-positioning-intro) | T1 Ch. 6 + R1 Case 9 | — | ✅ |
+| 6 | [Positioning](#session-6--positioning) | T1 Ch. 7 | Kellogg's Cornflakes | ✅ |
+| 7 | [Product Management & NPD](#session-7--product-management--npd) | T1 Ch. 7 + R1 Case 10 | — | ✅ |
+| 8 | [Services and Marketing Mix](#session-8--services-and-marketing-mix) | T1 Ch. 8 | MTR Foods | ✅ |
+| 9 | [Pricing strategies](#session-9--pricing-strategies) | T1 Ch. 8 + R1 Case 1 | — | — |
+| 10 | [Setting initial prices](#session-10--setting-initial-prices) | T1 Ch. 11 | — | — |
+| 11 | [Marketing Communications process](#session-11--marketing-communications-process) | T1 Ch. 12 | — | — |
+| 12 | [IMC, Advertising & Sales promotion](#session-12--imc-advertising--sales-promotion) | T1 Ch. 12, 13 + R1 Case 17 | Oreo in India | — |
+| 13 | [Marketing Channels](#session-13--marketing-channels) | T1 Ch. 15 | — | — |
+| 14 | [Intermediaries, E-commerce, M-commerce](#session-14--intermediaries-ecommerce-mcommerce) | T1 Ch. 15, 16 | — | — |
+| 15 | [Marketing regulation & Industrial research](#session-15--marketing-regulation--industrial-research) | T1 Ch. 4, 5 | — | — |
+| 16 | [Marketing Strategy & Plan](#session-16--marketing-strategy--plan) | R1 Case 21 | Amazon India | — |
 
 ---
 
-## Chapter 2 — Marketing Environment
+## Session 1 — Introduction to Marketing
+**Source:** T1 Ch. 1 & 2.
 
-### 2.1 PESTEL — macro environment
-- **Political**: govt stability, foreign trade policy, taxation, regulatory bodies (TRAI, RBI, SEBI, IRDAI).
-- **Economic**: GDP growth, inflation, interest rates, exchange rate, disposable income.
-- **Social**: demographics, lifestyle, urbanisation, gender roles, education levels.
-- **Technological**: digital adoption, AI/IoT/Cloud, R&D investment.
-- **Environmental**: climate change, resource scarcity, ESG reporting.
-- **Legal**: consumer protection (CPA 2019), data protection (DPDP Act 2023), competition (CCI), labour.
+**AMA definition** — "Marketing is the activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for customers, clients, partners, and society at large."
 
-### 2.2 Micro environment
-Company, Suppliers, Intermediaries (resellers, distributors), Customers, Competitors, Publics (media, financial, govt, citizen action).
+**Core marketing concepts**
+- **Need** (basic human requirement) → **Want** (specific shape need takes given culture) → **Demand** (want backed by ability/willingness to pay).
+- **Offering** = combination of products, services, information, experiences.
+- **Value** = perceived benefits − costs (functional, emotional, social).
+- **Customer satisfaction** = perceived performance vs expectations.
+- **Marketing mix** = traditional **4Ps** (Product, Price, Place, Promotion); services add **3Ps** (People, Process, Physical evidence).
 
-### 2.3 Porter's Five Forces
-1. Threat of new entrants — capital, brand, IP, scale economies.
-2. Bargaining power of suppliers — concentration, switching costs.
-3. Bargaining power of buyers — volume, price sensitivity, alternatives.
-4. Threat of substitutes — relative price-performance.
-5. Industry rivalry — number of competitors, growth rate, exit barriers.
+**Marketing for the New Realities** (Kotler 16e)
+- Information technology, globalisation, deregulation, privatisation, heightened competition, industry convergence, retail transformation, disintermediation, consumer empowerment, new capabilities.
+- Marketers' new responses: relationship marketing, customer lifetime value, customer share, target marketing, customisation, data analytics, omnichannel, accountability.
 
-Used to assess industry attractiveness and inform strategy.
+**Marketing orientations (evolution)**
+- Production → Product → Selling → Marketing → **Holistic Marketing** (Relationship + Integrated + Internal + Performance).
 
-### 60-second recap
-Marketing happens inside an environment that constrains and enables. PESTEL covers the wider canvas; Porter assesses competitive dynamics; micro env is your immediate ecosystem. Diagnose all three before strategy.
+**Analysing Consumer Markets** — heavily psychological/cultural; large numbers, low value per transaction.
 
----
+**Analysing Business (B2B) Markets** — fewer, larger buyers; close supplier-buyer relationships; derived demand; geographically concentrated; multi-person buying centres.
 
-## Chapter 3 — Marketing Information & Research
+**Marketing's role within the firm**
+- Cross-functional integration (sales, ops, finance, R&D).
+- Value-creation engine; revenue generator.
+- Brand custodian.
 
-### 3.1 Marketing Information System (MIS)
-A structured set of people, equipment and procedures that gather, sort, analyse, evaluate and distribute timely, accurate marketing information.
-
-Components:
-- Internal records (sales, inventory, CRM)
-- Marketing intelligence (competitor info, market trends)
-- Marketing research (specific studies)
-- Marketing analytics (BI, dashboards, AI models)
-
-### 3.2 Marketing research process
-1. Define the problem & research objectives
-2. Develop the research plan (data sources, approach, instruments, sampling, contact methods)
-3. Collect the data
-4. Analyse the data
-5. Present findings & recommendations
-6. Make decision
-
-### 3.3 Data types
-- **Primary**: collected first-hand (surveys, FGDs, interviews, observations, experiments).
-- **Secondary**: existing (RBI data, NIELSEN, government reports, internal analytics).
-- **Qualitative**: depth, why behind behaviour (FGDs, in-depth interviews, ethnography).
-- **Quantitative**: scale, statistical generalisability (surveys, analytics, A/B tests).
-
-### 3.4 Sampling
-Probability (random, stratified, cluster) vs non-probability (convenience, judgement, quota, snowball).
-
-### 3.5 Modern approaches
-- Sentiment analysis on social media + reviews
-- Computer vision: in-store traffic patterns, shelf compliance
-- Conversational AI: real-time customer feedback
-- Big data CRM: 360-degree customer view
-
-### 60-second recap
-Information beats intuition. Define the question first; then design the smallest, fastest research that can answer it. AI is making research continuous, not periodic.
+**HSTalks reference** — *What is the marketing mix?* by Dr. Annmarie Hanlon (Cranfield).
 
 ---
 
-## Chapter 4 — Consumer Behaviour
+## Session 2 — Needs, Wants, Demand & Consumer Behaviour
+**Source:** T1 Ch. 2.
 
-### 4.1 Buyer decision process (5 stages)
-1. **Need recognition** (internal cues like hunger, external cues like ads).
-2. **Information search** (personal, commercial, public, experiential sources).
-3. **Evaluation of alternatives** (multi-attribute models, conjunctive, disjunctive, lexicographic rules).
-4. **Purchase decision** (intention may be modified by attitudes of others, situational factors).
-5. **Post-purchase behaviour** (satisfaction, dissonance, future intentions, word-of-mouth).
+**Types of demand & marketing tasks**
+| Demand state | Example | Marketing task |
+|--------------|---------|----------------|
+| Negative | Vaccinations | Conversional marketing |
+| Non-existent | Innovative product | Stimulational |
+| Latent | Healthy snacks | Developmental |
+| Declining | Newspapers | Remarketing |
+| Irregular | Resorts off-season | Synchromarketing |
+| Full | Successful product | Maintenance |
+| Overfull | Peak hour utility | De-marketing |
+| Unwholesome | Tobacco | Counter-marketing |
 
-### 4.2 Influences on consumer behaviour
-- **Cultural**: culture, sub-culture, social class.
-- **Social**: reference groups (membership, aspirational, dissociative), family, roles & status.
-- **Personal**: age, life-cycle stage, occupation, lifestyle (VALS, AIO), economic situation.
-- **Psychological**: motivation (Maslow, Freud), perception (selective attention, distortion, retention), learning, beliefs, attitudes.
+**Demand estimation methods**
+- **Total market demand** = N × q × p (units × frequency × price), or chain ratio.
+- **Area market demand** — Multiple Factor Index method.
+- **Industry sales & market share**.
+- **Forecasting**: Surveys of intentions, sales-force composite, expert opinion, Delphi, market test, time-series, regression.
 
-### 4.3 Online consumer behaviour
-- Customer journey: awareness → consideration → conversion → retention → advocacy.
-- ZMOT (Zero Moment of Truth, Google): pre-shopping research on mobile.
-- Reviews and influencer effect; social proof.
-- Mobile-first decisions; UPI-driven impulse purchases (India).
+**Consumer Behaviour basics**
+- **Stimulus → Black Box (consumer characteristics + decision process) → Response**.
 
-### 4.4 Theory of Planned Behaviour (Ajzen)
-Intention to act = Attitude × Subjective Norms × Perceived Behavioural Control. Used to predict adoption of new behaviours (e.g., switching to electric vehicles).
+**Buyer decision process** — Need recognition → Information search → Evaluation → Purchase decision → Post-purchase behaviour.
 
-### 60-second recap
-Consumers go through a 5-step journey. Influences are layered (culture > social > personal > psychological). Online journeys are fragmented across screens. Marketers must show up at each step with relevant value.
-
----
-
-## Chapter 5 — Business / Organisational Buying
-
-### 5.1 B2B vs B2C
-
-| Aspect | B2B | B2C |
-|--------|-----|-----|
-| Buyers | Few, large, professional | Many, small, individual |
-| Decision making | Group, formal | Individual / family |
-| Demand | Derived, inelastic | Direct |
-| Sales cycle | Long (months/years) | Short |
-| Channels | Direct + few intermediaries | Multiple intermediaries |
-| Promotion | Personal selling, trade shows | Mass media + digital |
-
-### 5.2 Buying centre roles
-- **Initiator** — recognises need.
-- **User** — uses the product.
-- **Influencer** — shapes specifications.
-- **Decider** — formal authority.
-- **Buyer** — handles commercial transaction.
-- **Gatekeeper** — controls information flow (PA, IT manager).
-
-### 5.3 Buying situations
-- **New task** — first-time purchase, complex, lots of information.
-- **Modified rebuy** — change in specs/supplier, moderate effort.
-- **Straight rebuy** — routine, automatic re-orders.
-
-### 5.4 B2B sales cycle
-Prospect → Qualify → Discover → Demo/POC → Propose → Negotiate → Close → Onboard → Expand. CRM tools (Salesforce, HubSpot) anchor the workflow. Account-based marketing (ABM) for high-value accounts.
-
-### 60-second recap
-B2B is fewer, bigger, slower, more rational. Map the buying centre. Manage situations differently. Invest disproportionately in account-based plays for top accounts.
+**Levels of consumer involvement**
+- High involvement (car, home loan): extensive search, brand differences matter.
+- Low involvement (toothpaste): habitual, brand-switching for variety.
 
 ---
 
-## Chapter 6 — Segmentation, Targeting & Positioning (STP)
+## Session 3 — Consumer characteristics & Competitive behaviour
+**Source:** T1 Ch. 3. **Mandatory case discussion: Consumer Behaviour — Wide Facts and Deep Implications (R1 Case 6, pp. 6.1–6.8).**
 
-### 6.1 Segmentation
-Dividing the market into distinct subsets that may merit separate offerings.
+**Factors influencing buying behaviour**
+- **Cultural** — culture, sub-culture, social class.
+- **Social** — reference groups (membership, aspirational, dissociative), family, roles, status. **Opinion leaders** influence early purchasers.
+- **Personal** — age, life-cycle stage, occupation, economic circumstances, lifestyle (psychographics — VALS, AIO), self-concept.
+- **Psychological** — motivation (Maslow, Freud, Herzberg), perception (selective attention/distortion/retention), learning, beliefs & attitudes.
 
-**Bases**:
-- **Demographic**: age, gender, income, education, occupation, family size, religion.
-- **Geographic**: country, region, urban/rural, climate.
-- **Psychographic**: lifestyle, values, personality (VALS).
-- **Behavioural**: occasion, benefits sought, user status, usage rate, loyalty status, attitude.
-- **Technographic** (B2B): tech stack, AI maturity, cloud adoption.
+**Models of consumer behaviour**
+- **Stimulus-Response (Marshallian)** — economic, rational.
+- **Pavlovian** — learning, conditioned response.
+- **Freudian** — unconscious motives.
+- **Veblenian** — social/conspicuous consumption.
+- **Hawkins-Mothersbaugh** — comprehensive.
 
-**Effective segmentation** (5 criteria): Measurable, Accessible, Substantial, Differentiable, Actionable.
+**Buying roles** — Initiator, Influencer, Decider, Buyer, User. Especially relevant for family decisions and B2B.
 
-### 6.2 Targeting strategies
-- **Undifferentiated** (mass marketing) — same offering for all (Coca-Cola classic).
-- **Differentiated** (segmented) — different offerings per segment (Tata Motors: Nano, Tiago, Nexon, Safari).
-- **Concentrated** (niche) — single segment, deep focus (Royal Enfield enthusiasts).
-- **Micro-marketing** — local, individual personalisation (Netflix recommendations, Amazon).
+**Types of buying behaviour (Assael)**
+- Complex (high involvement, big differences) — car.
+- Dissonance-reducing (high involvement, few differences) — tiles.
+- Variety-seeking (low involvement, big differences) — biscuits.
+- Habitual (low involvement, few differences) — salt.
 
-Choice depends on company resources, product variability, market variability, competitor strategies, PLC stage.
+**Competitive behaviour**
+- Five Forces — competitive intensity drivers.
+- Competitor identification: industry, market, strategic-group, direct vs indirect.
+- Strategies: market leader (defensive, offensive), challenger, follower, nicher.
+- War-game / scenario planning.
 
-### 6.3 Positioning
-The act of designing the company's offering and image to occupy a distinct, valued place in the target customer's mind.
-
-Key tools:
-- **Perceptual map** (X = price, Y = quality; or feature-based)
-- **Points of Parity (POP)**: must-have elements (a smartphone must make calls)
-- **Points of Difference (POD)**: distinctive value (iPhone's design + ecosystem)
-- **Positioning statement** template:
-  *For [target customer], our [brand] is the [category] that [single most important benefit] because [reason to believe].*
-- **Repositioning** when share/relevance erode.
-
-### 6.4 Indian examples
-- HUL Pureit: low-income segment, "purified water without electricity."
-- Cred: HNI millennials, "rewards for paying credit-card bills."
-- boAt: aspirational youth, "audio gear at affordable prices."
-
-### 60-second recap
-Don't try to please everyone. Segment > Target > Position. Know your one POD; deliver the POPs effortlessly. Refresh positioning every 3–5 years.
+**Indian context** — large value-conscious mass market; rural-urban divide; brand consciousness rising in Tier 2/3; digital-first young consumers.
 
 ---
 
-## Chapter 7 — Product Decisions
+## Session 4 — Segmentation & Targeting
+**Source:** T1 Ch. 6. **Mandatory case discussion: Who will buy XYLO — Mahindra & Mahindra Automotive Sector.**
 
-### 7.1 Product levels (Kotler)
-1. **Core benefit**: fundamental need (a hotel = rest).
-2. **Basic product**: tangible product satisfying need (room with bed).
-3. **Expected product**: standard attributes buyers expect (clean linen, hot water).
-4. **Augmented product**: additional features that delight (free breakfast, fast Wi-Fi).
-5. **Potential product**: future possibilities (IoT-enabled rooms).
+**Why segment?** Different needs, different price-sensitivity, different channels, different communication.
 
-### 7.2 Product classification
-- **Convenience** — frequent, low effort (toothpaste, milk).
-- **Shopping** — comparison effort (clothes, electronics).
-- **Speciality** — strong brand preference, willing to travel/wait (Hermès, Tesla).
-- **Unsought** — buyer doesn't think about until needed (life insurance, funeral services).
+**Bases of segmentation (consumer markets)**
+- **Geographic** — country, region, city size, density, climate.
+- **Demographic** — age, gender, family size, life-cycle, income, occupation, religion, education, generation, social class.
+- **Psychographic** — lifestyle (AIO), values (VALS), personality.
+- **Behavioural** — occasion, benefits sought, user status, usage rate, loyalty, attitude, buyer-readiness stage.
 
-### 7.3 Product mix
-- **Width**: number of product lines (HUL: home, personal care, food).
-- **Length**: total products in mix.
-- **Depth**: variants per product.
-- **Consistency**: relatedness of lines.
+**Bases for B2B** — demographic (industry, size, location), operating variables (technology, customer capabilities), purchasing approach, situational, personal characteristics.
 
-### 7.4 Product Life Cycle (PLC)
+**Requirements for effective segmentation** — M-A-D-A-S
+- **Measurable** — size, purchasing power.
+- **Accessible** — reachable & servable.
+- **Differentiable** — segments respond differently to marketing mix.
+- **Actionable** — programmes can be designed.
+- **Substantial** — large/profitable enough to serve.
 
-| Stage | Sales | Costs/unit | Profit | Strategy |
-|-------|------:|----------:|------:|----------|
-| Introduction | Low | High | Negative | Awareness, skimming or penetration pricing |
-| Growth | Rising fast | Falling | Rising | Brand-building, market expansion, product extensions |
-| Maturity | Peak, slow growth | Low | Peak then declining | Differentiate, find new uses/users, reposition |
-| Decline | Declining | Low | Declining | Harvest, reposition, divest |
+**Targeting strategies**
+- **Undifferentiated (mass)** — single product for all (e.g., Coke historically).
+- **Differentiated** — separate offerings to multiple segments (e.g., Maruti Alto/Swift/Dzire/Brezza).
+- **Concentrated (niche)** — focus on one segment (e.g., Royal Enfield).
+- **Customised / Micromarketing** — tailored offerings (luxury, B2B).
 
-### 7.5 New Product Development (NPD)
-Idea generation → screening → concept testing → marketing strategy → business analysis → product development → test marketing → commercialisation.
+**Selecting target segments** — segment size & growth, segment structural attractiveness (Five Forces), company objectives & resources.
 
-Failure rates 50%+. Common reasons: overestimated market, poor product, wrong positioning, weak distribution, insufficient promotion.
-
-### 7.6 Branding
-**Brand equity** — added value endowed on a product by its brand.
-
-**Aaker's brand equity model**: Brand awareness · Perceived quality · Brand associations · Brand loyalty · Other proprietary assets.
-
-**Keller's CBBE pyramid** (bottom-up):
-1. Brand identity (salience) — Who are you?
-2. Brand meaning (performance + imagery) — What are you?
-3. Brand response (judgements + feelings) — What about you?
-4. Brand resonance (loyalty, attachment, community, engagement) — What about you and me?
-
-Branding decisions: brand sponsor (manufacturer/private/licensed/co-branded), brand name, brand strategy (line extension, brand extension, multibrand, new brand), brand portfolio.
-
-### 60-second recap
-Product is more than the physical good — it's a hierarchy of value. Manage through PLC consciously. NPD is risky; minimise it with disciplined gates. Brand is the long-term asset that pricing flexibility comes from.
+**Indian segmentation case-study examples** — Mahindra XYLO (large family + small commercial use), Bajaj Chetak revival (urban premium scooter), Tata Nano (failed positioning to "cheapest").
 
 ---
 
-## Chapter 8 — Pricing Decisions
+## Session 5 — CVP and Positioning intro
+**Source:** T1 Ch. 6 + R1 Case 9 (pp. 9.1–9.6).
 
-### 8.1 Pricing objectives
-Survival, current-profit maximisation, market share leadership, product-quality leadership, image, social.
+**Customer Value Proposition (CVP)** — clear statement of what the firm offers, to whom, and why it's better than alternatives.
 
-### 8.2 Pricing methods
-- **Cost-plus**: cost + markup.
-- **Target return**: price for desired ROI.
-- **Value-based**: price = perceived value to customer.
-- **Competition-based / going-rate**: peg to competitor pricing.
-- **Sealed-bid**: tender-driven.
-- **Dynamic / yield pricing**: ride-sharing surge, airline yields.
-- **Auction**: English, Dutch, sealed.
+**Components of a CVP**
+- **Target customer** — who.
+- **Customer needs / pains** — what jobs to be done.
+- **Offering** — product/service.
+- **Benefits** — functional + emotional + social + economic.
+- **Differentiation** — what makes us better/unique vs competitors.
 
-### 8.3 Pricing strategies
-- **Market skimming** — high initial price, lower later (iPhone launches).
-- **Market penetration** — low launch price for mass adoption (Jio).
-- **Premium** — high quality, high price (Apple).
-- **Economy** — low cost, low price (Big Bazaar private labels).
+**Value Proposition Canvas** (Strategyzer)
+- Customer profile: jobs, pains, gains.
+- Value map: products & services, pain relievers, gain creators.
+- Fit when value map addresses customer profile.
+
+**Value disciplines (Treacy & Wiersema)**
+- **Operational excellence** — best price (Walmart, IndiGo).
+- **Product leadership** — best product (Apple, Tesla).
+- **Customer intimacy** — best total solution (Asian Paints, IBM).
+
+**Positioning intro** — "the act of designing the company's offer and image so that it occupies a distinctive place in the minds of the target customers."
+
+**Positioning statement template**
+> *"For [target segment], our [brand] is the [category] that [point of difference], because [reason to believe]."*
+
+**Frame of reference (FoR)** — the relevant competitive set (which category, which alternatives).
+**Points of Parity (POP)** — must-have to belong to category.
+**Points of Difference (POD)** — what makes you preferable.
+
+---
+
+## Session 6 — Positioning
+**Source:** T1 Ch. 7. **Mandatory case discussion: Kellogg's Cornflakes in India — Finding a Platform that Connects.**
+
+**Bases of positioning**
+- Attribute (LIC — security), Benefit (Volini — fast pain relief), Use/application (Activia — gut health), User (Johnson's Baby — babies), Competitor (Pepsi vs Coke), Product category (7Up — uncola), Quality/Price (Tata Salt vs cheap salts).
+
+**Brand mantras** — short, three-to-five-word articulation of brand essence (e.g., Nike "Authentic Athletic Performance").
+
+**Differentiation** by:
+- **Product** — features, performance, conformance, durability, reliability, repairability, design.
+- **Service** — ordering, delivery, installation, training, consulting, repair, returns.
+- **Personnel** — competence, courtesy, credibility.
+- **Channel** — coverage, expertise, performance.
+- **Image** — symbols, media, atmosphere, events.
+
+**Repositioning** — shift the perception over time (Old Spice from "your dad's brand" to youth; Tata Tea from generic to "Jaago Re"; Maggi recovery post-MSG crisis).
+
+**Kellogg's India learning**
+- Initial 1994 launch struggled — positioned as Western breakfast in Indian milk culture.
+- Repositioning: "healthy/family" angle; flavour & affordability variants; Chocos for kids; Special K for women's wellness.
+- **Lesson**: positioning must be culturally resonant + adapt mix for local needs.
+
+**Perceptual map** — graphical representation of consumer perceptions on 2-3 attributes.
+
+---
+
+## Session 7 — Product Management & NPD
+**Source:** T1 Ch. 7 + R1 Case 10 (pp. 10.1–10.8).
+
+**Product hierarchy**
+- Need family → Product family → Class → Line → Type → Item (SKU).
+
+**Product levels** (Kotler, 5 levels)
+1. **Core benefit** — fundamental need.
+2. **Generic / Basic product** — functional version.
+3. **Expected product** — what buyer normally expects.
+4. **Augmented product** — exceeds expectations (warranty, support).
+5. **Potential product** — future possibilities.
+
+**Product mix decisions**
+- **Width** — number of product lines.
+- **Length** — total items in the lines.
+- **Depth** — variants per item.
+- **Consistency** — relatedness across lines.
+
+**Product Life Cycle (PLC)**
+- **Introduction** — slow growth, high cost, losses; build awareness.
+- **Growth** — rapid acceptance, profits rise; expand distribution.
+- **Maturity** — slowdown, intensified competition; defend share.
+- **Decline** — sales drop; harvest or divest.
+- Different marketing mix per stage.
+
+**New Product Development (NPD) process**
+1. **Idea generation** (employees, customers, competitors, R&D, distributors).
+2. **Idea screening** — cost, feasibility, fit.
+3. **Concept development & testing**.
+4. **Marketing strategy formulation**.
+5. **Business analysis** — revenue, cost, profit estimation.
+6. **Product development** (prototype).
+7. **Market testing** (test markets, simulated test markets).
+8. **Commercialisation** (when, where, to whom, how).
+
+**Reasons for NPD failure** — overestimate market, poor positioning, high development cost, inadequate marketing support, strong competition, timing.
+
+**Innovation types** — incremental vs disruptive (Christensen); sustaining vs disruptive; closed vs open innovation.
+
+**Indian NPD examples** — Maruti Brezza, Tata Tiago, Patanjali Atta Noodles (failed), Boat audio (D2C disruptive).
+
+---
+
+## Session 8 — Services and Marketing Mix
+**Source:** T1 Ch. 8. **Mandatory case discussion: MTR Foods — A Marketing Marvel.**
+
+**Service characteristics (IHIP)**
+- **Intangibility** — can't be seen/touched before purchase.
+- **Heterogeneity (Variability)** — quality varies with provider, time, place.
+- **Inseparability** — produced & consumed simultaneously.
+- **Perishability** — can't be stored.
+
+**Implications**
+- Need to "tangibilise" (uniforms, ambience), standardise (training, SOPs), align demand/supply (off-peak pricing, reservations).
+
+**Services Marketing Mix — 7 Ps**
+1. **Product** — service offering & quality.
+2. **Price** — bundling, value pricing.
+3. **Place** — channel, location, accessibility.
+4. **Promotion** — communication.
+5. **People** — frontline staff (most critical for service quality).
+6. **Process** — service delivery flow, blueprint.
+7. **Physical evidence** — décor, uniforms, brochures, website.
+
+**Service quality (SERVQUAL — Parasuraman, Zeithaml, Berry)**
+- 5 dimensions: **R-A-T-E-R**
+  - **R**eliability (most important)
+  - **A**ssurance (knowledge & courtesy)
+  - **T**angibles (physical facilities)
+  - **E**mpathy (caring, individualised attention)
+  - **R**esponsiveness (willingness to help)
+- Gap model: 5 gaps causing service failure (knowledge gap, design gap, performance gap, communication gap, customer gap).
+
+**Service recovery**
+- Acknowledge failure → empathise → fix → compensate → learn.
+- "Recovery paradox" — well-recovered failures can yield higher loyalty.
+
+**Marketing Mix integration**
+- 4Ps (goods) → 7Ps (services).
+- Modern view: 4Cs (Customer value, Cost, Convenience, Communication) — customer-centric reformulation.
+- SAVE framework (B2B): Solution, Access, Value, Education.
+
+**MTR Foods learning**
+- Heritage restaurant brand → packaged ready-to-eat & ready-to-cook.
+- Marketing mix: high quality (product), premium pricing, modern retail + traditional kirana (place), TV + print + Indian sentiment-led ads (promotion).
+- Acquired by Norwegian Orkla 2007; now MTR-Eastern combined.
+
+---
+
+> **Mid-Semester scope ends here (Sessions 1–8).** Closed Book, 2 hrs, 30 % weight, **21-Jun-2026 (AN)**.
+
+---
+
+## Session 9 — Pricing strategies
+**Source:** T1 Ch. 8 + R1 Case 1 (pp. 1.1–1.5).
+
+**Pricing objectives**
+- Survival, Maximum current profit, Maximum market share (penetration), Maximum market skimming, Product-quality leadership, Other (social, non-profit).
+
+**Six-step pricing process** (Kotler)
+1. Selecting pricing objective.
+2. Determining demand (price elasticity).
+3. Estimating costs (fixed, variable, total, target costing, ABC).
+4. Analysing competitors' costs, prices, offers.
+5. Selecting pricing method.
+6. Selecting final price.
+
+**Price elasticity** = %ΔQ / %ΔP. Less elastic = more pricing power.
+
+**Pricing methods**
+- **Cost-based** — markup, target-return.
+- **Value-based** — perceived value, EVC (economic value to customer).
+- **Competition-based** — going-rate, sealed-bid.
+- **Auction-type** — English (ascending), Dutch (descending), sealed-bid.
+
+**Price discrimination** (legal in many cases)
+- 1st degree (perfect — each customer pays max willingness).
+- 2nd degree (volume discount, version-based).
+- 3rd degree (segment-based — student, senior, geographic).
+
+**Strategic pricing**
+- **Skimming** (high → low) — innovative tech (iPhone launch).
+- **Penetration** (low → grow share) — Jio launch.
+- **Premium** — luxury.
+- **Loss leader** — low margin product to drive footfall.
+- **Bundle pricing** — combo meals, software suites.
+- **Captive** — printer + ink, razor + blades.
+- **Two-part** — fixed + variable (Disney park).
 - **Psychological** — ₹999 vs ₹1,000.
-- **Bundle** — multiple products together (Microsoft 365).
-- **Captive product** — printer cheap, ink expensive (Gillette razor + blade).
-- **Two-part** — fixed + variable (gym membership + per-class).
-- **Promotional** — temporary discounts.
-
-### 8.4 Price elasticity
-%ΔQ / %ΔP. Elastic (>1) — small price change → big demand change. Inelastic (<1) — demand changes little. Inelasticity higher when: necessity, no substitutes, brand loyalty, low % of income.
-
-### 8.5 New product pricing
-Skim if: high quality signals, demand price-inelastic at high prices, segment willing to pay high. Penetrate if: scale economies, price-sensitive market, blocking competitors.
-
-### 8.6 AI-driven pricing
-Real-time demand-supply matching (Uber surge); personalised offers (Amazon); willingness-to-pay (WTP) optimisation via ML; geo-and-time differential pricing.
-
-### 60-second recap
-Price = value capture. Cost-plus is naive; value-based is strategic. Pick strategy by lifecycle stage and competitive context. AI is making pricing dynamic, personalised and continuous.
+- **Promotional** — discounts, allowances, financing.
+- **Geographic** — FOB origin, freight absorption.
+- **Dynamic / Surge** — Uber, airline RM.
 
 ---
 
-## Chapter 9 — Place / Distribution Decisions
+## Session 10 — Setting initial prices
+**Source:** T1 Ch. 11.
 
-### 9.1 Channel functions
-Information, promotion, contact, matching, negotiation, physical distribution, financing, risk-taking.
+**Setting initial price for new product**
+- Market-skimming: starts high, lowers progressively. Suited when:
+  - Demand is high enough at high price.
+  - Cost of producing small volume not so high it cancels advantage.
+  - High initial price doesn't attract competitors.
+  - Quality image is reinforced by high price.
+- Market-penetration: low price to attract many buyers; high volume → low cost. Suited when:
+  - Market is highly price-sensitive.
+  - Production & distribution costs fall with experience.
+  - Low price discourages competitors.
 
-### 9.2 Channel design
-- **Length / levels**:
-  - Zero-level (D2C): manufacturer → consumer.
-  - One-level: manufacturer → retailer → consumer.
-  - Two-level: manufacturer → wholesaler → retailer → consumer.
-  - Three-level: + agent.
+**Adjustments to list price**
+- **Discount & Allowance** — cash, quantity, functional, seasonal, trade-in, promotional.
+- **Differentiated pricing** — by customer segment, product form, image, channel, location, time.
 
-- **Intensity**:
-  - **Intensive** — as many outlets as possible (FMCG: salt, biscuits).
-  - **Selective** — moderate number (apparel, electronics).
-  - **Exclusive** — single dealer per area (Mercedes-Benz, designer brands).
+**Initiating price changes**
+- **Cuts**: when excess capacity, declining share, drive-to-dominate via cost.
+- **Increases**: cost inflation, over-demand. Methods: delayed quotation, escalator clauses, unbundling, reduced discounts.
 
-### 9.3 Channel management
-Motivation (margins, training, support), evaluation (sales, inventory, service), conflict (vertical, horizontal, multi-channel), integration (vertical/horizontal/multi-channel marketing systems).
+**Reaction to competitor's price changes**
+- Why did they change? Temporary or permanent? Will others follow? What if we don't react?
+- Options: Maintain price (with selective concessions), Maintain price & add value, Reduce price, Increase price + improve quality, Launch fighter brand.
 
-### 9.4 Retail formats
-Department stores, supermarkets, hypermarkets, specialty stores, convenience stores, discount stores, off-price retailers, e-tailers, factory outlets, kiosks, vending machines, malls, marketplaces (Amazon, Flipkart).
-
-### 9.5 Logistics for marketers
-Order processing → warehousing → inventory → transportation. Total logistics cost minimisation, customer service trade-offs.
-
-### 9.6 E-commerce, omni-channel and D2C
-- **E-commerce**: pure digital channels.
-- **Omni-channel**: seamless across physical and digital (Reliance Retail, Decathlon).
-- **D2C**: brand sells directly through own site/app, removing intermediaries (boAt, Mamaearth, Sugar). Higher margins, direct data, brand control.
-
-### 60-second recap
-Place = availability when and where customers want. Choose intensity by product type and brand strategy. Omni-channel and D2C are reshaping the channel mix for almost every category.
+**Brand-price-quality positioning matrix**
+- Premium, High-value, Super-value, Overcharging, Mid-value, Good-value, Rip-off, False economy, Economy.
 
 ---
 
-## Chapter 10 — Promotion / Integrated Marketing Communications (IMC)
+## Session 11 — Marketing Communications process
+**Source:** T1 Ch. 12.
 
-### 10.1 Communication models
-- **AIDA**: Attention → Interest → Desire → Action.
-- **Hierarchy of effects**: Awareness → Knowledge → Liking → Preference → Conviction → Purchase.
-- **Customer journey funnel**: Awareness → Consideration → Conversion → Retention → Advocacy.
+**Role of marketing communications**
+- Inform, Persuade, Remind, Reinforce.
+- Build brand equity by creating awareness, image, judgments and feelings.
 
-### 10.2 IMC tools
-- **Advertising** — paid, non-personal mass communication. ATL (TV, print, OOH) vs BTL (in-store, events).
-- **Sales promotion** — short-term incentives (coupons, BOGO, contests).
-- **Public Relations** — earned media, press releases, sponsorships, CSR.
-- **Personal selling** — face-to-face/digital sales.
-- **Direct & digital marketing** — email, SMS, push notifications.
-- **Events & experiences** — sponsorships, conferences, brand activations.
-- **Social media & influencer marketing** — UGC, micro/macro influencers, viral.
+**Marketing Communications Mix (the 8 modes)**
+1. Advertising (paid mass media)
+2. Sales promotion (incentives)
+3. Events & experiences (sponsorships, brand activations)
+4. Public relations & publicity
+5. Online & social media marketing (web, blog, social, search, mobile)
+6. Mobile marketing
+7. Direct & database marketing (email, catalogue)
+8. Personal selling
 
-### 10.3 Media planning
-- **Reach**: % of target exposed at least once.
-- **Frequency**: average exposures per person.
-- **GRP** = Reach × Frequency.
-- **CPM**: cost per thousand impressions.
-- **CPC**: cost per click.
-- **CTR**: click-through rate.
+**Steps in developing effective communications**
+1. **Identify target audience**.
+2. **Set communication objectives** — Awareness, Knowledge, Liking, Preference, Conviction, Purchase (hierarchy-of-effects).
+3. **Design communication** — Message strategy (what to say), Creative strategy (how — informational vs transformational), Message source (credibility — expertise, trustworthiness, likeability).
+4. **Select channels** — personal vs non-personal.
+5. **Establish budget** — Affordable, % of sales, Competitive parity, Objective-and-task.
+6. **Decide on media mix**.
+7. **Measure results**.
+8. **Manage IMC**.
 
-### 10.4 Digital marketing essentials
-- **SEO** (Search Engine Optimisation) — organic traffic from Google.
-- **SEM/PPC** — Google Ads, paid search.
-- **Display** & retargeting.
-- **Social** — paid + organic on Meta, Instagram, LinkedIn, X, YouTube.
-- **Content marketing** — blogs, podcasts, videos.
-- **Email** — nurture funnels, abandoned-cart triggers.
-- **Influencer** — credibility transfer.
-- **Affiliate** — commission on conversion.
+**Hierarchy-of-effects models**
+- AIDA (Attention → Interest → Desire → Action).
+- Innovation Adoption (Awareness → Interest → Evaluation → Trial → Adoption).
+- Communications model (Exposure → Reception → Cognitive response → Attitude → Intention → Behaviour).
 
-### 10.5 Measuring effectiveness
-Marketing funnel KPIs: impressions, CTR, CPL, CAC, conversion, LTV, ROAS (Return on Ad Spend = Revenue / Ad Spend).
-
-### 10.6 AI in IMC
-- Targeted ad bidding (Google Ads ML).
-- GenAI for content variants & copy testing.
-- Chatbots for top-of-funnel.
-- Personalisation engines (Netflix-style recommendations on every page).
-- Predictive analytics for next-best-action.
-
-### 60-second recap
-IMC = consistent message across paid, owned, earned, shared channels. Pick the funnel stage, then the channel, then the metric. Digital is dominant; AI supercharges targeting, personalisation and creative.
+**Push vs Pull strategy**
+- **Push** — manufacturer to channel members (trade promotions).
+- **Pull** — direct to consumers (consumer ads).
 
 ---
 
-## Chapter 11 — Services Marketing
+## Session 12 — IMC, Advertising & Sales promotion
+**Source:** T1 Ch. 12 & 13. **Mandatory case discussion: Oreo in India — Launching and Establishing a global brand using IMC effectively.**
 
-### 11.1 Distinctive characteristics (IIVP)
-- **Intangibility** — cannot be touched, demoed.
-- **Inseparability** — production and consumption simultaneous.
-- **Variability** — quality varies with provider/time.
-- **Perishability** — cannot be stored (empty hotel rooms today are lost).
+**IMC (Integrated Marketing Communications)** — coordinated, consistent messaging across all channels & touch-points.
 
-### 11.2 7Ps of services marketing
-4Ps + People (employees, customers) + Process (service blueprints) + Physical evidence (servicescape).
+### Advertising
+**5 M decisions**
+- **Mission** — sales/communications goals.
+- **Money** — budget setting.
+- **Message** — generation, evaluation, execution, social responsibility.
+- **Media** — reach, frequency, impact, vehicle, timing, geography.
+- **Measurement** — communication & sales effects.
 
-### 11.3 SERVQUAL gap model (Parasuraman, Zeithaml, Berry)
+**Reach (R)** — % of target exposed at least once.
+**Frequency (F)** — average exposures per person.
+**Impact (I)** — qualitative value of an exposure.
+**GRP** = R × F. **TRP** = R × F × adjustment for target.
 
-Five dimensions of perceived service quality (RATER):
-- **Reliability** — perform promised service dependably.
-- **Assurance** — knowledge, courtesy, trust.
-- **Tangibles** — physical facilities, personnel appearance.
-- **Empathy** — caring, individualised attention.
-- **Responsiveness** — willingness to help promptly.
+**Creative execution styles** — slice of life, lifestyle, fantasy, mood/image, musical, personality symbol, technical expertise, scientific evidence, testimonial.
 
-Five gaps:
-- Gap 1: Customer expectations vs management perception
-- Gap 2: Management perception vs service-quality specs
-- Gap 3: Service-quality specs vs actual delivery
-- Gap 4: Actual delivery vs external communication
-- Gap 5: Customer expected vs perceived service (driven by gaps 1–4)
+**Advertising ethics & regulation**
+- **ASCI Code** (India) — self-regulatory.
+- Surrogate advertising rules (alcohol, tobacco).
+- DAVP guidelines, IRDAI for insurance.
 
-### 11.4 Service recovery & customer experience
-- Service failures inevitable; recovery determines loyalty.
-- Service recovery paradox: a well-handled failure can yield higher loyalty than no failure at all.
-- Customer Experience Management (CEM) — orchestrating every touchpoint to deliver desired emotion.
+### Sales promotion
+**Consumer promotions** — samples, coupons, cash refunds, price packs, premiums, rewards, free trials, warranties, tie-ins.
+**Trade promotions** — discount, allowance, free goods.
+**Business/sales-force promotions** — trade shows, contests, specialty advertising.
 
-### 60-second recap
-Services need 7Ps, not 4Ps. Quality lives in the gap between expectation and perception. Failures are recovery opportunities — handle them well.
+**Pros**: short-term sales bump, encourages trial, defends share.
+**Cons**: erodes brand image if overused, attracts deal-prone non-loyals.
 
----
+### Public Relations & Publicity
+- Press releases, product publicity, corporate communications, lobbying, counselling.
+- PR is more credible than advertising; lower cost; less controllable.
 
-## Chapter 12 — Strategic Marketing & Emerging Topics
+### Events & Sponsorships
+- Olympics, IPL, brand-owned events (Sunburn, Kingfisher Calendar).
 
-### 12.1 Marketing strategy formulation
-Vision → Mission → Objectives → Strategy → Programmes → Budget → Implementation → Control.
+### Digital & Social Media
+- Owned media, Paid media, Earned media (POEM model).
+- Influencer marketing, content marketing, SEO/SEM, programmatic ads.
 
-### 12.2 Customer Lifetime Value (CLV)
-CLV = Σ (Margin per period × Retention rate^t) / (1+discount rate)^t
+### Personal Selling
+- Steps: prospecting → pre-approach → approach → presentation → handling objections → closing → follow-up.
+- Sales-force structure: territorial, product, market, complex.
 
-A simple version: Average gross margin × Average customer lifespan − Acquisition cost.
-
-CLV-driven marketing prioritises acquiring high-CLV customers and extending lifespan through CRM and loyalty.
-
-### 12.3 CRM & loyalty
-- **Operational CRM**: sales, service, marketing automation.
-- **Analytical CRM**: data analysis, segmentation, propensity models.
-- **Collaborative CRM**: partner/channel coordination.
-
-Loyalty programmes: reward (points), recognition (status tiers), engagement (community, content).
-
-### 12.4 Sustainability & cause-related marketing
-- ESG-based positioning (Patagonia, Tata, Asian Paints).
-- Cause marketing — purchase tied to social cause (TOMS, P&G Shiksha).
-- Greenwashing risk if claims aren't substantiated.
-
-### 12.5 Ansoff growth matrix
-
-|  | Existing market | New market |
-|--|---|---|
-| **Existing product** | Market penetration | Market development |
-| **New product** | Product development | Diversification |
-
-Risk increases moving away from the top-left.
-
-### 12.6 Global marketing (overview)
-Standardisation vs adaptation; entry modes (export, licensing, JV, acquisition, FDI); global brand vs local relevance.
-
-### 12.7 AI-first marketing
-- **Customer intelligence**: 360° profiles built from behavioural + transactional + sentiment data.
-- **Recommendation engines**: collaborative filtering, content-based, hybrid.
-- **GenAI**: copy, images, video at scale, personalised at the individual level.
-- **Marketing Mix Modelling (MMM)** + **Multi-Touch Attribution (MTA)**: optimise spend across channels.
-- **Conversational AI**: 24×7 customer support, lead qualification.
-- Ethical concerns: privacy (DPDP Act), bias, deepfakes, transparency.
-
-### 60-second recap
-Strategy ties marketing to corporate goals. CLV beats short-term sales as the metric. Ansoff frames growth options. AI is now infrastructure for marketing — every marketer must understand the mechanics, the metrics, and the ethics.
+**Oreo India learning (R1 Case 17)**
+- Mondelez launched 2011 India.
+- IMC: TVCs (Twist, Lick, Dunk ritual), digital (#OreoDunkSweepstakes), in-store sampling, tie-up with Disney/Cricket.
+- Localisation: Daddy-cool angle; Indian father-child bond.
+- Result: 30 % share of cream-biscuit segment within 2 years.
 
 ---
 
-## References & Sources
+## Session 13 — Marketing Channels
+**Source:** T1 Ch. 15.
 
-### Primary textbook (T1)
-Kotler, Keller, Koshy & Jha — *Marketing Management: A South Asian Perspective*, Pearson.
+**Channel = set of interdependent organisations involved in making product/service available for use or consumption.**
 
-### Chapter-to-source mapping
+**Functions of channel members**
+- Information gathering, Promotion, Negotiation, Order taking, Financing, Risk taking, Physical possession, Payment, Title transfer.
 
-| Chapter | Primary source | Online supplement |
-|---------|----------------|-------------------|
-| 1 — Intro to Marketing | Kotler Ch. 1; AMA definition | https://www.ama.org/the-definition-of-marketing-what-is-marketing/ |
-| 2 — Marketing environment | Kotler Ch. 3; PESTEL | https://www.mindtools.com/pestle-analysis |
-| 3 — Consumer behaviour | Kotler Ch. 6; Solomon | https://www.thinkwithgoogle.com/marketing-strategies/search/zero-moment-truth/ |
-| 4 — Marketing research | Malhotra; Kotler Ch. 4 | https://www.qualtrics.com/experience-management/research/ |
-| 5 — STP | Kotler Ch. 9–10; Ries & Trout | https://hbr.org/2008/05/segmentation-targeting-and-positioning |
-| 6 — Product strategy | Kotler Ch. 12–14 | https://www.productplan.com/glossary/product-life-cycle/ |
-| 7 — Pricing | Kotler Ch. 16; Nagle | https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-power-of-pricing |
-| 8 — Place / Distribution | Kotler Ch. 17–18 | https://hbr.org/topic/distribution-channels |
-| 9 — Promotion / IMC | Kotler Ch. 19–20; Belch | https://www.thinkwithgoogle.com/ |
-| 10 — Branding | Keller — *Strategic Brand Management* | https://www.interbrand.com/best-brands/ |
-| 11 — Services & rural marketing | Zeithaml; Pradeep Kashyap | https://www.iimb.ac.in/research/centres-of-excellence/centre-public-policy/research-publications |
-| 12 — Digital & emerging | Chaffey — *Digital Marketing* | https://www.smartinsights.com/ |
+**Channel levels**
+- **Zero-level (direct)** — manufacturer → consumer (D2C, online).
+- **One-level** — manufacturer → retailer → consumer.
+- **Two-level** — manufacturer → wholesaler → retailer → consumer (FMCG).
+- **Three-level** — adds jobber/agent.
+- **B2B** — typically shorter.
 
-### Foundational HBR articles used
-- Levitt — *Marketing Myopia*: https://hbr.org/2004/07/marketing-myopia
-- Porter — *How Competitive Forces Shape Strategy*: https://hbr.org/1979/03/how-competitive-forces-shape-strategy
-- Christensen — *Marketing Malpractice*: https://hbr.org/2005/12/marketing-malpractice-the-cause-and-the-cure
-- Kotler — *From Marketing Mix to Marketing 4.0*: https://www.kotlermarketing.com/
-- Reichheld — *NPS / The One Number You Need to Grow*: https://hbr.org/2003/12/the-one-number-you-need-to-grow
+**Channel design decisions**
+1. Analyse customer needs (lot size, waiting time, spatial convenience, product variety, service backup).
+2. Establish objectives & constraints.
+3. Identify channel alternatives — Type of intermediaries, Number (intensive, selective, exclusive), T&Cs.
+4. Evaluate alternatives — Economic (cost-vs-effort), Control, Adaptive criteria.
 
-### Indian brand cases referenced
-- Tata Tea Jaago Re — Effie India archive: https://effieindia.com/
-- Patanjali rise — IIM Cases: https://web.iima.ac.in/iima-case-centre.html
-- Asian Paints — Harvard case (HBSP): https://hbsp.harvard.edu/product/516017-PDF-ENG
-- Nirma vs HUL — *Strategy & Marketing* Indian classic.
-- Amul — Storyboard18 / Afaqs case studies: https://www.afaqs.com/news/advertising/amul-girl
+**Channel management**
+- Selecting, training, motivating, evaluating intermediaries.
+- Modifying channel arrangements.
 
-### Frameworks and models
-- BCG Matrix: https://www.bcg.com/about/overview/our-history/growth-share-matrix
-- Ansoff Matrix: https://hbr.org/1957/09/strategies-for-diversification
-- Porter Generic Strategies: https://hbr.org/topic/competitive-strategy
-- 7Ps services (Booms & Bitner): https://www.mindtools.com/aqj01y3/the-7-ps-of-marketing
-- AIDA model: https://www.smartinsights.com/digital-marketing-strategy/customer-acquisition-strategy/aida-model/
-- Customer Journey Maps: https://www.nngroup.com/articles/customer-journey-mapping/
+**Channel power** — Coercive, Reward, Legitimate, Expert, Referent (French & Raven).
 
-### Free reference
-- Smart Insights — digital marketing models: https://www.smartinsights.com/
-- HubSpot Academy (free certifications): https://academy.hubspot.com/
-- Google Skillshop (Ads / Analytics): https://skillshop.withgoogle.com/
-- Meta Blueprint: https://www.facebookblueprint.com/
+**Channel conflict & resolution**
+- Vertical conflict (manufacturer vs retailer).
+- Horizontal conflict (same-level intermediaries).
+- Multi-channel conflict.
+- Resolution: superordinate goals, exchange of personnel, co-optation, joint membership, diplomacy, mediation, arbitration.
+
+**Vertical Marketing System (VMS)** — corporate, administered, contractual (franchising).
+**Horizontal Marketing System** — two/more unrelated firms join (Maruti showrooms in Tata steel plants).
+**Multi-channel marketing** — direct + retail + online.
+
+**Value Network** — broader than channel: includes suppliers, partners, distributors, customers.
+
+---
+
+## Session 14 — Intermediaries, E-commerce, M-commerce
+**Source:** T1 Ch. 15 & 16.
+
+**Major retail formats**
+- Specialty store, Department store, Supermarket, Convenience store, Discount store, Off-price retailer, Superstore (Big Bazaar, Reliance Smart), Catalog showroom.
+
+**Wholesalers** types — Merchant (full-service, limited service), Brokers/Agents, Manufacturers' branches/offices.
+
+**Trends in retail**
+- Rise of organised retail (India: Reliance, DMart, Trent).
+- Private labels.
+- Experiential retail.
+- Omnichannel — single-customer view across stores, online, mobile, social.
+
+**E-commerce**
+- B2C (Amazon, Flipkart), B2B (IndiaMART, Alibaba), C2C (OLX, eBay), C2B (freelance gigs), D2C (Boat, Mamaearth, Lenskart).
+- Pure-click vs Brick-and-click.
+- Transaction-cost economics: search, evaluation, transaction, monitoring → all reduced by online.
+- ONDC (Open Network for Digital Commerce) — Indian govt initiative for interoperable e-commerce.
+
+**M-commerce**
+- Mobile-first markets (India 800 M+ smartphone users).
+- UPI revolutionised payments (NPCI).
+- App-based aggregators: Swiggy, Zomato, Ola, Uber, Urban Company.
+- Mobile wallets: Paytm, PhonePe, Google Pay.
+
+**Logistics & Supply Chain**
+- Order processing, Warehousing, Inventory, Transportation.
+- 3PL (Mahindra Logistics, Blue Dart) and 4PL.
+- Reverse logistics increasingly important for e-commerce returns.
+
+**Direct & social-commerce**
+- Live shopping (Meesho, Flipkart live).
+- Instagram/Facebook shopping.
+- WhatsApp commerce.
+
+**Indian e-com regulations**
+- FDI policy: marketplace allowed (100 %), inventory not allowed for foreign-owned platforms.
+- Consumer Protection (E-commerce) Rules 2020.
+- Data Protection: DPDP Act 2023.
+
+---
+
+## Session 15 — Marketing regulation & Industrial research
+**Source:** T1 Ch. 4 & 5.
+
+### Marketing Regulation (India)
+**Consumer Protection**
+- **Consumer Protection Act 2019** — replaced 1986 Act. Establishes:
+  - Consumer Disputes Redressal Commissions (District/State/National).
+  - Central Consumer Protection Authority (CCPA).
+  - Product liability provisions.
+  - Definition of unfair trade practice including misleading ads, e-commerce.
+- **Consumer Protection (E-Commerce) Rules, 2020**.
+
+**Advertising regulation**
+- **ASCI Code** — self-regulatory; covers truthfulness, honesty, decency.
+- **Cable Television Networks Act 1995** — TV ad rules.
+- Drugs and Magic Remedies Act 1954.
+- Surrogate advertising of alcohol/tobacco — restricted.
+
+**Sectoral regulation**
+- **Food** — FSSAI (Food Safety and Standards Authority of India).
+- **Drugs** — DCGI, CDSCO (Central Drugs Standard Control Organisation).
+- **Insurance** — IRDAI.
+- **Telecom** — TRAI.
+- **Banking/Securities** — RBI, SEBI.
+- **Real estate** — RERA.
+
+**Competition law**
+- **Competition Act 2002** — anti-competitive agreements, abuse of dominance, regulation of combinations.
+- CCI (Competition Commission of India) enforcement.
+
+**Data privacy**
+- **DPDP Act 2023** (Digital Personal Data Protection Act).
+- Consent-based data processing; data fiduciary responsibilities; rights of data principal.
+
+### Industrial / B2B Marketing Research basics
+**B2B vs B2C research differences**
+- Smaller universe → census often possible.
+- Decision unit complexity (DMU/buying centre).
+- Technical depth required.
+- Long sales cycles.
+- Confidentiality issues.
+
+**B2B research process**
+1. Define problem (often jointly with client).
+2. Develop research design (exploratory, descriptive, causal).
+3. Sampling — judgmental often; small sample with depth.
+4. Data collection — In-depth interviews, expert interviews, ethnography, secondary data.
+5. Analysis & insights.
+6. Action.
+
+**Methods**
+- **Qualitative** — In-depth interviews (IDI), focus groups, observation, case study.
+- **Quantitative** — surveys, conjoint analysis, customer satisfaction surveys.
+- **Secondary** — industry reports (CMIE, IBEF, ICRA), trade publications, government data.
+
+**Conjoint analysis** — measure trade-off preferences across product attributes (price, features, brand). Estimate "utilities" → simulate market share for new combinations.
+
+**Customer Satisfaction & NPS (Net Promoter Score)**
+- NPS = % Promoters (9-10) − % Detractors (0-6). Industry benchmarks vary.
+
+---
+
+## Session 16 — Marketing Strategy & Plan
+**Source:** Class material + R1 Case 21 (pp. 21.1-21.4). **Mandatory case discussion: Amazon.com adopts its retail business in India.**
+
+**Strategic Planning Hierarchy** — Corporate plan → SBU plan → Product/Brand plan.
+
+**Corporate strategic planning** (Kotler)
+1. Define corporate mission.
+2. Establish strategic business units (SBUs).
+3. Assign resources to each SBU (BCG matrix, GE Multifactor matrix).
+4. Assess growth opportunities (Ansoff Matrix: Market Penetration, Market Development, Product Development, Diversification).
+
+**SBU strategic planning** (Porter generic strategies)
+- Cost leadership.
+- Differentiation.
+- Focus (cost or differentiation).
+
+**SWOT analysis** — Strengths, Weaknesses (internal); Opportunities, Threats (external — PESTEL).
+
+**Marketing Plan structure**
+1. **Executive Summary**.
+2. **Situation Analysis** — market, product, competition, distribution, macro environment, SWOT.
+3. **Marketing Objectives & Goals** — SMART, financial + marketing.
+4. **Marketing Strategy** — STP, value proposition, positioning.
+5. **Marketing Mix Strategies** — Product, Price, Place, Promotion (+ People/Process/Physical for services).
+6. **Action Programs** — who, what, when, cost.
+7. **Budget** — projected P&L.
+8. **Controls** — KPIs, dashboards, reviews.
+9. **Contingency planning**.
+
+**Annual marketing budget metrics**
+- Marketing-spend-to-revenue ratio.
+- Cost per acquisition (CAC), Customer lifetime value (CLV), CLV:CAC ratio.
+- Return on marketing investment (ROMI).
+- Brand health metrics (awareness, consideration, preference, loyalty).
+
+**Implementation**
+- 4 skills: allocating, monitoring, organising, interacting.
+
+**Marketing audit**
+- Periodic, comprehensive, systematic, independent examination of marketing environment, objectives, strategies, activities to determine problem areas and recommend actions.
+
+**Amazon India case learning (R1 Case 21)**
+- Initial entry 2013 (Junglee → Amazon.in marketplace).
+- Adapted to India: Cash on Delivery, vernacular interfaces, Easy Ship/FBA logistics, partnerships with kirana stores (I Have Space).
+- Heavy investment (₹50,000 cr+ committed) to compete with Flipkart.
+- Subsequent challenges: FDI rules limiting inventory model, COD profitability, consumer protection regs, competition from Reliance JioMart.
+- **Lesson**: global brands need substantial India-specific operating model adaptation; STP and 4Ps must be redesigned for Indian context.
+
+**Marketing Strategy & AI (modern, beyond syllabus)**
+- AI for segmentation (clustering on transactional data), personalisation (recommender systems), pricing (dynamic), targeting (lookalike audiences), content (generative AI for ad copy), customer service (chatbots).
+- Useful for ELC simulation insights.
+
+---
+
+## ELC reminder
+
+### Cesim Marketing Simulation
+- 1 practice round + 3 actual rounds (each = 1 financial year).
+- Save decisions: Decision Checklist → Copy as Team Decisions.
+
+### Individual Marketing Concepts Assignment
+- Pick **10 marketing concepts/models**.
+- For each: definition (no marks but must be correct) + real-life illustration with justification.
+- Encourage small/regional brand examples + diagrams/pictures.

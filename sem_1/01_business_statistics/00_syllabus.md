@@ -1,147 +1,142 @@
-# Business Statistics — Syllabus
+# Business Statistics — Official Syllabus
 
-> Likely BITS course code: **MBA ZC417 / QM ZG511** (varies by batch). Confirm from your handout on Taxila.
+> **Source:** Course handout `S2-25_MBACCZG501` v4.0, dated 9 July 2025.
+> Local copy: `sem_1/handouts/Business Statistics (S2-25_MBACCZG501)COURSE HANDOUT.docx`
+> This page is a faithful transcription of the official handout. **Do not edit unless the handout itself is updated.**
 
-## Course objective
+## Part A — Course identity
 
-Equip managers to collect, summarise, analyse and infer from data; lay the foundation for Applied Data Science, Applied ML & DL in later semesters.
+| Field | Detail |
+|-------|--------|
+| Course title | Business Statistics |
+| Course code | **MBACC ZG501** |
+| Credit units | 4 |
+| Credit model | 3-0-1 (Lecture-Tutorial-Practical/ELC) |
+| Instructor (lead) | Prof. Sandeep Kayastha |
+| Handout version | 4.0 |
+| Handout date | 9 July 2025 |
+| Semester | 2nd Semester 2025-2026 |
 
-## Modules / units
+## Course description (verbatim)
 
-### Module 1 — Introduction to Statistics & Data
-- Role of statistics in business decisions
-- Population vs sample; descriptive vs inferential statistics
-- Types of data: nominal, ordinal, interval, ratio
-- Sources of data; primary vs secondary
-- Data collection methods (surveys, observation, experiments)
+Introduction to Business Statistics, Descriptive and Inferential Statistics, Data vs Information, Describing the data through graphs, different data scales, measures of central tendency, measure of skewness, kurtosis, quartiles, percentiles, etc., Measures of dispersion, Concept of Probability, Conditional Probability, Bayes Theorem, Probability distributions — discrete (uniform discrete, binomial, poisson) and continuous (uniform continuous, normal, exponential), Finding mean and variance of probability distributions, Sampling estimation, Central Limit Theorem, Estimation of population mean and population proportion, Hypothesis testing related to equality of population means and population proportion against a reference, Comparing the means of two dependent and related populations, Comparing the variance of two populations, Comparing the proportion for more than 2 populations, comparing the population mean for more than 2 populations, checking for association between two categorical variables, **Non-parametric tests (Sign Test, Wilcoxon Rank-Sum Test or Mann Whitney U Test, Kruskal-Wallis Test, Spearman Rank Correlation)**, Correlation Coefficient, Covariance, regression, **Validating the assumptions of regression (heteroscedasticity, autocorrelation, normality of residuals)**, **Tests of normality (Anderson-Darling, Shapiro-Wilk, Kolmogorov-Smirnov)**, **Linear Programming and its applications in business**, Performing descriptive statistics, inferential statistics and simple linear regression using **Python**.
 
-### Module 2 — Descriptive Statistics
-- Frequency distributions, histograms, ogives
-- Measures of central tendency: mean, median, mode (and weighted mean, geometric, harmonic)
-- Measures of dispersion: range, variance, standard deviation, coefficient of variation
-- Measures of shape: skewness, kurtosis
-- Five-number summary, box-plots, outlier detection
+## Course objectives
 
-### Module 3 — Probability
-- Random experiment, sample space, events
-- Approaches: classical, relative-frequency, subjective
-- Axioms of probability; addition and multiplication rules
-- Conditional probability, independence
-- Bayes' theorem
+| No | Objective |
+|----|-----------|
+| CO1 | Introduce concepts and techniques of Business Statistics |
+| CO2 | Introduce concepts and techniques of select Management Science |
+| CO3 | Introduce **MS Excel** software to solve Business Statistics & Management Science problems |
 
-### Module 4 — Probability Distributions
-- Discrete distributions: Bernoulli, Binomial, Poisson, Hypergeometric
-- Continuous distributions: Uniform, Normal, Exponential
-- Standard normal Z-scores; finding probabilities and quantiles
-- Approximations (binomial → normal, binomial → Poisson)
+## Learning outcomes
 
-### Module 5 — Sampling and Sampling Distributions
-- Sampling techniques (random, stratified, cluster, systematic)
-- Central Limit Theorem
-- Sampling distribution of mean, proportion
-- Standard error
+| LO | Statement |
+|----|-----------|
+| LO1 | Formulate and solve Business Statistics & Management Science problems |
+| LO2 | Solve problems using Microsoft Excel |
 
-### Module 6 — Estimation
-- Point estimation; properties of estimators (unbiased, consistent, efficient)
-- Interval estimation (confidence intervals) for mean, proportion, variance
-- Determining sample size
+## Textbooks
 
-### Module 7 — Hypothesis Testing
-- Null and alternative hypotheses; Type I & II errors; power
-- One-sample tests for mean (Z and t) and proportion
-- Two-sample tests; paired samples
-- Chi-square tests (goodness-of-fit, independence)
-- p-value approach vs critical-value approach
+| Code | Reference | Use |
+|:-----|-----------|-----|
+| **T1** | David M Levine, Kathryn A Szabat, David F Stephan & PK Viswanathan. *Business Statistics*. **7th Edition**. Pearson Education. 2019. | Business Statistics |
+| **T2** | David R Anderson, Dennis J Sweeney, Thomas A Williams, Jeffrey D Camm & Kipp Martin. *Quantitative Methods for Business*. **12th Edition**. Cengage Learning. 2013. | Management Science |
 
-### Module 8 — Analysis of Variance (ANOVA)
-- One-way ANOVA
-- F-distribution
-- Post-hoc tests (overview)
+## Reference books
 
-### Module 9 — Correlation and Regression
-- Scatter diagrams; covariance, Pearson's r, Spearman rank
-- Simple linear regression: least-squares estimation
-- Coefficient of determination (R²)
-- Inference on regression coefficients
-- Multiple regression: model, interpretation, multicollinearity (overview)
+| Code | Reference |
+|:-----|-----------|
+| R1 | Ken Black. *Business Statistics*. 7th edition. Wiley. 2012. |
+| R2 | Aczel, Sounderpandian, Saravanan & Joshi. *Complete Business Statistics*. 7th edition. McGraw Hill. 2017. |
+| R3 | Hillier & Hillier. *Introduction to Management Science*. 5th edition. McGraw Hill. 2019. |
+| R4 | Render, Stair & Hanna. *Quantitative Analysis for Management*. 11th edition. Pearson Education. 2011. |
 
-### Module 10 — Time Series & Forecasting (often included)
-- Components: trend, seasonality, cyclicity, irregular
-- Moving averages and exponential smoothing
-- Linear trend forecasting
-- Forecast accuracy: MAD, MSE, MAPE
+## Part B — Learning Plan (16 contact sessions)
 
-### Module 11 — Index Numbers (sometimes included)
-- Simple and weighted indices (Laspeyres, Paasche, Fisher)
-- Tests of adequacy
-- Consumer Price Index applications
+| CS # | Topic | Sub-topics | Reference |
+|:----:|-------|------------|-----------|
+| 1 | Defining and collecting data | Defining variables; Collecting data; Types of sampling methods; Types of survey methods | T1 Ch. 1 |
+| 2 | Organizing and analyzing data | Organising categorical/numerical variables; Visualising categorical, numerical & two-numerical variables; Sets of variables | T1 Ch. 2 |
+| 3 | Numerical Descriptive Measures | Central tendency; Variation & shape; Exploring numerical data; Measures for a population; Covariance & coefficient of correlation | T1 Ch. 3 |
+| 4 | Basic Probability | Probability concepts; Conditional probability; Bayes' theorem | T1 Ch. 4 |
+| 5 | Discrete Probability Distributions | Mean & SD of discrete distributions; Binomial; Poisson | T1 Ch. 5 |
+| 6 | Normal Distribution | Continuous distributions; Normal distribution | T1 Ch. 6 |
+| 7 | Sampling Distributions | Sampling distribution of mean; Sampling distribution of proportion | T1 Ch. 7 |
+| 8 | Confidence Interval Estimation | CI for mean (σ unknown); CI for proportion; Determining sample size | T1 Ch. 8 |
+| 9 | Fundamentals of Hypothesis Testing | Methodology; t-test for mean (σ unknown); One-tail tests; Z-test for proportion | T1 Ch. 9 |
+| 10 | Two-sample tests and ANOVA | Two-sample means (independent & related); Two-sample proportions; F-test for two variances; One-way ANOVA | T1 Ch. 10 |
+| 11 | Chi-square test | Two-proportion chi-square; >2 proportion chi-square; Test of independence; Goodness of fit | T1 Ch. 11 |
+| 12 | Other Non-parametric tests | Sign Test; Wilcoxon Rank-Sum / Mann-Whitney U; Kruskal-Wallis; Spearman Rank Correlation; Covariance/regression intro; checking heteroscedasticity | Class Notes |
+| 13 | Validating the regression assumption & normality testing | Types of regression models; Simple linear regression equation; R² | T1 Ch. 13 |
+| 14 | Linear Regression — diagnostics | Heteroscedasticity from residual analysis; Normality of errors via Shapiro-Wilk, Anderson-Darling, Kolmogorov-Smirnov | Class Notes |
+| 15 | Introduction to Linear Programming | Simple maximisation problem; Graphical solution; Extreme points & optimal solution; Computer solution | Class Notes (T2 Ch. on LP) |
+| 16 | Revision | Revision | — |
 
-### Module 12 — Decision-making & Statistical Quality Control (sometimes elective)
-- Decision under risk and uncertainty
-- Control charts (X-bar, R, p) — overview
+## Experiential Learning Component
 
----
+1. **MS Excel** is used (in extra sessions) for the following chapters:
+   - Organising & Visualising Variables
+   - Numerical Descriptive Measures
+   - Basic Probability
+   - Discrete Probability Distributions
+   - The Normal Distribution
+   - Sampling Distributions
+   - Confidence Interval Estimation
+   - Fundamentals of Hypothesis Testing — One-Sample Tests
+   - Two-Sample Tests & ANOVA
+   - Chi-Square Tests
+   - Simple Linear Regression
+   - Introduction to Linear Programming
+   - LP Applications in Marketing, Finance, Operations
+   - Distribution & Network Models
+2. **Online free LP solver** introduced in extra sessions.
+3. **HSTalks videos and IIMA case studies** (see below).
 
-## Recommended textbooks
+### HSTalks videos (mandatory reference)
 
-| Type | Title | Author | Notes |
-|------|-------|--------|-------|
-| **T1** | Statistics for Business and Economics | Anderson, Sweeney, Williams | Standard BITS WILP recommendation |
-| T2 | Business Statistics: A First Course | Levine, Stephan, Krehbiel, Berenson | Excellent worked examples |
-| R1 | Complete Business Statistics | Aczel & Sounderpandian | Indian context, lots of problems |
-| R2 | Statistical Methods | S.P. Gupta | Classical Indian textbook for revision |
+| # | Title | Link |
+|---|-------|------|
+| HST1 | Fundamentals of Data Analysis | https://hstalks.com/t/3522/fundamentals-of-data-analysis/?business |
+| HST2 | Predictive Analytics | https://hstalks.com/t/4282/predictive-analytics/?business |
+| HST3 | The analytical framework and the four stages of data analysis | https://hstalks.com/t/5177/the-analytical-framework-and-the-four-stages-of-da/?business |
+| HST4 | Failure and feedback in data analytics: lessons learnt, improvements made | https://hstalks.com/t/5077/failure-and-feedback-in-data-analytics-lessons-lea/?business |
 
----
+> Access via `hstalks.com` → Login → Login via Organization → choose *Birla Institute of Technology & Science Pilani – WILP* → use elearn credentials.
 
-## Evaluation pattern (typical)
+### IIMA Case Centre case studies (mandatory reference)
 
-| Component | Weight | Format |
-|-----------|------:|--------|
-| EC-1 (Quizzes + Assignment) | 25–30% | Online MCQ + 1 case-based assignment using Excel/Python |
-| EC-2 Mid-Sem (Modules 1–6) | 30% | 2-hour, closed-book, calculator allowed |
-| EC-3 Comprehensive (all modules) | 40–45% | 2-hour, often open-book, calculator allowed |
+| Ref. No. | Title | Authors |
+|----------|-------|---------|
+| QM0284EX | [Sankhosh Constructions Inc](https://cases.iima.ac.in/index.php/sankhosh-constructions-inc.html) | Sankaranarayanan, Sriram |
+| [PROD0331EX](https://cases.iima.ac.in/download.php?file=media/downloads/4972/PROD0331_Inspection_Copy.pdf) | Anugnyaa Agricultural Association | Sankaranarayanan, Sriram |
+| CMHS0028 | [Understanding Lung Cancer – Tobacco Smoking Linkage](https://cases.iima.ac.in/index.php/understanding-lung-cancer-tobacco-smoking-linkage.html) | Roy, Priyanka; Laha, Arnab K |
+| QM0226 | Iron Ore Distribution for Steel Authority of India Limited | Kalro, A H; Shukla, P R; Tripathy, Arabinda; Raghuram, G |
 
-Z-tables and t-tables are usually provided in the question paper. Verify on your handout.
+## Evaluation Scheme
 
----
+| EC | Component | Type | Duration | Weight | Date / Session |
+|----|-----------|------|----------|-------:|---------------|
+| EC-1 | Quiz-I | Online | — | 5 % | TBA |
+| EC-1 | Quiz-II | Online | — | 5 % | TBA |
+| EC-1 | Quiz-III | Online | — | 5 % | TBA |
+| EC-1 | Assignment 1 (Situated Learning) | Online | — | 3 % | TBD |
+| EC-1 | Assignment 2 | Online | — | 12 % | TBD |
+| **EC-2** | **Mid-Semester Test** | **Closed Book** | **2 hours** | **30 %** | **20-06-2026 (FN)** |
+| **EC-3** | **Comprehensive Exam** | **Open Book** | **2 hours** | **40 %** | **05-09-2026 (FN)** |
 
-## Tools you should learn
+- **Mid-Sem syllabus**: Contact Sessions **1–8**.
+- **Comprehensive syllabus**: All 16 sessions.
+- Open Book = text/reference books (publisher copy only). No printed notes, photocopies or other learning material.
+- Total EC-1 = 30 %.
 
-- Casio FX-991EX (statistics mode, regression mode)
-- MS Excel — `AVERAGE`, `STDEV.S`, `NORM.S.DIST`, `T.TEST`, `CORREL`, `LINEST`, Data Analysis Toolpak
-- Python — `numpy`, `scipy.stats`, `statsmodels`, `pandas` for the assignment
+## Important links
 
----
+- eLearn portal: https://elearn.bits-pilani.ac.in
+- EC-3 open-book guidelines: https://docs.google.com/document/d/1DJvlhVzOaIw4njc9g30MlBuu0DqTzeIL/
 
-## References & Sources
+## Tools to install / install-and-learn
 
-### Official BITS Pilani WILP
-- Programme page (curriculum): https://bits-pilani-wilp.ac.in/mba/mba-in-ai-for-business.php
-- WILP Education Policy (evaluation, grading, CGPA): https://bits-pilani-wilp.ac.in/resource/education-policy.php
-- BITS Library textbooks portal (login required): https://library.bits-pilani.ac.in/services/textbooks/
-- Academic Regulations 2023 (sec. 4.04 / 4.05): https://www.bits-pilani.ac.in/wp-content/uploads/Academic-Regulations-2023.pdf
-
-### Course-code traces (community / non-official)
-- MBA ZC417 handout (Scribd, unverified): https://www.scribd.com/document/801129996/Mba-Zc417-Course-Handout
-- MBA ZC417 sample (Scribd): https://www.scribd.com/document/515064632/MBA-ZC417
-
-### Recommended textbooks
-- Anderson, Sweeney, Williams — *Statistics for Business and Economics*, Cengage. https://www.cengage.com/c/statistics-for-business-economics-15e-anderson/
-- Levine, Stephan, Krehbiel, Berenson — *Business Statistics: A First Course*, Pearson. https://www.pearson.com/store/p/business-statistics-a-first-course/P200000005840
-- Aczel & Sounderpandian — *Complete Business Statistics*, McGraw Hill.
-- S.P. Gupta — *Statistical Methods*, Sultan Chand & Sons.
-
-### Open educational resources
-- OpenStax — *Introductory Business Statistics*: https://openstax.org/details/books/introductory-business-statistics-2e
-- Khan Academy — Statistics & Probability: https://www.khanacademy.org/math/statistics-probability
-- OpenIntro Statistics (free PDF): https://www.openintro.org/book/os/
-- StatTrek Tutorials: https://stattrek.com/
-
-### Statistical tables
-- Z-table: https://www.z-table.com/
-- t-distribution table: https://www.tdistributiontable.com/
-- Chi-square / F-distribution tables: https://www.statisticshowto.com/tables/
-
-### BITS WILP community / blogs
-- WILP knowledge base (GitHub): https://github.com/Akhilsudh/BITS-WILP-Knowledge-Base
-- Crack BITS WILP — exam tips & illustrative weightings: https://crackbitswilp.in/
+- **MS Excel** with Data Analysis Toolpak (essential for all labs)
+- **Python** (`numpy`, `pandas`, `scipy.stats`, `statsmodels`) — for descriptive stats, inferential stats, simple linear regression
+- Online LP solvers (e.g., PHPSimplex, Excel Solver add-in)

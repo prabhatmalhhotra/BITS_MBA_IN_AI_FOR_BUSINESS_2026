@@ -1,49 +1,63 @@
-# Semester 1 — Master Sources & References
+# Semester 1 — Master Sources & References (handout-aligned)
 
-A consolidated bibliography of every source used to build this Semester 1 vault. Each subject folder also has a per-file **References & Sources** section appended to the bottom.
-
-> **Important caveat**: BITS Pilani WILP does *not* publish official MBA course handouts, syllabi, or past papers publicly. Access requires the **Taxila LMS** login after enrolment. Everything below is built from a hybrid of:
-> 1. Official high-level pages (programme outline, education policy)
-> 2. Standard MBA textbooks (Kotler, Robbins, Hilton, Anderson)
-> 3. Community-shared / leaked materials (Scribd, GitHub, blogs) — **flagged as unverified**
->
-> Once you log in to Taxila, **replace the unverified items with your batch's official handouts.**
+> **All Sem 1 content is now strictly aligned to the official Taxila course handouts** (S2-25 batch, dated July 2025) located in `sem_1/handouts/`. Each subject file has its own per-file **References & Sources** section appended at the bottom.
 
 ---
 
-## 1. Official BITS Pilani / WILP sources
+## 1. Official handouts (PRIMARY — source of truth)
+
+| Subject | Course code | Handout (.docx) | Markdown copy |
+|---------|-------------|-----------------|---------------|
+| Business Statistics | **MBACC ZG501** | `handouts/Business Statistics (S2-25_MBACCZG501)COURSE HANDOUT.docx` | same path, `.md` |
+| Managerial Accounting | **MBACC ZG502** | `handouts/Managerial Accounting (S2-25_MBACCZG502) COURSE HANDOUT.docx` | same path, `.md` |
+| Marketing Management | **MBACC ZG503** | `handouts/Marketing Management (S2-25_MBACCZG503) COURSE HANDOUT.docx` | same path, `.md` |
+| Managing People & Organisations | **MBACC ZG511** | `handouts/Managing People and Organization (S2-25_MBACCZG511) COURSE HANDOUT.docx` | same path, `.md` |
+
+> If your batch's handout (S2-26 onwards) differs from the S2-25 versions above, **the handout is always the source of truth** — update content from the new handout.
+
+## 2. Official BITS Pilani / WILP links
 
 | What | URL |
 |------|-----|
 | MBA in AI & Business programme page | https://bits-pilani-wilp.ac.in/mba/mba-in-ai-for-business.php |
+| Taxila eLearn portal | https://elearn.bits-pilani.ac.in |
 | WILP Education Policy (EC-1/2/3, grading) | https://bits-pilani-wilp.ac.in/resource/education-policy.php |
 | Academic Regulations 2023 (CGPA, grade scale) | https://www.bits-pilani.ac.in/wp-content/uploads/Academic-Regulations-2023.pdf |
 | BITS Library textbooks portal (login) | https://library.bits-pilani.ac.in/services/textbooks/ |
-| WILP exam centres | https://bits-pilani-wilp.ac.in/admissions/exam-cities.php |
-| WILP — Frequently Asked Questions | https://bits-pilani-wilp.ac.in/faq.php |
+| WILP exam cities | https://bits-pilani-wilp.ac.in/admissions/exam-cities.php |
+| EC-3 open-book guidelines | https://docs.google.com/document/d/1DJvlhVzOaIw4njc9g30MlBuu0DqTzeIL/ |
 
----
+## 3. Community / WILP knowledge bases (unverified — for PYQ patterns only)
 
-## 2. Community / WILP knowledge bases (unverified — use with care)
+> These are useful only for PYQ-style practice; **never** treat as authoritative for syllabus/textbook references.
 
 | What | URL |
 |------|-----|
 | WILP Knowledge Base — GitHub | https://github.com/Akhilsudh/BITS-WILP-Knowledge-Base |
-| WILP KB — All-semester Question Papers index | https://akhilsudh.github.io/BITS-WILP-Knowledge-Base/Knowledge%20Base/All%20Semesters/QuestionPapers.html |
-| Crack BITS WILP blog (exam patterns, MCQs) | https://crackbitswilp.in/ |
-| BITS WILP MBA student blog (2017) | http://bitswilpmba.blogspot.com/2017/05/?m=1 |
+| WILP KB — Question Papers index | https://akhilsudh.github.io/BITS-WILP-Knowledge-Base/Knowledge%20Base/All%20Semesters/QuestionPapers.html |
+| Crack BITS WILP blog | https://crackbitswilp.in/ |
+| BITS WILP MBA student blog (2017) | http://bitswilpmba.blogspot.com/ |
 
 ---
 
-## 3. Subject 1 — Business Statistics (course code commonly seen: MBA ZC417)
+## 4. Subject 1 — Business Statistics (MBACC ZG501)
 
-### Textbooks
-- Anderson, Sweeney & Williams — *Statistics for Business and Economics*, Cengage. https://www.cengage.com/c/statistics-for-business-economics-15e-anderson/
-- Levine, Stephan, Krehbiel, Berenson — *Business Statistics: A First Course*, Pearson. https://www.pearson.com/store/p/business-statistics-a-first-course/P200000005840
-- Aczel & Sounderpandian — *Complete Business Statistics*, McGraw Hill.
-- S.P. Gupta — *Statistical Methods*, Sultan Chand.
+### Official textbooks (per handout)
+- **T1**: Levine, Szabat, Stephan & Viswanathan, *Business Statistics*, **Pearson 7e (2019)** — https://www.pearson.com/
+- **T2**: Anderson, Sweeney, Williams, Camm & Martin, *Quantitative Methods for Business*, **Cengage 12e (2013)** — https://www.cengage.com/c/quantitative-methods-for-business-12e-anderson/9781285866314/
 
-### Open educational
+### Reference books (per handout — R1–R4)
+- **R1**: Ken Black, *Business Statistics*, Wiley, **7e (2012)**.
+- **R2**: Aczel, Sounderpandian, Saravanan & Joshi, *Complete Business Statistics*, McGraw Hill, **7e (2017)**.
+- **R3**: Hillier & Hillier, *Introduction to Management Science*, McGraw Hill, **5e (2019)**.
+- **R4**: Render, Stair & Hanna, *Quantitative Analysis for Management*, Pearson, **11e (2011)**.
+
+### Mandatory online resources (HSTalks + IIMA cases per handout)
+- HSTalks Business: https://hstalks.com/business/
+- IIMA Case Centre: https://www.thecasecentre.org/
+- HBR cases: https://hbr.org/
+
+### Open / supplementary practice
 - OpenStax *Introductory Business Statistics 2e*: https://openstax.org/details/books/introductory-business-statistics-2e
 - OpenIntro Statistics: https://www.openintro.org/book/os/
 - Khan Academy Statistics & Probability: https://www.khanacademy.org/math/statistics-probability
@@ -51,181 +65,143 @@ A consolidated bibliography of every source used to build this Semester 1 vault.
 - NIST/SEMATECH e-Handbook: https://www.itl.nist.gov/div898/handbook/
 - Penn State STAT 500: https://online.stat.psu.edu/stat500/
 - MIT OCW 18.05 Probability & Statistics: https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2014/
-- Statistics by Jim: https://statisticsbyjim.com/
+- scipy.stats reference: https://docs.scipy.org/doc/scipy/reference/stats.html
+- statsmodels diagnostics: https://www.statsmodels.org/stable/diagnostic.html
+- Excel Solver (LP): https://www.solver.com/excel-solver-online-help
 
-### Tables & calculator
-- Z-table: https://www.z-table.com/
-- t-table: https://www.tdistributiontable.com/
-- Casio FX-991EX manual: https://support.casio.com/global/en/calc/manual/fx-991EX_570EX_en/
-
-### India data sources (for case practice)
-- RBI DBIE: https://dbie.rbi.org.in/
-- MoSPI: https://www.mospi.gov.in/
-- NSE/BSE corporate data; Screener.in: https://www.screener.in/
-
-### Community
-- MBA-ZC417 handout (Scribd): https://www.scribd.com/document/801129996/Mba-Zc417-Course-Handout
-- MBA-ZC417 alt: https://www.scribd.com/document/515064632/MBA-ZC417
+> NEW topics in S2-25 vs older syllabus (MBA ZC417): Linear Programming, non-parametric tests, regression diagnostics. Dropped: time-series decomposition, index numbers, SQC.
 
 ---
 
-## 4. Subject 2 — Managerial Accounting (course code commonly seen: MBA ZC415)
+## 5. Subject 2 — Managerial Accounting (MBACC ZG502)
 
-### Textbooks
-- Hilton, Maher & Selto — *Cost Management*, McGraw Hill. https://www.mheducation.com/highered/product/cost-management-strategies-business-decisions-hilton-maher/M9780073526942.html
-- Garrison, Noreen, Brewer — *Managerial Accounting*, McGraw Hill. https://www.mheducation.com/highered/product/managerial-accounting-garrison-noreen/M9781260247787.html
-- Horngren, Datar, Rajan — *Cost Accounting: A Managerial Emphasis*, Pearson.
-- M.Y. Khan & P.K. Jain — *Management Accounting*, McGraw Hill.
-- R. Narayanaswamy — *Financial Accounting: A Managerial Perspective*, PHI.
+### Official textbook (per handout)
+- **T1**: SN Maheswari & SK Maheswari, *Financial and Management Accounting*, **Sultan Chand & Sons 6e (2022)** — https://www.sultanchandandsons.com/
 
-### Indian regulators / standards
-- ICAI Study Materials (CA Inter — Cost & Management Accounting): https://resource.cdn.icai.org/74628bos60628.pdf
-- ICAI all study materials: https://www.icai.org/post.html?post_id=1947
-- ICMAI Cost Accounting Standards (CAS 1–24): https://icmai.in/icmai/CAS.php
-- Companies Act 2013 (Schedule III): https://www.mca.gov.in/Ministry/pdf/CompaniesAct2013.pdf
-- Ind AS notifications (MCA): https://www.mca.gov.in/MinistryV2/indasandifrs.html
-- Ind AS pocket guide (Deloitte): https://www2.deloitte.com/in/en/pages/audit/articles/ind-as-pocket-guide.html
+### Reference books (per handout)
+- P.C. Tulsian, *Financial Accounting*, Tata McGraw Hill 2022.
+- R. Narayanaswamy, *Financial Accounting — A Managerial Perspective*, PHI 5e (2014).
+- Ashok Banerjee, *Financial Accounting: A Managerial Emphasis*, Excel Books 3e (2009).
 
-### Open educational
-- AccountingCoach: https://www.accountingcoach.com/
-- AccountingFormanagement.org: https://www.accountingformanagement.org/
-- Investopedia accounting: https://www.investopedia.com/accounting-4427790
-- CFI accounting resources: https://corporatefinanceinstitute.com/resources/accounting/
-- Edspira (YouTube): https://www.youtube.com/c/Edspira
-- MIT OCW 15.514: https://ocw.mit.edu/courses/15-514-financial-and-managerial-accounting-summer-2003/
-- Coursera UVA Managerial Accounting: https://www.coursera.org/learn/uva-darden-managerial-accounting
+### Standards & frameworks
+- IFRS Foundation — Standards: https://www.ifrs.org/issued-standards/list-of-standards/
+- IFRS S1 & S2 Sustainability: https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/
+- MCA Ind-AS list: https://www.mca.gov.in/MinistryV2/Stand.html
+- Deloitte Ind AS Pocket Guide: https://www2.deloitte.com/in/en/pages/audit/articles/ind-as-pocket-guide.html
+- KPMG IFRS in focus: https://home.kpmg/in/en/home/insights/2020/05/ifrs-in-focus.html
 
-### Foundational HBR
-- Cooper & Kaplan — *Measure Costs Right*: https://hbr.org/1988/09/measure-costs-right-make-the-right-decisions
-- Kaplan & Norton — *Balanced Scorecard*: https://hbr.org/1992/01/the-balanced-scorecard-measures-that-drive-performance-2
+### Practice problem banks
+- ICAI CA Inter Accounting (Group I, Paper 1): https://www.icai.org/post/board-of-studies-knowledge-portal
+- ICAI CA Inter Cost & Management Accounting: https://www.icai.org/
+- ICMAI Intermediate Cost Accounting (Paper 8): https://icmai.in/upload/Students/Syllabus2022/Inter/Paper-08-NEW.pdf
+- IGNOU MMPC-004 Accounting for Managers: http://egyankosh.ac.in/
 
-### Community
-- MBA-ZC415 leaked paper: https://www.scribd.com/document/693053288/MBA-ZC415-EC-2R-FIRST-SEM-2022-2023
+### Quick-reference
+- Investopedia accounting glossary: https://www.investopedia.com/accounting-4427790
+- AccountingCoach Q&A: https://www.accountingcoach.com/managerial-accounting/quiz
+- CFI accounting hub: https://corporatefinanceinstitute.com/resources/accounting/
+
+> NEW emphasis in S2-25: heavy IFRS/IAS coverage (S1, S2, 5, 7, 8, 13, 15, 2, 16); US GAAP vs IFRS on R&D; quality of FR / red flags; 5-year FS analysis ELC project. Dropped: deep variance analysis chapters from prior plan.
 
 ---
 
-## 5. Subject 3 — Managing People & Organisations (course code commonly seen: MBA ZG511)
+## 6. Subject 3 — Managing People and Organizations (MBACC ZG511)
 
-### Textbooks
-- Robbins & Judge — *Organizational Behavior*, Pearson. https://www.pearson.com/store/p/organizational-behavior/P200000005816
-- Luthans — *Organizational Behavior*, McGraw Hill.
-- Dessler & Varkkey — *Human Resource Management*, Pearson (Indian ed.).
-- Greenberg & Baron — *Behavior in Organizations*, PHI/Pearson.
-- Aswathappa — *Organisational Behaviour*, Himalaya.
+### Official textbooks (per handout)
+- **T1**: Robbins, Judge & Vohra, *Organizational Behavior*, **Pearson Updated 18e (2022)** — https://www.pearson.com/
+- **T2**: K. Aswathappa & Sadhna Dash, *Human Resource Management — Text and Cases*, **Tata McGraw Hill 10e (2023)** — https://www.mheducation.co.in/
 
-### Foundational HBR / theories
-- Maslow (1943) original paper: https://psychclassics.yorku.ca/Maslow/motivation.htm
-- Herzberg — *How Do You Motivate Employees?*: https://hbr.org/2003/01/one-more-time-how-do-you-motivate-employees
-- Goleman — *What Makes a Leader?*: https://hbr.org/2004/01/what-makes-a-leader
-- Kotter — *Leading Change*: https://hbr.org/1995/05/leading-change-why-transformation-efforts-fail-2
-- Heifetz — *Adaptive Leadership*: https://hbr.org/2009/07/leadership-in-a-permanent-crisis
+### Reference books (per handout)
+- Richard L. Daft, *Understanding the Theory and Design of Organizations*, Cengage India 10e (2013).
+- Dessler & Varkkey, *Human Resource Management*, Pearson 16e (2020).
+- Daniel Goleman, *Emotional Intelligence: Why It Can Matter More Than IQ*, Bantam Books (2013).
 
-### Models reference
-- Hofstede Insights: https://www.hofstede-insights.com/country-comparison-tool
-- Schein on culture: https://www.scheinocli.org/
-- Kotter Inc — 8-step: https://www.kotterinc.com/8-steps-process-for-leading-change/
-- Prosci ADKAR: https://www.prosci.com/methodology/adkar
-- Hersey-Blanchard (Situational): https://situational.com/
-- MindTools (model library): https://www.mindtools.com/
+### Mandatory HSTalks (per handout)
+- https://hstalks.com/business/
+- Specific titles tabulated in `00_syllabus.md` (HST1-HST10).
 
-### Indian regulation
-- POSH Act 2013: https://wcd.nic.in/sites/default/files/Sexual-Harassment-at-Workplace-Act.pdf
-- Industrial Disputes Act 1947: https://labour.gov.in/sites/default/files/the_industrial_disputes_act_1947.pdf
-- Code on Wages 2019: https://labour.gov.in/sites/default/files/THE_CODE_ON_WAGES_2019_No._29_of_2019.pdf
-- Industrial Relations Code 2020: https://labour.gov.in/sites/default/files/IR_Gazette_of_India.pdf
+### Practice & supplementary
+- IGNOU MMPC-001 Management Functions and Behaviour: http://egyankosh.ac.in/handle/123456789/30437
+- IGNOU MMPC-005 / MS-2 HRM: http://egyankosh.ac.in/handle/123456789/9
+- SHRM India: https://www.shrm.org/in
+- Ulrich HR model: https://www.daveulrich.com/
+- Goleman EI Hub: https://www.danielgoleman.info/topics/emotional-intelligence/
+- Kotter 8-step change: https://www.kotterinc.com/methodology/8-steps/
+- HBR — OB & Leadership: https://hbr.org/topic/organizational-behavior
 
-### Open educational
-- MIT OCW 15.668 People & Organizations: https://ocw.mit.edu/courses/15-668-people-and-organizations-fall-2010/
-- Coursera Macquarie Organizational Behaviour: https://www.coursera.org/specializations/organisational-behaviour
-- HBR OB topic: https://hbr.org/topic/organizational-behavior
-- OpenStax Organizational Behavior: https://openstax.org/books/organizational-behavior/
-
-### Community
-- MBA-ZG511 handout (Scribd): https://www.scribd.com/document/517119145/MBA-ZG511-COURSE-HANDOUT
-- MPO answer sheet sample (Scribd): https://www.scribd.com/document/876301607/Mba-Mpo-Answersheet2-Sep16-Ver1
+> NEW emphasis in S2-25 vs older OB-only syllabus: HRM-heavy modules (Recruitment, Compensation, Performance Appraisal — T2 chapters 6, 7, 9, 12) added; Stress chapter dropped. Mid-Sem weight = **35 %** (highest in Sem 1); EC-3 = 2.5 hours.
 
 ---
 
-## 6. Subject 4 — Marketing Management (course code commonly seen: MBA ZG611)
+## 7. Subject 4 — Marketing Management (MBACC ZG503)
 
-### Textbooks
-- Kotler, Keller, Koshy & Jha — *Marketing Management: A South Asian Perspective*, Pearson. https://www.pearson.com/store/p/marketing-management-a-south-asian-perspective/P200000005846
-- Kotler & Armstrong — *Principles of Marketing*, Pearson.
-- Etzel, Walker & Stanton — *Marketing*, McGraw Hill.
-- Ramaswamy & Namakumari — *Marketing Management*, Sage Publications India.
-- Saxena — *Marketing Management*, McGraw Hill (Indian context).
+### Official textbook (per handout)
+- **T1**: Kotler, Keller, Chernev, Sheth & Shaineesh, *Marketing Management*, **Pearson 16/e (2022)** — https://www.pearson.com/
 
-### Foundational HBR / classics
-- Levitt — *Marketing Myopia*: https://hbr.org/2004/07/marketing-myopia
-- Porter — *How Competitive Forces Shape Strategy*: https://hbr.org/1979/03/how-competitive-forces-shape-strategy
-- Ansoff — *Strategies for Diversification*: https://hbr.org/1957/09/strategies-for-diversification
-- Christensen — *Marketing Malpractice*: https://hbr.org/2005/12/marketing-malpractice-the-cause-and-the-cure
-- Reichheld — *NPS / The One Number You Need to Grow*: https://hbr.org/2003/12/the-one-number-you-need-to-grow
+### Reference books (per handout)
+- *Marketing Management — Indian Cases*, Pearson 2018.
+- Ramaswamy & Namakumari, *Marketing Management: Indian Context, Global Perspective*, SAGE 6e (2018).
+- Economic Times — Brand Equity section: https://economictimes.indiatimes.com/topic/brand-equity
+- Social Samosa: https://www.socialsamosa.com/
+- Campaign India: https://www.campaignindia.in/
+- Journal of Consumer Behaviour: https://onlinelibrary.wiley.com/journal/14791838
 
-### Models / frameworks
-- AMA Definition: https://www.ama.org/the-definition-of-marketing-what-is-marketing/
-- BCG Matrix: https://www.bcg.com/about/overview/our-history/growth-share-matrix
-- Smart Insights model library: https://www.smartinsights.com/
-- MindTools Porter / 7Ps / Ansoff: https://www.mindtools.com/
+### Mandatory HSTalks (per handout)
+- HSTalks Business: https://hstalks.com/business/
+- 8 specific titles tabulated in `00_syllabus.md` (HST1-HST8).
 
-### Indian regulation / industry
-- ASCI Code: https://ascionline.in/the-asci-code/
-- Consumer Protection Act 2019: https://consumeraffairs.nic.in/sites/default/files/CP%20Act%202019.pdf
-- DPDP Act 2023: https://www.meity.gov.in/digital-personal-data-protection
-- IBEF Industry Reports: https://www.ibef.org/industry
-- Effie India Awards (campaign archive): https://effieindia.com/
+### Mandatory case discussions (Pearson Indian Cases)
+- Case 6 — Consumer Behaviour: Wide Facts, Deep Implications (S3)
+- Case 9 — Mahindra XYLO + Kellogg's (S4, S6)
+- Case 10 — Product management (S7)
+- Case 17 — Oreo IMC (S12)
+- Case 21 — Amazon India (S16)
 
-### Open educational
-- Coursera UPenn Wharton Marketing: https://www.coursera.org/learn/wharton-marketing
-- MIT OCW 15.810 Marketing Management: https://ocw.mit.edu/courses/15-810-marketing-management-spring-2010/
-- Think with Google: https://www.thinkwithgoogle.com/
-- HubSpot Academy: https://academy.hubspot.com/
-- Google Skillshop: https://skillshop.withgoogle.com/
+### Cesim Marketing Simulation (mandatory per handout)
+- https://www.cesim.com/simulations/cesim-simbrand-marketing-management-simulation
+- 1 practice + 3 actual rounds (each = 1 financial year).
 
-### Cases (India)
-- Asian Paints (HBSP): https://hbsp.harvard.edu/product/516017-PDF-ENG
-- Tata Nano (IIMA): https://web.iima.ac.in/iima-case-centre.html
-- Amul (Storyboard18 / ET BrandEquity): https://brandequity.economictimes.indiatimes.com/
-- Patanjali (Forbes India): https://www.forbesindia.com/
+### Practice & supplementary
+- IGNOU MMPC-006 Marketing Management: http://egyankosh.ac.in/handle/123456789/30391
+- AMA marketing definitions: https://www.ama.org/topics/marketing-definition/
+- Marketing91: https://www.marketing91.com/
+- HBR Marketing topic: https://hbr.org/topic/marketing
+- ASCI India: https://www.ascionline.in/
+- Consumer Affairs India (CCPA): https://consumeraffairs.nic.in/
+- Goodvertising agency (HSTalk tie-in): https://www.goodvertisingagency.com/
 
-### Community
-- BITS WILP MBA Marketing notes blog: http://bitswilpmba.blogspot.com/2017/05/?m=1
+> NEW emphasis in S2-25: Kotler 16/e (latest), 5 mandatory case discussions integrated into specific sessions, Cesim simulation mandatory, e/m-commerce + omnichannel + sustainable advertising added.
 
 ---
 
-## 7. Cross-cutting / general MBA references
+## 8. Cross-cutting practice resources
 
-### PYQ banks (when BITS-specific not available)
-- IGNOU MBA past papers: http://www.ignou.ac.in/ignou/aboutignou/school/soms/programmes
-- NMIMS Distance Learning: https://www.nmims.edu/
-- Sikkim Manipal MBA: https://smude.edu.in/
-- Symbiosis Distance MBA (SCDL): https://www.scdl.net/
-- ICAI past papers (for accounting): https://www.icai.org/post.html?post_id=11929
-- ICMAI past papers (for cost): https://icmai.in/studentswebsite/Examination.php
+### PYQ aggregators (use only for pattern; never as syllabus reference)
+- BITS WILP knowledge base: https://akhilsudh.github.io/BITS-WILP-Knowledge-Base/Knowledge%20Base/All%20Semesters/QuestionPapers.html
+- Crack BITS WILP: https://crackbitswilp.in/
+- Scribd searches (filter to MBA/MBACC keywords)
 
-### Case study repositories (free or freemium)
-- Harvard Business Publishing Education: https://hbsp.harvard.edu/cases/
-- Ivey Publishing (India-focused): https://www.iveycases.com/
-- The Case Centre — students: https://www.thecasecentre.org/students/
-- IIM Ahmedabad case centre: https://web.iima.ac.in/iima-case-centre.html
-
-### Tools & Excel templates
-- Microsoft Excel templates: https://create.microsoft.com/en-us/templates/budget
-- CFI free Excel templates: https://corporatefinanceinstitute.com/resources/templates/excel-modeling/
+### Open educational platforms
+- IGNOU MBA / MMPC: http://egyankosh.ac.in/
+- Coursera (Wharton, Kellogg specialisations relevant to each subject).
+- edX (HBX, MITx, IIMBx).
+- NPTEL (Management courses).
 
 ---
 
-## 8. Disclaimer & verification protocol
+## 9. Caveat & maintenance
 
-When you log in to **Taxila LMS** as an enrolled student:
+- BITS Pilani WILP does **not** publish official MBA past papers. Compute estimates of question patterns from leaked uploads + standard MBA conventions, **filtered** to S2-25 handout topics.
+- If your batch's handout differs from S2-25, **re-anchor everything to the new handout**. Update version + date stamp on each `00_syllabus.md`.
+- Keep this file in sync whenever a subject's handout changes.
 
-1. Download the **official course handout PDF** for each subject — this contains the *authoritative*:
-   - Module-wise topic list
-   - Recommended textbook(s) with edition numbers
-   - Exact EC-1 / EC-2 / EC-3 weightages for *your* batch
-   - Faculty contact and slot schedule
-2. Compare the official handout against `00_syllabus.md` in this vault and **edit the file to match**.
-3. Replace the "Course-code traces (community / non-official)" subsection in each `00_syllabus.md` with the actual handout reference.
-4. Use the official **Sample / Mock papers** released on Taxila to validate the patterns in `04_pyq_bank.md`.
+---
 
-This vault is a *starting scaffold*. Treat the BITS-internal Taxila documents as the single source of truth.
+## 10. Quick contact / support
+
+- Taxila helpdesk: via eLearn portal (login)
+- Course owners / instructors (per S2-25 handouts):
+  - Bus Stats (MBACC ZG501) — **Prof. Sandeep Kayastha**
+  - Mgmt Acc (MBACC ZG502) — **Prof. Abhishek Sinha, Prof. Ankita Nagpal**
+  - MPO (MBACC ZG511) — **Anjani Srikanth Koka** (Lead, Course Owner), Sandya Sarangarajan
+  - Marketing (MBACC ZG503) — **Prof. Atul Kumar, Prof. Sagar Venkateswar**

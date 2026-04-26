@@ -1,6 +1,7 @@
 # BITS Pilani WILP — MBA in AI for Business
 
-> **Single navigation hub.** Sem → Subject → Chapter → File. Every link is direct.
+> **Single navigation hub.** Sem → Subject → Session → File. Every link is direct.
+> **Sem 1 content is now strictly aligned to the official Taxila course handouts** in `sem_1/handouts/` (S2-25 batch, dated July 2025).
 
 | Item | Detail |
 |------|--------|
@@ -10,124 +11,160 @@
 | Mode | Live online weekend sessions + Taxila LMS + in-person exams |
 | Credits | 12 courses + 1 Project / Dissertation |
 | Min CGPA to graduate | 5.50 (no E grade) |
-| Evaluation | EC-1 (25–30 %, online quizzes/assignments) · EC-2 (30 %, mid-sem in-person, 2 hrs) · EC-3 (40–45 %, comprehensive in-person, 2 hrs) |
+| Evaluation | EC-1 (≈ 30 %, online quizzes/assignments) · EC-2 (30–35 %, **Closed Book** mid-sem, 2 hrs) · EC-3 (40 %, **Open Book** comprehensive, 2 / 2.5 hrs) |
 | Programme page | https://bits-pilani-wilp.ac.in/mba/mba-in-ai-for-business.php |
 | Education policy | https://bits-pilani-wilp.ac.in/resource/education-policy.php |
 | Academic regs 2023 | https://www.bits-pilani.ac.in/wp-content/uploads/Academic-Regulations-2023.pdf |
+| eLearn portal | https://elearn.bits-pilani.ac.in |
+| EC-3 open-book guidelines | [Google Doc](https://docs.google.com/document/d/1DJvlhVzOaIw4njc9g30MlBuu0DqTzeIL/) |
 
-**File icon legend** — 📋 Syllabus · 📒 Notes (chapter-wise) · ❓ Short Qs · 📝 Long Qs · 🗂 PYQ Bank · ⚡ Revision Sheet
-
----
-
-# Semester 1 — Management Foundation ✅
-
-## 1.1 Business Statistics — `MBA ZC417`
-
-📋 [Syllabus](./sem_1/01_business_statistics/00_syllabus.md) · 📒 [Notes](./sem_1/01_business_statistics/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/01_business_statistics/02_short_questions.md) · 📝 [Long Qs](./sem_1/01_business_statistics/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/01_business_statistics/04_pyq_bank.md) · ⚡ [Revision](./sem_1/01_business_statistics/05_revision_quick_sheet.md)
-
-Primary text: **Anderson, Sweeney & Williams — *Statistics for Business and Economics*** ([Cengage](https://www.cengage.com/c/statistics-for-business-economics-15e-anderson/))
-
-| # | Chapter | Notes link | Primary source | Free online resource |
-|--:|---------|------------|----------------|----------------------|
-| 1 | Introduction to Statistics & Data | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-1--introduction-to-statistics--data) | Anderson Ch. 1 | [OpenStax Ch. 1](https://openstax.org/books/introductory-business-statistics-2e/pages/1-introduction) |
-| 2 | Descriptive Statistics | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-2--descriptive-statistics) | Anderson Ch. 2–3 | [Khan Academy — Summarising data](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data) |
-| 3 | Probability | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-3--probability) | Anderson Ch. 4 | [StatTrek — Probability rules](https://stattrek.com/probability/probability-rules) |
-| 4 | Probability Distributions | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-4--probability-distributions) | Anderson Ch. 5–6 | [StatTrek — Distributions](https://stattrek.com/probability-distributions/probability-distribution) |
-| 5 | Sampling & Sampling Distributions | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-5--sampling-and-sampling-distributions) | Anderson Ch. 7 | [Khan Academy — Sampling](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library) |
-| 6 | Estimation | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-6--estimation) | Anderson Ch. 8 | [StatTrek — Confidence intervals](https://stattrek.com/estimation/confidence-interval) |
-| 7 | Hypothesis Testing | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-7--hypothesis-testing) | Anderson Ch. 9 | [Khan Academy — Significance tests](https://www.khanacademy.org/math/ap-statistics/tests-significance-ap) |
-| 8 | ANOVA | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-8--analysis-of-variance-anova) | Anderson Ch. 13 | [StatTrek — ANOVA](https://stattrek.com/anova/anova) |
-| 9 | Correlation & Regression | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-9--correlation-and-regression) | Anderson Ch. 14–15 | [ISLR Ch. 3 (free PDF)](https://www.statlearning.com/) |
-| 10 | Time Series & Forecasting | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-10--time-series--forecasting) | Anderson Ch. 17 | [Hyndman — Forecasting Principles](https://otexts.com/fpp3/) |
-| 11 | Index Numbers | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-11--index-numbers) | S.P. Gupta Ch. 11 | [RBI WPI Manual](https://www.rbi.org.in/scripts/PublicationsView.aspx?id=15394) |
-| 12 | Decision-making & SQC | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#chapter-12--decision-making--sqc-overview) | Anderson Ch. 21–22 | [NIST e-Handbook](https://www.itl.nist.gov/div898/handbook/) |
-
-<sub>Extras: [OpenStax](https://openstax.org/details/books/introductory-business-statistics-2e) · [OpenIntro](https://www.openintro.org/book/os/) · [Penn State STAT 500](https://online.stat.psu.edu/stat500/) · [MIT OCW 18.05](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2014/) · [Z-table](https://www.z-table.com/) · [t-table](https://www.tdistributiontable.com/) · [Casio FX-991EX manual](https://support.casio.com/global/en/calc/manual/fx-991EX_570EX_en/)</sub>
+**File icon legend** — 📋 Syllabus · 📒 Notes (session-wise) · ❓ Short Qs · 📝 Long Qs · 🗂 PYQ Bank · ⚡ Revision Sheet · 📑 Official handout
 
 ---
 
-## 1.2 Managerial Accounting — `MBA ZC415`
+# Semester 1 — Management Foundation ✅ (handout-aligned)
 
-📋 [Syllabus](./sem_1/02_managerial_accounting/00_syllabus.md) · 📒 [Notes](./sem_1/02_managerial_accounting/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/02_managerial_accounting/02_short_questions.md) · 📝 [Long Qs](./sem_1/02_managerial_accounting/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/02_managerial_accounting/04_pyq_bank.md) · ⚡ [Revision](./sem_1/02_managerial_accounting/05_revision_quick_sheet.md)
+## Sem 1 — Exam calendar (Second Semester 2025-2026)
 
-Primary texts: **Hilton — *Managerial Accounting*** ([McGraw Hill](https://www.mheducation.com/highered/product/cost-management-strategies-business-decisions-hilton-maher/M9780073526942.html)) · **Garrison, Noreen, Brewer** ([McGraw Hill](https://www.mheducation.com/highered/product/managerial-accounting-garrison-noreen/M9781260247787.html))
+| Subject | Code | EC-2 Mid-Sem | EC-2 type / dur | EC-3 Comprehensive | EC-3 type / dur | EC-2 weight |
+|---------|------|--------------|-----------------|--------------------|-----------------|------------:|
+| Business Statistics | MBACC ZG501 | **20-Jun-2026 (FN)** | Closed Book / 2 hrs | **05-Sep-2026 (FN)** | Open Book / 2 hrs | 30 % |
+| Managerial Accounting | MBACC ZG502 | **20-Jun-2026 (AN)** | Closed Book / 2 hrs | **05-Sep-2026 (AN)** | Open Book / 2 ½ hrs | 30 % |
+| Managing People & Organizations | MBACC ZG511 | **21-Jun-2026 (FN)** | Closed Book / 2 hrs | **06-Sep-2026 (FN)** | Open Book / 2 ½ hrs | **35 %** |
+| Marketing Management | MBACC ZG503 | **21-Jun-2026 (AN)** | Closed Book / 2 hrs | **06-Sep-2026 (AN)** | Open Book / 2 ½ hrs | 30 % |
 
-| # | Chapter | Notes link | Primary source | Free online resource |
-|--:|---------|------------|----------------|----------------------|
-| 1 | Introduction to Accounting | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-1--introduction-to-accounting) | Garrison Ch. 1; Hilton Ch. 1 | [AccountingCoach intro](https://www.accountingcoach.com/managerial-accounting/explanation) |
-| 2 | The Accounting Cycle | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-2--the-accounting-cycle) | Narayanaswamy Ch. 2–3 | [AccountingCoach — Debits & Credits](https://www.accountingcoach.com/debits-and-credits/explanation) |
-| 3 | Financial Statements | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-3--financial-statements) | Narayanaswamy Ch. 4–6; MCA Sched. III | [MCA Companies Act 2013](https://www.mca.gov.in/Ministry/pdf/CompaniesAct2013.pdf) |
-| 4 | Depreciation, Provisions & Reserves | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-4--depreciation-provisions--reserves) | AS-10 / Ind AS 16 | [MCA Ind AS portal](https://www.mca.gov.in/MinistryV2/indasandifrs.html) |
-| 5 | Inventory Valuation | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-5--inventory-valuation) | AS-2 / Ind AS 2 | [Investopedia — Inventory methods](https://www.investopedia.com/terms/i/inventory.asp) |
-| 6 | Financial Statement Analysis | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-6--financial-statement-analysis) | Narayanaswamy Ch. 12 | [CFI Ratio Analysis](https://corporatefinanceinstitute.com/resources/accounting/financial-ratios/) |
-| 7 | Cost Accounting Concepts | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-7--cost-accounting-concepts) | Garrison Ch. 2; ICAI CMA Inter | [CFI — Types of Costs](https://corporatefinanceinstitute.com/resources/accounting/types-of-costs/) |
-| 8 | Marginal vs Absorption Costing | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-8--marginal-vs-absorption-costing) | Garrison Ch. 5–6 | [CFI — Absorption Costing](https://corporatefinanceinstitute.com/resources/accounting/absorption-costing/) |
-| 9 | Budgeting & Budgetary Control | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-9--budgeting-and-budgetary-control) | Garrison Ch. 8 | [CGMA — Cost Transformation](https://www.cgma.org/resources/tools/cost-transformation-model.html) |
-| 10 | Standard Costing & Variance Analysis | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-10--standard-costing--variance-analysis) | Garrison Ch. 10–11 | [Std Costing primer](https://www.accountingformanagement.org/standard-costing/) |
-| 11 | Responsibility Accounting & Performance | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-11--responsibility-accounting--performance-measurement) | Hilton Ch. 12; Kaplan-Norton | [HBR — Balanced Scorecard](https://hbr.org/1992/01/the-balanced-scorecard-measures-that-drive-performance-2) |
-| 12 | Decision-making with Accounting Info | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#chapter-12--decision-making-with-accounting-information) | Garrison Ch. 12–13 | [Investopedia — Relevant cost](https://www.investopedia.com/terms/r/relevantcost.asp) |
-
-<sub>Extras: [ICAI CA Inter — Cost & Mgmt Acc](https://resource.cdn.icai.org/74628bos60628.pdf) · [ICMAI CAS 1–24](https://icmai.in/icmai/CAS.php) · [AccountingCoach](https://www.accountingcoach.com/) · [MIT OCW 15.514](https://ocw.mit.edu/courses/15-514-financial-and-managerial-accounting-summer-2003/) · [Edspira (YouTube)](https://www.youtube.com/c/Edspira) · [Screener.in](https://www.screener.in/)</sub>
+> EC-2 syllabus = **Sessions 1-8** for every subject. EC-3 = all 16 sessions.
 
 ---
 
-## 1.3 Managing People & Organisations — `MBA ZG511`
+## 1.1 Business Statistics — `MBACC ZG501`
 
-📋 [Syllabus](./sem_1/03_managing_people_organisations/00_syllabus.md) · 📒 [Notes](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/03_managing_people_organisations/02_short_questions.md) · 📝 [Long Qs](./sem_1/03_managing_people_organisations/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/03_managing_people_organisations/04_pyq_bank.md) · ⚡ [Revision](./sem_1/03_managing_people_organisations/05_revision_quick_sheet.md)
+📋 [Syllabus](./sem_1/01_business_statistics/00_syllabus.md) · 📒 [Notes](./sem_1/01_business_statistics/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/01_business_statistics/02_short_questions.md) · 📝 [Long Qs](./sem_1/01_business_statistics/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/01_business_statistics/04_pyq_bank.md) · ⚡ [Revision](./sem_1/01_business_statistics/05_revision_quick_sheet.md) · 📑 [Official handout](./sem_1/handouts/Business%20Statistics%20%28S2-25_MBACCZG501%29COURSE%20HANDOUT.docx)
 
-Primary texts: **Robbins & Judge — *Organizational Behavior*** ([Pearson](https://www.pearson.com/store/p/organizational-behavior/P200000005816)) · **Luthans — *Organizational Behavior***
+Instructor: Prof. Sandeep Kayastha
+- **T1**: David M Levine, Kathryn A Szabat, David F Stephan, PK Viswanathan — *Business Statistics*, Pearson, **7e (2019)**
+- **T2**: Anderson, Sweeney, Williams, Camm, Martin — *Quantitative Methods for Business*, Cengage, 12e (2013)
+- **Tools**: MS Excel (Data Analysis Toolpak) + Python (`numpy`, `pandas`, `scipy.stats`, `statsmodels`)
 
-| # | Chapter | Notes link | Primary source | Free online resource |
-|--:|---------|------------|----------------|----------------------|
-| 1 | Introduction to OB | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-1--introduction-to-organisational-behaviour) | Robbins Ch. 1 | [OpenStax OB Ch. 1](https://openstax.org/books/organizational-behavior/pages/1-introduction) |
-| 2 | Individual Behaviour (Personality, Perception, Learning, Values) | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-2--individual-behaviour) | Robbins Ch. 5–7 | [SimplyPsych — Personality](https://www.simplypsychology.org/personality-theories.html) |
-| 3 | Motivation | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-3--motivation) | Robbins Ch. 7–8; Luthans Ch. 6 | [HBR — Herzberg](https://hbr.org/2003/01/one-more-time-how-do-you-motivate-employees) |
-| 4 | Group & Team Dynamics | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-4--group--team-dynamics) | Robbins Ch. 9–10 | [MindTools — Tuckman](https://www.mindtools.com/abyj5fi/forming-storming-norming-and-performing) |
-| 5 | Communication | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-5--communication) | Robbins Ch. 11 | [HBR — Communication](https://hbr.org/topic/communication) |
-| 6 | Leadership | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-6--leadership) | Robbins Ch. 12; Luthans Ch. 12 | [HBR — Goleman, *What Makes a Leader*](https://hbr.org/2004/01/what-makes-a-leader) |
-| 7 | Power, Politics & Conflict | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-7--power-politics--conflict) | Robbins Ch. 13–14 | [MindTools — Conflict resolution](https://www.mindtools.com/a3v95gw/conflict-resolution) |
-| 8 | Organisational Structure & Design | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-8--organisational-structure--design) | Robbins Ch. 15 | [HBR — Org structure](https://hbr.org/topic/organizational-structure) |
-| 9 | Organisational Culture | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-9--organisational-culture) | Robbins Ch. 16; Schein | [Hofstede Insights](https://www.hofstede-insights.com/country-comparison-tool) |
-| 10 | Organisational Change & Development | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-10--organisational-change--development) | Robbins Ch. 18 | [Kotter 8-step](https://www.kotterinc.com/8-steps-process-for-leading-change/) · [Prosci ADKAR](https://www.prosci.com/methodology/adkar) |
-| 11 | HRM Foundations | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-11--human-resource-management-foundations) | Dessler Ch. 1–10 | [SHRM Toolkits](https://www.shrm.org/ResourcesAndTools/tools-and-samples/Pages/default.aspx) |
-| 12 | Stress, Wellbeing & Org Effectiveness | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#chapter-12--stress-wellbeing--organisational-effectiveness) | Robbins Ch. 18–19 | [WHO — Workplace stress](https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work) |
+| CS # | Topic | Notes link | Primary source | Free online resource |
+|--:|-------|------------|----------------|----------------------|
+| 1 | Defining and collecting data | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-1--defining-and-collecting-data) | T1 Ch. 1 | [OpenStax Ch. 1](https://openstax.org/books/introductory-business-statistics-2e/pages/1-introduction) |
+| 2 | Organising and analysing data | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-2--organising-and-analysing-data) | T1 Ch. 2 | [Khan — Summarising data](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data) |
+| 3 | Numerical Descriptive Measures | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-3--numerical-descriptive-measures) | T1 Ch. 3 | [Khan — Central tendency](https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data) |
+| 4 | Basic Probability | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-4--basic-probability) | T1 Ch. 4 | [StatTrek — Probability rules](https://stattrek.com/probability/probability-rules) |
+| 5 | Discrete Probability Distributions | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-5--discrete-probability-distributions) | T1 Ch. 5 | [StatTrek — Distributions](https://stattrek.com/probability-distributions/probability-distribution) |
+| 6 | Normal Distribution | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-6--normal-distribution) | T1 Ch. 6 | [Khan — Normal](https://www.khanacademy.org/math/statistics-probability/modeling-distributions-of-data) |
+| 7 | Sampling Distributions | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-7--sampling-distributions) | T1 Ch. 7 | [Khan — Sampling distributions](https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library) |
+| 8 | Confidence Interval Estimation | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-8--confidence-interval-estimation) | T1 Ch. 8 | [StatTrek — CIs](https://stattrek.com/estimation/confidence-interval) |
+| 9 | Fundamentals of Hypothesis Testing | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-9--fundamentals-of-hypothesis-testing) | T1 Ch. 9 | [Khan — Significance tests](https://www.khanacademy.org/math/ap-statistics/tests-significance-ap) |
+| 10 | Two-sample tests and ANOVA | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-10--two-sample-tests-and-anova) | T1 Ch. 10 | [StatTrek — ANOVA](https://stattrek.com/anova/anova) |
+| 11 | Chi-square test | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-11--chi-square-test) | T1 Ch. 11 | [Penn STAT 500 — χ²](https://online.stat.psu.edu/stat500/lesson/8) |
+| 12 | Other Non-parametric tests | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-12--other-non-parametric-tests) | Class Notes | [Penn STAT 415 — Non-parametric](https://online.stat.psu.edu/stat415/lesson/20) |
+| 13 | Validating regression assumption & normality testing | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-13--validating-regression-assumption--normality-testing) | T1 Ch. 13 | [ISLR Ch. 3 (free PDF)](https://www.statlearning.com/) |
+| 14 | Linear Regression — diagnostics | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-14--linear-regression--diagnostics) | Class Notes | [statsmodels — diagnostics](https://www.statsmodels.org/stable/regression.html) |
+| 15 | Introduction to Linear Programming | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-15--introduction-to-linear-programming) | Class Notes (T2) | [PHPSimplex](https://www.phpsimplex.com/en/) · [MIT OCW 15.053](https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/) |
+| 16 | Revision | [📒](./sem_1/01_business_statistics/01_notes_chapterwise.md#session-16--revision) | — | — |
 
-<sub>Extras: [MindTools](https://www.mindtools.com/) · [Hofstede](https://www.hofstede-insights.com/) · [HBR — Leadership](https://hbr.org/topic/leadership) · [MIT OCW 15.668](https://ocw.mit.edu/courses/15-668-people-and-organizations-fall-2010/) · [POSH Act 2013](https://wcd.nic.in/sites/default/files/Sexual-Harassment-at-Workplace-Act.pdf) · [Code on Wages 2019](https://labour.gov.in/sites/default/files/THE_CODE_ON_WAGES_2019_No._29_of_2019.pdf)</sub>
+<sub>Mandatory IIMA cases: [Sankhosh Constructions Inc (QM0284EX)](https://cases.iima.ac.in/index.php/sankhosh-constructions-inc.html) · [Anugnyaa Agricultural Association (PROD0331EX)](https://cases.iima.ac.in/download.php?file=media/downloads/4972/PROD0331_Inspection_Copy.pdf) · [Lung Cancer-Tobacco Linkage (CMHS0028)](https://cases.iima.ac.in/index.php/understanding-lung-cancer-tobacco-smoking-linkage.html) · Iron Ore Distribution for SAIL (QM0226). Mandatory HSTalks: [Fundamentals of Data Analysis](https://hstalks.com/t/3522/fundamentals-of-data-analysis/?business) · [Predictive Analytics](https://hstalks.com/t/4282/predictive-analytics/?business) · [Analytical framework — 4 stages](https://hstalks.com/t/5177/the-analytical-framework-and-the-four-stages-of-da/?business) · [Failure & feedback in data analytics](https://hstalks.com/t/5077/failure-and-feedback-in-data-analytics-lessons-lea/?business)</sub>
 
 ---
 
-## 1.4 Marketing Management — `MBA ZG521`
+## 1.2 Managerial Accounting — `MBACC ZG502`
 
-📋 [Syllabus](./sem_1/04_marketing_management/00_syllabus.md) · 📒 [Notes](./sem_1/04_marketing_management/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/04_marketing_management/02_short_questions.md) · 📝 [Long Qs](./sem_1/04_marketing_management/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/04_marketing_management/04_pyq_bank.md) · ⚡ [Revision](./sem_1/04_marketing_management/05_revision_quick_sheet.md)
+📋 [Syllabus](./sem_1/02_managerial_accounting/00_syllabus.md) · 📒 [Notes](./sem_1/02_managerial_accounting/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/02_managerial_accounting/02_short_questions.md) · 📝 [Long Qs](./sem_1/02_managerial_accounting/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/02_managerial_accounting/04_pyq_bank.md) · ⚡ [Revision](./sem_1/02_managerial_accounting/05_revision_quick_sheet.md) · 📑 [Official handout](./sem_1/handouts/Managerial%20Accounting%20%28S2-25_MBACCZG502%29%20COURSE%20HANDOUT.docx)
 
-Primary text: **Kotler, Keller, Koshy & Jha — *Marketing Management: A South Asian Perspective*** ([Pearson](https://www.pearson.com/store/p/marketing-management-a-south-asian-perspective/P200000005846))
+Instructors: Prof. Abhishek Sinha, Prof. Ankita Nagpal
+- **T1**: **S.N. Maheswari & S.K. Maheswari** — *Financial and Management Accounting*, Sultan Chand & Sons, **6e (2022)**
+- References: P.C. Tulsian (2022) · R. Narayanaswamy 5e (2014) · Ashok Banerjee 3e (2009)
+- ELC: 5-year financial-statement analysis project (real listed company)
 
-| # | Chapter | Notes link | Primary source | Free online resource |
-|--:|---------|------------|----------------|----------------------|
-| 1 | Introduction to Marketing | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-1--introduction-to-marketing) | Kotler Ch. 1; AMA | [AMA — What is marketing?](https://www.ama.org/the-definition-of-marketing-what-is-marketing/) |
-| 2 | Marketing Environment | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-2--marketing-environment) | Kotler Ch. 3; PESTEL | [MindTools — PESTLE](https://www.mindtools.com/pestle-analysis) |
-| 3 | Marketing Information & Research | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-3--marketing-information--research) | Malhotra; Kotler Ch. 4 | [Qualtrics research methods](https://www.qualtrics.com/experience-management/research/) |
-| 4 | Consumer Behaviour | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-4--consumer-behaviour) | Kotler Ch. 6; Solomon | [Think with Google — ZMOT](https://www.thinkwithgoogle.com/marketing-strategies/search/zero-moment-truth/) |
-| 5 | Business / Organisational Buying | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-5--business--organisational-buying) | Kotler Ch. 7 | [HBR — B2B Elements of Value](https://hbr.org/2017/03/the-b2b-elements-of-value) |
-| 6 | STP — Segmentation, Targeting, Positioning | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-6--segmentation-targeting--positioning-stp) | Kotler Ch. 9–10; Ries & Trout | [HBR — STP](https://hbr.org/2008/05/segmentation-targeting-and-positioning) |
-| 7 | Product Decisions (Branding & PLC) | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-7--product-decisions) | Kotler Ch. 12–14; Keller — CBBE | [ProductPlan — PLC](https://www.productplan.com/glossary/product-life-cycle/) |
-| 8 | Pricing Decisions | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-8--pricing-decisions) | Kotler Ch. 16; Nagle | [McKinsey — Power of Pricing](https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-power-of-pricing) |
-| 9 | Place / Distribution | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-9--place--distribution-decisions) | Kotler Ch. 17–18 | [HBR — Distribution channels](https://hbr.org/topic/distribution-channels) |
-| 10 | Promotion / IMC | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-10--promotion--integrated-marketing-communications-imc) | Kotler Ch. 19–20; Belch | [Smart Insights — AIDA](https://www.smartinsights.com/digital-marketing-strategy/customer-acquisition-strategy/aida-model/) |
-| 11 | Services Marketing | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-11--services-marketing) | Zeithaml; Kotler Ch. 13 | [MindTools — 7Ps](https://www.mindtools.com/aqj01y3/the-7-ps-of-marketing) |
-| 12 | Strategic Marketing & Emerging | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#chapter-12--strategic-marketing--emerging-topics) | Kotler Ch. 22 | [Smart Insights — Digital strategy](https://www.smartinsights.com/) |
+| CS # | Topic | Notes link | Primary source | Free online resource |
+|--:|-------|------------|----------------|----------------------|
+| 1 | Introduction to Accounting | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-1--introduction-to-accounting) | Maheswari Ch. 1 | [AccountingCoach Intro](https://www.accountingcoach.com/managerial-accounting/explanation) |
+| 2 | GAAP & Accounting Principles | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-2--gaap--accounting-principles) | Maheswari Ch. 2 | [IFRS — Conceptual Framework](https://www.ifrs.org/issued-standards/list-of-standards/conceptual-framework/) |
+| 3-4 | Journal, Ledger, Trial Balance, Financial Statements | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-3-4--journal-ledger-trial-balance-financial-statements) | Maheswari Ch. 3-7 | [AccountingCoach — Debits & Credits](https://www.accountingcoach.com/debits-and-credits/explanation) |
+| 5 | IFRS / IAS & Quality of Reporting | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-5--ifrs--ias--quality-of-financial-reporting) | Selected IFRS/IAS | [IFRS Standards list](https://www.ifrs.org/issued-standards/list-of-standards/) · [IFRS S1 & S2](https://www.ifrs.org/issued-standards/ifrs-sustainability-standards-navigator/) |
+| 6-7 | Understanding & Analysing Financial Statements | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-6-7--understanding--analysing-financial-statements) | Maheswari Ch. 12-15 | [Investopedia — FS Analysis](https://www.investopedia.com/terms/f/financial-statement-analysis.asp) |
+| 8-10 | Ratio Analysis: concepts, calculations, industry classification | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-8-10--ratio-analysis) | Maheswari Ch. 16-17 | [CFI — Ratios](https://corporatefinanceinstitute.com/resources/accounting/financial-ratios/) · [Screener.in](https://www.screener.in/) |
+| 11-13 | Empirical / Case Study FS Analysis | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-11-13--empirical--case-study-fs-analysis) | Maheswari Ch. 18 + cases | [Aswath Damodaran data](https://pages.stern.nyu.edu/~adamodar/) |
+| 14-15 | Cost Accounting + BEP & CVP | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-14-15--cost-accounting-and-cvp) | Maheswari Ch. 22-23 | [CFI — CVP](https://corporatefinanceinstitute.com/resources/accounting/cvp-analysis/) |
+| 16 | Budgeting & Variance Analysis | [📒](./sem_1/02_managerial_accounting/01_notes_chapterwise.md#session-16--budgeting--variance-analysis) | Maheswari Ch. 25 | [CGMA — Cost Transformation](https://www.cgma.org/resources/tools/cost-transformation-model.html) |
 
-<sub>Extras: [HubSpot Academy](https://academy.hubspot.com/) · [Google Skillshop](https://skillshop.withgoogle.com/) · [Meta Blueprint](https://www.facebookblueprint.com/) · [HBR — Levitt, *Marketing Myopia*](https://hbr.org/2004/07/marketing-myopia) · [HBR — Porter, *Five Forces*](https://hbr.org/1979/03/how-competitive-forces-shape-strategy) · [BCG Matrix](https://www.bcg.com/about/overview/our-history/growth-share-matrix) · [ASCI Code](https://ascionline.in/the-asci-code/) · [IBEF industry reports](https://www.ibef.org/industry) · [Effie India winners](https://effieindia.com/)</sub>
+<sub>Self-reading: Business structures (Sole Proprietorship · Partnership · LLP · OPC · Pvt · Public). IFRS focus: S1, S2, 5, 7, 8, 13, 15 + IAS-2 (Inventories), IAS-16 (PPE) + US GAAP vs IFRS R&D.</sub>
+
+---
+
+## 1.3 Managing People & Organizations — `MBACC ZG511`
+
+📋 [Syllabus](./sem_1/03_managing_people_organisations/00_syllabus.md) · 📒 [Notes](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/03_managing_people_organisations/02_short_questions.md) · 📝 [Long Qs](./sem_1/03_managing_people_organisations/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/03_managing_people_organisations/04_pyq_bank.md) · ⚡ [Revision](./sem_1/03_managing_people_organisations/05_revision_quick_sheet.md) · 📑 [Official handout](./sem_1/handouts/Managing%20People%20and%20Organization%20%28S2-25_MBACCZG511%29%20COURSE%20HANDOUT.docx)
+
+Instructors: Anjani Srikanth Koka (Lead), Sandya Sarangarajan
+- **T1**: **Robbins, Judge & Vohra** — *Organizational Behavior*, Pearson, **Updated 18e (2022)**
+- **T2**: **K. Aswathappa & Sadhna Dash** — *Human Resource Management — Text and Cases*, Tata McGraw Hill, **10e (2023)**
+- References: Daft (Org Theory & Design 10e) · Dessler & Varkkey (HRM 16e) · Goleman (Emotional Intelligence)
+
+| CS # | Topic | Notes link | Primary source | Free online resource |
+|--:|-------|------------|----------------|----------------------|
+| 1 | Introduction to OB | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-1--introduction-to-ob) | T1 Ch. 1 | [OpenStax OB Ch. 1](https://openstax.org/books/organizational-behavior/pages/1-introduction) |
+| 2 | Introduction to HRM (Nature, Scope, Context) | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-2--introduction-to-hrm) | T2 Ch. 1, 2 | [SHRM — HR Foundations](https://www.shrm.org/topics-tools/topics/people-managers) |
+| 3 | The Individual: Attitudes, Job Satisfaction, Diversity | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-3--attitudes-job-satisfaction-diversity) | T1 Ch. 2, 3 | [Gallup Q12 engagement](https://www.gallup.com/q12/) |
+| 4 | The Individual: Personality and Values | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-4--personality-and-values) | T1 Ch. 4 | [SimplyPsych — Big Five](https://www.simplypsychology.org/big-five-personality.html) |
+| 5 | The Individual: Perception & Decision Making | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-5--perception--decision-making) | T1 Ch. 5 | [HBR — Cognitive biases](https://hbr.org/topic/decision-making) |
+| 6 | The Individual: Emotions and Moods | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-6--emotions-and-moods) | T1 Ch. 6 | [APA — Emotional intelligence](https://www.apa.org/topics/emotional-intelligence) |
+| 7 | The Individual: Motivation Concepts | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-7--motivation-concepts) | T1 Ch. 7 | [HBR — Herzberg](https://hbr.org/2003/01/one-more-time-how-do-you-motivate-employees) |
+| 8 | Motivation — concepts to applications | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-8--motivation-applications) | T1 Ch. 8 | [Daniel Pink — Drive (TED)](https://www.ted.com/talks/dan_pink_the_puzzle_of_motivation) |
+| 9 | The Group: Foundations of Group Behaviour | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-9--foundations-of-group-behaviour) | T1 Ch. 9 | [MindTools — Tuckman](https://www.mindtools.com/abyj5fi/forming-storming-norming-and-performing) |
+| 10 | The Group: Work Teams + Communication | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-10--work-teams-and-communication) | T1 Ch. 10, 12 | [Google re:Work — Aristotle](https://rework.withgoogle.com/print/guides/5721312655835136/) |
+| 11 | The Group: Leadership theories + EI | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-11--leadership-theories--ei) | T1 Ch. 13 | [HBR — Goleman: What Makes a Leader](https://hbr.org/2004/01/what-makes-a-leader) |
+| 12 | The Organization: Structure | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-12--organisation-structure) | T1 Ch. 14 | [HBR — Org structure](https://hbr.org/topic/organizational-structure) |
+| 13 | The Organization: Culture & Change | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-13--organisational-culture--change) | T1 Ch. 15, 16 | [Hofstede Insights](https://www.hofstede-insights.com/) · [Kotter 8-step](https://www.kotterinc.com/8-steps-process-for-leading-change/) |
+| 14 | HRM: Recruitment & Selection | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-14--recruitment--selection) | T2 Ch. 6, 7 | [SHRM Toolkit — Hiring](https://www.shrm.org/topics-tools/tools/toolkits/staffing-recruiting) |
+| 15 | HRM: Compensation Management | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-15--compensation-management) | T2 Ch. 12 | [WorldatWork glossary](https://worldatwork.org/glossary) |
+| 16 | HRM: Appraising & Managing Performance | [📒](./sem_1/03_managing_people_organisations/01_notes_chapterwise.md#session-16--performance-appraisal--management) | T2 Ch. 9 | [HBR — Performance management](https://hbr.org/topic/performance-management) |
+
+<sub>10 mandatory HSTalks videos (login via BITS WILP): [Positive OB](https://hstalks.com/t/2339/positive-organizational-behavior/?business) · [Managing strategy & HRM](https://hstalks.com/t/2036/managing-strategy-and-hrm/?business) · [Diversity & inclusion](https://hstalks.com/t/3534/diversity-and-inclusion-in-organizations/?business) · [High-performing teams](https://hstalks.com/t/4775/building-high-performing-teams/?business) · [What makes a great team](https://hstalks.com/t/2595/what-makes-for-a-great-team/?business) · [What is leadership](https://hstalks.com/t/4732/what-is-leadership/?business) · [Leadership vs Management](https://hstalks.com/t/4739/leadership-versus-management/?business) · [History of leadership](https://hstalks.com/t/1777/an-overview-and-history-of-leadership-and-leadersh/?business) · [EI for leaders](https://hstalks.com/t/4139/emotional-intelligence-your-success-as-a-leader-de/?business) · [Managing cultures](https://hstalks.com/t/1757/managing-cultures/?business)</sub>
+
+---
+
+## 1.4 Marketing Management — `MBACC ZG503`
+
+📋 [Syllabus](./sem_1/04_marketing_management/00_syllabus.md) · 📒 [Notes](./sem_1/04_marketing_management/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_1/04_marketing_management/02_short_questions.md) · 📝 [Long Qs](./sem_1/04_marketing_management/03_long_questions.md) · 🗂 [PYQ Bank](./sem_1/04_marketing_management/04_pyq_bank.md) · ⚡ [Revision](./sem_1/04_marketing_management/05_revision_quick_sheet.md) · 📑 [Official handout](./sem_1/handouts/Marketing%20Management%20%28S2-25_MBACCZG503%29%20COURSE%20HANDOUT.docx)
+
+Instructors: Prof. Atul Kumar, Prof. Sagar Venkateswar
+- **T1**: **Kotler, Keller, Chernev, Sheth & Shaineesh** — *Marketing Management*, **16/e (2022)**, Pearson
+- References: *Marketing Management — Indian Cases* (Pearson 2018) · Ramaswamy & Namakumari 6e (2018) · ET Brand Equity · Social Samosa · Campaign India
+- ELC: **Cesim Marketing Simulation** (1 practice + 3 actual rounds) + 10-concept marketing assignment
+
+| CS # | Topic + Case Discussion | Notes link | Primary source | Free online resource |
+|--:|--------------------------|------------|----------------|----------------------|
+| 1 | Intro to Marketing — definition, scope, new realities, consumer & business markets | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-1--introduction-to-marketing) | T1 Ch. 1, 2 | [AMA — Definition of Marketing](https://www.ama.org/the-definition-of-marketing-what-is-marketing/) |
+| 2 | Need, Wants, Demand & estimation; Consumer Behaviour | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-2--needs-wants-demand--consumer-behaviour) | T1 Ch. 2 | [Think with Google — ZMOT](https://www.thinkwithgoogle.com/marketing-strategies/search/zero-moment-truth/) |
+| 3 | Consumer characteristics; Model of CB; Competitive behaviour. **Case: CB - Wide Facts & Deep Implications** | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-3--consumer-characteristics--competitive-behaviour) | T1 Ch. 3 + R1 Case 6 | [HBR — Customer journey](https://hbr.org/2010/06/branding-in-the-digital-age-youre-spending-your-money-in-all-the-wrong-places) |
+| 4 | Segmentation + Targeting. **Case: Mahindra XYLO — who will buy** | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-4--segmentation--targeting) | T1 Ch. 6 | [HBR — STP](https://hbr.org/2008/05/segmentation-targeting-and-positioning) |
+| 5 | Customer Value Proposition + intro to Positioning | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-5--cvp-and-positioning-intro) | T1 Ch. 6 + R1 Case 9 | [Strategyzer — Value Prop Canvas](https://www.strategyzer.com/canvas/value-proposition-canvas) |
+| 6 | Effective positioning. **Case: Kellogg's Cornflakes in India** | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-6--positioning) | T1 Ch. 7 | [Trout & Ries — Positioning (summary)](https://hbr.org/2002/11/the-best-of-hbr-1980-the-discipline-of-positioning) |
+| 7 | Product Mgmt — design, NPD, differentiation | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-7--product-management--npd) | T1 Ch. 7 + R1 Case 10 | [ProductPlan — PLC](https://www.productplan.com/glossary/product-life-cycle/) |
+| 8 | Services design + Marketing Mix. **Case: MTR Foods — A Marketing Marvel** | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-8--services-and-marketing-mix) | T1 Ch. 8 | [MindTools — 7Ps](https://www.mindtools.com/aqj01y3/the-7-ps-of-marketing) |
+| 9 | Pricing strategies & programs | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-9--pricing-strategies) | T1 Ch. 8 + R1 Case 1 | [McKinsey — Power of Pricing](https://www.mckinsey.com/business-functions/marketing-and-sales/our-insights/the-power-of-pricing) |
+| 10 | Initial price-setting; competitor price response | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-10--setting-initial-prices) | T1 Ch. 11 | [Nagle — Strategy & Tactics of Pricing summary](https://www.routledge.com/The-Strategy-and-Tactics-of-Pricing/Nagle-Mller/p/book/9780367217001) |
+| 11 | Marketing Communications — role and steps | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-11--marketing-communications-process) | T1 Ch. 12 | [Smart Insights — AIDA](https://www.smartinsights.com/digital-marketing-strategy/customer-acquisition-strategy/aida-model/) |
+| 12 | Comm tools, IMC, Advertising, Sales promotion. **Case: Oreo in India** | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-12--imc-advertising--sales-promotion) | T1 Ch. 12, 13 + R1 Case 17 | [ASCI Code](https://ascionline.in/the-asci-code/) |
+| 13 | Marketing channels & value network | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-13--marketing-channels) | T1 Ch. 15 | [HBR — Distribution channels](https://hbr.org/topic/distribution-channels) |
+| 14 | Intermediaries; E-commerce & M-commerce | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-14--intermediaries-ecommerce-mcommerce) | T1 Ch. 15, 16 | [IBEF — Indian E-com](https://www.ibef.org/industry/ecommerce.aspx) |
+| 15 | Marketing regulation; Industrial market research basics | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-15--marketing-regulation--industrial-research) | T1 Ch. 4, 5 | [Consumer Protection Act 2019](https://consumeraffairs.nic.in/sites/default/files/CP%20Act%202019.pdf) |
+| 16 | Marketing strategy & Marketing Plan. **Case: Amazon adopts retail in India** | [📒](./sem_1/04_marketing_management/01_notes_chapterwise.md#session-16--marketing-strategy--plan) | R1 Case 21 | [HBR — Marketing strategy](https://hbr.org/topic/marketing-strategy) |
+
+<sub>8 mandatory HSTalks videos: What is the marketing mix (Hanlon) · McDonald's in India (A.K. Gupta) · What are personas (Hanlon) · Targeting & segmentation (Sleight) · Hotel marketing segmentation (Evans) · Yoga & Glocalisation (Askegaard) · Omni-channel marketing (Atorough) · Sustainable advertising (Kolster). Mandatory simulation: **Cesim** (Marketing). Indian-context references: [Social Samosa](https://www.socialsamosa.com/) · [Campaign India](https://www.campaignindia.in/) · [Effie India winners](https://effieindia.com/) · [IBEF](https://www.ibef.org/industry).</sub>
 
 ---
 
 # Semester 2 — Functional Core + AI On-ramp ⚠️ partially built
 
-## 2.1 Corporate Finance — `MBA ZG541`
+## 2.1 Corporate Finance — `MBA ZG541` (placeholder code, awaiting handout)
 
 📋 [Syllabus](./sem_2/01_corporate_finance/00_syllabus.md) · 📒 [Notes](./sem_2/01_corporate_finance/01_notes_chapterwise.md) · ❓ [Short Qs](./sem_2/01_corporate_finance/02_short_questions.md) · 📝 [Long Qs](./sem_2/01_corporate_finance/03_long_questions.md) · 🗂 [PYQ Bank](./sem_2/01_corporate_finance/04_pyq_bank.md) · ⚡ [Revision](./sem_2/01_corporate_finance/05_revision_quick_sheet.md)
 
-> Chapter-wise table will be added when Sem 2 detail is built out (alongside Operations Mgmt, AI Apps, Applied Data Science).
+> Chapter-wise table will be added once Sem 2 handouts are uploaded into `sem_2/handouts/`.
 
 ## 2.2 Operations Management — `QM ZG526` ⏳
 
@@ -162,29 +199,27 @@ Primary text: **Kotler, Keller, Koshy & Jha — *Marketing Management: A South A
 
 ---
 
-# Self-tracking checklist (Sem 1)
+# Self-tracking checklist (Sem 1, 16 sessions per subject)
 
-| Subject | Ch | Read | Short Q | Long Q | PYQ | Revised |
-|---------|---:|:----:|:-------:|:------:|:---:|:-------:|
-| Bus. Stats | 1–4 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Bus. Stats | 5–8 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Bus. Stats | 9–12 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Mgmt Acc. | 1–4 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Mgmt Acc. | 5–8 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Mgmt Acc. | 9–12 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| MPO | 1–4 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| MPO | 5–8 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| MPO | 9–12 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Marketing | 1–4 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Marketing | 5–8 | ▢ | ▢ | ▢ | ▢ | ▢ |
-| Marketing | 9–12 | ▢ | ▢ | ▢ | ▢ | ▢ |
+| Subject | Sessions | Read | Short Q | Long Q | PYQ | Revised |
+|---------|---------:|:----:|:-------:|:------:|:---:|:-------:|
+| Bus. Stats | 1–8  (mid-sem scope) | ▢ | ▢ | ▢ | ▢ | ▢ |
+| Bus. Stats | 9–16 | ▢ | ▢ | ▢ | ▢ | ▢ |
+| Mgmt Acc. | 1–8  (mid-sem scope) | ▢ | ▢ | ▢ | ▢ | ▢ |
+| Mgmt Acc. | 9–16 | ▢ | ▢ | ▢ | ▢ | ▢ |
+| MPO | 1–8  (mid-sem scope) | ▢ | ▢ | ▢ | ▢ | ▢ |
+| MPO | 9–16 | ▢ | ▢ | ▢ | ▢ | ▢ |
+| Marketing | 1–8  (mid-sem scope) | ▢ | ▢ | ▢ | ▢ | ▢ |
+| Marketing | 9–16 | ▢ | ▢ | ▢ | ▢ | ▢ |
 
-**Pacing**: 1 chapter per subject per week → 12 weeks per pass → 3 passes before EC-3.
+**Pacing**: 1 session per subject per week → 16 weeks → 1 full pass before EC-2 (mid-sem scope = sessions 1–8) and EC-3 (all 16).
 
-**Exam-month playbook**: Wk−4 re-read all notes · Wk−3 solve mid-sem PYQs · Wk−2 solve comprehensive PYQs · Wk−1 revision sheet only.
+**Exam-month playbook**: Wk−4 re-read all session notes · Wk−3 solve mid-sem PYQs · Wk−2 solve comprehensive PYQs (Open Book mode for EC-3) · Wk−1 revision sheet only.
 
 ---
 
 # Disclaimer
 
-Synthesised from publicly available syllabi + standard textbooks (Anderson, Kotler, Robbins, Hilton, Garrison etc.) + community knowledge bases. Once you log into Taxila LMS, replace any placeholder topic with your batch's exact handout. Detailed bibliography for every Sem 1 subject is appended at the bottom of each individual file (`References & Sources` section).
+**Sem 1 content** is now strictly aligned to the **official BITS Pilani WILP S2-25 course handouts** for `MBACC ZG501/502/503/511`, stored locally in `sem_1/handouts/`. Exam dates, weights, textbooks (T1/T2), references (R1-R4), HSTalks videos, IIMA cases and the 16-session learning plan match the handouts verbatim.
+
+**Sem 2-4 content** is still synthesised from the public programme overview + standard textbooks + community resources, pending official handouts. Once you upload them into `sem_X/handouts/`, the same alignment process can be applied.

@@ -1,162 +1,143 @@
-# Marketing Management — Syllabus
+# Marketing Management — Official Syllabus
 
-> Likely BITS code: **MBA ZG521 / MBA ZC419** (varies). Verify on Taxila handout.
+> **Source:** Course handout `S2-25_MBACCZG503` v1.0, dated 1 July 2025.
+> Local copy: `sem_1/handouts/Marketing Management (S2-25_MBACCZG503) COURSE HANDOUT.docx`
+> Faithful transcription of the official handout. **Do not edit unless the handout itself is updated.**
 
-## Course objective
+## Part A — Course identity
 
-Build a holistic understanding of the marketing function — from analysing consumers and competition, through STP and the 4Ps, to crafting integrated marketing strategy in a digital and AI-augmented economy.
+| Field | Detail |
+|-------|--------|
+| Course title | Marketing Management |
+| Course code | **MBACC ZG503** |
+| Credit units | 4 |
+| Credit model | 3-0-1 (Lecture-Tutorial-Practical/ELC) |
+| Instructors | Prof. Atul Kumar, Prof. Sagar Venkateswar |
+| Handout version | 1.0 |
+| Handout date | 1 July 2025 |
+| Semester | 2nd Semester 2025-2026 |
 
-## Modules / units
+## Course description (verbatim)
 
-### Module 1 — Introduction to Marketing
-- Core concepts: needs, wants, demands; products, value, satisfaction; exchange, transaction, relationship; market
-- Evolution of marketing: production → product → selling → marketing → societal → digital → AI-driven
-- Marketing vs selling; marketing's role in value creation
-- Holistic marketing: relationship, integrated, internal, performance
+Definition and scope, Consumer behavior, competitive behavior, Demand estimation, new product introduction, Product/brand management, Pricing policies, Channels of distribution, credit management, Advertising and other sales promotion, Positioning, marketing regulation, Market research basics of industrial marketing.
 
-### Module 2 — Marketing Environment
-- Macro environment: PESTEL (Political, Economic, Social, Technological, Environmental, Legal)
-- Micro environment: company, suppliers, intermediaries, customers, competitors, publics
-- Five-Forces analysis (industry attractiveness)
+## Course objectives
 
-### Module 3 — Marketing Information & Research
-- Marketing information system (MIS)
-- Marketing research process (define problem → design → data collection → analysis → reporting)
-- Primary vs secondary data; qualitative vs quantitative
-- Sampling methods, questionnaire design
-- Use of analytics & AI in modern research (text mining of reviews, computer vision in retail)
+| No | Objective |
+|----|-----------|
+| CO1 | Understand fundamental marketing concepts and the processes that influence the market orientation of a firm |
+| CO2 | Understand the role of marketing within the organisation |
+| CO3 | Analyse consumer behaviour and its importance for marketing in a competitive world |
+| CO4 | Critically examine the marketing process and its environmental context, with focus on the strategic use of the marketing mix |
+| CO5 | Equip learners with foundational knowledge of market research principles and their application in industrial markets |
 
-### Module 4 — Consumer Behaviour
-- Buyer decision process (5 stages: need recognition → information search → evaluation → purchase → post-purchase)
-- Influences: cultural, social, personal, psychological
-- Models: Howard-Sheth, Engel-Kollat-Blackwell (overview)
-- Online consumer behaviour, customer journey
-- Theory of Planned Behaviour
+## Learning outcomes
 
-### Module 5 — Business / Organisational Buying Behaviour
-- B2B vs B2C differences
-- Buying centre roles: initiator, user, influencer, decider, buyer, gatekeeper
-- Buying situations: new task, modified rebuy, straight rebuy
-- B2B sales cycle and account management
+| LO | Statement |
+|----|-----------|
+| LO1 | Demonstrate understanding of value creation, STP and branding for market-oriented strategies |
+| LO2 | Evaluate the strategic role of marketing in cross-functional integration and innovation |
+| LO3 | Analyse consumer behaviour using psychological, social and cultural frameworks |
+| LO4 | Apply the marketing mix across analysis, opportunity, strategy & tactics |
+| LO5 | Apply foundational market research methods in consumer & industrial markets |
 
-### Module 6 — Segmentation, Targeting and Positioning (STP)
-- **Segmentation bases**: demographic, geographic, psychographic, behavioural, technographic
-- Requirements for effective segmentation: measurable, accessible, substantial, differentiable, actionable
-- **Targeting strategies**: undifferentiated, differentiated, concentrated, micro-marketing
-- **Positioning**: perceptual maps, points of parity (POP), points of difference (POD), positioning statements, repositioning
+## Textbook
 
-### Module 7 — Product Decisions
-- Product levels: core benefit → basic → expected → augmented → potential
-- Product classification: convenience, shopping, speciality, unsought; durables, non-durables, services
-- Product mix decisions: width, length, depth, consistency
-- Product Life Cycle (PLC): introduction, growth, maturity, decline — strategy by stage
-- New product development (NPD): idea generation → screening → concept testing → marketing strategy → business analysis → product development → test marketing → commercialisation
-- Branding: brand equity (Aaker, Keller's CBBE pyramid), brand positioning, branding decisions
+| Code | Reference |
+|:-----|-----------|
+| **T1** | **Philip Kotler, Kevin Lane Keller, Alexander Chernev, Jagdish N. Sheth & G. Shaineesh**. *Marketing Management*. **16/e**. Pearson Education. **2022**. |
 
-### Module 8 — Pricing Decisions
-- Pricing objectives: survival, profit, share, image
-- Methods: cost-plus, target-return, value-based, competition-based, going-rate, sealed-bid, dynamic pricing
-- Strategies: skimming, penetration, premium, economy, psychological, bundle, captive product, two-part
-- Price elasticity; pricing for new products vs established products
-- AI/ML in dynamic pricing (e.g., ride-sharing, e-commerce)
+## Reference books & resources
 
-### Module 9 — Place / Distribution Decisions
-- Channel functions and flows
-- Channel design: length, intensity (intensive, selective, exclusive)
-- Channel management: motivation, evaluation, conflict, integration
-- Vertical, horizontal and multi-channel marketing systems
-- Retail and wholesale formats
-- Logistics & supply chain basics for marketers
-- E-commerce, omni-channel, D2C
+| Code | Reference |
+|:-----|-----------|
+| R1 | *Marketing Management — Indian Cases*. Pearson. 2018. |
+| R2 | Ramaswamy, V. S. & Namakumari, S. *Marketing Management: Indian Context, Global Perspective*. SAGE Publications India. 6e (2018). |
+| R3 | The Economic Times — Brand Equity section. |
+| R4 | Marketing campaigns in print and electronic media — https://www.socialsamosa.com/ , https://www.campaignindia.in/ |
+| R5 | Journal of Consumer Behaviour — https://onlinelibrary.wiley.com/journal/14791838 |
 
-### Module 10 — Promotion / Integrated Marketing Communications (IMC)
-- Communication process; AIDA, hierarchy-of-effects models
-- IMC tools: advertising, sales promotion, PR, personal selling, direct & digital marketing, events, sponsorship
-- Media planning: reach, frequency, GRPs, CPM
-- Digital marketing: SEO, SEM, social media, content, influencer, email
-- Measuring IMC effectiveness
-- AI in marketing communications: targeted ads, GenAI for content, chatbots
+## HSTalks digital resources (mandatory)
 
-### Module 11 — Services Marketing
-- Distinctive characteristics: intangibility, inseparability, variability, perishability (IIVP)
-- 7Ps of services marketing: Product, Price, Place, Promotion, People, Process, Physical evidence
-- Service quality: SERVQUAL gap model
-- Service recovery, customer experience management
+| # | Title / Author |
+|---|----------------|
+| HST1 | What is the marketing mix? — Dr. Annmarie Hanlon, Cranfield SoM (Lecture, 31 May 2023) |
+| HST2 | McDonald's in India: how far should multinational companies go in adapting to local markets? — Prof. Anil K. Gupta, U Maryland (Bite-size Case Study, 30 Apr 2019) |
+| HST3 | What are personas? — Dr. Annmarie Hanlon, Cranfield SoM (Lecture, 31 May 2023) |
+| HST4 | Targeting and segmentation in marketing — Mr. Peter Sleight, Target Market Consultancy (Lecture) |
+| HST5 | Market segmentation: a vital component of hotel marketing — Mr. Martin Evans, The Tourism Business (Lecture) |
+| HST6 | Culture as a consumer force: Yoga and "Glocalisation" — Prof. Søren Askegaard, U Southern Denmark (Bite-size Case Study) |
+| HST7 | Omni-channel marketing and operations: An integrated approach — Dr. Peter Atorough, U Roehampton (Lecture) |
+| HST8 | Sustainable advertising — Mr. Thomas Kolster, Goodvertising Agency (Lecture) |
 
-### Module 12 — Strategic Marketing & Emerging Topics
-- Marketing strategy formulation
-- Customer Lifetime Value (CLV); CRM
-- Loyalty programmes, customer engagement
-- Sustainability, ESG marketing, cause-related marketing
-- Growth strategies: Ansoff matrix
-- Global marketing (overview)
-- AI-first marketing: customer intelligence, recommendation systems, GenAI for personalisation
+## Modular Content Structure
 
----
+- Definition and scope of Marketing
+- Need and Demand estimation
+- Consumer behavior; Competitive behavior
+- Segmentation, Targeting, Positioning
+- New product introduction; Product/Brand management
+- Pricing policies
+- Advertising and other sales promotion
+- Channels of distribution; Credit management
+- Marketing regulation
+- Market research basics; Industrial marketing
 
-## Recommended textbooks
+## Part B — Learning Plan (16 contact sessions with case discussions)
 
-| Type | Title | Author |
-|------|-------|--------|
-| **T1** | Marketing Management | Philip Kotler, Kevin Lane Keller |
-| T2 | Principles of Marketing | Kotler, Armstrong, Agnihotri (Indian edition) |
-| T3 | Marketing Management — A South Asian Perspective | Kotler, Keller, Koshy, Jha |
-| R1 | Strategic Brand Management | Kevin Lane Keller |
-| R2 | Services Marketing | Zeithaml, Bitner, Gremler |
+| CS # | Topic | Reference |
+|:----:|-------|-----------|
+| 1 | Introduction to Marketing — Definition and scope, Marketing for the New Realities, Analysing Consumer Markets and Business Markets | T1 Ch. 1 & 2 + Class Materials |
+| 2 | Types of Need, Wants and Demand and its estimation; Understanding Consumer Behaviour | T1 Ch. 2 |
+| 3 | Consumer characteristics influencing buying behaviour; Model of Consumer Behaviour; Competitive behaviour. **Case Discussion: Consumer Behaviour — Its wide Facts and Deep Implications** | T1 Ch. 3 + R1 Case 6 (pp. 6.1–6.8) |
+| 4 | Identifying Market Segments — requirements for effective segmentation; Targeting. **Case Discussion: Who will buy XYLO — Mahindra & Mahindra Automotive Sector** | T1 Ch. 6 + Class Materials |
+| 5 | Crafting a Customer Value Proposition (CVP); Introduction to Positioning | T1 Ch. 6 + R1 Case 9 (pp. 9.1–9.6) |
+| 6 | Develop and establish effective positioning. **Case Discussion: Kellogg's Cornflakes in India — Finding a Platform that Connects** | T1 Ch. 7 |
+| 7 | Product Management — Designing & Managing Products; New product introduction; Differentiation | T1 Ch. 7 + R1 Case 10 (pp. 10.1–10.8) |
+| 8 | Designing & Managing Services; Marketing Mix for Products/Services. **Case Discussion: MTR Foods — A Marketing Marvel** | T1 Ch. 8 + Pearson Case Book |
+| 9 | Developing Pricing Strategies and Programs | T1 Ch. 8 + R1 Case 1 (pp. 1.1–1.5) |
+| 10 | Setting prices initially; Responding to competitor's price challenge | T1 Ch. 11 |
+| 11 | Managing Marketing Communications — role and major steps | T1 Ch. 12 |
+| 12 | Marketing communication tools; Communications mix; Advertising; Sales promotion. **Case Discussion: Oreo in India — Launching and Establishing a global brand using IMC effectively** | T1 Ch. 12 & 13 + R1 Case 17 (pp. 17.1–17.6) |
+| 13 | Marketing Channel System and Value Network; Channels of Distribution | T1 Ch. 15 |
+| 14 | Major trends with marketing intermediaries; E-commerce and M-commerce | T1 Ch. 15 & 16 |
+| 15 | Marketing regulation; Market research basics of industrial marketing | T1 Ch. 4 & 5 |
+| 16 | Marketing strategy and Marketing Plan. **Case Discussion: Amazon.com adopts its retail business in India** | R1 Case 21 (pp. 21.1–21.4) |
 
----
+## Experiential Learning Components
 
-## Evaluation pattern (typical)
+### In-class ELC
+Examples, audio-visuals and case studies relating to management.
 
-| Component | Weight | Format |
-|-----------|------:|--------|
-| EC-1 | 25–30% | LMS quizzes + 1 case-analysis or marketing-plan assignment |
-| EC-2 Mid-Sem | 30% | 2 hr, descriptive + 1 case-let |
-| EC-3 Comprehensive | 40–45% | 2 hr, descriptive + 1 long case |
+### **Cesim Marketing Simulation** (mandatory)
+- Subscribed to Cesim Simulation as part of Management Lab
+- Best viewed on desktop/laptop with decent internet
+- Game = **1 practice round + 3 actual rounds** (each round = 1 financial year)
+- Decisions can be changed multiple times before the round deadline; once deadline passes, the system auto-advances and previous-round results appear in the *Results* tab
+- Save decisions: *Decision Checklist* → *Copy as Team Decisions*
 
-## Assignment archetypes
-- Build a STP + 4P plan for a real Indian product launch (e.g., a new EV, GenAI tool, FMCG variant).
-- Critique the marketing strategy of a recent campaign (Cred, Zomato, boAt).
-- Design a 90-day digital marketing plan with KPIs.
+### Individual ELC assignment
+**Objective:** Stimulate and check understanding & ability to apply marketing concepts to real brand/product/service.
+**Scope:** Analyse **10 different marketing concepts/models** with definition + real-life illustration (ads, packages, billboards, signage, TV/radio ads, etc.). Indian or global brands.
+- Definitions can be from lecture slides (no marks for definitions, but omission/wrong def → forfeit marks for that question).
+- Justify each illustration and why it fits.
+- Encourage examples from small/regional brands (clinics, coaching centres, restaurants).
+- Use diagrams/pictures wherever possible.
 
----
+## Evaluation Scheme
 
-## References & Sources
+| EC | Component | Type | Weight | Duration | Date / Session |
+|----|-----------|------|-------:|----------|---------------|
+| EC-1 | Quiz-I | Online | 10 % | 10 days | TBA |
+| EC-1 | Quiz-II | Online | 10 % | 10 days | TBA |
+| EC-1 | Experiential Learning-I Assignment | Online | 10 % | 2 weeks | TBA |
+| **EC-2** | **Mid-Semester Test** | **Closed Book** | **30 %** | **2 hours** | **21-06-2026 (AN)** |
+| **EC-3** | **Comprehensive Exam** | **Open Book** | **40 %** | **2 ½ hours** | **06-09-2026 (AN)** |
 
-### Official BITS Pilani WILP
-- Programme page: https://bits-pilani-wilp.ac.in/mba/mba-in-ai-for-business.php
-- WILP Education Policy: https://bits-pilani-wilp.ac.in/resource/education-policy.php
-- BITS Library textbooks portal: https://library.bits-pilani.ac.in/services/textbooks/
+- **Mid-Sem syllabus**: Contact Sessions **1–8**.
+- **Comprehensive syllabus**: All 16 sessions.
 
-### Course-code traces (community / non-official)
-- BITS WILP MBA blog (Marketing Management notes): http://bitswilpmba.blogspot.com/2017/05/?m=1
-- MBA WILP question paper aggregator: https://github.com/Akhilsudh/BITS-WILP-Knowledge-Base
-- Crack BITS WILP — MM exam patterns: https://crackbitswilp.in/
+## Important links
 
-### Recommended textbooks
-- Kotler, Keller, Koshy & Jha — *Marketing Management: A South Asian Perspective*, Pearson: https://www.pearson.com/store/p/marketing-management-a-south-asian-perspective/P200000005846
-- Kotler & Armstrong — *Principles of Marketing*, Pearson: https://www.pearson.com/store/p/principles-of-marketing/P200000005847
-- Etzel, Walker & Stanton — *Marketing*, McGraw Hill.
-- Saxena — *Marketing Management*, McGraw Hill (Indian context).
-- Ramaswamy & Namakumari — *Marketing Management*, Sage Publications India.
-
-### Foundational marketing references
-- AMA — Definition of Marketing: https://www.ama.org/the-definition-of-marketing-what-is-marketing/
-- Porter's Five Forces (HBR original): https://hbr.org/1979/03/how-competitive-forces-shape-strategy
-- Ansoff Matrix (HBR original 1957): https://hbr.org/1957/09/strategies-for-diversification
-- BCG Growth-Share Matrix: https://www.bcg.com/about/overview/our-history/growth-share-matrix
-- Ries & Trout — *Positioning: The Battle for Your Mind* (book summary): https://www.ries.com/positioning/
-- Kotler 4Ps origin (McCarthy): https://www.business.com/articles/4-ps-of-marketing/
-
-### Open educational resources
-- Coursera — Marketing Mix (UPenn Wharton): https://www.coursera.org/learn/wharton-marketing
-- MIT OCW 15.810 — Marketing Management: https://ocw.mit.edu/courses/15-810-marketing-management-spring-2010/
-- HBR — Marketing topic page: https://hbr.org/topic/marketing
-- Think with Google (consumer insights): https://www.thinkwithgoogle.com/
-
-### Indian regulatory & industry context
-- Advertising Standards Council of India (ASCI) Code: https://ascionline.in/the-asci-code/
-- Consumer Protection Act 2019: https://consumeraffairs.nic.in/sites/default/files/CP%20Act%202019.pdf
-- Digital Personal Data Protection (DPDP) Act 2023: https://www.meity.gov.in/digital-personal-data-protection
-- IBEF industry reports (free): https://www.ibef.org/industry
-- Nielsen India market reports: https://www.nielsen.com/in/en/insights/
+- eLearn portal: https://elearn.bits-pilani.ac.in
+- EC-3 open-book guidelines: https://docs.google.com/document/d/1DJvlhVzOaIw4njc9g30MlBuu0DqTzeIL/

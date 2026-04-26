@@ -1,176 +1,104 @@
-# Business Statistics — Short Questions (with Answers)
+# Business Statistics — Short Questions (handout-aligned)
 
-> 35 short-answer questions, each worth 2–5 marks. Designed for EC-1 quizzes and the short-answer section of Mid-Sem / Comprehensive.
+> Aligned to `MBACC ZG501` 16-session plan. Mid-Sem (closed book) draws from S1-S8; Comprehensive (open book) from S1-S16.
+> Each Q has a one- to three-line ideal answer to drill quickly.
 
----
+## Session 1 — Defining and collecting data
+1. **Distinguish parameter vs statistic.** Parameter is a numerical descriptor of population (μ, σ, π); statistic is its sample analogue (X̄, S, p) used to estimate the parameter.
+2. **List four probability sampling methods.** Simple Random, Systematic, Stratified, Cluster.
+3. **What is operational definition of a variable?** Precise rule for measuring it so different observers get the same value.
+4. **State four sources of survey error.** Coverage, Non-response, Sampling, Measurement.
+5. **When is stratified sampling preferable to SRS?** When the population has distinct sub-groups whose proportions you want preserved in the sample (improves precision per ₹).
 
-## Set A — Foundational concepts
+## Session 2 — Organising and analysing data
+6. **What is a Pareto chart used for?** Bars in descending order with cumulative line; identifies the "vital few" categories driving most of the impact.
+7. **Sturges' rule for histogram classes.** k ≈ 1 + 3.322 log₁₀(n).
+8. **Difference between histogram and bar chart.** Histogram for numerical data (touching bars, intervals); bar chart for categorical (gaps).
+9. **Why avoid 3-D pie charts?** Distorts area perception → audience mis-reads the relative magnitudes.
 
-**Q1. Differentiate between descriptive and inferential statistics.**
-Descriptive summarises observed data (mean, σ, charts). Inferential uses sample data to draw conclusions about the population (CIs, hypothesis tests).
+## Session 3 — Numerical Descriptive Measures
+10. **Why use n-1 in sample variance?** Bessel's correction — gives an unbiased estimator of population variance (degrees-of-freedom argument).
+11. **Define coefficient of variation. When use it?** CV = σ/μ × 100 %. Compares variability across data sets with different units or means.
+12. **What does kurtosis = 3 mean?** Mesokurtic — same peakedness as a normal distribution.
+13. **State Chebyshev's rule.** For any distribution, ≥ (1 − 1/k²) of observations lie within k standard deviations of the mean.
+14. **Pearson r limits and meaning.** Range [-1, +1]. ±1 perfect linear, 0 no linear relationship. Doesn't capture non-linear association.
 
-**Q2. List the four scales of measurement with examples.**
-Nominal (gender), Ordinal (satisfaction 1–5), Interval (°C), Ratio (revenue).
+## Session 4 — Basic Probability
+15. **Define conditional probability.** P(A|B) = P(A ∩ B)/P(B), assuming P(B) > 0.
+16. **State Bayes' theorem.** P(A|B) = [P(B|A)·P(A)] / Σ P(B|Aᵢ)·P(Aᵢ).
+17. **A and B are independent. P(A∩B) = ?** P(A) × P(B).
+18. **Difference between mutually exclusive and independent events.** Mutually exclusive: cannot occur together (P(A∩B)=0); Independent: occurrence of one doesn't affect the other (P(A|B)=P(A)).
 
-**Q3. Define population, sample, parameter and statistic.**
-Population = all elements; Sample = subset; Parameter = numeric summary of population (μ); Statistic = numeric summary of sample (x̄).
+## Session 5 — Discrete Probability Distributions
+19. **Mean & variance of binomial B(n,p).** μ = np; σ² = np(1−p).
+20. **Mean & variance of Poisson(λ).** μ = σ² = λ.
+21. **When approximate Binomial by Poisson?** n large, p small, np = λ moderate (rule of thumb: n ≥ 20, p ≤ 0.05).
+22. **Conditions for binomial.** Fixed n trials, two outcomes (S/F), constant p, independent trials.
 
-**Q4. State three differences between primary and secondary data.**
-Primary is fresh, expensive, fit-for-purpose; Secondary is existing, cheap, may not match the exact need.
+## Session 6 — Normal Distribution
+23. **Empirical rule.** ≈ 68 % within ±1σ, 95 % within ±2σ, 99.7 % within ±3σ for a normal distribution.
+24. **Z-score formula and use.** Z = (X − μ)/σ. Standardises any normal variable to N(0,1) for table lookup.
+25. **What property makes the exponential distribution special?** Memoryless: P(X > s+t | X > s) = P(X > t).
 
-**Q5. Why do we use n−1 in sample variance?**
-Bessel's correction: produces an unbiased estimate of population variance, since one degree of freedom is "spent" computing x̄.
+## Session 7 — Sampling Distributions
+26. **State CLT.** For sample size n large enough (≥30 typically), the distribution of X̄ is approximately normal regardless of population shape.
+27. **Standard error of mean.** σ/√n (or S/√n if σ unknown).
+28. **When apply Finite Population Correction?** When n/N > 5 %; multiply SE by √((N−n)/(N−1)).
 
----
-
-## Set B — Descriptive statistics
-
-**Q6. When is the median preferred over the mean?**
-When data are skewed or contain outliers — median is robust; mean is pulled by extremes.
-
-**Q7. Define coefficient of variation. Why is it useful?**
-CV = (σ / μ) × 100%. Unit-free, lets us compare variability across data sets with different units (₹ vs kg).
-
-**Q8. Distinguish positive and negative skew.**
-Positive: long right tail, mean > median (income). Negative: long left tail, mean < median (easy exam).
-
-**Q9. What is kurtosis? Name the three categories.**
-Tailedness of distribution. Mesokurtic (normal), Leptokurtic (heavy tails), Platykurtic (thin tails).
-
-**Q10. How are outliers identified using IQR?**
-Outlier if value < Q1 − 1.5·IQR or > Q3 + 1.5·IQR.
-
----
-
-## Set C — Probability
-
-**Q11. State the addition rule for two non-mutually-exclusive events.**
-P(A ∪ B) = P(A) + P(B) − P(A ∩ B).
-
-**Q12. When are two events independent?**
-P(A ∩ B) = P(A) · P(B), or equivalently P(A | B) = P(A).
-
-**Q13. State Bayes' theorem.**
-P(A | B) = [P(B | A) · P(A)] / P(B).
-
-**Q14. A bag has 4 red and 6 blue balls. Two are drawn without replacement. P(both red)?**
-(4/10) × (3/9) = 12/90 = 2/15 ≈ 0.133.
-
-**Q15. What is the difference between mutually exclusive and independent events?**
-Mutually exclusive: A and B cannot both occur (P(A ∩ B) = 0). Independent: occurrence of A doesn't change P(B). They are not the same; in fact, mutually exclusive events with positive probability are *not* independent.
+## Session 8 — Confidence Interval Estimation
+29. **Why use t-distribution instead of z?** When σ unknown and we estimate it with S; t accounts for extra uncertainty (heavier tails).
+30. **95 % CI formula for mean (σ unknown).** X̄ ± t_(α/2, n-1) · S/√n.
+31. **Sample size formula for mean estimation.** n = (z_(α/2)·σ / e)².
+32. **Common interpretation pitfall of CI.** Saying "there's a 95 % chance μ is in this CI" — wrong; the parameter is fixed; 95 % refers to long-run capture rate.
 
 ---
 
-## Set D — Distributions
+## Session 9 — Fundamentals of Hypothesis Testing
+33. **State the 7 steps of hypothesis testing.** State H₀/H₁ → choose α → pick test stat → decision rule → collect data → compute → decide.
+34. **Type I vs Type II error.** Type I = rejecting true H₀ (α); Type II = accepting false H₀ (β).
+35. **What does p-value of 0.03 mean?** Probability of observing data as extreme as the sample if H₀ is true is 3 %.
+36. **Power of test definition.** 1 − β; probability of correctly rejecting a false H₀.
 
-**Q16. State the assumptions of the binomial distribution.**
-Fixed n trials, two outcomes (success/failure), constant p, independent trials.
+## Session 10 — Two-sample tests and ANOVA
+37. **When use paired t-test?** When observations are naturally pairwise related (before/after, matched pairs).
+38. **F-test purpose.** Compare two variances; ratio S₁²/S₂² with df = n₁−1, n₂−1.
+39. **One-way ANOVA H₀.** All k population means are equal: μ₁ = μ₂ = … = μ_k.
+40. **What is Tukey's HSD?** Post-hoc multiple-comparison test to identify which pairs of means differ after a significant ANOVA.
 
-**Q17. When can a binomial be approximated by a Poisson?**
-Large n (≥30), small p (≤0.05), np ≤ 10.
+## Session 11 — Chi-square test
+41. **Expected count formula in contingency table.** E_ij = (row total × column total) / grand total.
+42. **df for chi-square test of independence (r×c table).** (r − 1)(c − 1).
+43. **Goodness-of-fit df.** k − 1 − (number of parameters estimated from data).
+44. **When chi-square test is invalid.** When any expected frequency < 5 (use Fisher's exact instead, or merge categories).
 
-**Q18. What is the memoryless property of the exponential distribution?**
-P(X > s + t | X > s) = P(X > t). Past waiting time doesn't affect future waiting time.
+## Session 12 — Other Non-parametric tests
+45. **Non-parametric counterpart to two-sample t.** Mann-Whitney U / Wilcoxon Rank-Sum.
+46. **Non-parametric counterpart to one-way ANOVA.** Kruskal-Wallis H test.
+47. **Non-parametric counterpart to paired t.** Wilcoxon Signed-Rank.
+48. **Spearman rank correlation formula.** r_s = 1 − [6 Σd_i² / (n(n²−1))] where d_i = rank difference.
+49. **Why use non-parametric tests?** When normality assumption violated, data ordinal, or small samples.
 
-**Q19. Calculate P(Z ≤ 1.96) and P(−1.96 ≤ Z ≤ 1.96).**
-P(Z ≤ 1.96) = 0.975; P(−1.96 ≤ Z ≤ 1.96) = 0.95.
+## Session 13 — Regression assumption & normality testing
+50. **List regression assumptions (LINE).** Linearity, Independence of errors, Normality of errors, Equal variance.
+51. **What does R² = 0.78 mean?** 78 % of variation in Y is explained by the regression model.
+52. **Adjusted R² vs R².** Adjusted R² penalises addition of predictors; better for comparing models with different numbers of variables.
+53. **F-test in regression purpose.** Tests overall significance — at least one β_i ≠ 0.
 
-**Q20. The mean and variance of a Poisson distribution are both equal to ___.**
-λ.
+## Session 14 — Linear Regression — diagnostics
+54. **Detect heteroscedasticity from residual plot.** Funnel/cone shape (variance changing with fitted values).
+55. **Durbin-Watson interpretation.** DW ≈ 2 → no autocorrelation; <2 positive; >2 negative.
+56. **Best test of normality for small samples.** Shapiro-Wilk (also Anderson-Darling).
+57. **What's VIF and threshold?** Variance Inflation Factor for multicollinearity; VIF > 5–10 problematic.
+58. **Fix for heteroscedasticity.** Transform Y (log/Box-Cox), use weighted least squares, or use heteroscedasticity-robust SEs.
 
----
+## Session 15 — Introduction to Linear Programming
+59. **Three components of an LP.** Decision variables, linear objective function, linear constraints (+ non-negativity).
+60. **Where does optimal LP solution lie?** At an extreme/corner point of the feasible region (Fundamental Theorem of LP).
+61. **What is shadow price?** Improvement in objective function per unit increase in RHS of a binding constraint.
+62. **What is reduced cost?** Penalty per unit forced into the optimal solution if a non-basic variable is brought in.
+63. **Special LP cases.** Multiple optimal, infeasibility, unbounded, degeneracy.
+64. **Excel tool for LP.** Solver add-in (use Simplex LP method for linear models).
 
-## Set E — Sampling and CLT
-
-**Q21. State the Central Limit Theorem.**
-For a sufficiently large sample size (n ≥ 30), the sampling distribution of the sample mean is approximately normal with mean μ and SE σ/√n, regardless of the population distribution.
-
-**Q22. Differentiate stratified and cluster sampling.**
-Stratified: divide into homogeneous strata, sample from each. Cluster: divide into heterogeneous clusters, sample whole clusters. Stratified gives better precision; cluster is cheaper.
-
-**Q23. Standard error of the sample mean is ___.**
-σ/√n (or s/√n if σ unknown).
-
-**Q24. To halve the standard error, sample size should be ___.**
-Multiplied by 4 (since SE ∝ 1/√n).
-
----
-
-## Set F — Estimation
-
-**Q25. Interpret a 95% confidence interval (35, 45) for population mean.**
-We are 95% confident that the population mean lies between 35 and 45 — meaning if we repeated the sampling process, ~95% of such intervals would contain μ.
-
-**Q26. List 3 properties of a good estimator.**
-Unbiased, consistent, efficient (also: sufficient).
-
-**Q27. To estimate a proportion when no prior estimate of p is available, use p̂ = ___.**
-0.5 (gives the most conservative, i.e., largest, sample size).
-
----
-
-## Set G — Hypothesis testing
-
-**Q28. Differentiate Type I and Type II errors.**
-Type I: reject H₀ when true (false positive, controlled by α). Type II: fail to reject H₀ when false (false negative, β).
-
-**Q29. What is power of a test?**
-1 − β = probability of correctly rejecting a false H₀.
-
-**Q30. Define p-value.**
-Probability of observing a test statistic at least as extreme as the one computed, assuming H₀ is true.
-
-**Q31. When do we use the t-distribution instead of Z?**
-When σ is unknown and the sample is small (typically n < 30); also useful even for larger samples when σ unknown.
-
-**Q32. State H₀ for a chi-square test of independence.**
-The two categorical variables are independent (no association).
-
----
-
-## Set H — Regression & forecasting
-
-**Q33. State two assumptions of simple linear regression.**
-(i) Linear relationship between X and Y; (ii) Errors are independent, normally distributed with constant variance (homoscedasticity).
-
-**Q34. What does R² = 0.8 mean?**
-80% of the variation in Y is explained by the regression on X.
-
-**Q35. Define MAPE in forecasting.**
-Mean Absolute Percentage Error = (Σ|(Actual − Forecast)/Actual| / n) × 100%. Lower is better; common forecast accuracy KPI.
-
----
-
-## Bonus — One-liners often appearing in EC-1 quizzes
-
-| Question | Answer |
-|----------|--------|
-| Mean of standard normal | 0 |
-| Variance of standard normal | 1 |
-| Sum of all probabilities in a distribution | 1 |
-| df for one-sample t-test (n=20) | 19 |
-| df for chi-square independence (3×4 table) | 6 |
-| Critical Z for 99% two-tailed | ±2.576 |
-| Sampling distribution shape for proportion (large n) | Approximately normal |
-| Symmetry of normal distribution | Yes, around μ |
-| Skewness of normal distribution | 0 |
-| Kurtosis (excess) of normal | 0 |
-
----
-
-## References & Sources
-
-### Question patterns drawn from
-- Anderson, Sweeney & Williams — chapter-end review questions and self-test problems.
-- Levine — *Business Statistics: A First Course* — practice problem sets.
-- Aczel & Sounderpandian — Indian-context numerical problems.
-- BITS WILP MBA ZC417 sample question patterns (Scribd uploads, unverified): https://www.scribd.com/document/515064632/MBA-ZC417
-
-### Practice resources
-- OpenIntro Statistics — end-of-chapter exercises: https://www.openintro.org/book/os/
-- Khan Academy practice exercises: https://www.khanacademy.org/math/statistics-probability
-- StatTrek practice problems: https://stattrek.com/practice/quiz
-- Investopedia for definitions cross-check: https://www.investopedia.com/financial-term-dictionary-4769738
-
-### Calculator quick references
-- Casio FX-991EX manual (statistics mode): https://support.casio.com/global/en/calc/manual/fx-991EX_570EX_en/
+## Session 16 — Revision (cross-cutting)
+65. **Quick selector — categorical association test?** Chi-square test of independence.
+66. **Open-book exam tactic.** Tab textbook by chapter; pre-print Z/t/F/χ² tables; flag formulas you slow down on.

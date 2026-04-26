@@ -1,452 +1,549 @@
-# Business Statistics — Chapter-wise Notes
+# Business Statistics — Session-wise Notes (handout-aligned)
 
-> Use alongside Anderson, Sweeney & Williams (T1). Each chapter ends with a 60-second recap.
+> Built from the official `MBACC ZG501` handout (S2-25, v4.0).
+> Primary text **T1** = Levine, Szabat, Stephan & Viswanathan, *Business Statistics*, **Pearson 7e (2019)**.
+> Secondary text **T2** = Anderson, Sweeney, Williams, Camm & Martin, *Quantitative Methods for Business*, **Cengage 12e (2013)**.
+> 16 contact sessions = exam-ready chunks. Mid-Sem (closed book) covers sessions 1-8; Comprehensive (open book) covers 1-16.
 
----
+## Quick session map
 
-## Chapter 1 — Introduction to Statistics & Data
-
-### 1.1 What is statistics?
-A discipline of collecting, organising, summarising, analysing, and interpreting data so business decisions are supported by evidence rather than gut feel.
-
-Two broad branches:
-- **Descriptive statistics** — summarise data (mean, σ, charts).
-- **Inferential statistics** — generalise from a sample to a population (estimation, hypothesis testing).
-
-### 1.2 Population vs sample
-- **Population (N)**: the complete set of all elements of interest (e.g., all 30,000 employees of TCS).
-- **Sample (n)**: a subset selected for study (e.g., 500 employees surveyed).
-- **Parameter**: numerical summary of a population (μ, σ, π).
-- **Statistic**: numerical summary of a sample (x̄, s, p).
-
-### 1.3 Types of data
-
-| Scale | Property | Example | Permitted operations |
-|-------|----------|---------|----------------------|
-| Nominal | Labels only | Gender, brand | Counts, mode |
-| Ordinal | Order, no equal gaps | Customer satisfaction (1–5) | Median, percentiles |
-| Interval | Equal gaps, no true zero | Temperature in °C | Mean, σ, addition |
-| Ratio | Equal gaps + true zero | Revenue, weight | All arithmetic |
-
-### 1.4 Sources of data
-- **Primary**: collected first-hand (surveys, experiments, observations).
-- **Secondary**: already-existing (RBI, NSO, Bloomberg, internal CRM logs).
-
-### 60-second recap
-Statistics turns raw numbers into evidence. Know the difference between a parameter (population) and a statistic (sample), and the four data scales — they decide which formula you can use.
+| # | Session | Source | Mid-Sem? |
+|--:|---------|--------|:--------:|
+| 1 | [Defining and collecting data](#session-1--defining-and-collecting-data) | T1 Ch. 1 | ✅ |
+| 2 | [Organising and analysing data](#session-2--organising-and-analysing-data) | T1 Ch. 2 | ✅ |
+| 3 | [Numerical Descriptive Measures](#session-3--numerical-descriptive-measures) | T1 Ch. 3 | ✅ |
+| 4 | [Basic Probability](#session-4--basic-probability) | T1 Ch. 4 | ✅ |
+| 5 | [Discrete Probability Distributions](#session-5--discrete-probability-distributions) | T1 Ch. 5 | ✅ |
+| 6 | [Normal Distribution](#session-6--normal-distribution) | T1 Ch. 6 | ✅ |
+| 7 | [Sampling Distributions](#session-7--sampling-distributions) | T1 Ch. 7 | ✅ |
+| 8 | [Confidence Interval Estimation](#session-8--confidence-interval-estimation) | T1 Ch. 8 | ✅ |
+| 9 | [Fundamentals of Hypothesis Testing](#session-9--fundamentals-of-hypothesis-testing) | T1 Ch. 9 | — |
+| 10 | [Two-sample tests and ANOVA](#session-10--two-sample-tests-and-anova) | T1 Ch. 10 | — |
+| 11 | [Chi-square test](#session-11--chi-square-test) | T1 Ch. 11 | — |
+| 12 | [Other Non-parametric tests](#session-12--other-non-parametric-tests) | Class Notes | — |
+| 13 | [Validating regression assumption & normality testing](#session-13--validating-regression-assumption--normality-testing) | T1 Ch. 13 | — |
+| 14 | [Linear Regression — diagnostics](#session-14--linear-regression--diagnostics) | Class Notes | — |
+| 15 | [Introduction to Linear Programming](#session-15--introduction-to-linear-programming) | Class Notes / T2 | — |
+| 16 | [Revision](#session-16--revision) | — | — |
 
 ---
 
-## Chapter 2 — Descriptive Statistics
+## Session 1 — Defining and collecting data
+**Source:** Levine T1 Ch. 1.
 
-### 2.1 Frequency distribution
-Group raw data into class intervals; record counts. Display via:
-- **Histogram** — vertical bars, no gaps (continuous data).
-- **Bar chart** — gaps between bars (categorical data).
-- **Ogive** — cumulative frequency curve, used to read percentiles.
+**Why it matters.** Every analytic conclusion is only as good as the data definition and the way it was collected. Mis-defined variables and biased samples cause expensive downstream rework.
 
-### 2.2 Measures of central tendency
+**Key concepts**
+- **Statistics**: Descriptive (summarise data) vs Inferential (generalise from sample to population).
+- **Variable**: a characteristic that varies — Categorical (Nominal, Ordinal) or Numerical (Discrete, Continuous; Interval, Ratio).
+- **Data scales**: Nominal < Ordinal < Interval < Ratio (each higher level supports more arithmetic).
+- **Population (N)** vs **Sample (n)**; **Parameter** (population) vs **Statistic** (sample).
+- **Operational definition**: precise rule for measuring the variable (essential for reproducibility).
 
-| Measure | Formula | When to use | Robust to outliers? |
-|---------|---------|-------------|---------------------|
-| Mean | x̄ = Σx / n | Symmetric data, ratio scale | No |
-| Median | Middle value when sorted | Skewed data, ordinal | Yes |
-| Mode | Most frequent value | Nominal data, identifying peaks | Yes |
-| Weighted mean | Σ(wᵢxᵢ) / Σwᵢ | Different weights per observation | No |
-| Geometric mean | (x₁·x₂·…·xₙ)^(1/n) | Growth rates, ratios | Slightly |
-| Harmonic mean | n / Σ(1/xᵢ) | Average of rates (km/h) | Yes |
+**Sampling methods** (probability)
+- **Simple Random** — every unit equal chance (use random numbers/RAND()).
+- **Systematic** — every k-th unit; k = N/n.
+- **Stratified** — divide into strata (by gender/region/etc.), sample within each.
+- **Cluster** — divide into clusters (geographic), sample whole clusters.
 
-### 2.3 Measures of dispersion
+**Non-probability** (use with caution): Convenience, Judgmental, Quota, Snowball.
 
-| Measure | Formula |
-|---------|---------|
-| Range | max − min |
-| Variance (sample) | s² = Σ(x − x̄)² / (n−1) |
-| Standard deviation | s = √s² |
-| Coefficient of variation | CV = s / x̄ × 100 % |
-| Inter-quartile range | IQR = Q3 − Q1 |
+**Survey methods**: Personal interview (high cost, high quality), Telephone, Mail, Online (lowest cost, highest non-response).
 
-Why divide by **n−1** for sample variance? Bessel's correction — gives an unbiased estimate of population variance.
+**Errors**
+- **Coverage error** (population frame missing units)
+- **Non-response error** (selected units don't reply)
+- **Sampling error** (chance variation across samples)
+- **Measurement error** (badly worded questions, interviewer bias)
 
-### 2.4 Measures of shape
-- **Skewness**: asymmetry. Positive skew → long right tail (income, asset prices). Negative skew → long left tail (exam scores when easy).
-  - Pearson's coefficient = 3(Mean − Median) / σ
-- **Kurtosis**: tailedness. Excess kurtosis > 0 → leptokurtic (fat tails). < 0 → platykurtic (thin tails).
-
-### 2.5 Five-number summary & box-plot
-Min · Q1 · Median · Q3 · Max.
-Outliers: any value outside Q1 − 1.5·IQR or Q3 + 1.5·IQR.
-
-### 60-second recap
-Mean is sensitive to outliers, median is not. Use σ to express spread, CV to compare spreads of different units. Skewness signals the side with the long tail; kurtosis signals heavy tails.
+**Excel/Python pointers**
+- Excel: `=RANDBETWEEN(1,N)` for SRS; `Data → Data Analysis → Sampling`.
+- Python: `pandas.DataFrame.sample(n)`, `sklearn.model_selection.train_test_split` for stratified split.
 
 ---
 
-## Chapter 3 — Probability
+## Session 2 — Organising and analysing data
+**Source:** Levine T1 Ch. 2.
 
-### 3.1 Definitions
-- **Random experiment**: outcome cannot be predicted with certainty (rolling a die).
-- **Sample space (S)**: set of all possible outcomes.
-- **Event (E)**: subset of S.
+**For categorical variables**
+- **Summary table**: counts/percentages.
+- **Bar chart, Pie chart, Pareto chart** (Pareto = bar in descending order + cumulative line; powerful for "vital few" analysis).
+- **Cross-tabulation (contingency table)** for two categorical variables; **side-by-side bar chart** to visualise.
 
-### 3.2 Approaches to probability
-1. **Classical**: P(E) = favourable / total (when outcomes are equally likely).
-2. **Relative frequency**: P(E) = (number of times E occurred) / total trials.
-3. **Subjective**: degree of belief based on judgement.
+**For numerical variables**
+- **Frequency distribution** with classes (use *Sturges' rule*: classes ≈ 1 + 3.322 log₁₀ n).
+- **Histogram, Polygon, Cumulative (ogive)**, **Stem-and-leaf** plot.
+- **Time-series plot** (numerical vs time).
+- **Scatter plot** for two numerical variables.
 
-### 3.3 Axioms (Kolmogorov)
-1. 0 ≤ P(E) ≤ 1
-2. P(S) = 1
-3. For mutually exclusive events: P(A ∪ B) = P(A) + P(B)
+**Visualising sets of variables**
+- Multidimensional contingency tables, side-by-side / stacked bar charts.
+- **Drill-down** PivotTables in Excel.
 
-### 3.4 Rules
+**Best practices**
+- Avoid 3-D effects, "chartjunk", non-zero baselines on bars, dual axes.
+- Use color sparingly to highlight; label axes.
 
-| Rule | Formula |
-|------|---------|
-| Complement | P(Aᶜ) = 1 − P(A) |
-| Addition (general) | P(A ∪ B) = P(A) + P(B) − P(A ∩ B) |
-| Multiplication (independent) | P(A ∩ B) = P(A) × P(B) |
-| Multiplication (dependent) | P(A ∩ B) = P(A) × P(B \| A) |
-| Conditional | P(A \| B) = P(A ∩ B) / P(B) |
-
-### 3.5 Bayes' theorem
-
-P(Aᵢ | B) = [P(B | Aᵢ) · P(Aᵢ)] / Σⱼ [P(B | Aⱼ) · P(Aⱼ)]
-
-Use when we know P(test result | disease) but want P(disease | test result). Foundation of Naive Bayes classifiers in ML.
-
-**Example.** A test for a rare disease has 95% sensitivity and 90% specificity. Disease prevalence = 1%. P(disease | positive) = ?
-- P(+ | D) = 0.95, P(+ | ¬D) = 0.10, P(D) = 0.01
-- P(D | +) = (0.95 × 0.01) / (0.95 × 0.01 + 0.10 × 0.99) = 0.0095 / 0.1085 ≈ 8.8 %.
-Counter-intuitive: even a "positive" result means only 9% chance of disease. This is the base-rate fallacy.
-
-### 60-second recap
-Probability lives between 0 and 1. Addition for "or" (subtract overlap), multiplication for "and" (independence simplifies). Bayes flips the conditional and is the heart of medical screening + spam filters + Naive Bayes.
+**Excel/Python pointers**
+- Excel: PivotTable + PivotChart; `=FREQUENCY()`.
+- Python: `pandas.crosstab`, `seaborn.histplot`, `seaborn.scatterplot`.
 
 ---
 
-## Chapter 4 — Probability Distributions
+## Session 3 — Numerical Descriptive Measures
+**Source:** Levine T1 Ch. 3.
 
-### 4.1 Discrete distributions
+**Central tendency**
+- **Mean** $\bar{X} = \frac{\sum X_i}{n}$ — affected by outliers.
+- **Median** = middle value; robust to outliers.
+- **Mode** = most frequent value; can be multimodal.
+- **Geometric mean** = $\left(\prod X_i\right)^{1/n}$ — for growth rates.
 
-#### Bernoulli
-- 1 trial, two outcomes (success/failure).
-- P(X = 1) = p, P(X = 0) = 1 − p.
-- Mean = p, Variance = p(1 − p).
+**Variation**
+- **Range** = max − min.
+- **Interquartile range (IQR)** = Q₃ − Q₁ (boxplot whiskers).
+- **Variance** $S^2 = \frac{\sum (X_i-\bar{X})^2}{n-1}$ (sample) — note $n-1$ for unbiasedness.
+- **Std deviation** $S = \sqrt{S^2}$.
+- **Coefficient of variation** $CV = (S / \bar{X}) \times 100\%$ — for comparing variability across different units.
 
-#### Binomial — n independent Bernoulli trials
-- P(X = k) = C(n, k) · pᵏ · (1−p)ⁿ⁻ᵏ
-- Mean = np, Variance = np(1 − p).
-- Use when: fixed n trials, two outcomes, constant p, independent trials.
+**Shape**
+- **Skewness** = E[(X−μ)³]/σ³. >0 right-skewed (mean > median), <0 left-skewed.
+- **Kurtosis** = E[(X−μ)⁴]/σ⁴. >3 leptokurtic (peaked, fat tails), <3 platykurtic.
+- **Empirical rule (normal)**: ≈ 68 % within 1σ, 95 % within 2σ, 99.7 % within 3σ.
+- **Chebyshev's rule** (any distribution): ≥ (1 − 1/k²) within k σ.
 
-#### Poisson — rare events in fixed interval
-- P(X = k) = (e⁻λ · λᵏ) / k!
+**Exploring data**
+- **Five-number summary** (min, Q₁, median, Q₃, max).
+- **Boxplot** highlights outliers.
+- **z-score** $z = (X - \bar{X})/S$; |z| > 3 typically flagged.
+
+**Population measures** (μ, σ²) — divide by N (not n−1).
+
+**Covariance & correlation**
+- $\text{Cov}(X,Y) = \frac{\sum (X_i-\bar{X})(Y_i-\bar{Y})}{n-1}$.
+- **Pearson r** = Cov(X,Y)/(SₓSᵧ); range [−1, +1]; measures **linear** association only.
+
+**Excel/Python pointers**
+- Excel: `=AVERAGE`, `=MEDIAN`, `=STDEV.S`, `=VAR.S`, `=PERCENTILE.INC`, `=SKEW`, `=KURT`, `=CORREL`, `=COVARIANCE.S`.
+- Python: `df.describe()`, `df.skew()`, `df.kurt()`, `df.corr()`.
+
+---
+
+## Session 4 — Basic Probability
+**Source:** Levine T1 Ch. 4.
+
+**Approaches to probability**
+- **Classical (a priori)**: equally likely outcomes, P(A) = favourable/total.
+- **Empirical (relative frequency)**: P(A) = #occurrences / #trials (Law of Large Numbers).
+- **Subjective (Bayesian prior)**: degree of belief.
+
+**Axioms**: 0 ≤ P(A) ≤ 1; P(S) = 1; for mutually exclusive A,B: P(A ∪ B) = P(A) + P(B).
+
+**Rules**
+- **Complement**: P(A') = 1 − P(A).
+- **Addition (general)**: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).
+- **Multiplication (independent)**: P(A ∩ B) = P(A) × P(B).
+- **Conditional**: P(A|B) = P(A ∩ B) / P(B) (B has happened).
+- **Independence test**: A,B independent iff P(A|B) = P(A).
+
+**Bayes' theorem**
+$$P(A_i|B) = \frac{P(B|A_i) P(A_i)}{\sum_j P(B|A_j) P(A_j)}$$
+- Use cases: medical testing (sensitivity, specificity → PPV), spam filtering, fraud detection.
+- **Prior** × **Likelihood** ∝ **Posterior**.
+
+**Counting rules**
+- Permutation: $P(n,r) = n!/(n-r)!$ (order matters).
+- Combination: $C(n,r) = n!/(r!(n-r)!)$ (order doesn't).
+
+**Worked Bayes example**
+- Disease prevalence 1 %, test sensitivity 99 %, specificity 95 %.
+- P(Disease|+) = (0.99 × 0.01) / (0.99 × 0.01 + 0.05 × 0.99) ≈ **16.7 %** — counter-intuitive low PPV.
+
+**Excel/Python**
+- Excel: `=PERMUT()`, `=COMBIN()`.
+- Python: `math.perm`, `math.comb`, `scipy.stats.bayes_mvs`.
+
+---
+
+## Session 5 — Discrete Probability Distributions
+**Source:** Levine T1 Ch. 5.
+
+**General**
+- PMF $P(X = x)$, satisfies $\sum P(x) = 1$.
+- **Expected value** $E(X) = \mu = \sum x \cdot P(x)$.
+- **Variance** $\sigma^2 = \sum (x-\mu)^2 P(x)$; **σ** = √Var.
+
+**Binomial distribution** B(n, p)
+- $P(X=x) = \binom{n}{x} p^x (1-p)^{n-x}$.
+- Mean = np; Variance = np(1−p).
+- Use cases: defective items, conversions, yes/no.
+- Conditions: fixed n, two outcomes, constant p, independent trials.
+- Excel: `=BINOM.DIST(x, n, p, FALSE/TRUE)`.
+
+**Poisson distribution** P(λ)
+- $P(X=x) = \frac{e^{-\lambda} \lambda^x}{x!}$.
 - Mean = Variance = λ.
-- Use when: events independent, rate constant, intervals small.
-- **Binomial → Poisson approximation** when n large, p small, np ≤ 10.
+- Models rare events per unit time/space (calls/hour, defects/m²).
+- **Binomial → Poisson** when n large, p small, np = λ.
+- Excel: `=POISSON.DIST(x, λ, FALSE/TRUE)`.
 
-#### Hypergeometric — sampling without replacement
-- P(X = k) = [C(K, k) · C(N−K, n−k)] / C(N, n)
-- Used when population is finite and successes are not replaced.
+**Discrete uniform** P(X=x) = 1/k for k equally likely outcomes; mean = (k+1)/2.
 
-### 4.2 Continuous distributions
-
-#### Uniform
-- f(x) = 1 / (b − a) for a ≤ x ≤ b.
-- Mean = (a + b)/2, Variance = (b − a)² / 12.
-
-#### Normal — the bell curve
-- f(x) = (1 / σ√(2π)) · exp(−(x − μ)² / 2σ²)
-- Symmetric around μ; ~68% within μ ± σ, ~95% within μ ± 2σ, ~99.7% within μ ± 3σ.
-- **Standardise**: Z = (X − μ) / σ; Z ~ N(0, 1).
-- Read Z-tables to find P(Z ≤ z).
-
-#### Exponential — time between Poisson events
-- f(x) = λe^(−λx), x ≥ 0.
-- Mean = 1/λ, Variance = 1/λ².
-- Memoryless property.
-
-### 4.3 Approximations
-- Binomial → Normal when np ≥ 5 and n(1−p) ≥ 5. Use μ = np, σ² = np(1−p), with continuity correction (±0.5).
-- Binomial → Poisson when n ≥ 30, p ≤ 0.05, np ≤ 10.
-
-### 60-second recap
-Discrete = countable outcomes (binomial counts successes; Poisson counts events). Continuous = measurable (normal is the universal default; exponential models waiting times). Always identify the random experiment first, then pick the distribution.
+**Worked example (binomial)**
+- Click-through rate p = 2 %, send n = 500 emails. P(X ≥ 15) = 1 − BINOM.DIST(14, 500, 0.02, TRUE).
 
 ---
 
-## Chapter 5 — Sampling and Sampling Distributions
+## Session 6 — Normal Distribution
+**Source:** Levine T1 Ch. 6.
 
-### 5.1 Sampling techniques
+**Continuous probability**: PDF $f(x)$, P(X = a single point) = 0; probability = area under curve.
 
-| Method | Description | When to use |
-|--------|-------------|-------------|
-| Simple random | Every unit equal chance | Homogeneous population |
-| Stratified | Divide into strata, sample within | Heterogeneous, want representation |
-| Systematic | Every kᵗʰ element | Ordered list |
-| Cluster | Sample whole groups | Geographically dispersed |
-| Convenience | Easiest to reach | Pilot study only — biased |
+**Normal distribution** N(μ, σ²)
+- Bell-shaped, symmetric about μ; defined by μ and σ.
+- $f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$.
+- **Standardisation**: $Z = (X-\mu)/\sigma$ → N(0,1).
+- 68-95-99.7 rule.
 
-### 5.2 Sampling distribution of the mean
-If we draw all possible samples of size n and compute x̄ for each, the distribution of x̄ has:
-- Mean: μ_x̄ = μ
-- Standard error: σ_x̄ = σ / √n (or s/√n if σ unknown)
+**Standard normal table usage**
+- Find P(Z < z), P(Z > z), P(a < Z < b).
+- Inverse: find z given probability (e.g., for 95th percentile, z ≈ 1.645).
 
-### 5.3 Central Limit Theorem
-For sufficiently large n (≥30), the sampling distribution of x̄ is approximately normal regardless of the population's distribution. This is the engine that makes nearly all inference work.
+**Other continuous**
+- **Uniform**: f(x) = 1/(b−a) on [a,b]; mean = (a+b)/2; var = (b−a)²/12.
+- **Exponential**: f(x) = λe^(−λx); mean = 1/λ; memoryless. Time between Poisson events.
 
-### 5.4 Sampling distribution of the proportion
-- Mean: μ_p = π
-- Standard error: σ_p = √(π(1−π)/n)
+**Worked example**
+- Daily order volume X ~ N(1200, 150²). P(X > 1500) = P(Z > 2) ≈ **2.28 %**.
+
+**Excel/Python**
+- Excel: `=NORM.DIST(x, μ, σ, TRUE)`, `=NORM.S.INV(p)`.
+- Python: `scipy.stats.norm.cdf`, `norm.ppf`.
+
+---
+
+## Session 7 — Sampling Distributions
+**Source:** Levine T1 Ch. 7.
+
+**Sampling distribution of the mean** $\bar{X}$
+- $E(\bar{X}) = \mu$; $\sigma_{\bar{X}} = \sigma/\sqrt{n}$ (standard error).
+- **Central Limit Theorem (CLT)**: for n ≥ 30 (or population already normal), $\bar{X}$ is approximately normal regardless of population shape.
+- Implication: as n increases, sampling distribution narrows; precision improves with √n.
+
+**Sampling distribution of the proportion** $p$
+- $E(p) = π$; $\sigma_p = \sqrt{π(1-π)/n}$.
 - Approximately normal when nπ ≥ 5 and n(1−π) ≥ 5.
 
-### 60-second recap
-Pick a sample, compute a statistic. Repeat. The variation of that statistic across samples is the sampling distribution. CLT says: the sample mean is approximately normal for n ≥ 30. Standard error shrinks as 1/√n.
+**Why it matters**
+- Foundation of all inferential statistics. Every test/CI uses a sampling distribution.
+
+**Finite Population Correction (FPC)** = √((N−n)/(N−1)); apply when n/N > 5 %.
 
 ---
 
-## Chapter 6 — Estimation
+## Session 8 — Confidence Interval Estimation
+**Source:** Levine T1 Ch. 8.
 
-### 6.1 Point estimation
-A single best-guess value. Properties of a good estimator:
-- **Unbiasedness**: E(θ̂) = θ
-- **Consistency**: θ̂ → θ as n → ∞
-- **Efficiency**: minimum variance among unbiased estimators
-- **Sufficiency**: uses all sample information
+**CI for mean (σ unknown)** — small/large samples
+$$\bar{X} \pm t_{\alpha/2,\,n-1} \cdot \frac{S}{\sqrt{n}}$$
+- Use **t-distribution** with n−1 degrees of freedom; t > z (wider CI to reflect extra uncertainty from estimating σ).
+- 95 % CI ⇒ α = 0.05, t-critical from table.
 
-### 6.2 Interval estimation — Confidence Intervals (CI)
+**CI for proportion**
+$$p \pm z_{\alpha/2} \cdot \sqrt{\frac{p(1-p)}{n}}$$
 
-**For population mean (σ known)**: x̄ ± Z_(α/2) · (σ/√n)
-**For population mean (σ unknown, n small)**: x̄ ± t_(α/2, n−1) · (s/√n)
-**For population proportion**: p̂ ± Z_(α/2) · √(p̂(1−p̂)/n)
+**Determining sample size**
+- For mean: $n = \left(\frac{z_{\alpha/2}\,\sigma}{e}\right)^2$ (e = margin of error).
+- For proportion: $n = \frac{z_{\alpha/2}^2 \cdot π(1-π)}{e^2}$ (use π = 0.5 for max n if unknown).
 
-Common Z values:
-| Confidence | Z |
-|-----------:|---|
-| 90% | 1.645 |
-| 95% | 1.96 |
-| 99% | 2.576 |
+**Interpretation pitfalls**
+- "95 % CI" means 95 % of such intervals constructed from repeated samples will contain μ — NOT "95 % probability μ is in this interval".
 
-**Interpretation of 95% CI**: if we drew many samples and built an interval each time, ~95% of those intervals would contain the true population parameter. NOT "95% chance the true value lies in this interval."
+**Worked example**
+- Sample n = 50, $\bar{X}$ = 4.2, S = 1.1, want 95 % CI: 4.2 ± 2.01 × 1.1/√50 = **4.2 ± 0.31**.
 
-### 6.3 Sample size determination
-For estimating mean with margin of error E:
-- n = (Z · σ / E)²
-For estimating proportion:
-- n = (Z² · p̂(1−p̂)) / E²
-
-If p̂ unknown, use 0.5 for the most conservative (largest) sample size.
-
-### 60-second recap
-A point estimate is a single number; a CI is a range. Width grows with desired confidence (Z), variability (σ), and shrinks with √n. To halve the margin of error, quadruple the sample.
+**Excel/Python**
+- Excel: `=CONFIDENCE.T(α, S, n)`.
+- Python: `scipy.stats.t.interval(0.95, n-1, loc=xbar, scale=S/sqrt(n))`.
 
 ---
 
-## Chapter 7 — Hypothesis Testing
-
-### 7.1 Setup
-- **H₀ (null)**: status quo, "no effect" (e.g., μ = 50).
-- **H₁ (alternative)**: claim we want evidence for (e.g., μ ≠ 50, > 50, or < 50).
-- **α (significance level)**: P(reject H₀ | H₀ true) = Type I error rate. Commonly 0.05.
-- **β**: P(fail to reject H₀ | H₀ false) = Type II error.
-- **Power = 1 − β**.
-
-### 7.2 Test procedure
-1. State H₀ and H₁ (one-tailed or two-tailed).
-2. Choose α.
-3. Compute test statistic.
-4. Find critical value or p-value.
-5. Decide: reject H₀ if test statistic falls in rejection region OR if p ≤ α.
-6. Conclude in business language.
-
-### 7.3 Common tests
-
-| Test | When | Statistic |
-|------|------|-----------|
-| One-sample Z (mean, σ known) | Large n | (x̄ − μ₀) / (σ/√n) |
-| One-sample t (mean, σ unknown) | Any n; use df = n−1 | (x̄ − μ₀) / (s/√n) |
-| One-sample proportion | nπ₀ ≥ 5 | (p̂ − π₀) / √(π₀(1−π₀)/n) |
-| Two-sample t (independent) | Compare two means | (x̄₁ − x̄₂) / SE |
-| Paired t | Same subjects, before/after | d̄ / (s_d/√n) |
-| Chi-square goodness-of-fit | Observed vs expected categories | Σ (O−E)²/E |
-| Chi-square independence | 2 categorical variables | Same; df = (r−1)(c−1) |
-
-### 7.4 p-value approach
-p-value = probability of observing a test statistic at least as extreme as the one computed, assuming H₀ is true. Smaller p → stronger evidence against H₀.
-
-### 60-second recap
-Hypothesis testing converts data into a binary decision. Pick α, compute statistic, compare to critical value or p to α. Rejecting H₀ does not "prove" H₁ — it just says the data are unlikely under H₀.
+> **Mid-Semester scope ends here (Sessions 1–8).** Closed Book, 2 hrs, 30 % weight, 20-Jun-2026 (FN).
 
 ---
 
-## Chapter 8 — Analysis of Variance (ANOVA)
+## Session 9 — Fundamentals of Hypothesis Testing
+**Source:** Levine T1 Ch. 9.
 
-### 8.1 One-way ANOVA
-Compares means of 3+ independent groups. H₀: μ₁ = μ₂ = … = μₖ.
+**Methodology (7 steps)**
+1. State H₀ and H₁ (research question).
+2. Choose α (typically 0.05 or 0.01).
+3. Choose test statistic (z, t, χ², F).
+4. State decision rule (critical region).
+5. Collect data, compute test statistic.
+6. Compare to critical value or compute p-value.
+7. Decide: reject/fail to reject H₀; interpret in business terms.
 
-Decompose total variation:
-- **SST (total)** = SSB (between groups) + SSW (within groups)
-- F = MSB / MSW = (SSB/(k−1)) / (SSW/(N−k))
-- Compare to F_(α, k−1, N−k).
+**Errors**
+- **Type I (α)** — reject H₀ when true (false positive).
+- **Type II (β)** — fail to reject H₀ when false (false negative).
+- **Power** = 1 − β. Increases with n, effect size, α.
 
-### 8.2 Why not multiple t-tests?
-Multiple t-tests inflate the family-wise error rate. ANOVA controls overall α at one level.
+**t-test for mean (σ unknown), two-tail**
+$$t = \frac{\bar{X} - \mu_0}{S/\sqrt{n}}, \; df = n-1$$
+- One-tail tests: directional H₁ (μ > μ₀ or μ < μ₀).
 
-### 8.3 Post-hoc
-If F is significant, use Tukey's HSD or Bonferroni to find which pairs differ.
+**Z-test for proportion**
+$$Z = \frac{p - \pi_0}{\sqrt{\pi_0 (1-\pi_0)/n}}$$
 
-### 60-second recap
-ANOVA tests whether at least one group mean differs. F-statistic = between-group spread / within-group spread. Big F → reject equality.
-
----
-
-## Chapter 9 — Correlation and Regression
-
-### 9.1 Correlation
-- **Covariance** Cov(X, Y) = Σ(xᵢ − x̄)(yᵢ − ȳ) / (n−1). Sign tells direction; magnitude depends on units.
-- **Pearson's r** = Cov(X, Y) / (s_x · s_y). Range: −1 to +1.
-  - |r| ≥ 0.7 → strong; 0.3 ≤ |r| < 0.7 → moderate; < 0.3 → weak.
-- **Spearman's ρ**: rank correlation; robust to outliers, non-linear monotone.
-
-Correlation ≠ causation. Always check for confounders.
-
-### 9.2 Simple linear regression
-Model: Y = β₀ + β₁X + ε
-
-**Least-squares estimates**:
-- b₁ = Σ(xᵢ − x̄)(yᵢ − ȳ) / Σ(xᵢ − x̄)²
-- b₀ = ȳ − b₁x̄
-
-**Goodness of fit**:
-- R² = SSR/SST = 1 − SSE/SST.
-- Standard error of estimate s_e = √(SSE / (n−2)).
-
-**Inference on β₁**: t = b₁ / SE(b₁), df = n − 2.
-
-### 9.3 Multiple regression
-Y = β₀ + β₁X₁ + β₂X₂ + … + βₖXₖ + ε
-
-- Adjusted R² penalises adding useless predictors.
-- **Multicollinearity**: predictors correlated with each other. Detect via VIF (Variance Inflation Factor); VIF > 10 → problem.
-- Assumptions: linearity, independence, normality of residuals, homoscedasticity (LINH).
-
-### 60-second recap
-Correlation measures linear association (−1 to +1). Regression fits a line by minimising squared errors. R² is share of variance explained. Beware multicollinearity in multiple regression.
+**p-value**: probability of observing data as extreme as (or more than) the sample, *assuming H₀ true*. p < α ⇒ reject H₀.
 
 ---
 
-## Chapter 10 — Time Series & Forecasting
+## Session 10 — Two-sample tests and ANOVA
+**Source:** Levine T1 Ch. 10.
 
-### 10.1 Components
-- **Trend (T)**: long-term direction.
-- **Seasonality (S)**: regular short-term cycles (quarterly, monthly).
-- **Cyclical (C)**: longer waves (business cycles).
-- **Irregular (I)**: random noise.
+**Two means (independent populations)**
+- **Pooled-variance t** (assumes equal σ²):
+  $$t = \frac{(\bar{X}_1 - \bar{X}_2)}{\sqrt{S_p^2 (1/n_1 + 1/n_2)}}, \; df = n_1+n_2-2$$
+- **Separate-variance (Welch) t** when σ² unequal.
 
-Models: additive Y = T + S + C + I; multiplicative Y = T × S × C × I.
+**Two means (related/paired)**
+- Compute differences D, treat as one-sample t-test on $\bar{D}$.
+- Use cases: before-after, matched pairs.
 
-### 10.2 Forecasting techniques
+**Two proportions** — Z-test using pooled p̂.
 
-| Technique | When to use |
-|-----------|-------------|
-| Naive (Y_t = Y_(t−1)) | Stable series, baseline |
-| Moving average | Smooth random fluctuations |
-| Weighted moving average | Recent values matter more |
-| Exponential smoothing | Recent values weighted exponentially |
-| Holt's (trend) / Holt-Winters (trend + seasonality) | Patterns present |
-| Linear trend regression | Clear linear trend |
+**F-test for two variances**
+$$F = S_1^2 / S_2^2,\; df_1 = n_1-1, df_2 = n_2-1$$
 
-**Simple exponential smoothing**: F_(t+1) = αY_t + (1 − α) F_t, α ∈ [0, 1].
+**One-way ANOVA**
+- Tests equality of k means: H₀: μ₁ = μ₂ = … = μ_k.
+- F = MS_between / MS_within; Reject if F > F_critical(k−1, n−k).
+- Assumptions: independence, normality, equal variances.
+- **Post-hoc**: Tukey's HSD to identify which pairs differ.
 
-### 10.3 Forecast accuracy
-- **MAD** = Σ|e| / n
-- **MSE** = Σe² / n
-- **MAPE** = (Σ|e/Y| / n) × 100%
-- **Bias** = Σe / n; should be near 0.
+| Source | df | SS | MS | F |
+|--------|---:|----|----|---|
+| Between groups | k − 1 | SSB | MSB | MSB/MSW |
+| Within groups | n − k | SSW | MSW |  |
+| Total | n − 1 | SST |  |  |
 
-### 60-second recap
-Decompose to understand. Forecast using technique matched to pattern. Compare models with MAD/MSE/MAPE — lowest wins.
-
----
-
-## Chapter 11 — Index Numbers
-
-### 11.1 Simple price index
-P_(0t) = (P_t / P_0) × 100
-
-### 11.2 Weighted indices (price)
-- **Laspeyres** = Σ(P_t · Q_0) / Σ(P_0 · Q_0) × 100 — base-year quantities.
-- **Paasche** = Σ(P_t · Q_t) / Σ(P_0 · Q_t) × 100 — current-year quantities.
-- **Fisher's ideal** = √(Laspeyres × Paasche) — passes both time-reversal and factor-reversal tests.
-
-### 11.3 Tests of an index
-- **Time-reversal**: P_(0t) × P_(t0) = 1.
-- **Factor-reversal**: P × Q = value index.
-
-### 11.4 CPI applications
-- Real income = nominal income × (100 / CPI).
-- Inflation rate = (CPI_t − CPI_(t−1)) / CPI_(t−1) × 100.
-
-### 60-second recap
-Indices compare values over time. Laspeyres uses old quantities (overstates inflation), Paasche uses new (understates), Fisher splits the difference.
+**Excel**: `Data → Data Analysis → ANOVA: Single Factor`.
+**Python**: `scipy.stats.f_oneway`, `statsmodels.stats.multicomp.pairwise_tukeyhsd`.
 
 ---
 
-## Chapter 12 — Decision-making & SQC (overview)
+## Session 11 — Chi-square test
+**Source:** Levine T1 Ch. 11.
 
-### 12.1 Decision under uncertainty
-- **Maximax** (optimist): pick alternative with the best best-case payoff.
-- **Maximin** (pessimist): pick alternative with the best worst-case payoff.
-- **Minimax regret**: minimise the maximum regret.
-- **Laplace**: assume equally likely; pick highest average.
+**Chi-square family** uses categorical data; statistic $\chi^2 = \sum \frac{(O - E)^2}{E}$.
 
-### 12.2 Decision under risk (probabilities known)
-- **Expected Monetary Value (EMV)** = Σ Pᵢ × Payoffᵢ. Pick max EMV.
-- **EVPI** (Expected Value of Perfect Information) = (EV with perfect info) − (best EMV).
+**Test for difference in two proportions** — equivalent to z-test, df = 1.
 
-### 12.3 Statistical Quality Control
-- **Variable charts**: X-bar (mean), R (range).
-- **Attribute charts**: p (proportion defective), c (count of defects).
-- Process is in control if points lie within ±3σ control limits and show no patterns.
+**Test for difference in > 2 proportions** — df = c − 1 (c = # of groups).
 
-### 60-second recap
-Decision tools formalise judgement when payoffs and probabilities are known. SQC charts spot when a process drifts out of control before defects pile up.
+**Test of independence (contingency table)**
+- H₀: variables independent.
+- df = (r−1)(c−1).
+- E_ij = (row total × column total) / grand total.
+- Caveat: each E_ij ≥ 5 (else use Fisher's exact test or merge categories).
+
+**Goodness of fit**
+- Compares observed counts to expected from a hypothesised distribution (e.g., uniform, Poisson).
+- df = k − 1 − (# parameters estimated).
+
+**Excel**: `=CHISQ.TEST(observed, expected)` for p-value.
 
 ---
 
-## References & Sources
+## Session 12 — Other Non-parametric tests
+**Source:** Class Notes (also covered in Levine Ch. 12 / online supplements).
 
-### Primary textbook (T1)
-Anderson, Sweeney & Williams — *Statistics for Business and Economics*, Cengage Learning.
-- Publisher page: https://www.cengage.com/c/statistics-for-business-economics-15e-anderson/
+**When to use non-parametric**
+- Data are ordinal, or
+- Distributional assumptions of parametric tests violated, or
+- Small samples without clear normality.
 
-### Chapter-to-source mapping
+**Sign Test** (one-sample / paired median)
+- Count positive vs negative differences from hypothesised median.
+- Apply binomial with p = 0.5.
 
-| Chapter | Primary source | Online supplement |
-|---------|----------------|-------------------|
-| 1 — Introduction | Anderson Ch. 1; OpenStax Ch. 1 | https://openstax.org/details/books/introductory-business-statistics-2e |
-| 2 — Descriptive stats | Anderson Ch. 2–3; Levine Ch. 3–4 | https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data |
-| 3 — Probability | Anderson Ch. 4 | https://stattrek.com/probability/probability-rules |
-| 4 — Distributions | Anderson Ch. 5–6 | https://stattrek.com/probability-distributions/probability-distribution |
-| 5 — Sampling & CLT | Anderson Ch. 7 | https://www.khanacademy.org/math/statistics-probability/sampling-distributions-library |
-| 6 — Estimation | Anderson Ch. 8 | https://stattrek.com/estimation/confidence-interval |
-| 7 — Hypothesis testing | Anderson Ch. 9 | https://www.khanacademy.org/math/ap-statistics/tests-significance-ap |
-| 8 — ANOVA | Anderson Ch. 13 | https://stattrek.com/anova/anova |
-| 9 — Regression | Anderson Ch. 14–15 | https://www.statlearning.com (ISLR Ch. 3) |
-| 10 — Time series | Anderson Ch. 17 | https://otexts.com/fpp3/ (Hyndman) |
-| 11 — Index numbers | S.P. Gupta Ch. 11 | RBI WPI manual: https://www.rbi.org.in/scripts/PublicationsView.aspx?id=15394 |
-| 12 — Decision-making & SQC | Anderson Ch. 21–22 | NIST Engineering Statistics Handbook: https://www.itl.nist.gov/div898/handbook/ |
+**Wilcoxon Rank-Sum Test (a.k.a. Mann-Whitney U)** — two independent samples
+- Combine, rank all observations, sum ranks for sample 1.
+- Tests whether two populations have the same distribution (specifically median).
+- Non-parametric alternative to two-sample t.
 
-### Free reference
-- NIST/SEMATECH e-Handbook of Statistical Methods: https://www.itl.nist.gov/div898/handbook/
-- Statistics by Jim (intuitive explanations): https://statisticsbyjim.com/
-- Cross-Validated (StackExchange): https://stats.stackexchange.com/
+**Wilcoxon Signed-Rank Test** — paired samples (uses signed differences and ranks).
 
-### Bayes' theorem extra reading
-- 3Blue1Brown video (visual proof): https://www.youtube.com/watch?v=HZGCoVF3YvM
-- Better Explained — Bayes: https://betterexplained.com/articles/an-intuitive-and-short-explanation-of-bayes-theorem/
+**Kruskal-Wallis Test** — three or more independent samples
+- Non-parametric ANOVA alternative.
+- Statistic H ≈ χ² with k − 1 df.
 
-### Indian-context data
-- RBI Database on Indian Economy (DBIE): https://dbie.rbi.org.in/
-- Ministry of Statistics (MoSPI): https://www.mospi.gov.in/
-- NSE/BSE for live market data
+**Spearman Rank Correlation**
+- $r_s = 1 - \frac{6 \sum d_i^2}{n(n^2-1)}$ where d_i = rank(X_i) − rank(Y_i).
+- Measures monotonic (not necessarily linear) association.
+- Robust to outliers; works on ordinal data.
+
+**Quick selector**
+| Question | Parametric | Non-parametric |
+|---------|-----------|----------------|
+| 1 sample mean/median | 1-sample t | Sign / Wilcoxon Signed-Rank |
+| 2 indep. groups | 2-sample t | Mann-Whitney U |
+| Paired groups | Paired t | Wilcoxon Signed-Rank |
+| 3+ groups | One-way ANOVA | Kruskal-Wallis |
+| Linear association | Pearson r | Spearman r_s |
+
+**Python**: `scipy.stats.mannwhitneyu`, `wilcoxon`, `kruskal`, `spearmanr`.
+
+---
+
+## Session 13 — Validating regression assumption & normality testing
+**Source:** Levine T1 Ch. 13.
+
+**Types of regression models**
+- Simple linear: $Y = \beta_0 + \beta_1 X + \epsilon$.
+- Multiple linear: $Y = \beta_0 + \beta_1 X_1 + \dots + \beta_k X_k + \epsilon$.
+- Polynomial / interaction terms.
+
+**OLS estimation**
+- $\hat{\beta}_1 = \frac{\text{SSXY}}{\text{SSX}}$; $\hat{\beta}_0 = \bar{Y} - \hat{\beta}_1 \bar{X}$.
+
+**Measures of variation**
+- **SST** = Σ(Y − Ȳ)² (total).
+- **SSR** = Σ(Ŷ − Ȳ)² (regression).
+- **SSE** = Σ(Y − Ŷ)² (error).
+- **Coefficient of Determination** $R^2 = SSR/SST$ — proportion of variation explained by regression.
+- Adjusted R² penalises for adding predictors: $R_{adj}^2 = 1 - \frac{(1-R^2)(n-1)}{n-k-1}$.
+
+**Standard error of estimate** $S_{YX} = \sqrt{SSE/(n-2)}$.
+
+**Inference on slope**
+- t-test: $t = \hat{\beta}_1 / S_{\hat{\beta}_1}$, df = n−2.
+- F-test: F = MSR/MSE.
+
+**Assumptions (LINE)**
+- **L**inearity — relationship is linear.
+- **I**ndependence of errors.
+- **N**ormality of errors (residuals ε).
+- **E**qual variance of errors (homoscedasticity).
+
+---
+
+## Session 14 — Linear Regression — diagnostics
+**Source:** Class Notes (Levine Ch. 13 and supplements).
+
+**Residuals = observed − predicted**: $e_i = Y_i - \hat{Y}_i$.
+
+**Visual diagnostics**
+- **Residuals vs Fitted** plot: random scatter ⇒ linearity & equal variance OK; funnel shape ⇒ heteroscedasticity; curve ⇒ non-linearity.
+- **Q-Q plot** of residuals vs normal: straight line ⇒ normality OK.
+- **Residuals vs time (or sequence)**: detects autocorrelation.
+
+**Heteroscedasticity** (non-constant variance)
+- Detection: residual plots; **Breusch-Pagan test**, **White test**.
+- Fix: log/Box-Cox transform Y; weighted least squares (WLS); robust standard errors.
+
+**Autocorrelation** (residuals correlated)
+- Detection: **Durbin-Watson** test (DW ≈ 2 ⇒ no autocorr; <2 positive; >2 negative).
+- Fix: add lag terms; Cochrane-Orcutt procedure.
+
+**Normality testing** (errors)
+- **Shapiro-Wilk test** — best for small samples (n < 50). H₀: data normal. p < α ⇒ reject normality.
+- **Anderson-Darling test** — emphasises tail-fit; widely used.
+- **Kolmogorov-Smirnov (KS) test** — compares empirical CDF to normal CDF; less powerful than SW.
+
+**Python**: `from scipy.stats import shapiro, anderson, kstest`; `statsmodels.stats.diagnostic.het_breuschpagan, het_white`; `statsmodels.stats.stattools.durbin_watson`.
+
+**Multicollinearity** (multiple regression)
+- Variance Inflation Factor (VIF). VIF > 5–10 ⇒ problematic.
+
+---
+
+## Session 15 — Introduction to Linear Programming
+**Source:** Class Notes (Anderson T2, Hillier R3, or Render R4).
+
+**LP setup**
+- **Decision variables** (x₁, x₂, …).
+- **Objective function** Z to maximise/minimise (linear in variables).
+- **Constraints** (≤, ≥, =) — also linear.
+- **Non-negativity** x_i ≥ 0.
+
+**Simple maximisation example**
+> Maximise Z = 40x₁ + 30x₂ subject to:
+> 4x₁ + 5x₂ ≤ 200 (machine hours)
+> 2x₁ + 3x₂ ≤ 100 (labour hours)
+> x₁, x₂ ≥ 0
+
+**Graphical solution**
+1. Plot constraints; identify **feasible region** (convex polygon).
+2. Identify **corner/extreme points**.
+3. Evaluate Z at each corner.
+4. Optimal solution at one of the corner points (Fundamental Theorem of LP).
+
+**Computer solution**
+- **Excel Solver** (Simplex LP method) — `Data → Solver`.
+- Online: **PHPSimplex**, **Lindo**, **GAMS**, Python `scipy.optimize.linprog` or `pulp`.
+
+**Sensitivity analysis** (Solver output)
+- **Shadow price** of a binding constraint = improvement in Z per unit increase of RHS.
+- **Reduced cost** of a non-basic variable = penalty per unit forced into solution.
+- **Allowable increase/decrease**: range over which current optimal basis stays valid.
+
+**Special LP cases**
+- Multiple optimal solutions (objective parallel to a constraint).
+- Infeasibility (no point satisfies all constraints).
+- Unbounded (feasible region open in direction of improvement).
+- Degeneracy.
+
+**Common applications**
+- Product mix, blending, transportation, assignment, scheduling, portfolio optimisation.
+
+---
+
+## Session 16 — Revision
+
+**Pre-mid-sem (closed book) checklist** — Sessions 1-8
+- Standard normal Z-table application; computing P(Z<z), P(Z>z), P(a<Z<b).
+- Computing μ, σ², CV, percentiles, IQR.
+- Bayes' theorem 2x2 problems (medical/quality).
+- Binomial vs Poisson selection; Poisson approximation conditions.
+- CLT statement and applications.
+- CI for mean (σ unknown, t-table) and proportion; sample-size formula.
+
+**Pre-comprehensive (open book) checklist** — Sessions 9-16 + earlier
+- Hypothesis testing 7-step framework; one- vs two-tail.
+- Choosing the right two-sample test (independent vs paired, equal vs unequal variance).
+- One-way ANOVA: F-statistic, source-table, post-hoc Tukey.
+- Chi-square: goodness-of-fit vs independence (df differs!).
+- Non-parametric selector table (this file → Session 12).
+- Regression diagnostics: residual plots → which assumption violated → which fix.
+- Normality tests: when to use SW vs AD vs KS.
+- LP graphical method on 2-variable problem; Solver output interpretation.
+
+**Reference cheat values**
+- z-critical: 1.645 (90 %), 1.96 (95 %), 2.576 (99 %).
+- Chebyshev: ≥ 75 % within 2σ; ≥ 89 % within 3σ.
+- Empirical: 68/95/99.7 within 1σ/2σ/3σ.
+- Power formula direction: ↑ n, ↑ effect, ↑ α → ↑ power.
+
+**Open-book strategy (EC-3)**
+- Tab the textbook by chapter; flag formulas you slow down on.
+- Pre-print: Z-table, t-table, F-table, χ²-table.
+- Bring a **non-programmable** scientific calculator (Casio FX-991EX is the WILP standard — non-programmable).
+
+---
+
+## Mandatory Experiential Learning resources (per handout)
+
+### IIMA Case Centre cases
+- **QM0284EX** — [Sankhosh Constructions Inc](https://cases.iima.ac.in/index.php/sankhosh-constructions-inc.html) (Sankaranarayanan)
+- **PROD0331EX** — [Anugnyaa Agricultural Association](https://cases.iima.ac.in/download.php?file=media/downloads/4972/PROD0331_Inspection_Copy.pdf) (Sankaranarayanan)
+- **CMHS0028** — [Understanding Lung Cancer – Tobacco Smoking Linkage](https://cases.iima.ac.in/index.php/understanding-lung-cancer-tobacco-smoking-linkage.html) (Roy & Laha)
+- **QM0226** — Iron Ore Distribution for Steel Authority of India Limited (Kalro, Shukla, Tripathy, Raghuram)
+
+### HSTalks videos (login via BITS WILP)
+- [Fundamentals of Data Analysis](https://hstalks.com/t/3522/fundamentals-of-data-analysis/?business)
+- [Predictive Analytics](https://hstalks.com/t/4282/predictive-analytics/?business)
+- [The analytical framework and the four stages of data analysis](https://hstalks.com/t/5177/the-analytical-framework-and-the-four-stages-of-da/?business)
+- [Failure and feedback in data analytics: lessons learnt, improvements made](https://hstalks.com/t/5077/failure-and-feedback-in-data-analytics-lessons-lea/?business)
