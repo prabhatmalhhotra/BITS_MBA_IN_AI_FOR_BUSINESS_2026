@@ -7,17 +7,17 @@ S2-25_MBACCZG501,Business Statistics,Text Book (T1),"David M Levine, Kathryn A S
 ,,Reference Book (R4),"Barry Render, Ralph M Stair and Michael E Hanna. Quantitative Analysis for Management. Eleventh edition. Pearson Education. 2011.",https://amzn.to/4ty2nvv,OK
 S2-25_MBACCZG502,Managerial Accounting,Text Book (T1),"S.N. Maheswari & S.K. Maheswari. Financial and Management Accounting. Sultan Chand & Sons. Sixth edition. 2022.",https://amzn.to/4daPv7R,OK
 ,,Reference Book (R1),"P. C. Tulsian. Financial Accounting. Tata McGraw Hill. 2022.",https://amzn.to/4u1SjdW,OK
-,,Reference Book (R2),"R. Narayanaswamy. Financial Accounting – A Managerial Perspective. PHI. 5th edition. 2014.",https://amzn.to/42w1nvW,OK
-,,Reference Book (R3),"Ashok Banerjee. Financial Accounting: A Managerial Emphasis. Excel Books. 3rd Revised edition. 2009.",REPLACE_LINK,"WRONG LINK in original CSV — previous link pointed to ""Financial Policy and Management Accounting"" which is a different book. Please search Amazon for ""Ashok Banerjee Financial Accounting Managerial Emphasis Excel Books"" and paste the correct link here."
-S2-25_MBACCZG503,Marketing Management,Text Book (T1),"Philip Kotler, Kevin Lane Keller, Alexander Chernev, Jagdish N. Sheth, and G. Shainesh. Marketing Management. 16th Edition. Pearson Education. 2022.",REPLACE_LINK,"EDITION MISMATCH — previous link pointed to 17th Edition. Handout mandates 16/e (2022). The 16/e chapter numbering matches our session table; 17/e chapters may differ. Please replace with 16/e Amazon link OR confirm if you want to use the 17/e."
-,,Reference Book (R1),"Marketing Management – Indian Cases. Pearson. 2018. (2nd Edition).",https://amzn.to/4txbUTr,OK
+,,Reference Book (R2),"R. Narayanaswamy. Financial Accounting - A Managerial Perspective. PHI. 5th edition. 2014.",https://amzn.to/42w1nvW,OK
+,,Reference Book (R3),"Ashok Banerjee. Financial Accounting: A Managerial Emphasis. Excel Books. 3rd Revised edition. 2009.",https://www.amazon.in/Financial-Accounting-Managerial-Ashok-Banerjee/dp/8174467432,"OK - verified ISBN 978-8174467430, Excel Books, 3rd Revised edition, July 2009, 794 pages."
+S2-25_MBACCZG503,Marketing Management,Text Book (T1),"Philip Kotler, Kevin Lane Keller, Alexander Chernev, Jagdish N. Sheth, and G. Shainesh. Marketing Management. 16th Edition. Pearson Education. 2022.",https://www.amazon.in/Marketing-Management-Studies-Included-Sixteenth/dp/9356062668,"OK - verified ISBN 9789356062665, Pearson India 2022, paperback (Indian Case Studies edition); chapter numbering matches our session table. Kindle edition: https://www.amazon.in/dp/B0B2RQFP13"
+,,Reference Book (R1),"Marketing Management - Indian Cases. Pearson. 2018. (2nd Edition).",https://amzn.to/4txbUTr,OK
 ,,Reference Book (R2),"Ramaswamy, V. S., & Namakumari, S. Marketing Management: Indian Context, Global Perspective. SAGE Publications India Pvt Limited. 6th edition. 2018.",https://amzn.to/3QtcQKc,OK
-,,Reference Book (R3),"The Economic Times – Brand Equity section.",https://economictimes.indiatimes.com/topic/brand-equity,Newspaper section — not a book; included for completeness
-,,Reference Book (R4),"Online — Social Samosa",https://www.socialsamosa.com/,Website — not a book
-,,Reference Book (R4 cont.),"Online — Campaign India",https://www.campaignindia.in/,Website — not a book
-,,Reference Book (R5),"Journal of Consumer Behaviour (Wiley).",https://onlinelibrary.wiley.com/journal/14791838,Journal — not a book
+,,Reference Book (R3),"The Economic Times - Brand Equity section.",https://economictimes.indiatimes.com/topic/brand-equity,Newspaper section - not a book; included for completeness
+,,Reference Book (R4),"Online - Social Samosa",https://www.socialsamosa.com/,Website - not a book
+,,Reference Book (R4 cont.),"Online - Campaign India",https://www.campaignindia.in/,Website - not a book
+,,Reference Book (R5),"Journal of Consumer Behaviour (Wiley).",https://onlinelibrary.wiley.com/journal/14791838,Journal - not a book
 S2-25_MBACCZG511,Managing People and Organizations,Text Book (T1),"Stephen P. Robbins, Timothy A. Judge & Neharika Vohra. Organizational Behavior. Pearson Education. Updated 18th Edition. 2022.",https://amzn.to/3R0lAHI,OK
-,,Text Book (T2),"K. Aswathappa & Sadhna Dash. Human Resource Management – Text and Cases. Tata McGraw Hill. 10th Edition. 2023.",https://amzn.to/3QKJK94,OK
+,,Text Book (T2),"K. Aswathappa & Sadhna Dash. Human Resource Management - Text and Cases. Tata McGraw Hill. 10th Edition. 2023.",https://amzn.to/3QKJK94,OK
 ,,Reference Book (R1),"Richard L. Daft. Understanding the Theory and Design of Organizations. Cengage India. 10th Edition. 2013.",https://amzn.to/3OrdeIB,OK
 ,,Reference Book (R2),"Gary Dessler & Biju Varkkey. Human Resource Management. Pearson Education. 16th Edition. 2020.",https://amzn.to/48m8Ilf,OK
 ,,Reference Book (R3),"Daniel Goleman. Emotional Intelligence: Why It Can Matter More Than IQ. Bantam Books. 2013.",https://amzn.to/4sXC3tF,OK

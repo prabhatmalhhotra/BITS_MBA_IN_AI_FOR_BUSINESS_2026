@@ -25,7 +25,30 @@
 | Cash | 41,000 | |
 | **Total** | **5,90,000** | **5,90,000** |
 
-**Skeleton**: Trading A/c → GP = 1,13,000; P&L A/c → adjust salaries, insurance (deduct prepaid), wages (add outstanding), depreciation 20,000, provision 4,000 → Net Profit ≈ 41,500 → Balance Sheet: Equity = Capital + NP = 2,71,500; Liabilities = Creditors + Outstanding wages = 63,000; Assets = Machinery (1,80,000), Closing Stock (40,000), Debtors (76,000 net), Prepaid (1,500), Cash (41,000) = 3,38,500. Total = 3,34,500. (Verify own calc.)
+**Skeleton (fully worked)**:
+
+*Trading A/c (year ended 31-Mar-2025)*
+- Dr: Opening stock 25,000 + Purchases 1,80,000 + Wages (22,000 + 3,000 outstanding) 25,000 = **2,30,000**
+- Cr: Sales 3,00,000 + Closing stock 40,000 = **3,40,000**
+- **Gross Profit = ₹1,10,000**
+
+*P&L A/c*
+- Dr: Salaries 36,000 + Insurance (6,000 − 1,500 prepaid) 4,500 + Depreciation on machinery (10 % × 2,00,000) 20,000 + Provision for doubtful debts (5 % × 80,000) 4,000 = **64,500**
+- Cr: Gross Profit 1,10,000
+- **Net Profit = ₹45,500**
+
+*Balance Sheet as on 31-Mar-2025*
+
+| Equity & Liabilities | ₹ | Assets | ₹ |
+|----------------------|---:|--------|---:|
+| Capital 2,30,000 + NP 45,500 | 2,75,500 | Machinery (2,00,000 − 20,000 dep) | 1,80,000 |
+| Creditors | 60,000 | Closing stock | 40,000 |
+| Outstanding wages | 3,000 | Debtors (80,000 − 4,000 provision) | 76,000 |
+|  |  | Prepaid insurance | 1,500 |
+|  |  | Cash | 41,000 |
+| **Total** | **3,38,500** | **Total** | **3,38,500** |
+
+Articulation check ✓: Equity & Liabilities = Assets = ₹3,38,500.
 
 ### LQ-3 (Session 5) — IFRS / IAS impact analysis
 **Prompt.** Discuss how IFRS 15, IAS 2, IAS 16, and IAS 38 each shape the financial statements of a (a) software company, (b) FMCG firm, (c) manufacturer. Mention one Indian Ind-AS equivalent for each.
@@ -110,7 +133,8 @@ IAS 38: software → development capitalised if PIRATE met → big asset boost v
 - Relevant cost of making = variable cost only (assuming fixed overhead is unavoidable) = 120 × 4,000 = ₹4,80,000.
 - Cost of buying = 150 × 4,000 = ₹6,00,000.
 - Continue making — cheaper by ₹1,20,000.
-- BUT if 60 % of fixed overhead (₹1,20,000) is avoidable on outsourcing → relevant cost = ₹4,80,000 + ₹80,000 = ₹5,60,000 (still cheaper to make).
+- BUT if **40 %** of fixed overhead (₹80,000 of the ₹2,00,000 total) is avoidable on outsourcing → relevant cost of making = ₹4,80,000 + ₹80,000 = ₹5,60,000 vs buying ₹6,00,000 → still cheaper to make by ₹40,000.
+- *Tipping point*: if avoidable fixed ≥ ₹1,20,000 (i.e. ≥ 60 % of total fixed overhead), the make/buy decision flips — the firm becomes indifferent and outsourcing wins on strategic flexibility.
 - Strategic: quality control, IP protection, capacity for new products, vendor lock-in, supply chain risk.
 
 ### LQ-11 (Session 14) — Special order

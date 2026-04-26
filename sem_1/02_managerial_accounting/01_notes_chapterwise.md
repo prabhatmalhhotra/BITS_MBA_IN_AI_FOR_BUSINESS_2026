@@ -1,8 +1,15 @@
 # Managerial Accounting — Session-wise Notes (handout-aligned)
 
 > Built from the official `MBACC ZG502` handout (S2-25, v1.0).
-> Primary text **T1** = SN Maheswari & SK Maheswari, *Financial and Management Accounting*, **Sultan Chand & Sons 6e (2022)**.
+> **Primary text T1** = SN Maheswari & SK Maheswari, *Financial and Management Accounting*, Sultan Chand & Sons 6e (2022).
+> **Reference books (per handout, used as alternative reading):**
+> - **R1** P.C. Tulsian, *Financial Accounting*, Tata McGraw Hill (2022) — strong on journal/ledger/final accounts mechanics (S3-4) and ratio analysis (S8-10).
+> - **R2** R. Narayanaswamy, *Financial Accounting — A Managerial Perspective*, PHI 5e (2014) — strong on IFRS/Ind-AS framing (S5), FS interpretation (S6-7), and case-study style (S11-13).
+> - **R3** Ashok Banerjee, *Financial Accounting: A Managerial Emphasis*, Excel Books 3e (2009) — quality-of-reporting / managerial-lens treatment (S5, S11-13).
+>
 > 16 contact sessions (some grouped per handout). Mid-Sem (closed book) covers sessions 1-8; Comprehensive (open book) covers 1-16.
+>
+> **Caveat on chapter numbers**: The handout does *not* prescribe specific Maheswari chapter numbers per session. Chapter numbers in the session map below are **inferred** from Maheswari 6e's standard TOC and may need re-mapping once you have the physical T1 in hand. Topic coverage (sub-topics in the handout) is the binding constraint, not chapter numbers.
 
 ## Quick session map
 
@@ -191,6 +198,14 @@ xx/yy | Cash A/c             Dr             |    | 50,000 |
 - Benchmark vs industry (asset-light vs asset-heavy).
 - Spot inflexion points before they show in profit.
 
+**Integrating the three statements (handout: "A Holistic View")**
+- Net profit (P&L) flows into Reserves & Surplus (B/S) → grows equity.
+- Depreciation hits P&L (expense) but on B/S reduces PPE; in CF it is added back to PAT (non-cash).
+- A capex transaction: B/S shows asset rise; CF shows outflow under Investing; P&L impact comes later via depreciation over the asset's life.
+- Working-capital changes: increase in receivables/inventory or decrease in payables = cash *use* in CFO; the P&L revenue is unaffected.
+- Issuing new equity: CF (Financing inflow), B/S (Cash up, Equity up), no P&L impact today.
+- **Articulation check**: Closing Cash on B/S − Opening Cash = total of CFO + CFI + CFF. If this doesn't reconcile, the statements aren't internally consistent.
+
 ---
 
 ## Session 8-10 — Ratio Analysis
@@ -328,6 +343,20 @@ Direct Material Consumed                  X
 - **Special order** — accept if price ≥ relevant variable cost (assuming spare capacity, no impact on regular customers).
 - **Pricing** — use variable cost as floor; consider full cost for long-run sustainability.
 - **Product mix** — under capacity constraint, choose product with highest CM per unit of constrained resource.
+
+**Inventory valuation methods** *(handout Part A, module 11)*
+
+| Method | How cost is assigned | Effect in inflation | Effect in deflation | IFRS / Ind-AS |
+|--------|---------------------|---------------------|---------------------|---------------|
+| **FIFO** (First-In, First-Out) | Oldest costs go to COGS; newest costs stay in closing stock | Lower COGS → higher reported profit & higher ending inventory; higher tax | Higher COGS → lower profit, lower ending inventory | **Allowed** under IAS 2 |
+| **LIFO** (Last-In, First-Out) | Newest costs go to COGS; oldest costs stay in closing stock | Higher COGS → lower profit, lower ending inventory; lower tax | Lower COGS → higher profit, higher ending inventory | **Prohibited** under IAS 2 (still allowed under US GAAP) |
+| **Weighted Average** | COGS = average cost across all units | Smooths the impact of price fluctuations | Same | **Allowed** under IAS 2 |
+| **Specific Identification** | Cost of each individual item tracked | Used for high-value, distinguishable items (jewellery, custom equipment) | Same | **Allowed** under IAS 2, mandatory for non-interchangeable items |
+
+**Why this matters for managerial decisions**
+- Method choice changes reported profit, tax outflow, ending inventory on B/S, and most ratios that use either (gross margin, inventory turnover, current ratio, ROA).
+- IAS 2 prohibits LIFO precisely because it allows the firm to manipulate profit by timing purchases at year-end (LIFO liquidation is a classic red flag).
+- **Lower of cost and NRV** rule (IAS 2): inventory is written down to NRV (Net Realisable Value = expected selling price − costs to complete & sell) if NRV < cost. Write-downs hit P&L, not OCI.
 
 ---
 

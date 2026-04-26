@@ -1,9 +1,16 @@
 # Managing People and Organizations — Session-wise Notes (handout-aligned)
 
 > Built from the official `MBACC ZG511` handout (S2-25, v4).
-> Primary text **T1** = Robbins, Judge & Vohra, *Organizational Behavior*, **Pearson Updated 18e (2022)**.
-> Secondary text **T2** = K. Aswathappa & Sadhna Dash, *Human Resource Management — Text and Cases*, **Tata McGraw Hill 10e (2023)**.
-> 16 contact sessions. Mid-Sem (Closed Book, **35 % weight**) covers sessions 1-8; Comprehensive (Open Book, 2.5 hrs) covers all 16.
+> **Primary text T1** = Robbins, Judge & Vohra, *Organizational Behavior*, Pearson Updated 18e (2022).
+> **Secondary text T2** = K. Aswathappa & Sadhna Dash, *Human Resource Management — Text and Cases*, Tata McGraw Hill 10e (2023).
+> **Reference books (per handout, used as alternative reading):**
+> - **R1** Richard L. Daft, *Understanding the Theory and Design of Organizations*, Cengage India 10e (2013) — primary alternative for **organisation structure (S12), culture & change (S13)**.
+> - **R2** Dessler & Varkkey, *Human Resource Management*, Pearson 16e (2020) — primary alternative for **HRM intro (S2), recruitment & selection (S14), compensation (S15), performance appraisal (S16)**.
+> - **R3** Daniel Goleman, *Emotional Intelligence: Why It Can Matter More Than IQ*, Bantam Books (2013) — primary source for **EI content in S6 (emotions/moods) and S11 (leadership)**.
+>
+> **Mandatory HSTalks videos (per handout, 10 videos HST1-HST10):** HST1 Positive OB (S1) · HST2 Managing strategy and HRM (S2) · HST3 Diversity and inclusion (S3) · HST4 Building high-performing teams (S10) · HST5 What makes for a great team? (S10) · HST6 What is leadership? (S11) · HST7 Leadership vs management (S11) · HST8 Overview & history of leadership development (S11) · HST9 Emotional intelligence: your success as a leader (S6, S11) · HST10 Managing cultures (S13). Login via BITS WILP elearn → HSTalks → Business & Management Collection.
+>
+> 16 contact sessions. Mid-Sem (Closed Book, 2 hrs, **35 % weight**) covers sessions 1-8; Comprehensive (Open Book, 2.5 hrs) covers all 16.
 
 ## Quick session map
 
@@ -29,7 +36,7 @@
 ---
 
 ## Session 1 — Introduction to OB
-**Source:** T1 Ch. 1.
+**Source:** T1 Ch. 1. **Mandatory video:** HST1 *Positive organizational behavior*.
 
 **What is OB?** A field of study that investigates the impact of individuals, groups and structure on behaviour within organisations, with the aim of improving organisational effectiveness.
 
@@ -66,7 +73,7 @@
 ---
 
 ## Session 2 — Introduction to HRM
-**Source:** T2 (Aswathappa & Dash) Ch. 1, 2.
+**Source:** T2 (Aswathappa & Dash) Ch. 1, 2 (alt: R2 Dessler & Varkkey Ch. 1-2). **Mandatory video:** HST2 *Managing strategy and HRM*.
 
 **HRM definition** — managing human resources to achieve individual, organisational and societal goals.
 
@@ -101,7 +108,7 @@
 ---
 
 ## Session 3 — Attitudes, Job Satisfaction, Diversity
-**Source:** T1 Ch. 2 & 3.
+**Source:** T1 Ch. 2 & 3. **Mandatory video:** HST3 *Diversity and inclusion in organizations*.
 
 **Attitudes** — evaluative statements about objects/people/events.
 - Three components: **Cognitive** (belief), **Affective** (feeling), **Behavioural** (intention).
@@ -215,7 +222,7 @@
 ---
 
 ## Session 6 — Emotions and Moods
-**Source:** T1 Ch. 6.
+**Source:** T1 Ch. 6 (alt: R3 Goleman, *Emotional Intelligence*, Parts I-III). **Mandatory video:** HST9 *Emotional intelligence: your success as a leader depends on it*.
 
 **Emotion vs Mood vs Affect**
 - **Affect** = umbrella term.
@@ -366,7 +373,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 10 — Work Teams and Communication
-**Source:** T1 Ch. 10 & 12.
+**Source:** T1 Ch. 10 & 12. **Mandatory videos:** HST4 *Building high-performing teams* + HST5 *What makes for a great team?*.
 
 ### Teams (vs Groups)
 - Group = sum of contributions.
@@ -420,7 +427,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 11 — Leadership Theories & EI
-**Source:** T1 Ch. 13.
+**Source:** T1 Ch. 13 (alt: R3 Goleman for EI sections). **Mandatory videos:** HST6 *What is leadership?* + HST7 *Leadership vs management* + HST8 *An overview and history of leadership and leadership development* + HST9 *EI: your success as a leader*.
 
 **Leadership vs Management**
 - Manager: cope with complexity, plan-budget, organise-staff, control.
@@ -462,7 +469,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 12 — Organisation Structure
-**Source:** T1 Ch. 14.
+**Source:** T1 Ch. 14 (alt: R1 Daft, *Theory and Design of Organizations*, Ch. 3-4 — primary alt for structure & design).
 
 **Six key elements of structure**
 1. **Work specialisation** (division of labour).
@@ -499,7 +506,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 13 — Organisational Culture & Change
-**Source:** T1 Ch. 15 & 16.
+**Source:** T1 Ch. 15 & 16 (alt: R1 Daft Ch. 9 for culture, Ch. 11 for change & innovation). **Mandatory video:** HST10 *Managing cultures*.
 
 ### Organisational Culture
 **Definition** — shared meaning system that distinguishes one organisation from another.
@@ -552,7 +559,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 14 — Recruitment & Selection
-**Source:** T2 (Aswathappa) Ch. 6 & 7.
+**Source:** T2 (Aswathappa) Ch. 6 & 7 (alt: R2 Dessler & Varkkey Ch. 5-6 — strong on Indian recruitment channels and modern selection science).
 
 ### Recruitment
 **Definition** — process of attracting qualified applicants to apply.
@@ -606,7 +613,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 15 — Compensation Management
-**Source:** T2 (Aswathappa) Ch. 12.
+**Source:** T2 (Aswathappa) Ch. 12 (alt: R2 Dessler & Varkkey Ch. 11-12 for pay structures and incentive systems).
 
 **Definition** — all forms of financial returns and tangible benefits an employee receives as part of employment.
 
@@ -662,7 +669,7 @@ EI predicts job performance, leadership effectiveness, conflict resolution skill
 ---
 
 ## Session 16 — Performance Appraisal & Management
-**Source:** T2 (Aswathappa) Ch. 9.
+**Source:** T2 (Aswathappa) Ch. 9 (alt: R2 Dessler & Varkkey Ch. 9 for performance management systems).
 
 **Performance Management vs Performance Appraisal**
 - **PA** = annual event, retrospective.

@@ -22,7 +22,7 @@
 ### LQ-4 (Session 5) — Discrete distribution problem
 **Prompt.** A call centre receives on average 12 calls/hour. (a) P(exactly 10 calls in next hour). (b) P(at least 20 calls in next hour). (c) Justify Poisson assumption. (d) If conversion rate to sale is 15 %, expected sales per hour and its standard deviation (use binomial within Poisson hour).
 
-**Skeleton**: Poisson(λ=12) → POISSON.DIST formulas → Poisson assumed because rare-event count over fixed time, independent arrivals, constant rate → conversions ~Binomial(n=12, p=0.15) compounded with Poisson → E[sales]=λp=1.8/hr, more rigorous: E=12·0.15=1.8, Var=12·0.15·0.85+0.15²·12 (compound Poisson) ≈ approximately 2.07.
+**Skeleton**: Poisson(λ=12) → use `POISSON.DIST(10, 12, FALSE)` for (a) and `1 − POISSON.DIST(19, 12, TRUE)` for (b) → Poisson assumed because rare-event count over fixed time, independent arrivals, constant rate. For (d), use **Poisson thinning**: if calls arrive Poisson(λ=12) and each is independently a sale with prob p=0.15, then **Sales ~ Poisson(λp) = Poisson(1.8)**, so **E[Sales] = Var[Sales] = 1.8** and SD = √1.8 ≈ 1.342. (Long form via law of total variance: Var(S) = E[Np(1−p)] + Var(Np) = λp(1−p) + p²λ = λp = 1.8.)
 
 ### LQ-5 (Session 6) — Normal distribution applications
 **Prompt.** Daily turnover of a delivery service is N(μ=320, σ=42) parcels. (a) Probability tomorrow's volume exceeds 400. (b) The 90th percentile of demand. (c) For staffing, the volume that has only 5 % probability of being exceeded.
@@ -71,7 +71,7 @@
 ### LQ-13 (Session 15) — Linear Programming formulation & solution
 **Prompt.** A factory makes Product A and B. Each A needs 4 hrs machine + 2 hrs labour, profit ₹40. Each B needs 3 hrs machine + 5 hrs labour, profit ₹30. Available: 200 machine hours, 150 labour hours. (a) Formulate LP. (b) Solve graphically. (c) Identify binding constraints and shadow prices. (d) Comment on what to do if labour increases by 10 hrs.
 
-**Skeleton**: Max Z = 40A + 30B s.t. 4A + 3B ≤ 200, 2A + 5B ≤ 150, A,B ≥ 0; identify corner points (0,0), (50,0), (0,30), and intersection of two constraints; intersection: solve 4A+3B=200, 2A+5B=150 → A=35.7, B=15.7; Z values at corners; optimal at intersection ≈ ₹1900; both constraints binding so both have positive shadow prices; for labour +10 hrs, ΔZ = shadow price × 10 (use sensitivity output).
+**Skeleton**: Max Z = 40A + 30B s.t. 4A + 3B ≤ 200, 2A + 5B ≤ 150, A,B ≥ 0. Corner points: (0,0) Z=0; (50,0) Z=2000; (0,30) Z=900; intersection: solve 4A+3B=200, 2A+5B=150 → from eq2 A=75−2.5B, sub: 300−7B=200 → **B=14.286, A=39.286**, **Z = 40(39.286) + 30(14.286) = 2000**. **Special case alert** — the objective slope (−40/30 = −4/3) equals the machine-constraint slope (−4/3), so the objective is parallel to the machine-binding edge. This produces **multiple optimal solutions** along the entire edge from (50,0) to (39.286, 14.286), all giving Z = ₹2000. Machine constraint is binding everywhere on the optimal edge → positive machine shadow price; labour binding only at the intersection corner. For labour +10 hrs, the firm can move further along that edge → ΔZ = labour shadow price × 10 (read from Solver sensitivity report).
 
 ### LQ-14 (Session 12, 13, 14 cross-cutting) — Choosing the right test
 **Prompt.** For each scenario, identify the right statistical test:

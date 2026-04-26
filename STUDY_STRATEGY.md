@@ -2,12 +2,17 @@
 
 A working professional's playbook: how to actually finish this MBA with a strong CGPA without burning out.
 
+> **What's handout-anchored vs. general advice**
+> - Sections 1, 6-8 contain figures (32 contact hours, EC weights, exam scope) that are validated against the Sem 1 S2-25 handouts in `sem_1/handouts/`.
+> - Sections 4 (Sem 2-3 Python/Jupyter), 9 (Sem 4 Capstone), and the elective tactics in §5 are **forward-looking advice** based on standard WILP MBA conventions, not yet validated against Sem 2-4 handouts (which we have not seen).
+> - Whenever a handout for a future semester arrives, update this file the same way we updated Sem 1.
+
 ---
 
 ## 1. The reality of WILP
 
-- 4 courses per semester, each with **32 hours of live instruction** spread over ~14 weekends.
-- Every course has **3 evaluation components**: continuous (EC-1), mid-semester (EC-2), comprehensive (EC-3).
+- 4 courses per semester. Each Sem 1 course has **16 contact sessions × ~2 hrs = ~32 hours of live instruction** (verified across all four S2-25 handouts). Sessions are typically run on weekend cohorts — exact weekend count depends on the semester calendar (handouts list dates per session).
+- Every course has **3 evaluation components**: continuous (EC-1), mid-semester (EC-2), comprehensive (EC-3). Sem 1 weight pattern: EC-1 = **25-30 %** (MPO is 25 %, others 30 %), EC-2 = **30-35 %** (MPO is 35 %, others 30 %), EC-3 = **40 %** for all four.
 - You are working full-time. Realistic study budget: **8–12 hours/week** during the semester, **20+ hours/week** in the exam month.
 
 ---
@@ -61,7 +66,7 @@ Total: ~17 hours/week (12 h live + 5 h self-study). Drop to 8 h self-study durin
 | Notion / Obsidian | Personal notes + flashcards |
 | Anki | Spaced-repetition flashcards (10 min/day) |
 | Excel / Google Sheets | Stats, finance, accounting practice |
-| Python + Jupyter | Data Science, ML, DL labs (Sem 2–3) |
+| Python + Jupyter | Data Science, ML, DL labs (forward-looking — confirm in Sem 2-3 handouts) |
 | Power BI / Tableau | Data Visualization elective + Stats viz |
 | ChatGPT / Cursor | Concept clarification, coding help (NEVER for graded submissions) |
 
@@ -93,7 +98,7 @@ Total: ~17 hours/week (12 h live + 5 h self-study). Drop to 8 h self-study durin
 
 ## 6. Continuous Evaluation (EC-1) hacks
 
-- **Quizzes** are usually open and you can attempt 2–3 times: take the first one to see the question pool, prepare, then attempt for marks.
+- **Quizzes**: retake policy is course-specific — check each subject's EC-1 instructions on Taxila (the four Sem 1 handouts don't fix a uniform attempt count). Treat the first attempt as a diagnostic if multiple attempts are allowed; otherwise prepare fully before the only attempt.
 - **Assignments** typically need ~6 hours over 2 weekends. Start the day they are released.
 - Answer the question that is asked, not the question you wish was asked. WILP graders mark on rubric.
 - Submit by **T−24 hours** to avoid LMS issues.
@@ -108,7 +113,7 @@ Total: ~17 hours/week (12 h live + 5 h self-study). Drop to 8 h self-study durin
 | T−2 | Solve 3 PYQ Mid-Sem papers (timed, 2 hours each). Identify weak topics. |
 | T−1 | Memorise formulas + definitions. One paper per day. Sleep on time. |
 
-Mid-Sem usually covers **first 50–60% of syllabus**. Closed-book in most subjects.
+Mid-Sem covers **the first 8 of 16 sessions = exactly 50 % of the syllabus** in all four Sem 1 subjects (verified from S2-25 handouts). All four are closed-book; durations are 2 hrs.
 
 ---
 
@@ -125,7 +130,7 @@ Comprehensive covers **entire syllabus, weighted toward post-mid material**.
 
 ---
 
-## 9. Capstone Project (Sem 4)
+## 9. Capstone Project (Sem 4) — *forward-looking, not yet handout-validated*
 
 - Pick a problem from your **own workplace**. Easier data access, easier mentor sign-off, easier panel defence.
 - AI for Business projects that work well: customer churn, demand forecasting, document automation with GenAI, fraud detection, marketing mix optimisation.
@@ -137,7 +142,7 @@ Comprehensive covers **entire syllabus, weighted toward post-mid material**.
 ## 10. Mistakes to avoid
 
 1. **Skipping live classes** for "I'll watch the recording later" — recordings pile up.
-2. **Ignoring EC-1** — it is the easiest 30 marks; squander it and you need 80+ in mid+comp combined.
+2. **Ignoring EC-1** — it is the easiest 25-30 marks (Sem 1: 30 % for Bus Stats / Mgmt Acc / Marketing; 25 % for MPO); squander it and you need 80+ in mid+comp combined.
 3. **Studying only the textbook** — handouts call out specific chapters; faculty slides indicate exact exam scope.
 4. **No formula sheet** — guarantees panic in numerical exams.
 5. **Cramming the night before** — every WILP exam rewards consistency over heroics.

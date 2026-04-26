@@ -28,6 +28,8 @@
 
 ## Sem 1 — Exam calendar (Second Semester 2025-2026)
 
+> "Second Semester 2025-2026" is the BITS academic-year label printed on the S2-25 handouts, corresponding to BITS WILP's Jan/Feb intake of the 2025-2026 academic year. This is *your* MBA Semester 1 (the first of four).
+
 | Subject | Code | EC-2 Mid-Sem | EC-2 type / dur | EC-3 Comprehensive | EC-3 type / dur | EC-2 weight |
 |---------|------|--------------|-----------------|--------------------|-----------------|------------:|
 | Business Statistics | MBACC ZG501 | **20-Jun-2026 (FN)** | Closed Book / 2 hrs | **05-Sep-2026 (FN)** | Open Book / 2 hrs | 30 % |

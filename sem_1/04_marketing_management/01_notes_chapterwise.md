@@ -1,9 +1,24 @@
 # Marketing Management — Session-wise Notes (handout-aligned)
 
 > Built from the official `MBACC ZG503` handout (S2-25, v1.0).
-> Primary text **T1** = Kotler, Keller, Chernev, Sheth & Shaineesh, *Marketing Management*, **Pearson 16/e (2022)**.
-> Reference **R1** = *Marketing Management — Indian Cases*, Pearson, 2018 (case discussions in 8 sessions are mandatory).
-> 16 contact sessions. Mid-Sem (Closed Book, 30 %) covers sessions 1-8; Comprehensive (Open Book, 2.5 hrs, 40 %) covers all 16.
+> **Primary text T1** = Kotler, Keller, Chernev, Sheth & Shainesh, *Marketing Management*, Pearson 16/e (2022).
+> **Reference R1** = *Marketing Management — Indian Cases*, Pearson, 2018 — 6 mandatory case discussions spread across the semester.
+> **Reference R2** = V.S. Ramaswamy & S. Namakumari, *Marketing Management: Indian Context, Global Perspective*, SAGE Publications India 6e (2018) — Indian-flavoured alternative to Kotler; especially useful for **rural marketing, Indian distribution networks, regulatory environment (S15) and Indian segmentation cases (S4)**.
+>
+> **Mandatory HSTalks videos (per handout, 8 videos HST1-HST8):**
+> - **HST1** *What is the marketing mix?* (Hanlon, Cranfield) → S1, S8
+> - **HST2** *McDonald's in India: how far should MNCs go in adapting?* (Anil K Gupta, Maryland) → S3, S16
+> - **HST3** *What are personas?* (Hanlon, Cranfield) → S3, S4
+> - **HST4** *Targeting and segmentation in marketing* (Peter Sleight) → S4
+> - **HST5** *Market segmentation: a vital component of hotel marketing* (Martin Evans) → S4
+> - **HST6** *Culture as a consumer force: Yoga and "Glocalisation"* (Askegaard, Southern Denmark) → S3, S6
+> - **HST7** *Omni-channel marketing and operations: an integrated approach* (Atorough, Roehampton) → S13, S14
+> - **HST8** *Sustainable advertising* (Thomas Kolster) → S12
+> Login via BITS WILP elearn → HSTalks → Business & Management Collection.
+>
+> **On the handout's case-discussion / R1-reading offset**: In the handout, a case is *discussed* in session N (named in the topic column) but the R1 chapter often appears under session N+1's reading column. These notes tag each case at the session where it is discussed (i.e. where you must come prepared), which is the more useful anchor for exam prep.
+>
+> 16 contact sessions. Mid-Sem (Closed Book, 2 hrs, 30 % weight) covers sessions 1-8; Comprehensive (Open Book, 2.5 hrs, 40 % weight) covers all 16.
 
 ## Quick session map
 
@@ -56,7 +71,7 @@
 - Value-creation engine; revenue generator.
 - Brand custodian.
 
-**HSTalks reference** — *What is the marketing mix?* by Dr. Annmarie Hanlon (Cranfield).
+**Mandatory video:** HST1 *What is the marketing mix?* by Dr. Annmarie Hanlon (Cranfield).
 
 ---
 
@@ -93,7 +108,7 @@
 ---
 
 ## Session 3 — Consumer characteristics & Competitive behaviour
-**Source:** T1 Ch. 3. **Mandatory case discussion: Consumer Behaviour — Wide Facts and Deep Implications (R1 Case 6, pp. 6.1–6.8).**
+**Source:** T1 Ch. 3 (alt: R2 Ramaswamy Ch. 4-5 for Indian consumer behaviour). **Mandatory case discussion: Consumer Behaviour — Wide Facts and Deep Implications (R1 Case 6, pp. 6.1–6.8).** **Mandatory videos:** HST2 *McDonald's in India* + HST3 *What are personas?* + HST6 *Yoga and Glocalisation*.
 
 **Factors influencing buying behaviour**
 - **Cultural** — culture, sub-culture, social class.
@@ -127,7 +142,7 @@
 ---
 
 ## Session 4 — Segmentation & Targeting
-**Source:** T1 Ch. 6. **Mandatory case discussion: Who will buy XYLO — Mahindra & Mahindra Automotive Sector.**
+**Source:** T1 Ch. 6 (alt: R2 Ramaswamy Ch. 6-7 for STP in Indian context). **Mandatory case discussion: Who will buy XYLO — Mahindra & Mahindra Automotive Sector** *(R1 Case 9 reading carries into S5)*. **Mandatory videos:** HST3 *Personas* + HST4 *Targeting & Segmentation* + HST5 *Hotel marketing segmentation*.
 
 **Why segment?** Different needs, different price-sensitivity, different channels, different communication.
 
@@ -192,7 +207,7 @@
 ---
 
 ## Session 6 — Positioning
-**Source:** T1 Ch. 7. **Mandatory case discussion: Kellogg's Cornflakes in India — Finding a Platform that Connects.**
+**Source:** T1 Ch. 7 (alt: R2 Ramaswamy Ch. 8 for positioning of Indian brands). **Mandatory case discussion: Kellogg's Cornflakes in India — Finding a Platform that Connects** *(R1 Case 10 reading carries into S7)*. **Mandatory video:** HST6 *Yoga and Glocalisation* (cultural fit for positioning).
 
 **Bases of positioning**
 - Attribute (LIC — security), Benefit (Volini — fast pain relief), Use/application (Activia — gut health), User (Johnson's Baby — babies), Competitor (Pepsi vs Coke), Product category (7Up — uncola), Quality/Price (Tata Salt vs cheap salts).
@@ -262,7 +277,7 @@
 ---
 
 ## Session 8 — Services and Marketing Mix
-**Source:** T1 Ch. 8. **Mandatory case discussion: MTR Foods — A Marketing Marvel.**
+**Source:** T1 Ch. 8 + Pearson Case Book (per handout S8 reference). **Mandatory case discussion: MTR Foods — A Marketing Marvel** *(R1 Case 1 reading carries into S9)*. **Mandatory video:** HST1 *What is the marketing mix?* (re-anchor for 4Ps → 7Ps for services).
 
 **Service characteristics (IHIP)**
 - **Intangibility** — can't be seen/touched before purchase.
@@ -423,7 +438,7 @@
 ---
 
 ## Session 12 — IMC, Advertising & Sales promotion
-**Source:** T1 Ch. 12 & 13. **Mandatory case discussion: Oreo in India — Launching and Establishing a global brand using IMC effectively.**
+**Source:** T1 Ch. 12 & 13 + R1 Case 17 (pp. 17.1-17.6). **Mandatory case discussion: Oreo in India — Launching and Establishing a global brand using IMC effectively.** **Mandatory video:** HST8 *Sustainable advertising* (Kolster).
 
 **IMC (Integrated Marketing Communications)** — coordinated, consistent messaging across all channels & touch-points.
 
@@ -479,7 +494,7 @@
 ---
 
 ## Session 13 — Marketing Channels
-**Source:** T1 Ch. 15.
+**Source:** T1 Ch. 15 (alt: R2 Ramaswamy Ch. 12-13 for Indian distribution networks — kirana, mandi, super-stockist, sub-stockist hierarchy). **Mandatory video:** HST7 *Omni-channel marketing and operations* (Atorough).
 
 **Channel = set of interdependent organisations involved in making product/service available for use or consumption.**
 
@@ -520,7 +535,7 @@
 ---
 
 ## Session 14 — Intermediaries, E-commerce, M-commerce
-**Source:** T1 Ch. 15 & 16.
+**Source:** T1 Ch. 15 & 16 (alt: R2 Ramaswamy Ch. 14 for Indian retail evolution and ONDC context). **Mandatory video:** HST7 *Omni-channel marketing and operations*.
 
 **Major retail formats**
 - Specialty store, Department store, Supermarket, Convenience store, Discount store, Off-price retailer, Superstore (Big Bazaar, Reliance Smart), Catalog showroom.
@@ -563,7 +578,7 @@
 ---
 
 ## Session 15 — Marketing regulation & Industrial research
-**Source:** T1 Ch. 4 & 5.
+**Source:** T1 Ch. 4 & 5 (alt: R2 Ramaswamy Ch. 19 for Indian regulatory/legal environment specifically — CCPA, ASCI, FSSAI, RERA, DPDP).
 
 ### Marketing Regulation (India)
 **Consumer Protection**
@@ -625,7 +640,7 @@
 ---
 
 ## Session 16 — Marketing Strategy & Plan
-**Source:** Class material + R1 Case 21 (pp. 21.1-21.4). **Mandatory case discussion: Amazon.com adopts its retail business in India.**
+**Source:** Class material + R1 Case 21 (pp. 21.1-21.4) (alt: R2 Ramaswamy Ch. 20 for marketing planning in Indian firms). **Mandatory case discussion: Amazon.com adopts its retail business in India.** **Mandatory video:** HST2 *McDonald's in India: how far should MNCs go in adapting?* (cross-applies to Amazon's localisation strategy).
 
 **Strategic Planning Hierarchy** — Corporate plan → SBU plan → Product/Brand plan.
 

@@ -94,7 +94,7 @@
 64. **Behavioural theories (Ohio State).** Two dimensions: Initiating Structure (task orientation) and Consideration (people orientation).
 65. **Fiedler's Contingency Model.** Effectiveness = match between leader's style (LPC) and situational favourableness (leader-member relations, task structure, position power).
 66. **Hersey-Blanchard Situational Leadership.** Leader style depends on follower readiness: Telling, Selling, Participating, Delegating.
-67. **Transformational vs Transactional leadership.** Transactional = exchange (rewards for performance); Transformational = inspire vision, intellectual stimulation, individualised consideration, idealised influence.
+67. **Transformational vs Transactional leadership.** Transactional = exchange (rewards for performance, management-by-exception). Transformational = inspires via the **4 I's**: **I**dealised influence (charisma/role-model), **I**nspirational motivation (vision, meaning), **I**ntellectual stimulation (challenge assumptions), **I**ndividualised consideration (coach each follower).
 68. **Servant leadership.** Leader serves followers; focus on listening, empathy, stewardship, growth of others.
 69. **Why is EI important for leadership?** Self-aware leaders manage own emotions, empathise with team, build trust → better team outcomes; meta-analysis: EI predicts leadership effectiveness.
 

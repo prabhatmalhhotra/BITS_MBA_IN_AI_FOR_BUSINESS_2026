@@ -14,7 +14,7 @@
 ## Session 2 — Need, Wants, Demand
 7. **Distinguish needs, wants, demand.** Need = basic requirement (food). Want = need shaped by culture/personality (pizza). Demand = want backed by ability to pay.
 8. **State Maslow's 5 needs hierarchy.** Physiological → Safety → Social → Esteem → Self-actualisation; used to identify product/service positioning.
-9. **State 5 demand states (Kotler).** Negative, No demand, Latent, Declining, Irregular, Full, Overfull, Unwholesome.
+9. **State Kotler's 8 demand states.** Negative, No demand, Latent, Declining, Irregular, Full, Overfull, Unwholesome.
 10. **Define market demand and demand forecasting.** Total volume of a product/service that would be bought by a defined customer group, in a defined area, time period, marketing environment, marketing program. Forecasting = expected demand at specified marketing effort.
 11. **List demand-estimation methods.** Survey of buyers' intentions, expert opinion, sales-force composite, time-series analysis, regression, market test.
 
@@ -31,7 +31,7 @@
 19. **Bases for consumer segmentation.** Geographic, Demographic, Psychographic, Behavioural.
 20. **Bases for B2B segmentation.** Demographic (industry, size), Operating variables, Purchasing approach, Situational factors, Personal characteristics.
 21. **Requirements for effective segmentation.** Measurable, Substantial, Accessible, Differentiable, Actionable.
-22. **3 targeting strategies.** Undifferentiated (mass), Differentiated (multi-segment), Concentrated (niche), Micromarketing (local/individual).
+22. **4 targeting strategies (Kotler).** Undifferentiated (mass), Differentiated (multi-segment), Concentrated (niche), Micromarketing (local/individual).
 23. **Define personas.** Detailed semi-fictional profile of ideal customer in a segment based on research; humanises segmentation.
 
 ## Session 5 — Customer Value Proposition
@@ -138,11 +138,12 @@
 | Product positioning visualised by | Perceptual Map |
 | AIDA stands for | Awareness, Interest, Desire, Action |
 | ASCI India regulates | Advertising standards |
-| Mahindra XYLO case used for | Segmentation & Targeting (S4) |
-| Kellogg's India case used for | Positioning (S6) |
-| MTR Foods case used for | Marketing Mix (S8) |
-| Oreo India case used for | IMC effectiveness (S12) |
-| Amazon India case used for | Marketing strategy adaptation (S16) |
+| Mahindra XYLO case used for | Segmentation & Targeting (S4) — R1 Case 9 |
+| Kellogg's India case used for | Positioning (S6) — R1 Case 10 |
+| MTR Foods case used for | Marketing Mix (S8) — R1 Case 1 |
+| Oreo India case used for | IMC effectiveness (S12) — R1 Case 17 |
+| Amazon India case used for | Marketing strategy adaptation (S16) — R1 Case 21 |
+| Consumer Behaviour case used for | Consumer behaviour (S3) — R1 Case 6 |
 
 ---
 

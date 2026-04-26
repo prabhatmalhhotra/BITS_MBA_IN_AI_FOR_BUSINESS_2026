@@ -1,9 +1,17 @@
 # Business Statistics — Session-wise Notes (handout-aligned)
 
 > Built from the official `MBACC ZG501` handout (S2-25, v4.0).
-> Primary text **T1** = Levine, Szabat, Stephan & Viswanathan, *Business Statistics*, **Pearson 7e (2019)**.
-> Secondary text **T2** = Anderson, Sweeney, Williams, Camm & Martin, *Quantitative Methods for Business*, **Cengage 12e (2013)**.
+> **Primary text T1** = Levine, Szabat, Stephan & Viswanathan, *Business Statistics*, Pearson 7e (2019).
+> **Secondary text T2** = Anderson, Sweeney, Williams, Camm & Martin, *Quantitative Methods for Business*, Cengage 12e (2013).
+> **Reference books (per handout, used as alternative reading):**
+> - **R1** Ken Black, *Business Statistics*, Wiley 7e (2012) — full alternative to T1 for descriptive/inferential chapters.
+> - **R2** Aczel, Sounderpandian, Saravanan & Joshi, *Complete Business Statistics*, McGraw Hill 7e (2017) — alt. for probability, distributions, hypothesis testing.
+> - **R3** Hillier & Hillier, *Introduction to Management Science*, McGraw Hill 5e (2019) — LP & operations research (S15).
+> - **R4** Render, Stair & Hanna, *Quantitative Analysis for Management*, Pearson 11e (2011) — LP & decision analysis (S15).
+>
 > 16 contact sessions = exam-ready chunks. Mid-Sem (closed book) covers sessions 1-8; Comprehensive (open book) covers 1-16.
+>
+> **Note on the handout's S13 / S14 titles**: in the official S2-25 handout, S13 is *titled* "Validating the regression assumption…" but its actual sub-topics are regression fundamentals (types, OLS, R²); S14 is *titled* "Linear Regression" but its sub-topics are diagnostics (heteroscedasticity, Shapiro-Wilk, Anderson-Darling, KS). These notes preserve the handout's titles but follow the handout's sub-topics — i.e. S13 = regression fundamentals, S14 = diagnostics.
 
 ## Quick session map
 
@@ -91,7 +99,7 @@
 ---
 
 ## Session 3 — Numerical Descriptive Measures
-**Source:** Levine T1 Ch. 3.
+**Source:** Levine T1 Ch. 3 (alt: Black R1 Ch. 3, Aczel R2 Ch. 3).
 
 **Central tendency**
 - **Mean** $\bar{X} = \frac{\sum X_i}{n}$ — affected by outliers.
@@ -130,7 +138,7 @@
 ---
 
 ## Session 4 — Basic Probability
-**Source:** Levine T1 Ch. 4.
+**Source:** Levine T1 Ch. 4 (alt: Black R1 Ch. 4, Aczel R2 Ch. 2-3).
 
 **Approaches to probability**
 - **Classical (a priori)**: equally likely outcomes, P(A) = favourable/total.
@@ -166,7 +174,7 @@ $$P(A_i|B) = \frac{P(B|A_i) P(A_i)}{\sum_j P(B|A_j) P(A_j)}$$
 ---
 
 ## Session 5 — Discrete Probability Distributions
-**Source:** Levine T1 Ch. 5.
+**Source:** Levine T1 Ch. 5 (alt: Black R1 Ch. 5, Aczel R2 Ch. 3).
 
 **General**
 - PMF $P(X = x)$, satisfies $\sum P(x) = 1$.
@@ -195,7 +203,7 @@ $$P(A_i|B) = \frac{P(B|A_i) P(A_i)}{\sum_j P(B|A_j) P(A_j)}$$
 ---
 
 ## Session 6 — Normal Distribution
-**Source:** Levine T1 Ch. 6.
+**Source:** Levine T1 Ch. 6 (alt: Black R1 Ch. 6, Aczel R2 Ch. 4).
 
 **Continuous probability**: PDF $f(x)$, P(X = a single point) = 0; probability = area under curve.
 
@@ -273,7 +281,7 @@ $$p \pm z_{\alpha/2} \cdot \sqrt{\frac{p(1-p)}{n}}$$
 ---
 
 ## Session 9 — Fundamentals of Hypothesis Testing
-**Source:** Levine T1 Ch. 9.
+**Source:** Levine T1 Ch. 9 (alt: Black R1 Ch. 9, Aczel R2 Ch. 7).
 
 **Methodology (7 steps)**
 1. State H₀ and H₁ (research question).
@@ -301,7 +309,7 @@ $$Z = \frac{p - \pi_0}{\sqrt{\pi_0 (1-\pi_0)/n}}$$
 ---
 
 ## Session 10 — Two-sample tests and ANOVA
-**Source:** Levine T1 Ch. 10.
+**Source:** Levine T1 Ch. 10 (alt: Black R1 Ch. 10-11, Aczel R2 Ch. 8-9).
 
 **Two means (independent populations)**
 - **Pooled-variance t** (assumes equal σ²):
@@ -399,7 +407,8 @@ $$F = S_1^2 / S_2^2,\; df_1 = n_1-1, df_2 = n_2-1$$
 ---
 
 ## Session 13 — Validating regression assumption & normality testing
-**Source:** Levine T1 Ch. 13.
+**Source:** Levine T1 Ch. 13 (alt: Black R1 Ch. 14, Aczel R2 Ch. 10-11).
+*(Handout titles S13 as "Validating…" but its sub-topics are regression fundamentals — see header note.)*
 
 **Types of regression models**
 - Simple linear: $Y = \beta_0 + \beta_1 X + \epsilon$.

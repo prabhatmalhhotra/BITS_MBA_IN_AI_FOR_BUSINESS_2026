@@ -21,7 +21,7 @@
 **Skeleton**: Black-box model → 4 sets of factors (cultural/social/personal/psychological). 5-stage process for premium smartphone: Need recognition (older device, status); Information search (YouTube reviews, peer influence); Evaluation (camera, brand, ecosystem, price); Purchase (online vs offline, financing); Post-purchase (cognitive dissonance, AppleCare/Samsung Care). Porter: high rivalry (Apple, Samsung, OnePlus, Xiaomi); medium new entrants (Nothing, Realme); high substitutes (refurbished, lower segments); medium supplier power (Qualcomm, foundries); high buyer power (price-comparison, switching).
 
 ### LQ-4 (Session 4) — STP for Mahindra XYLO (mandatory case)
-**Prompt.** Using the **Mahindra XYLO case** (Pearson Indian Cases), explain how Mahindra's segmentation, targeting, and positioning decisions evolved. What did they get right and what could improve? Apply effective-segmentation criteria.
+**Prompt.** Using the **Mahindra XYLO case** (Pearson Indian Cases, **Case 9** — *Who Will Buy XYLO*), explain how Mahindra's segmentation, targeting, and positioning decisions evolved. What did they get right and what could improve? Apply effective-segmentation criteria.
 
 **Skeleton**: Segments — large family travellers, intercity commercial users (taxi operators), upgraders from sedan; needs space, comfort, fuel economy. Targeting: differentiated (consumer + commercial trims). Positioning: "premium MPV" vs Toyota Innova. Effective segmentation criteria: measurable (yes), substantial (yes — large family segment), accessible (dealer network strong), differentiable, actionable. What worked: tapping commercial cab segment. Improve: stronger urban brand, refresh vs Innova Crysta. Conclude with personas (lecturer Dr. Annmarie Hanlon HSTalk).
 
@@ -31,7 +31,7 @@
 **Skeleton**: Customer profile — Jobs: manage daily working capital, pay suppliers, receive UPI payments. Pains: cash crunch, slow bank loans, paperwork, high interest from informal sources. Gains: instant credit, transparent rates, dignity, growth. Value Map: products — instant ₹10K-2L credit on UPI history; pain relievers: 0 paperwork, 30-sec approval, transparent rate, no collateral; gain creators: build credit score, accept QR + reconcile, integrate accounting. CVP statement: "For kiranas needing flexible working capital, our UPI-data-driven instant credit is faster than banks and cheaper than informal lenders." Differentiator: data + speed.
 
 ### LQ-6 (Session 6) — Positioning Kellogg's Cornflakes (mandatory case)
-**Prompt.** Using the **Kellogg's Cornflakes in India case** (Pearson Indian Cases, Case 9), discuss Kellogg's positioning challenges in India. Apply POP/POD analysis. Recommend a refined positioning statement.
+**Prompt.** Using the **Kellogg's Cornflakes in India case** (Pearson Indian Cases, **Case 10** — *Finding a Platform that Connects*), discuss Kellogg's positioning challenges in India. Apply POP/POD analysis. Recommend a refined positioning statement.
 
 **Skeleton**: Initial mistake — positioned as breakfast cereal, but Indian breakfast = hot, savoury, filling (paratha, idli, poha). POP: cereal category convenience; POD initially failed (cold, sweet, milk-based — alien). Adaptations: Chocos (kids), millet variants, fortified with vitamins, hot-prep options. Repositioning statement: "For health-conscious urban Indian families wanting a quick, nutritious breakfast, Kellogg's Cornflakes is a fortified-grain option that complements (not replaces) traditional breakfasts." Lessons: cultural sensitivity, distinguishing POP vs POD, perceptual mapping.
 
@@ -41,7 +41,7 @@
 **Skeleton**: PLC stages — Introduction (Chetak EV), Growth (premium 150-200cc Apache, FZ), Maturity (Splendor — cash cow), Decline (legacy Vespa). Strategies: Chetak — build awareness, R&D, partner with charging infra, skim pricing. Apache — differentiate on performance (RTR, racing DNA), aggressive marketing, lifestyle. Splendor — milk profits, line extensions (Splendor Plus, iSmart), defend share, EDLP. Discuss differentiation: product (engine, design), service (warranty, EMI), channel (rural reach), image (brand persona), personnel (Hero ki ghodaagiri).
 
 ### LQ-8 (Session 8) — Services marketing & MTR Foods (mandatory case)
-**Prompt.** Discuss the unique characteristics of services using SERVQUAL. Then, using the **MTR Foods case** (Pearson Indian Cases), explain how MTR managed the goods-services continuum (restaurant → packaged food). Apply marketing-mix (4Ps + 3Ps) for services.
+**Prompt.** Discuss the unique characteristics of services using SERVQUAL. Then, using the **MTR Foods case** (Pearson Indian Cases, **Case 1** — *MTR Foods: A Marketing Marvel*), explain how MTR managed the goods-services continuum (restaurant → packaged food). Apply marketing-mix (4Ps + 3Ps) for services.
 
 **Skeleton**: 4 service characteristics (IHIP). SERVQUAL 5 dims (RATER). MTR pivot: restaurant (high service variability) → packaged ready-to-eat (productisation; reduce variability). Marketing mix transition: Product (RTE, masala), Price (premium with brand equity), Place (modern trade + traditional + e-commerce), Promotion (heritage + nostalgia), People (vendor partnerships), Process (cold chain), Physical evidence (packaging, branding). Lesson: service brand equity transferable to packaged goods if execution holds.
 

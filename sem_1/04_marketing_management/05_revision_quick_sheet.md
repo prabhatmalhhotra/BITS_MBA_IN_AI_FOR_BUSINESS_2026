@@ -157,9 +157,9 @@
 | Session | Case | Key concepts | Source |
 |---------|------|--------------|--------|
 | 3 | Consumer Behaviour: Wide Facts and Deep Implications | EKB, decision process | Pearson Indian Cases (R1) Case 6 |
-| 4 | Mahindra XYLO | STP, segmentation criteria | Class materials + R1 |
-| 6 | Kellogg's Cornflakes in India | Positioning, POP/POD, cultural sensitivity | T1 Ch 7 |
-| 8 | MTR Foods: A Marketing Marvel | Goods-services continuum, 7Ps | Pearson Case Book |
+| 4 | Who Will Buy XYLO — Mahindra & Mahindra | STP, segmentation criteria | Pearson Indian Cases (R1) Case 9 |
+| 6 | Kellogg's Cornflakes in India — Finding a Platform that Connects | Positioning, POP/POD, cultural sensitivity | Pearson Indian Cases (R1) Case 10 |
+| 8 | MTR Foods: A Marketing Marvel | Goods-services continuum, 7Ps | Pearson Indian Cases (R1) Case 1 |
 | 12 | Oreo in India: IMC | 5 Ms of advertising, IMC integration | R1 Case 17 |
 | 16 | Amazon India: retail adaptation | Ansoff, BCG, STP, market entry | R1 Case 21 |
 
