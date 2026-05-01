@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 1 — Defining and Collecting Data | Business Statistics</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f0f2f5;
+    padding: 0;
+  }
+
+  /* ── Top Nav Bar ── */
+  .topbar {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge {
+    background: #ff5252;
+    color: #fff;
+    font-size: .7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 56px 32px 48px;
+    text-align: center;
+  }
+  .hero .session-tag {
+    display: inline-block;
+    background: rgba(100, 255, 218, .15);
+    color: #64ffda;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill {
+    background: rgba(255,255,255,.1);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: .78rem;
+    color: #cfd8dc;
+  }
+
+  /* ── Container ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Real World Problem Box ── */
+  .real-world {
+    background: linear-gradient(135deg, #fff3e0, #fff8e1);
+    border-left: 5px solid #ff9800;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 8px rgba(255,152,0,.12);
+  }
+  .real-world .rw-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff9800;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 14px;
+  }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway {
+    margin-top: 14px;
+    padding: 10px 16px;
+    background: rgba(255,152,0,.1);
+    border-radius: 8px;
+    font-weight: 600;
+    color: #bf360c;
+    font-size: .9rem;
+  }
+
+  /* ── Section Card ── */
+  .section-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    border: 1px solid #e8eaed;
+  }
+  .section-card h2 {
+    font-size: 1.35rem;
+    color: #0f2027;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-card h2 .sec-num {
+    background: #2c5364;
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+
+  /* ── Block Diagram ── */
+  .block-diagram {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 24px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .block-diagram .block {
+    background: #e3f2fd;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    padding: 14px 18px;
+    text-align: center;
+    min-width: 120px;
+    flex: 1;
+    max-width: 200px;
+  }
+  .block-diagram .block.highlight {
+    background: #bbdefb;
+    border-color: #42a5f5;
+    font-weight: 700;
+  }
+  .block-diagram .block .block-title {
+    font-weight: 700;
+    font-size: .85rem;
+    color: #1565c0;
+    margin-bottom: 4px;
+  }
+  .block-diagram .block .block-desc {
+    font-size: .78rem;
+    color: #37474f;
+  }
+  .block-diagram .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #90caf9;
+    padding: 0 6px;
+    min-width: 30px;
+  }
+
+  /* ── Vertical flow diagram ── */
+  .flow-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 24px auto;
+    max-width: 340px;
+  }
+  .flow-vertical .fv-box {
+    background: #e8f5e9;
+    border: 2px solid #81c784;
+    border-radius: 10px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 100%;
+  }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+
+  /* ── Split Comparison ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .compare-grid .cg-card {
+    border-radius: 10px;
+    padding: 18px 16px;
+    border: 2px solid;
+  }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 {
+    font-size: .95rem;
+    margin-bottom: 8px;
+  }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+
+  /* ── Daily Life Example ── */
+  .daily-example {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 5px solid #4caf50;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .daily-example .de-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+  }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+
+  /* ── Latest / Trending Example ── */
+  .trending-example {
+    background: linear-gradient(135deg, #ede7f6, #e8eaf6);
+    border-left: 5px solid #7c4dff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .trending-example .te-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #4a148c;
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+  }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+
+  /* ── Table ── */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: .88rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+
+  /* ── Key Term ── */
+  .key-term {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .88rem;
+  }
+
+  /* ── Formula Box ── */
+  .formula-box {
+    background: #263238;
+    color: #e0f7fa;
+    padding: 16px 22px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: .95rem;
+    margin: 16px 0;
+    text-align: center;
+    letter-spacing: .5px;
+  }
+
+  /* ── Summary / Checklist ── */
+  .summary-box {
+    background: linear-gradient(135deg, #e0f2f1, #e0f7fa);
+    border: 2px solid #4dd0e1;
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 30px 0;
+  }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li {
+    font-size: .9rem;
+    color: #004d40;
+    margin-bottom: 6px;
+    list-style-type: '✓  ';
+  }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+
+  /* ── Difficulty Badge ── */
+  .difficulty {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-left: 10px;
+  }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+
+  /* ── Progress Bar ── */
+  .progress-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0 10px;
+    position: relative;
+  }
+  .progress-track::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: #e0e0e0;
+    z-index: 0;
+  }
+  .progress-track .pt-step {
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+  }
+  .progress-track .pt-dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin: 0 auto 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+
+  /* ── Exam Tip ── */
+  .exam-tip {
+    background: #fff3e0;
+    border: 2px dashed #ff9800;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: .88rem;
+    color: #e65100;
+  }
+  .exam-tip strong { color: #bf360c; }
+
+  /* ── Footer ── */
+  .page-footer {
+    text-align: center;
+    padding: 28px 20px;
+    color: #90a4ae;
+    font-size: .78rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+  }
+
+  /* ── Tree diagram ── */
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li {
+    position: relative;
+    padding: 6px 0 6px 24px;
+    font-size: .88rem;
+    color: #37474f;
+  }
+  .tree li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #b0bec5;
+  }
+  .tree li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 18px;
+    height: 2px;
+    background: #b0bec5;
+  }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label {
+    display: inline-block;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-weight: 600;
+    color: #1565c0;
+  }
+  .tree .node-desc {
+    display: block;
+    font-size: .8rem;
+    color: #607d8b;
+    margin-top: 2px;
+    padding-left: 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ TOP BAR ═══════════ -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <div class="session-tag">Session 1 of 16</div>
+  <h1>Defining and Collecting Data</h1>
+  <p class="subtitle">Before you can analyse anything, you need to understand what you're measuring and how to collect it without bias. This session builds that foundation.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 1 (Levine)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~45 min read</span>
+  </div>
+</div>
+
+<!-- ═══════════ PROGRESS ═══════════ -->
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+  <div class="pt-step done"><div class="pt-dot">6</div></div>
+</div>
+
+<!-- ═══════════ REAL-WORLD PROBLEM ═══════════ -->
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Zomato wants to know: "Are customers happy with delivery time in Bangalore?"</h3>
+  <p>
+    Imagine you're a data analyst at Zomato. Your manager says: <em>"Find out if our Bangalore customers are satisfied with delivery speed."</em>
+    Sounds simple? But think about it &mdash;
+  </p>
+  <ul style="margin:12px 0; padding-left:22px; color:#4e342e; font-size:.92rem;">
+    <li><strong>Who</strong> do you ask? All 5 lakh Bangalore users? Or just some?</li>
+    <li><strong>What exactly</strong> is "satisfied"? Rating above 4? Delivery under 30 min?</li>
+    <li><strong>How</strong> do you pick people to survey without bias?</li>
+    <li><strong>What if</strong> only angry customers respond? Is your data still reliable?</li>
+  </ul>
+  <div class="rw-takeaway">
+    This is exactly what Session 1 teaches you &mdash; how to <strong>define what you're measuring</strong>,
+    <strong>pick the right sample</strong>, and <strong>avoid mistakes</strong> that ruin your analysis before it even starts.
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 1: WHAT IS STATISTICS? ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> What is Statistics? <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>At its core, statistics is the science of <strong>learning from data</strong>. It has two branches:</p>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Descriptive Statistics</h4>
+      <p><strong>Summarise</strong> what you already have.</p>
+      <ul>
+        <li>Average delivery time = 28 min</li>
+        <li>60% rated 4+ stars</li>
+        <li>Bar chart of ratings</li>
+      </ul>
+      <p style="margin-top:8px;font-size:.82rem;"><em>Think: "Here's what the data looks like"</em></p>
+    </div>
+    <div class="cg-card right">
+      <h4>Inferential Statistics</h4>
+      <p><strong>Generalise</strong> from a sample to a larger population.</p>
+      <ul>
+        <li>Sample 500 users &rarr; conclude about 5 lakh</li>
+        <li>"We're 95% confident that satisfaction is between 58-62%"</li>
+      </ul>
+      <p style="margin-top:8px;font-size:.82rem;"><em>Think: "Here's what we can conclude"</em></p>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>
+      <strong>Descriptive:</strong> You check your phone's screen time &mdash; "I used my phone 4.5 hours today." That's describing what happened.<br><br>
+      <strong>Inferential:</strong> Based on last week's average (4.2 hrs/day), you predict you'll use ~30 hrs next week. That's inferring a future pattern from a sample of past data.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 2: VARIABLES ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Variables &mdash; What Are You Measuring? <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>A <span class="key-term">Variable</span> is any characteristic that can change from one observation to another. The first step in any data project is to clearly define your variables.</p>
+
+  <h3>The Variable Family Tree</h3>
+  <p>Every variable falls into one of two families:</p>
+
+  <div class="tree">
+    <ul>
+      <li>
+        <span class="node-label" style="background:#1565c0;color:#fff;border-color:#1565c0;">VARIABLE</span>
+        <span class="node-desc">Any characteristic that varies across observations</span>
+        <ul>
+          <li>
+            <span class="node-label">CATEGORICAL</span>
+            <span class="node-desc">Labels / categories (no math operations)</span>
+            <ul>
+              <li>
+                <span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Nominal</span>
+                <span class="node-desc">No natural order &mdash; e.g. Gender, City, Payment method (UPI / Card / Cash)</span>
+              </li>
+              <li>
+                <span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Ordinal</span>
+                <span class="node-desc">Has order but gaps aren't equal &mdash; e.g. Rating (1-5 stars), Education level, T-shirt size (S/M/L)</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="node-label">NUMERICAL</span>
+            <span class="node-desc">Numbers you can do math with</span>
+            <ul>
+              <li>
+                <span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Discrete</span>
+                <span class="node-desc">Countable, whole numbers &mdash; e.g. No. of orders, No. of children, Defects in a batch</span>
+              </li>
+              <li>
+                <span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Continuous</span>
+                <span class="node-desc">Any value in a range &mdash; e.g. Delivery time (28.5 min), Weight (72.3 kg), Temperature</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>
+      Think about a Swiggy order:<br>
+      &bull; <strong>Restaurant name</strong> = Categorical (Nominal)<br>
+      &bull; <strong>Your rating</strong> (1-5 stars) = Categorical (Ordinal)<br>
+      &bull; <strong>Number of items</strong> = Numerical (Discrete)<br>
+      &bull; <strong>Bill amount</strong> (&#8377;347.50) = Numerical (Continuous)
+    </p>
+  </div>
+
+  <h3>The 4 Measurement Scales (NOIR)</h3>
+  <p>Each scale builds on the previous one &mdash; like levels in a game. Higher scale = more math you can do.</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Scale</th><th>Properties</th><th>Example</th><th>Math you can do</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Nominal</strong></td>
+        <td>Names / Labels only</td>
+        <td>Blood group (A, B, AB, O)</td>
+        <td>Count, Mode</td>
+      </tr>
+      <tr>
+        <td><strong>Ordinal</strong></td>
+        <td>Names + Order</td>
+        <td>Army rank (Lt, Capt, Major)</td>
+        <td>+ Median, Percentiles</td>
+      </tr>
+      <tr>
+        <td><strong>Interval</strong></td>
+        <td>Names + Order + Equal gaps</td>
+        <td>Temperature in &deg;C (0&deg;C &ne; "no heat")</td>
+        <td>+ Mean, Std Dev</td>
+      </tr>
+      <tr>
+        <td><strong>Ratio</strong></td>
+        <td>Names + Order + Equal gaps + True zero</td>
+        <td>Income (&#8377;0 = no income), Weight, Height</td>
+        <td>+ Ratios ("twice as heavy")</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> Remember <strong>NOIR</strong> (Nominal, Ordinal, Interval, Ratio) &mdash; like the film genre. The most common exam question asks you to <em>classify variables</em> from a scenario. Practice identifying variable type for every real-world example you see.
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 3: POPULATION vs SAMPLE ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Population vs Sample <span class="difficulty beginner">Beginner</span></h2>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Population (N)</h4>
+      <p>The <strong>entire group</strong> you want to study.</p>
+      <ul>
+        <li>All 5 lakh Zomato Bangalore users</li>
+        <li>All cars manufactured by Tata in 2025</li>
+        <li>All transactions on PhonePe today</li>
+      </ul>
+      <p style="margin-top:8px;font-size:.82rem;">Measurement on population = <span class="key-term">Parameter</span></p>
+    </div>
+    <div class="cg-card right">
+      <h4>Sample (n)</h4>
+      <p>A <strong>subset</strong> chosen from the population.</p>
+      <ul>
+        <li>500 randomly selected users</li>
+        <li>100 cars from the production line</li>
+        <li>1000 transactions picked at random</li>
+      </ul>
+      <p style="margin-top:8px;font-size:.82rem;">Measurement on sample = <span class="key-term">Statistic</span></p>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>
+      Your mom makes a pot of dal. She stirs it well and tastes <strong>one spoon</strong> (sample). If it's good, she assumes the <strong>whole pot</strong> (population) is good. That one spoon is a "random sample" &mdash; and stirring first ensures it represents the whole pot (no bias).
+    </p>
+  </div>
+
+  <h3>Operational Definition</h3>
+  <p>An <span class="key-term">Operational Definition</span> is a precise, measurable rule for your variable. Without it, different people will measure differently, and your data becomes meaningless.</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Vague Definition</th><th>Operational Definition</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>"Customer is satisfied"</td><td>Customer gave rating &ge; 4 out of 5 on post-delivery survey</td></tr>
+      <tr><td>"Fast delivery"</td><td>Order delivered within 30 minutes of placement</td></tr>
+      <tr><td>"Active user"</td><td>User who placed at least 1 order in the last 30 days</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════ SECTION 4: SAMPLING METHODS ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Sampling Methods <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <p>How you pick your sample determines whether your conclusions are trustworthy. There are two families:</p>
+
+  <h3>Probability Sampling (Preferred &mdash; every unit has a known chance of selection)</h3>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Method</th><th>How it works</th><th>Real Example</th><th>When to use</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Simple Random (SRS)</strong></td>
+        <td>Every unit has equal chance. Use lottery / random number generator.</td>
+        <td>Pick 500 Zomato users using RAND() in Excel</td>
+        <td>When population is homogeneous & you have a complete list</td>
+      </tr>
+      <tr>
+        <td><strong>Systematic</strong></td>
+        <td>Pick every k-th unit. k = N/n</td>
+        <td>QC inspector checks every 50th bottle on a Pepsi production line</td>
+        <td>When units are in a sequence and no hidden pattern exists</td>
+      </tr>
+      <tr>
+        <td><strong>Stratified</strong></td>
+        <td>Divide into groups (strata) by a key trait, then SRS within each</td>
+        <td>Survey employees: 30% from Engineering, 30% from Sales, 40% from Ops (proportional to headcount)</td>
+        <td>When population has distinct subgroups you want represented</td>
+      </tr>
+      <tr>
+        <td><strong>Cluster</strong></td>
+        <td>Divide into clusters (usually geographic), randomly pick some clusters, survey everyone in those</td>
+        <td>Pick 10 random pincodes in Bangalore, survey all Zomato users in those pincodes</td>
+        <td>When a full list isn't available but clusters are easy to identify</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="block-diagram">
+    <div class="block highlight">
+      <div class="block-title">Population</div>
+      <div class="block-desc">All units (N)</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block">
+      <div class="block-title">Sampling Frame</div>
+      <div class="block-desc">List of units you can actually reach</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block">
+      <div class="block-title">Sampling Method</div>
+      <div class="block-desc">SRS / Systematic / Stratified / Cluster</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight">
+      <div class="block-title">Sample (n)</div>
+      <div class="block-desc">Data you actually collect</div>
+    </div>
+  </div>
+
+  <h3>Non-Probability Sampling (Use with caution &mdash; no guaranteed representativeness)</h3>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Method</th><th>Example</th><th>Risk</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Convenience</strong></td><td>Surveying friends in your WhatsApp group</td><td>Not representative at all</td></tr>
+      <tr><td><strong>Judgmental</strong></td><td>Expert hand-picks "typical" respondents</td><td>Expert's bias creeps in</td></tr>
+      <tr><td><strong>Quota</strong></td><td>"Get 50 men and 50 women" but picker chooses who</td><td>Looks balanced but selection within quota is biased</td></tr>
+      <tr><td><strong>Snowball</strong></td><td>Ask one crypto trader to refer others</td><td>Useful for hidden populations but network bias</td></tr>
+    </tbody>
+  </table>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2025)</div>
+    <p>
+      <strong>India's National Family Health Survey (NFHS-6)</strong> uses <strong>two-stage stratified cluster sampling</strong>:
+      Stage 1 &mdash; randomly select villages (rural) / census blocks (urban) as clusters.
+      Stage 2 &mdash; randomly pick households within those clusters.
+      This lets them survey ~6 lakh households and estimate health indicators for 1.4 billion people.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 5: SURVEY METHODS ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Survey Methods <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <p>Once you know <em>who</em> to sample, you need to decide <em>how</em> to collect data from them:</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Method</th><th>Cost</th><th>Speed</th><th>Response Rate</th><th>Quality</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Personal Interview</strong></td><td>Very High</td><td>Slow</td><td>Highest</td><td>Best (can probe)</td><td>Census enumerator visiting your home</td></tr>
+      <tr><td><strong>Telephone</strong></td><td>Medium</td><td>Medium</td><td>Declining</td><td>Good</td><td>Bank calling to ask about loan experience</td></tr>
+      <tr><td><strong>Mail / Paper</strong></td><td>Low-Medium</td><td>Very Slow</td><td>Low</td><td>Variable</td><td>Feedback form at a restaurant table</td></tr>
+      <tr><td><strong>Online Survey</strong></td><td>Lowest</td><td>Fastest</td><td>Low (spam fatigue)</td><td>Variable</td><td>Google Form after a Flipkart delivery</td></tr>
+    </tbody>
+  </table>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>
+      After every Uber ride, you get a pop-up asking for a star rating &mdash; that's an <strong>online survey (census attempt)</strong>.
+      But only ~30% of riders actually rate. The other 70% who skip might be the ones who had an average or bad ride.
+      This is <strong>non-response bias</strong> in action, making Uber's average ratings look artificially high.
+    </p>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 6: ERRORS ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Types of Errors in Data Collection <span class="difficulty advanced">Advanced</span></h2>
+
+  <p>Even a perfectly designed study can go wrong. There are four types of errors to watch for:</p>
+
+  <div class="block-diagram" style="flex-wrap:wrap; gap:14px;">
+    <div class="block" style="border-color:#ef5350;background:#ffebee;max-width:190px;">
+      <div class="block-title" style="color:#c62828;">Coverage Error</div>
+      <div class="block-desc">Your list (frame) misses part of the population</div>
+    </div>
+    <div class="block" style="border-color:#ff9800;background:#fff3e0;max-width:190px;">
+      <div class="block-title" style="color:#e65100;">Non-Response Error</div>
+      <div class="block-desc">Selected people refuse or don't reply</div>
+    </div>
+    <div class="block" style="border-color:#42a5f5;background:#e3f2fd;max-width:190px;">
+      <div class="block-title" style="color:#1565c0;">Sampling Error</div>
+      <div class="block-desc">Random variation &mdash; different samples give different results</div>
+    </div>
+    <div class="block" style="border-color:#ab47bc;background:#f3e5f5;max-width:190px;">
+      <div class="block-title" style="color:#6a1b9a;">Measurement Error</div>
+      <div class="block-desc">Bad questions, leading wording, interviewer bias</div>
+    </div>
+  </div>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Error Type</th><th>Real Example</th><th>How to Reduce</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Coverage</strong></td>
+        <td>Phone survey excludes people without phones (rural India)</td>
+        <td>Use multiple frames; compare frame to census data</td>
+      </tr>
+      <tr>
+        <td><strong>Non-Response</strong></td>
+        <td>Salary survey &mdash; high earners less likely to respond</td>
+        <td>Follow-up reminders; incentives; short surveys</td>
+      </tr>
+      <tr>
+        <td><strong>Sampling</strong></td>
+        <td>Poll of 100 people vs 10,000 &mdash; the smaller one has more sampling error</td>
+        <td>Increase sample size; use efficient sampling design</td>
+      </tr>
+      <tr>
+        <td><strong>Measurement</strong></td>
+        <td>"Don't you agree our service is excellent?" (leading question)</td>
+        <td>Neutral wording; pre-test questionnaire; train interviewers</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024-25)</div>
+    <p>
+      <strong>US Election Polls 2024</strong> faced massive non-response bias. Pollsters used online panels where younger, urban, college-educated people were overrepresented. They tried "weighting" adjustments, but the underlying sample itself was skewed. Lesson: no statistical fix can fully compensate for a fundamentally biased sample.
+    </p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> A common 5-mark question gives you a survey scenario and asks: "Identify all possible sources of error." Practice mapping each of the 4 error types to the scenario. They often hide 2-3 errors in a single paragraph.
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 7: TOOLS ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Tools: Excel & Python <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Task</th><th>Excel</th><th>Python</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Generate random sample</td>
+        <td><code>=RANDBETWEEN(1, N)</code></td>
+        <td><code>df.sample(n=500)</code></td>
+      </tr>
+      <tr>
+        <td>Stratified sample</td>
+        <td>Sort by stratum &rarr; RAND() within each</td>
+        <td><code>train_test_split(stratify=col)</code></td>
+      </tr>
+      <tr>
+        <td>Systematic sample (every k-th)</td>
+        <td>Row number MOD k = 0 filter</td>
+        <td><code>df.iloc[::k]</code></td>
+      </tr>
+      <tr>
+        <td>Data Analysis Toolpak</td>
+        <td>Data &rarr; Data Analysis &rarr; Sampling</td>
+        <td><code>numpy.random.choice()</code></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════ BIG PICTURE FLOW ═══════════ -->
+<div class="section-card">
+  <h2><span class="sec-num">8</span> Big Picture: The Data Collection Pipeline</h2>
+
+  <p>Here's how everything in Session 1 connects, from business question to clean data:</p>
+
+  <div class="flow-vertical">
+    <div class="fv-box">
+      <div class="fv-title">Business Question</div>
+      <div class="fv-desc">"Are Bangalore customers happy with delivery time?"</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Define Variables</div>
+      <div class="fv-desc">Satisfaction (Ordinal, 1-5), Delivery time (Continuous, minutes)</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Operational Definition</div>
+      <div class="fv-desc">"Satisfied" = rating &ge; 4 on post-delivery survey</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Define Population & Frame</div>
+      <div class="fv-desc">All users who ordered in Bangalore in last 90 days (N = 5,00,000)</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Choose Sampling Method</div>
+      <div class="fv-desc">Stratified by area (North/South/East/West Bangalore), n = 2,000</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Choose Survey Method</div>
+      <div class="fv-desc">In-app push notification survey (online, low cost, fast)</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Collect &amp; Check for Errors</div>
+      <div class="fv-desc">Watch for non-response bias, coverage gaps, measurement issues</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#c8e6c9;border-color:#43a047;">
+      <div class="fv-title" style="color:#1b5e20;">Clean Dataset Ready for Analysis</div>
+      <div class="fv-desc" style="color:#2e7d32;">Proceed to Session 2 &rarr; Organising and Analysing Data</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ SUMMARY ═══════════ -->
+<div class="summary-box">
+  <h3>Session 1 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Statistics</strong> = Descriptive (summarise) + Inferential (generalise)</li>
+    <li><strong>Variables</strong> are either Categorical (Nominal/Ordinal) or Numerical (Discrete/Continuous)</li>
+    <li><strong>NOIR scales</strong>: Nominal &lt; Ordinal &lt; Interval &lt; Ratio &mdash; each enables more math</li>
+    <li><strong>Population</strong> = everyone; <strong>Sample</strong> = subset. Parameter vs Statistic.</li>
+    <li><strong>Operational definition</strong> removes ambiguity &mdash; define exactly how you measure</li>
+    <li><strong>Probability sampling</strong> (SRS, Systematic, Stratified, Cluster) is preferred over non-probability</li>
+    <li><strong>4 errors</strong>: Coverage, Non-Response, Sampling, Measurement &mdash; always identify and minimize</li>
+    <li>The entire pipeline: Question &rarr; Define &rarr; Frame &rarr; Sample &rarr; Collect &rarr; Check errors &rarr; Analyse</li>
+  </ul>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 1 of 16<br>
+  Source: Levine T1 Ch. 1 &bull; Handout-aligned &bull; Built for zero-to-advanced understanding
+</div>
+
+</div><!-- /container -->
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

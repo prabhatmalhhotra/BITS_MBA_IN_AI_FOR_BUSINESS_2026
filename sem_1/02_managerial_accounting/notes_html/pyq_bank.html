@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQ Question Bank | Managerial Accounting</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #1a0a2e, #2d1b69, #44318d); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #ffd54f; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; flex-wrap: wrap; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #ffd54f; }
+  .topbar .nav-links a.active { color: #ffd54f; font-weight: 700; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #1a0a2e, #2d1b69, #44318d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,213,79,.15); color: #ffd54f; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .quick-jump { background: #fff; border-radius: 14px; padding: 20px 24px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .quick-jump h3 { font-size: 1rem; color: #1a0a2e; margin-bottom: 12px; }
+  .quick-jump .jump-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .quick-jump .jump-links a { display: inline-block; padding: 6px 14px; border-radius: 8px; font-size: .82rem; font-weight: 600; text-decoration: none; transition: all .2s; }
+  .quick-jump .jump-links a.mid { background: #ede7f6; color: #4a148c; border: 1px solid #b39ddb; }
+  .quick-jump .jump-links a.mid:hover { background: #d1c4e9; }
+  .quick-jump .jump-links a.comp { background: #e8f5e9; color: #2e7d32; border: 1px solid #81c784; }
+  .quick-jump .jump-links a.comp:hover { background: #c8e6c9; }
+  .quick-jump .jump-links a.special { background: #fff3e0; color: #e65100; border: 1px solid #ffb74d; }
+  .quick-jump .jump-links a.special:hover { background: #ffe0b2; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card.mid-sem { border-left: 5px solid #7c4dff; }
+  .section-card.comp { border-left: 5px solid #2e7d32; }
+  .section-card h2 { font-size: 1.35rem; color: #1a0a2e; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .paper-badge { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .paper-badge.closed { background: #ede7f6; color: #4a148c; }
+  .paper-badge.open { background: #e8f5e9; color: #2e7d32; }
+  .marks { background: #ff5252; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: .75rem; font-weight: 700; white-space: nowrap; }
+  .question-list { list-style: none; padding: 0; }
+  .question-list > li { padding: 12px 0; border-bottom: 1px solid #f0f0f0; font-size: .92rem; color: #37474f; line-height: 1.7; }
+  .question-list > li:last-child { border-bottom: none; }
+  .q-num { display: inline-flex; align-items: center; justify-content: center; background: #eceff1; color: #455a64; width: 28px; height: 28px; border-radius: 50%; font-size: .8rem; font-weight: 700; margin-right: 10px; flex-shrink: 0; vertical-align: top; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #ede7f6; }
+  .freq-bar { display: inline-block; height: 18px; border-radius: 4px; vertical-align: middle; margin-right: 8px; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: disc; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #44318d; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #ffd54f !important; color: #1a0a2e; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .topbar { flex-direction: column; gap: 8px; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managerial Accounting</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" class="active">PYQ Bank</a>
+    <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">PYQ Question Bank</div>
+  <h1>Managerial Accounting &mdash; Previous Year Questions</h1>
+  <p class="subtitle">Closed-book Mid-Sem (2 hrs, 30%) covers Sessions 1-8. Open-book Comprehensive (2.5 hrs, 40%) covers all 16 sessions including IFRS, ratios, CVP, budgeting &amp; variance analysis.</p>
+  <div class="meta-pills">
+    <span class="pill">MBACC ZG502</span>
+    <span class="pill">Mid-Sem: S1-S8</span>
+    <span class="pill">Comprehensive: S1-S16</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="quick-jump">
+  <h3>Quick Jump</h3>
+  <div class="jump-links">
+    <a href="#mid-a" class="mid">Mid-Sem Paper A</a>
+    <a href="#mid-b" class="mid">Mid-Sem Paper B</a>
+    <a href="#mid-c" class="mid">Mid-Sem Paper C</a>
+    <a href="#comp-a" class="comp">Comprehensive A</a>
+    <a href="#comp-b" class="comp">Comprehensive B</a>
+    <a href="#comp-c" class="comp">Comprehensive C</a>
+    <a href="#freq-map" class="special">Topic Frequency Map</a>
+    <a href="#open-book" class="special">Open-Book Tactics</a>
+  </div>
+</div>
+
+<div class="progress-track"></div>
+
+<!-- MID-SEM PAPER A -->
+<div class="section-card mid-sem" id="mid-a">
+  <h2>Mid-Sem Paper A &mdash; 2 hours, 60 marks <span class="paper-badge closed">Mid-Sem / Closed Book</span></h2>
+  <h3>Section 1 &mdash; Short Answer (4 &times; 4 = 16 marks)</h3>
+  <ol class="question-list">
+    <li><span class="q-num">1</span> Distinguish financial accounting from management accounting with two examples each. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">2</span> State the dual-aspect concept and explain why it forms the foundation of double-entry bookkeeping. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">3</span> List four red flags that indicate poor quality of financial reporting. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">4</span> State the 5-step revenue recognition model under IFRS 15. <span class="marks">4 marks</span></li>
+  </ol>
+  <h3>Section 2 &mdash; Numerical / Journalising (3 &times; 8 = 24 marks)</h3>
+  <ol class="question-list" start="5">
+    <li><span class="q-num">5</span> Pass journal entries for the following transactions of M/s Karan Traders, May 2025: (a) Started business with cash &#8377;5,00,000. (b) Purchased machinery for &#8377;2,00,000 by cheque. (c) Sold goods costing &#8377;50,000 for &#8377;70,000 on credit to Suresh. (d) Received &#8377;40,000 from Suresh in full settlement of his account. (e) Paid salary &#8377;30,000. <span class="marks">8 marks</span></li>
+    <li>
+      <span class="q-num">6</span> From the following Trial Balance, prepare Trading &amp; Profit &amp; Loss Account and Balance Sheet of XYZ as on 31-Mar-2025. Closing stock &#8377;35,000. Depreciate furniture @ 10%. <span class="marks">8 marks</span>
+      <table class="styled-table" style="margin-top:12px;">
+        <thead><tr><th>Particulars</th><th>Dr (&#8377;)</th><th>Cr (&#8377;)</th></tr></thead>
+        <tbody>
+          <tr><td>Capital</td><td></td><td>2,00,000</td></tr>
+          <tr><td>Sales / Purchases</td><td>1,50,000</td><td>2,80,000</td></tr>
+          <tr><td>Stock (1-Apr)</td><td>30,000</td><td></td></tr>
+          <tr><td>Wages</td><td>25,000</td><td></td></tr>
+          <tr><td>Salaries</td><td>40,000</td><td></td></tr>
+          <tr><td>Furniture</td><td>80,000</td><td></td></tr>
+          <tr><td>Debtors / Creditors</td><td>70,000</td><td>50,000</td></tr>
+          <tr><td>Cash</td><td>1,35,000</td><td></td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>5,30,000</strong></td><td><strong>5,30,000</strong></td></tr>
+        </tbody>
+      </table>
+    </li>
+    <li><span class="q-num">7</span> From P&amp;L A/c data, compute Cash Flow from Operating Activities under the indirect method. PAT &#8377;2,50,000; Depreciation &#8377;40,000; Increase in debtors &#8377;30,000; Decrease in inventory &#8377;15,000; Increase in creditors &#8377;20,000; Tax paid &#8377;50,000. <span class="marks">8 marks</span></li>
+  </ol>
+  <h3>Section 3 &mdash; Long Answer (1 &times; 20 = 20 marks)</h3>
+  <ol class="question-list" start="8">
+    <li><span class="q-num">8</span> Explain in detail the IFRS framework. Discuss the impact of (a) IFRS 15 on revenue recognition, (b) IAS 2 on inventory valuation, (c) IAS 16 on PPE, and (d) US GAAP vs IFRS treatment of R&amp;D. Give one Indian Ind-AS equivalent for each. <span class="marks">20 marks</span></li>
+  </ol>
+</div>
+
+<!-- MID-SEM PAPER B -->
+<div class="section-card mid-sem" id="mid-b">
+  <h2>Mid-Sem Paper B &mdash; 2 hours, 50 marks <span class="paper-badge closed">Mid-Sem / Closed Book</span></h2>
+  <ol class="question-list">
+    <li><span class="q-num">1</span> Distinguish capital expenditure from revenue expenditure. Give two examples each. <span class="marks">5 marks</span></li>
+    <li><span class="q-num">2</span> State four limitations of historical-cost accounting in modern asset-light businesses. <span class="marks">5 marks</span></li>
+    <li><span class="q-num">3</span> From the data: PAT &#8377;4,00,000; Depreciation &#8377;60,000; Decrease in debtors &#8377;20,000; Increase in inventory &#8377;35,000; Decrease in creditors &#8377;15,000; Tax paid &#8377;70,000. Compute CFO. <span class="marks">8 marks</span></li>
+    <li><span class="q-num">4</span> ABC Ltd's standalone financials show Revenue &#8377;500 Cr, COGS &#8377;300 Cr, Op Exp &#8377;120 Cr, Interest &#8377;20 Cr, Tax &#8377;15 Cr; Equity &#8377;400 Cr, LT Debt &#8377;150 Cr, Total Assets &#8377;700 Cr; Current Assets &#8377;250 Cr (Inventory &#8377;80 Cr), Current Liabilities &#8377;180 Cr. Compute Current Ratio, Quick Ratio, D/E, ICR, ROA, ROE, Net Margin. Interpret. <span class="marks">10 marks</span></li>
+    <li><span class="q-num">5</span> Discuss the major IFRS sustainability standards (IFRS S1 and IFRS S2). What kind of disclosures are required? How do they affect the analysis of asset-heavy vs asset-light firms? <span class="marks">10 marks</span></li>
+    <li><span class="q-num">6</span> "Profit is opinion, cash is fact." Critically evaluate this statement using the relationship between accrual accounting and cash flow. Explain why a profitable firm can still face liquidity issues. <span class="marks">12 marks</span></li>
+  </ol>
+</div>
+
+<!-- MID-SEM PAPER C -->
+<div class="section-card mid-sem" id="mid-c">
+  <h2>Mid-Sem Paper C &mdash; Practice Paper (S2-25 aligned) <span class="paper-badge closed">Mid-Sem / Closed Book</span></h2>
+  <ol class="question-list">
+    <li><span class="q-num">1</span> Define accrual basis and matching principle with one illustration. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">2</span> State and illustrate the Cost (historical) and Going Concern concepts. <span class="marks">5 marks</span></li>
+    <li><span class="q-num">3</span> Pass journal entries for: (a) Withdrew goods worth &#8377;5,000 for personal use. (b) Bad debts written off &#8377;3,000. (c) Provision for doubtful debts created at 5% on debtors &#8377;2,00,000. (d) Outstanding salary &#8377;8,000. <span class="marks">8 marks</span></li>
+    <li><span class="q-num">4</span> Reconstruct the Cash Flow Statement (operating section, indirect method) given changes in working capital and net income. <span class="marks">10 marks</span></li>
+    <li><span class="q-num">5</span> Discuss IFRS 13 fair value hierarchy. For each of three illustrative items (listed equity, unlisted bond, custom-built plant), categorise into Level 1/2/3 and explain. <span class="marks">12 marks</span></li>
+    <li><span class="q-num">6</span> Discuss four red flags in financial reporting with real-world examples. How can an analyst use cash flow patterns to detect them? <span class="marks">12 marks</span></li>
+  </ol>
+</div>
+
+<!-- COMPREHENSIVE PAPER A -->
+<div class="section-card comp" id="comp-a">
+  <h2>Comprehensive Paper A &mdash; 2.5 hours, 100 marks <span class="paper-badge open">Comprehensive / Open Book</span></h2>
+  <h3>Section A &mdash; Short Answer (5 &times; 4 = 20 marks)</h3>
+  <ol class="question-list">
+    <li><span class="q-num">1</span> State the DuPont 5-step decomposition of ROE. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">2</span> Define and contrast operating leverage and financial leverage with formulas. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">3</span> Define cash conversion cycle. State three ways to reduce it. <span class="marks">4 marks</span></li>
+    <li><span class="q-num">4</span> List the four kinds of budgets per the handout (Master, Operating, Capital, ZBB). <span class="marks">4 marks</span></li>
+    <li><span class="q-num">5</span> State material price variance and usage variance formulas. <span class="marks">4 marks</span></li>
+  </ol>
+  <h3>Section B &mdash; Numericals (4 &times; 10 = 40 marks)</h3>
+  <ol class="question-list" start="6">
+    <li><span class="q-num">6</span> Compute and interpret all the following ratios for a manufacturing company: Current Ratio, Quick Ratio, Inventory Turnover, DSO, DPO, CCC, D/E, ICR, ROCE, Net Margin, Asset Turnover, ROE. Apply 5-step DuPont. (Data table provided in question.) <span class="marks">10 marks</span></li>
+    <li><span class="q-num">7</span> CVP problem: Selling price &#8377;250, variable cost &#8377;150, fixed cost &#8377;15,00,000. (a) BEP units &amp; revenue. (b) Margin of Safety at 25,000 units sold. (c) Sales required for &#8377;6,00,000 profit. (d) New BEP if SP drops 5% and VC rises 4%. <span class="marks">10 marks</span></li>
+    <li><span class="q-num">8</span> Make-or-Buy: Component currently made at variable cost &#8377;80, fixed overhead &#8377;40 per unit (50% avoidable on outsourcing); offered by vendor at &#8377;110. Annual demand 10,000 units. (a) Should outsource? (b) What if vendor offers &#8377;95? <span class="marks">10 marks</span></li>
+    <li><span class="q-num">9</span> Variance analysis: Standard 1 unit needs 2 kg material @ &#8377;40/kg + 3 hrs labour @ &#8377;50/hr. Actual production 4,000 units; actual material 8,500 kg @ &#8377;42/kg; actual labour 11,500 hrs @ &#8377;52/hr. Compute Material Price, Material Usage, Labour Rate, Labour Efficiency variances. Comment. <span class="marks">10 marks</span></li>
+  </ol>
+  <h3>Section C &mdash; Long Answer / Case (2 &times; 15 = 30 marks)</h3>
+  <ol class="question-list" start="10">
+    <li><span class="q-num">10</span> <strong>Case.</strong> A pharmaceutical company's 5-year financials show: revenue CAGR 12%, EBITDA margin contracting from 24% to 19%, R&amp;D capitalised under IFRS rising from 8% to 14% of revenue, debt-equity rising from 0.5 to 0.9. (a) Diagnose the company's financial trajectory. (b) Discuss IFRS-related quality concerns (IFRS S1/S2 disclosures, IAS 38 R&amp;D capitalisation). (c) Apply DuPont decomposition to explain ROE trend. <span class="marks">15 marks</span></li>
+    <li><span class="q-num">11</span> Discuss the key components of an effective budgetary control system. Compare incremental, flexible, and zero-based budgeting. Discuss limitations of traditional annual budgeting and the rise of "Beyond Budgeting" / driver-based forecasts. <span class="marks">15 marks</span></li>
+  </ol>
+  <h3>Section D &mdash; Application (1 &times; 10 = 10 marks)</h3>
+  <ol class="question-list" start="12">
+    <li><span class="q-num">12</span> A consumer electronics firm is launching a new product. Help management decide pricing using CVP and cost-plus approaches. Discuss strategic considerations: penetration vs skimming pricing, competitor benchmarking, cost-plus floor. <span class="marks">10 marks</span></li>
+  </ol>
+</div>
+
+<!-- COMPREHENSIVE PAPER B -->
+<div class="section-card comp" id="comp-b">
+  <h2>Comprehensive Paper B &mdash; 2.5 hours, 80 marks <span class="paper-badge open">Comprehensive / Open Book</span></h2>
+  <ol class="question-list">
+    <li><span class="q-num">1</span> Discuss the IFRS framework with focus on S1, S2, 15, IAS 2, IAS 16. Explain the comparability advantage for a multinational investor. <span class="marks">10 marks</span></li>
+    <li><span class="q-num">2</span> Common-size and comparative statements: From P&amp;L data of two firms in the same sector (provided), prepare common-size and comparative statements; compute year-on-year growth rates. Interpret. <span class="marks">10 marks</span></li>
+    <li><span class="q-num">3</span> Cash Flow Statement preparation (indirect method): from balance sheets of two consecutive years and the P&amp;L of the current year (provided), prepare the Cash Flow Statement and reconcile cash &amp; cash equivalents. <span class="marks">12 marks</span></li>
+    <li><span class="q-num">4</span> Special order decision: A factory at 80% capacity (16,000 units; total capacity 20,000) is offered an export order for 5,000 units at &#8377;90/unit. Standard SP &#8377;130, VC &#8377;70, FC &#8377;4,00,000. (a) Accept order? (b) What if accepting forces displacement of 1,500 domestic units? (c) Strategic factors beyond cost. <span class="marks">12 marks</span></li>
+    <li><span class="q-num">5</span> Budgeting: Prepare a cash budget for 3 months (Jan-Mar 2026) with given sales, collections (50% cash, 50% next month), purchases, expenses, capex, dividend payments. Identify months requiring overdraft. <span class="marks">12 marks</span></li>
+    <li><span class="q-num">6</span> Mini-case: A startup pivoting from B2C to B2B SaaS. Discuss how its (a) revenue recognition, (b) inventory/COGS, (c) cost structure (CVP), (d) cash flow profile change. Recommend appropriate IFRS standards and KPIs to track. <span class="marks">14 marks</span></li>
+    <li><span class="q-num">7</span> Discuss the limitations of ratio analysis. How does an analyst overcome these in practice? Give examples for cyclical (steel) vs defensive (FMCG) industries. <span class="marks">10 marks</span></li>
+  </ol>
+</div>
+
+<!-- COMPREHENSIVE PAPER C -->
+<div class="section-card comp" id="comp-c">
+  <h2>Comprehensive Paper C &mdash; Practice Paper (S2-25 aligned) <span class="paper-badge open">Comprehensive / Open Book</span></h2>
+  <ol class="question-list">
+    <li><span class="q-num">1</span> Compute and interpret 5-step DuPont for two firms with identical ROE but different drivers. Which is better quality and why? <span class="marks">8 marks</span></li>
+    <li><span class="q-num">2</span> Discuss the appropriate accounting treatment under IFRS for a software company that capitalises development costs. Reconcile to the US GAAP view. Impact on EBITDA, net income, and asset base. <span class="marks">10 marks</span></li>
+    <li><span class="q-num">3</span> Mini-case: Reliance Industries 5-year ratios provided. Discuss segment-wise (Oil-to-Chemicals, Retail, Jio) profitability, leverage, and capital allocation. Comment on the Jio investment cycle and its impact on consolidated ratios. <span class="marks">12 marks</span></li>
+    <li><span class="q-num">4</span> CVP + product mix: Two products with given SP, VC, machine-hour requirements; total available machine hours and demand limits given. Determine optimal production mix and total profit. <span class="marks">12 marks</span></li>
+    <li><span class="q-num">5</span> Variance analysis comprehensive: Material, Labour, Variable OH, Fixed OH, Sales (price + volume) variances. Interpret all and recommend management actions. <span class="marks">14 marks</span></li>
+    <li><span class="q-num">6</span> Open-ended FS-analysis case: Pick any listed Indian firm; outline the structure of your 5-year analysis, key ratios, peer benchmark, red flags, and IFRS S1-S2 disclosures. <span class="marks">14 marks</span></li>
+  </ol>
+</div>
+
+<!-- TOPIC FREQUENCY MAP -->
+<div class="section-card" id="freq-map" style="border-left:5px solid #ff9800;">
+  <h2>Topic Frequency Map (filtered to handout topics)</h2>
+  <table class="styled-table">
+    <thead><tr><th>Topic</th><th>Mid-Sem</th><th style="min-width:120px;">Visual</th><th>Comp.</th><th style="min-width:120px;">Visual</th></tr></thead>
+    <tbody>
+      <tr><td>Accounting concepts &amp; GAAP</td><td>5/6</td><td><span class="freq-bar" style="width:83%;background:#7c4dff;"></span></td><td>2/6</td><td><span class="freq-bar" style="width:33%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Journal/Ledger/TB/Final A/c</td><td>6/6</td><td><span class="freq-bar" style="width:100%;background:#7c4dff;"></span></td><td>1/6</td><td><span class="freq-bar" style="width:17%;background:#2e7d32;"></span></td></tr>
+      <tr><td>IFRS / IAS framework</td><td>4/6</td><td><span class="freq-bar" style="width:67%;background:#ff9800;"></span> <em style="font-size:.75rem;">NEW</em></td><td>5/6</td><td><span class="freq-bar" style="width:83%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Cash Flow Statement</td><td>4/6</td><td><span class="freq-bar" style="width:67%;background:#7c4dff;"></span></td><td>5/6</td><td><span class="freq-bar" style="width:83%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Ratio analysis (basic)</td><td>3/6</td><td><span class="freq-bar" style="width:50%;background:#7c4dff;"></span></td><td>2/6</td><td><span class="freq-bar" style="width:33%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Ratio analysis (DuPont, advanced)</td><td>n/a</td><td></td><td>5/6</td><td><span class="freq-bar" style="width:83%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Common-size / Comparative / Trend</td><td>n/a</td><td></td><td>4/6</td><td><span class="freq-bar" style="width:67%;background:#2e7d32;"></span></td></tr>
+      <tr><td>FS analysis case-based</td><td>n/a</td><td></td><td>6/6</td><td><span class="freq-bar" style="width:100%;background:#2e7d32;"></span></td></tr>
+      <tr><td>CVP &amp; marginal costing</td><td>n/a</td><td></td><td>5/6</td><td><span class="freq-bar" style="width:83%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Make-or-buy / Special order / Pricing</td><td>n/a</td><td></td><td>4/6</td><td><span class="freq-bar" style="width:67%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Inventory valuation (FIFO/LIFO/WA, IAS 2)</td><td>1/6</td><td><span class="freq-bar" style="width:17%;background:#7c4dff;"></span></td><td>3/6</td><td><span class="freq-bar" style="width:50%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Budgeting (Master, ZBB, Cash Budget)</td><td>n/a</td><td></td><td>4/6</td><td><span class="freq-bar" style="width:67%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Variance analysis (Material/Labour/OH/Sales)</td><td>n/a</td><td></td><td>4/6</td><td><span class="freq-bar" style="width:67%;background:#2e7d32;"></span></td></tr>
+      <tr><td>Quality of FR / Red flags</td><td>2/6</td><td><span class="freq-bar" style="width:33%;background:#ff9800;"></span> <em style="font-size:.75rem;">NEW</em></td><td>3/6</td><td><span class="freq-bar" style="width:50%;background:#2e7d32;"></span></td></tr>
+    </tbody>
+  </table>
+  <div class="exam-tip" style="margin-top:20px;">
+    <strong>Implication &mdash; Mid-Sem:</strong> Drill journalising, final accounts, basic ratios, CFO indirect method, IFRS framework + red flags.<br><br>
+    <strong>Implication &mdash; Comprehensive:</strong> Master DuPont, FS analysis case structure, CVP problems, variance analysis, budgeting. The IFRS-S1/S2 sustainability angle and IFRS 15 5-step are NEW vs older PYQs &mdash; anticipate fresh questions.
+  </div>
+</div>
+
+<!-- OPEN-BOOK EXAM TACTICS -->
+<div class="exam-tip" id="open-book" style="border-left:5px solid #ff9800;">
+  <strong>Open-Book Exam Tactics (Comprehensive)</strong><br><br>
+  &bull; Tab the Maheswari textbook by chapter (1, 12-17 for ratios, 22-23 for CVP, 25 for budgeting).<br>
+  &bull; Print one-page summary of: key ratios with formulas + ideal values; IFRS 15/S1/S2/IAS 2/16/38 summary; CVP formula sheet; variance formulas.<br>
+  &bull; Pre-prepare common-size/comparative templates.<br>
+  &bull; Carry calculator (BITS allows non-programmable).<br>
+  &bull; Time budget: ~1.5 min per mark; spend first 15 min reading paper and choosing question order.
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Managerial Accounting (MBACC ZG502) &bull; PYQ Question Bank<br>
+  Synthesised from leaked BITS WILP papers + standard MBA/CA-Inter conventions, filtered to S2-25 handout
+</div>
+
+</div>
+<script>
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".paper-badge");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 3 — Numerical Descriptive Measures | Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+    <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 3 of 16</div>
+  <h1>Numerical Descriptive Measures</h1>
+  <p class="subtitle">Numbers that summarise an entire dataset in a few values &mdash; the mean, spread, shape, and relationships that power every business decision.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 3 (Levine)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~60 min read</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+</div>
+
+<!-- REAL-WORLD -->
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Zerodha wants to know: "What does a typical investor's portfolio look like?"</h3>
+  <p>
+    Zerodha has 1.2 crore active investors. The CEO asks: <em>"What's the average portfolio value? How much do portfolios vary? Are most investors concentrated at small values or are they spread out?"</em>
+  </p>
+  <ul style="margin:12px 0; padding-left:22px; color:#4e342e; font-size:.92rem;">
+    <li>Average portfolio = <strong>Mean</strong> (but a few billionaire accounts will pull it up)</li>
+    <li>Typical portfolio = <strong>Median</strong> (immune to extreme outliers)</li>
+    <li>How much variation = <strong>Standard deviation, IQR</strong></li>
+    <li>Are most people small investors? = <strong>Skewness</strong> (right-skewed means yes)</li>
+    <li>Does portfolio size predict trading frequency? = <strong>Correlation</strong></li>
+  </ul>
+  <div class="rw-takeaway">
+    This session gives you every tool to describe a dataset numerically &mdash; from averages to spread to shape to relationships.
+  </div>
+</div>
+
+<!-- SECTION 1: Central Tendency -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Measures of Central Tendency <span class="difficulty beginner">Beginner</span></h2>
+  <p>Central tendency answers: <em>"What is a typical value in this dataset?"</em></p>
+
+  <h3>Mean (Arithmetic Average)</h3>
+  <div class="formula-box">
+    Sample Mean: X&#772; = (X&#8321; + X&#8322; + ... + X&#8345;) / n = &Sigma;X&#7522; / n
+  </div>
+  <p>The mean uses <strong>every value</strong> in the dataset, which makes it sensitive to outliers.</p>
+
+  <h3>Median</h3>
+  <p>The <span class="key-term">Median</span> is the middle value when data is sorted. If n is even, take the average of the two middle values. It is <strong>robust to outliers</strong>.</p>
+
+  <h3>Mode</h3>
+  <p>The most frequently occurring value. A dataset can be unimodal, bimodal, or multimodal. Useful for categorical data too.</p>
+
+  <h3>Geometric Mean</h3>
+  <div class="formula-box">
+    Geometric Mean = (X&#8321; &times; X&#8322; &times; ... &times; X&#8345;)^(1/n)
+  </div>
+  <p>Used for <strong>growth rates</strong> and <strong>compound returns</strong>. Always less than or equal to the arithmetic mean.</p>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>When to Use Mean</h4>
+      <ul>
+        <li>Data is symmetric (no extreme outliers)</li>
+        <li>You need to do further calculations</li>
+        <li>Interval or ratio data</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>When to Use Median</h4>
+      <ul>
+        <li>Data is skewed (incomes, house prices)</li>
+        <li>Outliers present</li>
+        <li>Ordinal data is acceptable</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Mean vs Median salary:</strong> In a startup with 9 employees earning &#8377;5-8 lakh and one founder earning &#8377;2 crore, the mean salary is ~&#8377;25 lakh (misleadingly high). The median is ~&#8377;6.5 lakh (much more "typical"). News headlines often use mean when they should use median &mdash; watch out!</p>
+  </div>
+</div>
+
+<!-- SECTION 2: Variation -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Measures of Variation <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>Central tendency alone is not enough. Two datasets can have the same mean but wildly different spreads.</p>
+
+  <h3>Range</h3>
+  <div class="formula-box">Range = Maximum - Minimum</div>
+  <p>Simple but uses only two values &mdash; vulnerable to a single outlier.</p>
+
+  <h3>Interquartile Range (IQR)</h3>
+  <div class="formula-box">IQR = Q&#8323; - Q&#8321;</div>
+  <p>Range of the middle 50% of data. Robust to outliers. Used in boxplots.</p>
+
+  <h3>Variance and Standard Deviation</h3>
+  <div class="formula-box">
+    Sample Variance: S&sup2; = &Sigma;(X&#7522; - X&#772;)&sup2; / (n - 1)<br><br>
+    Sample Std Dev: S = &radic;S&sup2;<br><br>
+    Population Variance: &sigma;&sup2; = &Sigma;(X&#7522; - &mu;)&sup2; / N
+  </div>
+  <p><strong>Why n-1?</strong> Using n-1 (called Bessel's correction) makes the sample variance an <strong>unbiased estimator</strong> of the population variance. With just n, we would consistently underestimate the true spread.</p>
+
+  <h3>Coefficient of Variation (CV)</h3>
+  <div class="formula-box">CV = (S / X&#772;) &times; 100%</div>
+  <p>Relative measure of variation. Use CV when comparing variability between datasets with <strong>different units or different means</strong>.</p>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>CV in cricket:</strong> Batsman A averages 45 with SD 10 (CV = 22%). Batsman B averages 30 with SD 10 (CV = 33%). Same absolute variability, but B is relatively more inconsistent. That is why selectors prefer A &mdash; lower CV means more reliable performance.</p>
+  </div>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024)</div>
+    <p><strong>Mutual fund factsheets</strong> from AMFI always report standard deviation alongside returns. A fund returning 15% with SD of 8% is less risky than one returning 16% with SD of 20%. Zerodha Coin and Groww apps now prominently display "risk" (standard deviation) to help investors compare funds beyond just returns.</p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> Variance formulas are the most commonly tested in mid-sem. Remember: <strong>sample uses n-1</strong>, population uses N. Also remember the CV formula &mdash; it appears in comparison questions ("which dataset is more variable?").
+  </div>
+</div>
+
+<!-- SECTION 3: Shape -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Shape: Skewness and Kurtosis <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <h3>Skewness</h3>
+  <div class="formula-box">Skewness = E[(X - &mu;)&sup3;] / &sigma;&sup3;</div>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Right-Skewed (Positive)</h4>
+      <ul>
+        <li>Skewness &gt; 0</li>
+        <li>Long tail to the right</li>
+        <li>Mean &gt; Median &gt; Mode</li>
+        <li>Example: Income, house prices</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Left-Skewed (Negative)</h4>
+      <ul>
+        <li>Skewness &lt; 0</li>
+        <li>Long tail to the left</li>
+        <li>Mean &lt; Median &lt; Mode</li>
+        <li>Example: Age at retirement, easy exam scores</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Kurtosis</h3>
+  <div class="formula-box">Kurtosis = E[(X - &mu;)&#8308;] / &sigma;&#8308;</div>
+
+  <table class="styled-table">
+    <thead><tr><th>Type</th><th>Kurtosis</th><th>Shape</th><th>Tail Behaviour</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Mesokurtic</strong></td><td>= 3 (excess = 0)</td><td>Normal bell shape</td><td>Normal tails</td></tr>
+      <tr><td><strong>Leptokurtic</strong></td><td>&gt; 3 (excess &gt; 0)</td><td>Peaked, thin middle</td><td>Fat tails (more extreme values)</td></tr>
+      <tr><td><strong>Platykurtic</strong></td><td>&lt; 3 (excess &lt; 0)</td><td>Flat, spread out</td><td>Thin tails (fewer extremes)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Empirical Rule (Normal Data Only)</h3>
+  <div class="block-diagram">
+    <div class="block">
+      <div class="block-title">1&sigma;</div>
+      <div class="block-desc">~68% of data</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block">
+      <div class="block-title">2&sigma;</div>
+      <div class="block-desc">~95% of data</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block">
+      <div class="block-title">3&sigma;</div>
+      <div class="block-desc">~99.7% of data</div>
+    </div>
+  </div>
+
+  <h3>Chebyshev's Rule (Any Distribution)</h3>
+  <div class="formula-box">
+    At least (1 - 1/k&sup2;) &times; 100% of data falls within k standard deviations of the mean<br><br>
+    k=2: at least 75% &nbsp;|&nbsp; k=3: at least 88.9%
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Skewness at a salary negotiation:</strong> When HR says "average salary is &#8377;12 lakh," ask for the median too. If the distribution is right-skewed (common for salaries), the median might be only &#8377;8 lakh. The mean is pulled up by a few senior leaders earning &#8377;50+ lakh.</p>
+  </div>
+</div>
+
+<!-- SECTION 4: Exploring Data -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Exploring Numerical Data <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <h3>Five-Number Summary</h3>
+  <div class="block-diagram">
+    <div class="block"><div class="block-title">Min</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block"><div class="block-title">Q1</div><div class="block-desc">25th percentile</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight"><div class="block-title">Median</div><div class="block-desc">50th percentile</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block"><div class="block-title">Q3</div><div class="block-desc">75th percentile</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block"><div class="block-title">Max</div></div>
+  </div>
+
+  <h3>Boxplot</h3>
+  <p>Visual representation of the five-number summary. The box spans Q1 to Q3, with a line at the median. Whiskers extend to 1.5 &times; IQR from the box edges. Points beyond the whiskers are <strong>outliers</strong>.</p>
+
+  <h3>Z-Score (Standard Score)</h3>
+  <div class="formula-box">z = (X - X&#772;) / S</div>
+  <p>Tells you how many standard deviations a value is from the mean. A z-score beyond &plusmn;3 is typically considered an <strong>outlier</strong>.</p>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> Boxplot interpretation is commonly tested. Know how to identify: median position, IQR, outlier thresholds (Q1 - 1.5&times;IQR and Q3 + 1.5&times;IQR), and skewness from the boxplot shape.
+  </div>
+</div>
+
+<!-- SECTION 5: Covariance and Correlation -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Covariance and Correlation <span class="difficulty advanced">Advanced</span></h2>
+
+  <h3>Covariance</h3>
+  <div class="formula-box">
+    Cov(X, Y) = &Sigma;(X&#7522; - X&#772;)(Y&#7522; - Y&#772;) / (n - 1)
+  </div>
+  <p>Positive covariance = X and Y tend to move together. Negative = opposite directions. Problem: covariance depends on the scale of variables, making it hard to compare.</p>
+
+  <h3>Pearson Correlation Coefficient (r)</h3>
+  <div class="formula-box">
+    r = Cov(X, Y) / (S&#8339; &times; S&#7527;)<br><br>
+    Range: -1 &le; r &le; +1
+  </div>
+
+  <table class="styled-table">
+    <thead><tr><th>r value</th><th>Interpretation</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>r = +1</td><td>Perfect positive linear</td><td>Circumference vs diameter</td></tr>
+      <tr><td>r = +0.8</td><td>Strong positive</td><td>Study hours vs marks</td></tr>
+      <tr><td>r = 0</td><td>No linear relationship</td><td>Shoe size vs IQ</td></tr>
+      <tr><td>r = -0.7</td><td>Strong negative</td><td>Price vs demand (for normal goods)</td></tr>
+      <tr><td>r = -1</td><td>Perfect negative linear</td><td>Rarely seen in real data</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Critical warning:</strong> Correlation measures <strong>linear</strong> association only. A perfect U-shaped relationship would give r near 0. Also, <strong>correlation does not imply causation</strong>.</p>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024)</div>
+    <p><strong>Swiggy IPO prospectus (November 2024):</strong> In investor filings, Swiggy reported correlations between advertising spend and new user acquisitions. While the correlation was strong (~0.75), analysts noted this does not prove ads cause sign-ups &mdash; both could be driven by seasonal demand (festive periods see higher ad budgets AND more users independently).</p>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Ice cream sales and drowning deaths</strong> are positively correlated. Does ice cream cause drowning? Of course not. The hidden variable (confounder) is <strong>summer heat</strong>: more people swim, more people buy ice cream. This is the classic example of why correlation does not equal causation.</p>
+  </div>
+</div>
+
+<!-- SECTION 6: Population Measures -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Population vs Sample Measures <span class="difficulty beginner">Beginner</span></h2>
+
+  <table class="styled-table">
+    <thead><tr><th>Measure</th><th>Sample Symbol</th><th>Population Symbol</th><th>Key Difference</th></tr></thead>
+    <tbody>
+      <tr><td>Mean</td><td>X&#772;</td><td>&mu;</td><td>Same formula, different notation</td></tr>
+      <tr><td>Variance</td><td>S&sup2; (divide by n-1)</td><td>&sigma;&sup2; (divide by N)</td><td>n-1 corrects bias in sample</td></tr>
+      <tr><td>Std Deviation</td><td>S</td><td>&sigma;</td><td>Square root of respective variance</td></tr>
+      <tr><td>Correlation</td><td>r</td><td>&rho; (rho)</td><td>Same formula</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 7: Excel/Python -->
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Tools: Excel &amp; Python <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Measure</th><th>Excel</th><th>Python</th></tr></thead>
+    <tbody>
+      <tr><td>Mean</td><td><code>=AVERAGE(data)</code></td><td><code>df['col'].mean()</code></td></tr>
+      <tr><td>Median</td><td><code>=MEDIAN(data)</code></td><td><code>df['col'].median()</code></td></tr>
+      <tr><td>Sample Std Dev</td><td><code>=STDEV.S(data)</code></td><td><code>df['col'].std()</code></td></tr>
+      <tr><td>Sample Variance</td><td><code>=VAR.S(data)</code></td><td><code>df['col'].var()</code></td></tr>
+      <tr><td>Percentile</td><td><code>=PERCENTILE.INC(data, 0.25)</code></td><td><code>df['col'].quantile(0.25)</code></td></tr>
+      <tr><td>Skewness</td><td><code>=SKEW(data)</code></td><td><code>df['col'].skew()</code></td></tr>
+      <tr><td>Kurtosis</td><td><code>=KURT(data)</code></td><td><code>df['col'].kurt()</code></td></tr>
+      <tr><td>Correlation</td><td><code>=CORREL(X, Y)</code></td><td><code>df[['X','Y']].corr()</code></td></tr>
+      <tr><td>Covariance</td><td><code>=COVARIANCE.S(X, Y)</code></td><td><code>df[['X','Y']].cov()</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 3 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Central tendency</strong>: Mean (sensitive to outliers), Median (robust), Mode (most frequent), Geometric Mean (for growth rates)</li>
+    <li><strong>Variation</strong>: Range, IQR, Variance (S&sup2;, divide by n-1), Standard Deviation (S), CV (for comparing across units)</li>
+    <li><strong>Shape</strong>: Skewness (positive = right tail, mean &gt; median), Kurtosis (&gt;3 = fat tails)</li>
+    <li><strong>Empirical rule</strong>: 68/95/99.7% within 1/2/3 &sigma; (normal data only)</li>
+    <li><strong>Chebyshev</strong>: At least (1 - 1/k&sup2;) within k&sigma; (any distribution)</li>
+    <li><strong>Five-number summary</strong>: Min, Q1, Median, Q3, Max &mdash; visualised as a boxplot</li>
+    <li><strong>z-score</strong> = (X - mean)/SD; |z| &gt; 3 flags outliers</li>
+    <li><strong>Covariance</strong> measures co-movement; <strong>Pearson r</strong> standardises it to [-1, +1]</li>
+    <li><strong>Correlation is not causation</strong> &mdash; always check for confounders</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 3 of 16<br>
+  Source: Levine T1 Ch. 3 &bull; Handout-aligned &bull; Built for zero-to-advanced understanding
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

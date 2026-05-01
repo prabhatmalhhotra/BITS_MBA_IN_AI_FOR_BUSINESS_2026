@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 5 &mdash; Perception &amp; Decision Making | Managing People &amp; Organizations</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '\2713  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managing People &amp; Organizations</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a><a href="session_02.html">S2</a><a href="session_03.html">S3</a><a href="session_04.html">S4</a><a href="session_05.html">S5</a><a href="session_06.html">S6</a><a href="session_07.html">S7</a><a href="session_08.html">S8</a><a href="session_09.html">S9</a><a href="session_10.html">S10</a><a href="session_11.html">S11</a><a href="session_12.html">S12</a><a href="session_13.html">S13</a><a href="session_14.html">S14</a><a href="session_15.html">S15</a><a href="session_16.html">S16</a><a href="#">Mid-Sem <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span></a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 5 of 16</div>
+  <h1>Perception &amp; Decision Making</h1>
+  <p class="subtitle">We don't see the world as it is &mdash; we see it as we are. This session explores how perception biases and cognitive shortcuts affect every decision at work.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Ch. 5 (Robbins)</span><span class="pill">Mid-Sem Syllabus</span><span class="pill">~40 min read</span>
+  </div>
+</div>
+
+<div class="container">
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+</div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Two interviewers evaluate the same Flipkart candidate &mdash; and reach opposite conclusions. How?</h3>
+  <p>Candidate Priya interviews at Flipkart. Interviewer A (who just rejected a terrible candidate) thinks Priya is "brilliant by comparison." Interviewer B (who just passed a stellar candidate) thinks Priya is "average." Same person, same resume, wildly different perceptions.</p>
+  <div class="rw-takeaway">This is the <strong>contrast effect</strong> &mdash; one of many perceptual biases that distort how we see reality. Session 5 shows how perception and cognitive biases affect every decision at work.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> What is Perception? <span class="difficulty beginner">Beginner</span></h2>
+  <p><span class="key-term">Perception</span> is the process by which individuals organise and interpret sensory impressions to give meaning to their environment.</p>
+  <p style="margin-top:10px;"><strong>Key insight:</strong> What we perceive can be substantially different from objective reality. Behaviour is based on our <em>perception</em> of reality, not reality itself.</p>
+
+  <h3>Factors Influencing Perception</h3>
+  <div class="block-diagram" style="gap:12px;">
+    <div class="block" style="background:#e3f2fd;border-color:#42a5f5;"><div class="block-title" style="color:#1565c0;">Perceiver</div><div class="block-desc">Attitudes, motives, interests, experience, expectations</div></div>
+    <div class="block" style="background:#e8f5e9;border-color:#66bb6a;"><div class="block-title" style="color:#2e7d32;">Target</div><div class="block-desc">Novelty, motion, sounds, size, background, proximity</div></div>
+    <div class="block" style="background:#fff3e0;border-color:#ffa726;"><div class="block-title" style="color:#e65100;">Situation</div><div class="block-desc">Time, work setting, social setting</div></div>
+  </div>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>You notice a luxury car in a college parking lot (novelty of <strong>target</strong>). If you're interested in cars (<strong>perceiver</strong> interest), you look closely. If it's raining and you're rushing (<strong>situation</strong>), you barely notice. Same car, different perception based on all three factors.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Attribution Theory (Kelley) <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>When we observe behaviour, we try to determine whether it was caused by <strong>internal</strong> (personality, ability) or <strong>external</strong> (situation, luck) factors. Kelley's model uses three criteria:</p>
+  <table class="styled-table">
+    <thead><tr><th>Criterion</th><th>Question</th><th>If HIGH</th><th>If LOW</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Distinctiveness</strong></td><td>Does person behave differently in other situations?</td><td>External attribution</td><td>Internal attribution</td></tr>
+      <tr><td><strong>Consensus</strong></td><td>Do others behave the same way?</td><td>External attribution</td><td>Internal attribution</td></tr>
+      <tr><td><strong>Consistency</strong></td><td>Does the person always behave this way?</td><td>Internal attribution</td><td>External attribution</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Common Attribution Errors</h3>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Fundamental Attribution Error</h4>
+      <p>We over-attribute <strong>others'</strong> behaviour to internal causes (personality) and underestimate situational factors.</p>
+      <p style="font-size:.82rem;margin-top:6px;"><em>"He's late because he's lazy" (ignoring traffic jam)</em></p>
+    </div>
+    <div class="cg-card right">
+      <h4>Self-Serving Bias</h4>
+      <p>We attribute <strong>our own</strong> success to internal factors and failure to external ones.</p>
+      <p style="font-size:.82rem;margin-top:6px;"><em>"I got promoted because I'm talented" vs "I didn't get promoted because the manager is biased"</em></p>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Perceptual Shortcuts &amp; Biases <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Shortcut</th><th>What Happens</th><th>Workplace Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Selective Perception</strong></td><td>See what you expect/want to see</td><td>Manager notices only mistakes of an employee they dislike</td></tr>
+      <tr><td><strong>Halo Effect</strong></td><td>One positive trait colours everything</td><td>Attractive candidate rated as more intelligent</td></tr>
+      <tr><td><strong>Horns Effect</strong></td><td>One negative trait colours everything</td><td>Late on Day 1, assumed to be unreliable forever</td></tr>
+      <tr><td><strong>Contrast Effect</strong></td><td>Judging relative to recent comparison</td><td>Average candidate looks great after a terrible one</td></tr>
+      <tr><td><strong>Stereotyping</strong></td><td>Judging based on group membership</td><td>"Engineers can't communicate well"</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Decision-Making Models <span class="difficulty intermediate">Intermediate</span></h2>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Rational Model</h4>
+      <ul>
+        <li>Define the problem clearly</li>
+        <li>Identify ALL criteria and alternatives</li>
+        <li>Evaluate all options objectively</li>
+        <li>Choose the optimal solution</li>
+      </ul>
+      <p style="font-size:.82rem;margin-top:6px;"><em>Assumes perfect information &mdash; rarely possible in real life</em></p>
+    </div>
+    <div class="cg-card right">
+      <h4>Bounded Rationality (Herbert Simon)</h4>
+      <ul>
+        <li>Limited information and cognitive ability</li>
+        <li>Simplified model of reality</li>
+        <li><strong>Satisfice</strong> (satisfy + suffice) rather than optimise</li>
+        <li>Choose the first "good enough" option</li>
+      </ul>
+      <p style="font-size:.82rem;margin-top:6px;"><em>How decisions are actually made in organisations</em></p>
+    </div>
+  </div>
+  <p style="margin-top:12px;"><strong>Intuitive Decision Making:</strong> Pattern recognition from experience &mdash; not irrational, but subconscious processing of accumulated expertise. Common among experienced managers.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Common Decision Biases <span class="difficulty advanced">Advanced</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Bias</th><th>Description</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Overconfidence</strong></td><td>Too sure about own judgement</td><td>Manager sure the project will finish on time (it won't)</td></tr>
+      <tr><td><strong>Anchoring</strong></td><td>Over-relying on first piece of info</td><td>Salary negotiation: first number sets the range</td></tr>
+      <tr><td><strong>Confirmation</strong></td><td>Seeking only info that supports existing belief</td><td>Only reading reviews that match your opinion</td></tr>
+      <tr><td><strong>Availability</strong></td><td>Overweighting easily recalled events</td><td>Fearing plane crashes (rare) more than car accidents (common)</td></tr>
+      <tr><td><strong>Escalation of Commitment</strong></td><td>Throwing good money after bad</td><td>Continuing a failing project because "we've invested too much"</td></tr>
+      <tr><td><strong>Hindsight</strong></td><td>"I knew it all along" after the fact</td><td>"I always knew that startup would fail"</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Group Decision Making</h3>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Pros</h4>
+      <ul><li>More complete information</li><li>Diverse perspectives</li><li>Greater acceptance of decisions</li></ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Cons</h4>
+      <ul><li>Time-consuming</li><li>Conformity pressure</li><li><strong>Groupthink</strong> (Janis)</li><li>Ambiguous responsibility</li></ul>
+    </div>
+  </div>
+  <p style="margin-top:10px;"><strong>Groupthink (Irving Janis):</strong> When group desire for harmony overrides realistic appraisal of alternatives. Symptoms: illusion of invulnerability, suppression of dissent, self-censorship.</p>
+  <p><strong>Techniques to improve:</strong> Brainstorming, Nominal Group Technique (NGT), Delphi method, Devil's Advocate.</p>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024-25)</div>
+    <p><strong>Escalation of commitment at Byju's:</strong> Despite mounting losses and declining enrolments, Byju's continued aggressive spending on acquisitions and marketing. The founder kept doubling down. This is a textbook case of escalation of commitment &mdash; refusing to cut losses because of past investment ("sunk cost fallacy").</p>
+  </div>
+
+  <div class="exam-tip"><strong>Exam Tip:</strong> Attribution theory and decision biases are heavily tested. Practice identifying which bias is at play in given scenarios. Remember: Fundamental Attribution Error = judging <em>others</em>; Self-Serving Bias = judging <em>yourself</em>.</div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 5 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Perception</strong> = organising/interpreting sensory impressions; influenced by perceiver, target, situation</li>
+    <li><strong>Attribution</strong> (Kelley): Distinctiveness + Consensus + Consistency determine internal vs external</li>
+    <li><strong>Fundamental Attribution Error</strong>: over-attribute others to internal; <strong>Self-Serving Bias</strong>: credit self, blame others</li>
+    <li><strong>Shortcuts</strong>: Selective perception, Halo/Horns, Contrast, Stereotyping</li>
+    <li><strong>Rational vs Bounded Rationality</strong> (Simon): satisfice, not optimise</li>
+    <li><strong>Key biases</strong>: Overconfidence, Anchoring, Confirmation, Availability, Escalation of Commitment</li>
+    <li><strong>Groupthink</strong> (Janis): conformity suppresses good decisions; counter with NGT, Delphi, Devil's Advocate</li>
+  </ul>
+</div>
+
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Managing People &amp; Organizations (MBACCZG511) &bull; Session 5 of 16<br>
+  Source: T1 Ch. 5 (Robbins) &bull; Handout-aligned
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

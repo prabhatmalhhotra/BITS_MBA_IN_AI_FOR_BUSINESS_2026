@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 8 &mdash; Services &amp; Marketing Mix | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); } .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; } .topbar .brand span { color: #64ffda; } .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; } .topbar .nav-links a:hover { color: #64ffda; } .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; } .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; } .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; } .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; } .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; } .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); } .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; } .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; } .real-world p { color: #4e342e; font-size: .95rem; } .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; } .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; } .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; } .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; } .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; } .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; } .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; } .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; } .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; } .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; } .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; } .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; } .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; } .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; } .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; } .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; } .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; } .compare-grid .cg-card.left h4 { color: #1565c0; } .compare-grid .cg-card.right h4 { color: #c62828; } .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; } .compare-grid .cg-card ul { padding-left: 18px; } .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; } .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; } .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; } .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; } .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); } .styled-table thead { background: #263238; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; } .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; } .styled-table tbody tr:nth-child(even) { background: #fafafa; } .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; } .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; } .summary-box ul { padding-left: 20px; } .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '\2713  '; } .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; } .difficulty.beginner { background: #c8e6c9; color: #1b5e20; } .difficulty.intermediate { background: #fff9c4; color: #f57f17; } .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; } .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; } .tree ul { list-style: none; padding-left: 28px; position: relative; } .tree > ul { padding-left: 0; } .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; } .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; } .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; } .tree li:last-child::before { bottom: 16px; } .tree > ul > li::before, .tree > ul > li::after { display: none; } .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; } .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; } .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; } .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; } .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; } .progress-track .pt-step.active .pt-dot { background: #2c5364; } .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; } .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+</style>
+</head>
+<body>
+<div class="topbar"><a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a><div class="nav-links"><a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a> <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a> <a href="#">Mid-Sem <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span></a></div></div>
+<div class="hero"><div class="session-tag">Session 8 of 16</div><h1>Services &amp; Marketing Mix</h1><p class="subtitle">Services are different from products &mdash; you cannot touch, store, or standardise them. Learn the 7Ps framework and SERVQUAL model that govern service marketing.</p><div class="meta-pills"><span class="pill">T1 Chapter 8 (Kotler 16e)</span><span class="pill">Case: MTR Foods (R1 Case 1)</span><span class="pill">Mid-Sem Syllabus</span></div></div>
+<div class="container">
+<div class="progress-track" id="auto-stepper"></div>
+
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Why does Zomato's rating for the same restaurant vary from 3.5 to 4.5 depending on when you order?</h3>
+  <p>You ordered biryani from Meghana Foods on a Saturday night and it was cold, late, and the raita was missing. Rating: 3 stars. Your friend ordered on a Tuesday afternoon &mdash; hot, fast, complete. Rating: 5 stars. Same restaurant, wildly different experience. This is the core challenge of services: <strong>heterogeneity</strong>. Quality varies with provider, time, and place. Unlike a Parle-G biscuit (which tastes the same every time), services are inherently inconsistent.</p>
+  <div class="rw-takeaway">Services have unique characteristics (IHIP) that require a different marketing approach. The 7Ps framework extends the 4Ps to handle these challenges.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Service Characteristics: IHIP <span class="difficulty beginner">Beginner</span></h2>
+  <div class="block-diagram" style="flex-wrap:wrap;gap:14px;">
+    <div class="block" style="border-color:#42a5f5;background:#e3f2fd;max-width:200px;"><div class="block-title" style="color:#1565c0;">Intangibility</div><div class="block-desc">Cannot see, touch, taste before purchase. A haircut, a flight, a consulting session.</div></div>
+    <div class="block" style="border-color:#66bb6a;background:#e8f5e9;max-width:200px;"><div class="block-title" style="color:#2e7d32;">Heterogeneity</div><div class="block-desc">Quality varies with provider, time, place. Same barber, different day = different cut.</div></div>
+    <div class="block" style="border-color:#ffa726;background:#fff3e0;max-width:200px;"><div class="block-title" style="color:#e65100;">Inseparability</div><div class="block-desc">Produced and consumed simultaneously. Doctor and patient must both be present.</div></div>
+    <div class="block" style="border-color:#ab47bc;background:#f3e5f5;max-width:200px;"><div class="block-title" style="color:#6a1b9a;">Perishability</div><div class="block-desc">Cannot be stored. Empty airline seat = lost revenue forever.</div></div>
+  </div>
+  <div class="daily-example"><div class="de-label">Daily Life Example</div><p>Think about a movie theatre seat. <strong>Intangible</strong> (the experience of watching, not the seat itself). <strong>Heterogeneous</strong> (different audience = different vibe). <strong>Inseparable</strong> (you must be there). <strong>Perishable</strong> (an unsold Friday night seat cannot be sold on Saturday).</p></div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> The 7Ps of Services Marketing <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>P</th><th>What It Covers</th><th>Example (Taj Hotels)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Product</strong></td><td>Service offering, quality levels</td><td>Rooms, restaurants, spa, events</td></tr>
+      <tr><td><strong>Price</strong></td><td>Pricing strategy, bundling</td><td>Dynamic pricing, weekend packages</td></tr>
+      <tr><td><strong>Place</strong></td><td>Location, channels, accessibility</td><td>Prime city locations, app booking</td></tr>
+      <tr><td><strong>Promotion</strong></td><td>Communication strategy</td><td>Luxury imagery, corporate tie-ups</td></tr>
+      <tr><td><strong>People</strong></td><td>Staff training, attitude, service culture</td><td>Legendary "guest is god" culture</td></tr>
+      <tr><td><strong>Process</strong></td><td>Service delivery flow, blueprinting</td><td>Check-in to check-out journey mapped</td></tr>
+      <tr><td><strong>Physical Evidence</strong></td><td>Tangible cues that signal quality</td><td>Grand lobby, uniforms, branded amenities</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> SERVQUAL &mdash; Measuring Service Quality <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>The <span class="key-term">SERVQUAL</span> model (Parasuraman, Zeithaml, Berry) measures service quality across 5 dimensions &mdash; remember <strong>RATER</strong>:</p>
+  <div class="block-diagram" style="flex-wrap:wrap;gap:10px;">
+    <div class="block" style="max-width:160px;"><div class="block-title">Reliability</div><div class="block-desc">Deliver promised service dependably (MOST important)</div></div>
+    <div class="block" style="max-width:160px;"><div class="block-title">Assurance</div><div class="block-desc">Knowledge, courtesy, trust of staff</div></div>
+    <div class="block" style="max-width:160px;"><div class="block-title">Tangibles</div><div class="block-desc">Physical facilities, equipment, appearance</div></div>
+    <div class="block" style="max-width:160px;"><div class="block-title">Empathy</div><div class="block-desc">Caring, individualised attention</div></div>
+    <div class="block" style="max-width:160px;"><div class="block-title">Responsiveness</div><div class="block-desc">Willingness to help promptly</div></div>
+  </div>
+  <h3>The 5 Gaps Model</h3>
+  <p>Service failures occur due to gaps: (1) Knowledge gap (not knowing expectations), (2) Design gap (wrong standards), (3) Performance gap (not meeting standards), (4) Communication gap (promising more than delivered), (5) Customer gap (expected vs perceived).</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Service Recovery &amp; Modern Frameworks <span class="difficulty advanced">Advanced</span></h2>
+  <p>When service fails, recovery matters more than prevention:</p>
+  <div class="flow-vertical" style="max-width:350px;">
+    <div class="fv-box"><div class="fv-title">Acknowledge</div><div class="fv-desc">Recognise the failure immediately</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Empathise</div><div class="fv-desc">Show genuine concern</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Fix</div><div class="fv-desc">Resolve the problem</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Compensate</div><div class="fv-desc">Offer something extra (refund, upgrade)</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#c8e6c9;border-color:#43a047;"><div class="fv-title" style="color:#1b5e20;">Learn</div><div class="fv-desc" style="color:#2e7d32;">Prevent recurrence &mdash; "Recovery Paradox" can build higher loyalty</div></div>
+  </div>
+  <h3>4Cs and SAVE Frameworks</h3>
+  <div class="compare-grid">
+    <div class="cg-card left"><h4>4Cs (Lauterborn)</h4><ul><li><strong>Customer value</strong> (not Product)</li><li><strong>Cost</strong> to customer (not Price)</li><li><strong>Convenience</strong> (not Place)</li><li><strong>Communication</strong> (not Promotion)</li></ul></div>
+    <div class="cg-card right"><h4>SAVE (B2B)</h4><ul><li><strong>Solution</strong> (not Product)</li><li><strong>Access</strong> (not Place)</li><li><strong>Value</strong> (not Price)</li><li><strong>Education</strong> (not Promotion)</li></ul></div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Case Study: MTR Foods <span class="difficulty advanced">Advanced</span></h2>
+  <p><strong>R1 Case 1: MTR Foods &mdash; A Marketing Marvel</strong></p>
+  <ul style="margin:12px 0;padding-left:22px;font-size:.92rem;">
+    <li>Heritage Bangalore restaurant brand (est. 1924) expanded to packaged ready-to-eat and ready-to-cook products</li>
+    <li><strong>Product:</strong> Authentic South Indian recipes (rava idli mix, bisibelebath) &mdash; premium quality</li>
+    <li><strong>Price:</strong> Premium but justified by quality and heritage</li>
+    <li><strong>Place:</strong> Modern retail + traditional kirana + growing online presence</li>
+    <li><strong>Promotion:</strong> Indian sentiment-led advertising, trust-based positioning</li>
+    <li>Acquired by Norwegian Orkla in 2007; merged with Eastern Condiments</li>
+  </ul>
+  <div class="exam-tip"><strong>Exam Tip:</strong> MTR Foods is a great example of a service brand (restaurant) extending into products. Be ready to discuss how they managed the 7Ps transition. Also re-watch HST1 on the marketing mix for services context. <strong>Mid-Sem scope ends after this session (S1-S8).</strong></div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 8 &mdash; Key Takeaways Checklist</h3>
+  <ul>
+    <li><strong>IHIP</strong>: Intangibility, Heterogeneity, Inseparability, Perishability</li>
+    <li><strong>7Ps</strong> = 4Ps + People, Process, Physical Evidence</li>
+    <li><strong>SERVQUAL/RATER</strong>: Reliability, Assurance, Tangibles, Empathy, Responsiveness</li>
+    <li><strong>5 Gaps Model</strong>: Knowledge, Design, Performance, Communication, Customer</li>
+    <li><strong>Service recovery</strong>: Acknowledge &rarr; Empathise &rarr; Fix &rarr; Compensate &rarr; Learn</li>
+    <li><strong>4Cs</strong> (customer-centric) and <strong>SAVE</strong> (B2B) are modern alternatives to 4Ps</li>
+    <li><strong>MTR Foods case</strong>: restaurant-to-product brand transition using 7Ps</li>
+    <li>THIS IS THE LAST SESSION FOR MID-SEM (Closed Book, 30%, 21-Jun-2026)</li>
+  </ul>
+</div>
+<div class="page-footer">BITS Pilani MBA (S2-25) &bull; Marketing Management (MBACCZG503) &bull; Session 8 of 16<br>Source: Kotler 16e Ch. 8 &bull; R1 Case 1 (MTR Foods) &bull; HST1 Video &bull; MID-SEM SCOPE ENDS HERE</div>
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

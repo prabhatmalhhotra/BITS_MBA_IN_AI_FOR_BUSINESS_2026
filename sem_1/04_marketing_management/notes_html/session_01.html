@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 1 — Introduction to Marketing | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="#">Mid-Sem <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span></a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 1 of 16</div>
+  <h1>Introduction to Marketing</h1>
+  <p class="subtitle">What is marketing really? Far beyond ads and sales &mdash; it is the science and art of creating, communicating, and delivering value. This session builds your foundation from scratch.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapters 1 &amp; 2 (Kotler 16e)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~45 min read</span>
+  </div>
+</div>
+
+<div class="container">
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+  <div class="pt-step done"><div class="pt-dot">6</div></div>
+</div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>How did Amul become India's most loved brand &mdash; without a big advertising budget?</h3>
+  <p>Amul spends barely 1% of revenue on advertising. Yet its "Utterly Butterly" girl is among the longest-running ad campaigns in the world (since 1966). Amul sells everything from butter to ice cream to chocolate &mdash; across 50+ product categories in India and 40+ countries.</p>
+  <ul style="margin:12px 0; padding-left:22px; color:#4e342e; font-size:.92rem;">
+    <li><strong>Product:</strong> Affordable, quality dairy for every Indian household</li>
+    <li><strong>Price:</strong> Kept intentionally low &mdash; "the taste of India" for the masses</li>
+    <li><strong>Place:</strong> 10 lakh+ retail outlets, from kiranas to supermarkets</li>
+    <li><strong>Promotion:</strong> Topical billboard ads that become viral cultural commentary</li>
+  </ul>
+  <div class="rw-takeaway">Amul's success is textbook marketing: understanding <strong>needs</strong>, creating <strong>value</strong>, reaching the right <strong>place</strong>, at the right <strong>price</strong>, with the right <strong>message</strong>. That is what Session 1 teaches.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> What is Marketing? <span class="difficulty beginner">Beginner</span></h2>
+  <p>Most people think marketing = advertising or selling. But marketing is far bigger:</p>
+  <div class="formula-box">AMA Definition: "Marketing is the activity, set of institutions, and processes for <strong>creating, communicating, delivering, and exchanging</strong> offerings that have <strong>value</strong> for customers, clients, partners, and society at large."</div>
+  <p>Breaking it down:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Creating</strong> &mdash; Designing products/services that solve real problems (Zomato solving "what to eat tonight?")</li>
+    <li><strong>Communicating</strong> &mdash; Telling people about it (Swiggy's "Why is this a Swiggy ad?")</li>
+    <li><strong>Delivering</strong> &mdash; Getting it to the customer (Amazon's next-day delivery)</li>
+    <li><strong>Exchanging</strong> &mdash; Both sides gain value (you get food, Zomato gets money)</li>
+  </ul>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>When you buy chai from a roadside stall, all 4 elements work: The chaiwala <strong>created</strong> a recipe, the aroma and signboard <strong>communicate</strong> it, the stall location <strong>delivers</strong> convenience, and your Rs 10 is the <strong>exchange</strong>. Even a chai stall does marketing!</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Core Marketing Concepts <span class="difficulty beginner">Beginner</span></h2>
+  <h3>Need &rarr; Want &rarr; Demand</h3>
+  <p>The most fundamental chain in marketing. Every purchase starts with a need.</p>
+  <div class="block-diagram">
+    <div class="block highlight"><div class="block-title">NEED</div><div class="block-desc">Basic human requirement (hunger, safety, belonging)</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block"><div class="block-title">WANT</div><div class="block-desc">Need shaped by culture &amp; personality (pizza, not roti)</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight"><div class="block-title">DEMAND</div><div class="block-desc">Want + Ability &amp; willingness to pay</div></div>
+  </div>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Need:</strong> You are thirsty. <strong>Want:</strong> You want a cold Coca-Cola (not just water &mdash; branding shaped that). <strong>Demand:</strong> You have Rs 40 and are willing to spend it. Now Coke has a customer!</p>
+  </div>
+  <h3>Other Core Concepts</h3>
+  <table class="styled-table">
+    <thead><tr><th>Concept</th><th>Definition</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Offering</strong></td><td>Combination of products, services, info, experiences</td><td>Zomato = food delivery + reviews + Gold membership</td></tr>
+      <tr><td><strong>Value</strong></td><td>Perceived benefits minus perceived costs</td><td>IndiGo: low price + on-time = high value for business travelers</td></tr>
+      <tr><td><strong>Satisfaction</strong></td><td>Performance vs expectations</td><td>Expecting 30-min delivery, getting in 20 = delight</td></tr>
+      <tr><td><strong>Exchange</strong></td><td>Giving something to get something desired</td><td>Rs 599/month for Netflix = hundreds of hours of content</td></tr>
+      <tr><td><strong>Market</strong></td><td>Set of all potential buyers</td><td>Everyone in India who drinks tea = tea market</td></tr>
+    </tbody>
+  </table>
+  <div class="exam-tip"><strong>Exam Tip:</strong> BITS loves asking "differentiate need, want, and demand with examples." Always use a 3-step chain with a single scenario &mdash; it shows you understand the progression, not just definitions.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> The Marketing Mix &mdash; 4Ps Framework <span class="difficulty beginner">Beginner</span></h2>
+  <p>The <span class="key-term">Marketing Mix</span> is the set of controllable tools a marketer uses to produce the desired response from the target market. The classic framework has <strong>4Ps</strong>:</p>
+  <div class="block-diagram" style="flex-wrap:wrap; gap:14px;">
+    <div class="block" style="border-color:#42a5f5;background:#e3f2fd;max-width:190px;"><div class="block-title" style="color:#1565c0;">Product</div><div class="block-desc">What you sell &mdash; features, quality, design, brand, packaging</div></div>
+    <div class="block" style="border-color:#66bb6a;background:#e8f5e9;max-width:190px;"><div class="block-title" style="color:#2e7d32;">Price</div><div class="block-desc">What you charge &mdash; list price, discounts, payment terms</div></div>
+    <div class="block" style="border-color:#ffa726;background:#fff3e0;max-width:190px;"><div class="block-title" style="color:#e65100;">Place</div><div class="block-desc">Where you sell &mdash; channels, locations, delivery, coverage</div></div>
+    <div class="block" style="border-color:#ab47bc;background:#f3e5f5;max-width:190px;"><div class="block-title" style="color:#6a1b9a;">Promotion</div><div class="block-desc">How you communicate &mdash; ads, PR, sales promo, digital</div></div>
+  </div>
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024-25)</div>
+    <p><strong>boAt's 4Ps masterclass:</strong> <strong>Product</strong> &mdash; affordable, stylish audio wearables for Indian youth. <strong>Price</strong> &mdash; Rs 499-5,000 (undercutting JBL/Sony). <strong>Place</strong> &mdash; Amazon, Flipkart first (D2C), then offline. <strong>Promotion</strong> &mdash; Hardik Pandya, Kiara Advani, IPL sponsorships, heavy social media. Result: India's #1 earwear brand.</p>
+  </div>
+  <h3>For Services: 4Ps + 3 more = 7Ps</h3>
+  <div class="block-diagram">
+    <div class="block" style="border-color:#ef5350;background:#ffebee;"><div class="block-title" style="color:#c62828;">People</div><div class="block-desc">Staff who deliver the service</div></div>
+    <div class="arrow">+</div>
+    <div class="block" style="border-color:#ef5350;background:#ffebee;"><div class="block-title" style="color:#c62828;">Process</div><div class="block-desc">How the service is delivered</div></div>
+    <div class="arrow">+</div>
+    <div class="block" style="border-color:#ef5350;background:#ffebee;"><div class="block-title" style="color:#c62828;">Physical Evidence</div><div class="block-desc">Tangible cues (uniforms, decor, website)</div></div>
+  </div>
+  <p style="margin-top:12px; font-size:.9rem; color:#546e7a;"><strong>HST1 Video:</strong> Watch "What is the marketing mix?" by Dr. Annmarie Hanlon (Cranfield) on HSTalks for a detailed walkthrough of this framework.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Evolution of Marketing Orientations <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>Companies have evolved through different philosophies of how to approach the market:</p>
+  <div class="flow-vertical" style="max-width:420px;">
+    <div class="fv-box" style="background:#ffebee;border-color:#ef5350;"><div class="fv-title" style="color:#c62828;">Production Concept</div><div class="fv-desc">"Make it cheap and available" &mdash; Ford Model T</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#fff3e0;border-color:#ffa726;"><div class="fv-title" style="color:#e65100;">Product Concept</div><div class="fv-desc">"Build a better mousetrap" &mdash; risk of marketing myopia</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#fff9c4;border-color:#fdd835;"><div class="fv-title" style="color:#f57f17;">Selling Concept</div><div class="fv-desc">"Push hard to sell" &mdash; insurance agents, aggressive salesmen</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#e8f5e9;border-color:#66bb6a;"><div class="fv-title" style="color:#2e7d32;">Marketing Concept</div><div class="fv-desc">"Find needs and fill them" &mdash; customer-centric</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#e3f2fd;border-color:#42a5f5;"><div class="fv-title" style="color:#1565c0;">Holistic Marketing</div><div class="fv-desc">Relationship + Integrated + Internal + Performance (Kotler 16e)</div></div>
+  </div>
+  <h3>Holistic Marketing &mdash; The 4 Pillars</h3>
+  <div class="compare-grid">
+    <div class="cg-card left"><h4>Relationship Marketing</h4><p>Deep, lasting bonds with customers, employees, partners.</p><ul><li>Amazon Prime loyalty ecosystem</li><li>Tata Neu super-app rewards</li></ul></div>
+    <div class="cg-card right"><h4>Integrated Marketing</h4><p>All channels deliver consistent message.</p><ul><li>Apple's website, store, ads &mdash; same minimalist feel</li><li>Nykaa's blog + app + stores = unified experience</li></ul></div>
+  </div>
+  <div class="compare-grid">
+    <div class="cg-card left"><h4>Internal Marketing</h4><p>Everyone inside thinks like a marketer.</p><ul><li>Zappos: every employee empowered to delight</li><li>Taj Hotels: "guest is god" culture</li></ul></div>
+    <div class="cg-card right"><h4>Performance Marketing</h4><p>Accountability for financial + non-financial returns.</p><ul><li>Tracking ROMI (Return on Marketing Investment)</li><li>Measuring CLV (Customer Lifetime Value)</li></ul></div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Marketing for the New Realities <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>Kotler 16e identifies major forces reshaping marketing:</p>
+  <table class="styled-table">
+    <thead><tr><th>Force</th><th>What Changed</th><th>Indian Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Technology</strong></td><td>AI, big data, mobile, IoT</td><td>Jio's 4G revolution made 500M+ Indians digital</td></tr>
+      <tr><td><strong>Globalisation</strong></td><td>Brands compete globally from day one</td><td>Mamaearth, boAt exporting globally as D2C brands</td></tr>
+      <tr><td><strong>Deregulation</strong></td><td>Markets opened up, more competition</td><td>Telecom deregulation enabled Jio's entry</td></tr>
+      <tr><td><strong>Consumer empowerment</strong></td><td>Reviews, price comparison, social voice</td><td>One bad tweet can go viral &mdash; Zomato incidents</td></tr>
+      <tr><td><strong>Retail transformation</strong></td><td>E-commerce, omnichannel, D2C</td><td>Flipkart, Amazon, Nykaa, Lenskart</td></tr>
+      <tr><td><strong>Disintermediation</strong></td><td>Cutting out middlemen</td><td>Sugar Cosmetics, Mamaearth selling direct via apps</td></tr>
+    </tbody>
+  </table>
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024-25)</div>
+    <p><strong>Jio's impact:</strong> By making data almost free (Rs 2/GB vs Rs 250 pre-Jio), Jio created 500M+ new digital consumers. This single move enabled the D2C revolution, quick commerce (Blinkit, Zepto), and India's social media boom. Every marketing trend today traces back to Jio's 2016 launch.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Consumer Markets vs Business Markets <span class="difficulty intermediate">Intermediate</span></h2>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Consumer Markets (B2C)</h4>
+      <ul><li>Large number of buyers</li><li>Low value per transaction</li><li>Emotional + rational decisions</li><li>Individual/family decides</li><li>Mass communication works</li><li>Short sales cycle</li></ul>
+      <p style="margin-top:8px;font-size:.82rem;"><em>Example: Parle-G sells to 100 crore Indians at Rs 5-10</em></p>
+    </div>
+    <div class="cg-card right">
+      <h4>Business Markets (B2B)</h4>
+      <ul><li>Fewer, larger buyers</li><li>High value per transaction</li><li>Rational, specification-driven</li><li>Buying centre (DMU) decides</li><li>Personal selling dominates</li><li>Long sales cycle</li></ul>
+      <p style="margin-top:8px;font-size:.82rem;"><em>Example: TCS selling IT services &mdash; multi-crore, multi-year contracts</em></p>
+    </div>
+  </div>
+  <h3>Key B2B Characteristics</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Derived demand</strong> &mdash; demand for steel depends on demand for cars</li>
+    <li><strong>Inelastic demand</strong> &mdash; small price changes don't affect B2B volumes much</li>
+    <li><strong>Multi-person buying centre</strong> &mdash; Initiator, Influencer, Decider, Buyer, User, Gatekeeper</li>
+    <li><strong>Close relationships</strong> &mdash; Maruti and tier-1 vendors work closely for years</li>
+  </ul>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>When your college buys 500 laptops for a lab, it is B2B. IT head (influencer) recommends Dell, admin (buyer) issues PO, director (decider) approves, students (users) use them. No single person decides &mdash; unlike buying your own laptop (B2C).</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Marketing's Role Within the Firm <span class="difficulty beginner">Beginner</span></h2>
+  <p>Marketing is the <strong>revenue engine</strong> connecting with every function:</p>
+  <div class="tree">
+    <ul><li>
+      <span class="node-label" style="background:#1565c0;color:#fff;border-color:#1565c0;">MARKETING</span>
+      <span class="node-desc">The customer voice inside the organisation</span>
+      <ul>
+        <li><span class="node-label">Finance</span><span class="node-desc">Revenue forecasts, justifies spend via ROMI</span></li>
+        <li><span class="node-label">Operations</span><span class="node-desc">Demand forecasting for right inventory</span></li>
+        <li><span class="node-label">R&amp;D / Product</span><span class="node-desc">Market insights feed new product development</span></li>
+        <li><span class="node-label">Sales</span><span class="node-desc">Marketing generates leads, sales converts</span></li>
+        <li><span class="node-label">HR</span><span class="node-desc">Employer branding, internal marketing culture</span></li>
+      </ul>
+    </li></ul>
+  </div>
+  <div class="exam-tip"><strong>Exam Tip:</strong> A common question: "Explain marketing's cross-functional role." Structure around 3-4 functions with one concrete example per function. Avoid vague statements.</div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 1 &mdash; Key Takeaways Checklist</h3>
+  <ul>
+    <li><strong>Marketing</strong> = creating, communicating, delivering, and exchanging value (AMA definition)</li>
+    <li><strong>Need &rarr; Want &rarr; Demand</strong> is the foundational chain</li>
+    <li><strong>Value</strong> = perceived benefits minus perceived costs</li>
+    <li><strong>Marketing Mix</strong> = 4Ps (Product, Price, Place, Promotion); services add People, Process, Physical Evidence = 7Ps</li>
+    <li><strong>Orientations evolved</strong>: Production &rarr; Product &rarr; Selling &rarr; Marketing &rarr; Holistic</li>
+    <li><strong>Holistic marketing</strong> = Relationship + Integrated + Internal + Performance</li>
+    <li><strong>New realities</strong>: technology, globalisation, consumer empowerment, disintermediation</li>
+    <li><strong>B2C</strong> = many buyers, emotional; <strong>B2B</strong> = fewer buyers, rational, buying centres</li>
+    <li>Marketing is the <strong>cross-functional revenue engine</strong> and brand custodian</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Marketing Management (MBACCZG503) &bull; Session 1 of 16<br>
+  Source: Kotler 16e Ch. 1 &amp; 2 &bull; HST1 Video &bull; Handout-aligned
+</div>
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

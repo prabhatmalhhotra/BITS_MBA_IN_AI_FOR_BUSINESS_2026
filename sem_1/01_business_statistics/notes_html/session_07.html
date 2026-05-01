@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 7 — Sampling Distributions | Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; } .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; } .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; } .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 380px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; } .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; } .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; } .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; } .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; } .difficulty.intermediate { background: #fff9c4; color: #f57f17; } .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+
+  /* ── Progress Bar ── */
+  .progress-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0 10px;
+    position: relative;
+  }
+  .progress-track::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: #e0e0e0;
+    z-index: 0;
+  }
+  .progress-track .pt-step {
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+    cursor: pointer;
+    transition: transform .2s;
+  }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin: 0 auto 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+    <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 7 of 16</div>
+  <h1>Sampling Distributions</h1>
+  <p class="subtitle">The bridge between a single sample and the population. The Central Limit Theorem is arguably the most important result in all of statistics.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 7 (Levine)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~45 min read</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="progress-track" id="auto-stepper"></div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Swiggy: Can we trust the average delivery time from a sample of 100 orders?</h3>
+  <p>Swiggy wants to report average delivery time in their quarterly earnings. They cannot measure all 3 crore monthly orders, so they sample 100. The sample mean is 32 minutes. But another sample of 100 might give 31 or 33 minutes. <em>How reliable is any single sample mean?</em></p>
+  <div class="rw-takeaway">
+    The sampling distribution tells you how much your sample statistic will vary from sample to sample. The CLT guarantees this distribution is approximately normal, even if individual delivery times are wildly skewed.
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> What Is a Sampling Distribution? <span class="difficulty beginner">Beginner</span></h2>
+  <p>A <span class="key-term">Sampling Distribution</span> is the probability distribution of a statistic (like the sample mean) computed from repeated random samples of size n from the same population.</p>
+
+  <div class="flow-vertical">
+    <div class="fv-box"><div class="fv-title">Population (&mu;, &sigma;)</div><div class="fv-desc">True but unknown parameters</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Take many samples of size n</div><div class="fv-desc">Sample 1, Sample 2, Sample 3, ...</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Compute statistic from each</div><div class="fv-desc">X&#772;1, X&#772;2, X&#772;3, ...</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#c8e6c9;border-color:#43a047;"><div class="fv-title" style="color:#1b5e20;">Sampling distribution of X&#772;</div><div class="fv-desc" style="color:#2e7d32;">Distribution of all possible sample means</div></div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>Imagine 50 students in your BITS batch each independently survey 30 Swiggy orders and compute the average delivery time. You will get 50 different means. If you plot those 50 means on a histogram, that histogram approximates the sampling distribution. It will be roughly bell-shaped and centred around the true population mean.</p>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Sampling Distribution of the Mean <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="formula-box">
+    E(X&#772;) = &mu; &nbsp;&nbsp; (unbiased: the average of all sample means equals the population mean)<br><br>
+    &sigma;(X&#772;) = &sigma; / &radic;n &nbsp;&nbsp; (Standard Error of the Mean)
+  </div>
+
+  <p>The <span class="key-term">Standard Error</span> decreases as n increases. Larger samples give more precise estimates &mdash; but precision improves with &radic;n, not n. To halve the standard error, you need to quadruple the sample size.</p>
+
+  <h3>The Central Limit Theorem (CLT)</h3>
+  <div class="formula-box">
+    For n &ge; 30 (or any n if population is normal):<br><br>
+    X&#772; ~ N(&mu;, &sigma;&sup2;/n) &nbsp; approximately<br><br>
+    Regardless of the shape of the population distribution!
+  </div>
+
+  <p>This is revolutionary. Even if delivery times follow a crazy right-skewed distribution, the <strong>average</strong> of 30+ delivery times will be approximately normally distributed. This justifies using Z-tests and t-tests.</p>
+
+  <div class="block-diagram">
+    <div class="block" style="border-color:#ef5350;background:#ffebee;">
+      <div class="block-title" style="color:#c62828;">Population</div>
+      <div class="block-desc">Any shape (skewed, bimodal, uniform...)</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight">
+      <div class="block-title">Sample means (n &ge; 30)</div>
+      <div class="block-desc">CLT kicks in</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block" style="border-color:#43a047;background:#e8f5e9;">
+      <div class="block-title" style="color:#1b5e20;">Approximately Normal</div>
+      <div class="block-desc">Centred at &mu;, spread &sigma;/&radic;n</div>
+    </div>
+  </div>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024)</div>
+    <p><strong>Election exit polls in India (2024 Lok Sabha):</strong> Agencies like Axis My India and C-Voter sampled ~50,000 voters each across 543 constituencies. The CLT is why they could predict national vote share within &plusmn;2% despite India's enormous diversity. Each constituency sample mean (vote share) was approximately normal, enabling reliable confidence intervals.</p>
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Sampling Distribution of the Proportion <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="formula-box">
+    E(p&#770;) = &pi; &nbsp;&nbsp; (population proportion)<br><br>
+    &sigma;(p&#770;) = &radic;[&pi;(1-&pi;)/n]<br><br>
+    Approximately normal when n&pi; &ge; 5 AND n(1-&pi;) &ge; 5
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>You survey 200 people about whether they prefer PhonePe over Google Pay. If the true proportion is &pi; = 0.60, then the standard error of p&#770; is &radic;(0.60 &times; 0.40 / 200) = 0.0346. By CLT, your sample proportion will be approximately N(0.60, 0.0346&sup2;). There is a 95% chance your sample proportion falls between 0.60 &plusmn; 1.96(0.0346) = 0.53 to 0.67.</p>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Finite Population Correction <span class="difficulty advanced">Advanced</span></h2>
+  <div class="formula-box">
+    FPC = &radic;[(N - n) / (N - 1)]<br><br>
+    Apply when n/N > 5% (sampling more than 5% of the population)<br><br>
+    Adjusted SE = (&sigma; / &radic;n) &times; FPC
+  </div>
+  <p>When you sample a large fraction of the population, there is less variability than infinite-population formulas suggest. The FPC shrinks the standard error.</p>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> The CLT statement ("for n &ge; 30, sampling distribution of mean is approximately normal regardless of population shape") is a frequent short-answer question. Also, be ready to compute standard error and use it in Z-score problems: Z = (X&#772; - &mu;) / (&sigma;/&radic;n). Remember to divide &sigma; by &radic;n &mdash; a very common mistake is forgetting the &radic;n.
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 7 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Sampling distribution</strong> = distribution of a statistic across all possible samples of size n</li>
+    <li><strong>E(X&#772;) = &mu;</strong> (unbiased); <strong>&sigma;(X&#772;) = &sigma;/&radic;n</strong> (standard error decreases with &radic;n)</li>
+    <li><strong>CLT</strong>: for n &ge; 30, X&#772; is approximately normal regardless of population shape</li>
+    <li>To halve SE, quadruple n (precision improves with &radic;n, not n)</li>
+    <li><strong>Proportion</strong>: &sigma;(p&#770;) = &radic;[&pi;(1-&pi;)/n]; normal when n&pi; &ge; 5 and n(1-&pi;) &ge; 5</li>
+    <li><strong>FPC</strong> = &radic;[(N-n)/(N-1)]; apply when sampling &gt; 5% of population</li>
+    <li>The CLT is the foundation for everything in Sessions 8-11 (CI, hypothesis tests, ANOVA)</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 7 of 16<br>
+  Source: Levine T1 Ch. 7 &bull; Handout-aligned &bull; Built for zero-to-advanced understanding
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

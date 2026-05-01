@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 14 &mdash; Recruitment &amp; Selection | Managing People &amp; Organizations</title>
+<style>
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '\2713  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managing People &amp; Organizations</span></a>
+  <div class="nav-links"><a href="session_01.html">S1</a><a href="session_02.html">S2</a><a href="session_03.html">S3</a><a href="session_04.html">S4</a><a href="session_05.html">S5</a><a href="session_06.html">S6</a><a href="session_07.html">S7</a><a href="session_08.html">S8</a><a href="session_09.html">S9</a><a href="session_10.html">S10</a><a href="session_11.html">S11</a><a href="session_12.html">S12</a><a href="session_13.html">S13</a><a href="session_14.html">S14</a><a href="session_15.html">S15</a><a href="session_16.html">S16</a><a href="#">Comprehensive <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Open Book</span></a></div>
+</div>
+<div class="hero">
+  <div class="session-tag">Session 14 of 16</div>
+  <h1>Recruitment &amp; Selection</h1>
+  <p class="subtitle">How do you attract the right talent and choose the best fit? This session covers recruitment sources, selection methods, validity, and common interview biases.</p>
+  <div class="meta-pills"><span class="pill">T2 Ch. 6-7 (Aswathappa)</span><span class="pill">Comprehensive Exam</span><span class="pill">R2: Dessler &amp; Varkkey</span></div>
+</div>
+<div class="container">
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+</div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>TCS receives 4 million applications for 40,000 positions. How do you find the right 1%?</h3>
+  <p>Every year, TCS runs one of the world's largest recruitment drives. With a 1:100 application-to-hire ratio, the challenge isn't attracting candidates &mdash; it's efficiently selecting the right ones without bias, while ensuring legal compliance across Indian labour laws.</p>
+  <div class="rw-takeaway">Session 14 covers the science and practice of recruitment (attracting the right people) and selection (choosing the best fit) &mdash; the most consequential HR decisions an organisation makes.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Recruitment &mdash; Sources &amp; Process <span class="difficulty beginner">Beginner</span></h2>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Internal Sources</h4>
+      <ul><li>Promotion, Transfer</li><li>Employee referrals</li><li>Internal Job Posting (IJP)</li><li>Re-hires</li></ul>
+      <p style="font-size:.82rem;margin-top:6px;"><em>Pros: Faster, cheaper, known quantity. Cons: Limited talent pool, inbreeding.</em></p>
+    </div>
+    <div class="cg-card right">
+      <h4>External Sources</h4>
+      <ul><li>Campus recruitment</li><li>Job portals (Naukri, LinkedIn)</li><li>Consultants, Agencies</li><li>Walk-ins, Job fairs</li><li>Social media, GitHub</li></ul>
+      <p style="font-size:.82rem;margin-top:6px;"><em>Pros: Fresh ideas, diversity. Cons: Expensive, longer onboarding.</em></p>
+    </div>
+  </div>
+
+  <h3>Recruitment Metrics</h3>
+  <table class="styled-table">
+    <thead><tr><th>Metric</th><th>What It Measures</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Yield ratio</strong></td><td>% of applicants who move to next stage</td></tr>
+      <tr><td><strong>Cost-per-hire</strong></td><td>Total recruitment cost / hires made</td></tr>
+      <tr><td><strong>Time-to-hire</strong></td><td>Days from job posting to offer acceptance</td></tr>
+      <tr><td><strong>Quality-of-hire</strong></td><td>Performance rating of new hires after 1 year</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:10px;"><strong>Realistic Job Preview (RJP):</strong> Share both pros AND cons of the job upfront. Reduces early turnover because expectations match reality.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Selection Process <span class="difficulty intermediate">Intermediate</span></h2>
+  <div class="flow-vertical" style="max-width:380px;">
+    <div class="fv-box"><div class="fv-title">1. Application Screening</div><div class="fv-desc">Resume filter, ATS keywords</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">2. Selection Tests</div><div class="fv-desc">Cognitive, personality, aptitude, work-sample</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">3. Interview</div><div class="fv-desc">Structured/behavioural (STAR), panel, situational</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">4. Reference &amp; Background Check</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">5. Medical Examination</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#c8e6c9;border-color:#43a047;"><div class="fv-title" style="color:#1b5e20;">6. Final Selection &amp; Offer</div></div>
+  </div>
+
+  <h3>Selection Tests &mdash; Validity Comparison</h3>
+  <table class="styled-table">
+    <thead><tr><th>Method</th><th>Validity</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>GMA (Cognitive Ability)</strong></td><td>Highest</td><td>Best single predictor of job performance across ALL roles</td></tr>
+      <tr><td><strong>Work Sample Tests</strong></td><td>Very High</td><td>E.g., coding test for developers; presentation for consultants</td></tr>
+      <tr><td><strong>Assessment Centres</strong></td><td>High</td><td>Multiple methods + multiple assessors; used for managerial selection</td></tr>
+      <tr><td><strong>Structured Interview</strong></td><td>High</td><td>Same questions, scoring rubric, behavioural/STAR format</td></tr>
+      <tr><td><strong>Personality Tests</strong></td><td>Moderate</td><td>Big Five; Conscientiousness best for performance</td></tr>
+      <tr><td><strong>Unstructured Interview</strong></td><td>Low</td><td>Subjective, prone to biases, yet most commonly used</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Common Interview Errors</h3>
+  <p>First impression, Halo/Horns, Contrast effect, Similar-to-me bias, Leniency/Strictness.</p>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024-25)</div>
+    <p><strong>AI in recruitment at Indian companies:</strong> Companies like HCL and Wipro use AI for resume screening, video interview analysis (body language, speech patterns), and chatbot-based initial screening. While efficient, this raises concerns about <strong>algorithmic bias</strong> &mdash; Amazon scrapped an AI hiring tool that discriminated against women. The human element in selection remains critical.</p>
+  </div>
+  <div class="exam-tip"><strong>Exam Tip:</strong> Know the hierarchy of validity: GMA > Work sample > Assessment centre > Structured interview > Personality > Unstructured interview. Also know reliability vs validity distinction.</div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 14 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Recruitment</strong>: Internal (promotion, referral, IJP) vs External (campus, portals, agencies)</li>
+    <li><strong>Metrics</strong>: Yield ratio, Cost-per-hire, Time-to-hire, Quality-of-hire</li>
+    <li><strong>RJP</strong>: Realistic job preview reduces early turnover</li>
+    <li><strong>Selection process</strong>: 6 steps from screening to offer</li>
+    <li><strong>GMA tests</strong> = highest validity predictor of job performance</li>
+    <li><strong>Structured interviews</strong> (STAR) >> Unstructured interviews in reliability</li>
+    <li><strong>Interview errors</strong>: First impression, halo, contrast, similar-to-me</li>
+    <li>Indian context: Article 16 (equal opportunity), PwD Act, POSH during selection</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Managing People &amp; Organizations (MBACCZG511) &bull; Session 14 of 16<br>
+  Source: T2 Ch. 6-7 (Aswathappa), R2 (Dessler) &bull; Handout-aligned
+</div>
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

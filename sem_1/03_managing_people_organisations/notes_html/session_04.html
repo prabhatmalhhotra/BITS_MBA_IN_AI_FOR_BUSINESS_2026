@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 4 &mdash; Personality and Values | Managing People &amp; Organizations</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '\2713  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managing People &amp; Organizations</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a><a href="session_02.html">S2</a><a href="session_03.html">S3</a><a href="session_04.html">S4</a><a href="session_05.html">S5</a><a href="session_06.html">S6</a><a href="session_07.html">S7</a><a href="session_08.html">S8</a><a href="session_09.html">S9</a><a href="session_10.html">S10</a><a href="session_11.html">S11</a><a href="session_12.html">S12</a><a href="session_13.html">S13</a><a href="session_14.html">S14</a><a href="session_15.html">S15</a><a href="session_16.html">S16</a><a href="#">Mid-Sem <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span></a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 4 of 16</div>
+  <h1>Personality and Values</h1>
+  <p class="subtitle">What makes each person unique? How do personality traits predict job success? How do values shape workplace behaviour? This session decodes the individual.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Ch. 4 (Robbins)</span><span class="pill">Mid-Sem Syllabus</span><span class="pill">~45 min read</span>
+  </div>
+</div>
+
+<div class="container">
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+</div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>A startup founder hires two brilliant engineers &mdash; one thrives, one quits in 3 months. Same role, same pay. What went wrong?</h3>
+  <p>A Bangalore startup hired two IIT graduates for identical roles. Engineer A loved the chaos, took initiative, and pushed back on the founder's ideas. Engineer B wanted clear instructions, predictable schedules, and hated ambiguity. Within 3 months, B quit saying "this isn't for me."</p>
+  <div class="rw-takeaway">The difference wasn't skill &mdash; it was <strong>personality</strong>. Engineer A scored high on Openness and low on Neuroticism (Big Five). Engineer B was the opposite. Understanding personality helps predict person-job fit and reduce costly mis-hires.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> What is Personality? <span class="difficulty beginner">Beginner</span></h2>
+  <p><span class="key-term">Personality</span> is the sum total of ways an individual reacts to and interacts with others. It's the consistent pattern of thoughts, feelings, and behaviours that makes you <em>you</em>.</p>
+  <h3>What Determines Personality?</h3>
+  <div class="block-diagram">
+    <div class="block" style="background:#e8f5e9;border-color:#66bb6a;"><div class="block-title" style="color:#2e7d32;">Heredity</div><div class="block-desc">Genes, temperament, biology (~50%)</div></div>
+    <div class="arrow">+</div>
+    <div class="block" style="background:#e3f2fd;border-color:#42a5f5;"><div class="block-title" style="color:#1565c0;">Environment</div><div class="block-desc">Family, culture, education, experiences</div></div>
+    <div class="arrow">+</div>
+    <div class="block" style="background:#fff3e0;border-color:#ffa726;"><div class="block-title" style="color:#e65100;">Situation</div><div class="block-desc">Context triggers different traits</div></div>
+    <div class="arrow">=</div>
+    <div class="block highlight"><div class="block-title">Personality</div><div class="block-desc">Your unique pattern</div></div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> The Big Five (OCEAN) <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>The most scientifically validated personality framework. Mnemonic: <strong>OCEAN</strong></p>
+  <table class="styled-table">
+    <thead><tr><th>Trait</th><th>High Score Means...</th><th>Low Score Means...</th><th>Job Relevance</th></tr></thead>
+    <tbody>
+      <tr><td><strong>O</strong>penness</td><td>Creative, curious, adventurous</td><td>Practical, conventional, routine-loving</td><td>Innovation roles, R&amp;D, design</td></tr>
+      <tr><td><strong>C</strong>onscientiousness</td><td>Organised, dependable, disciplined</td><td>Careless, impulsive, flexible</td><td><strong>Best predictor of job performance across ALL roles</strong></td></tr>
+      <tr><td><strong>E</strong>xtraversion</td><td>Outgoing, energetic, talkative</td><td>Reserved, quiet, independent</td><td>Sales, leadership, customer-facing roles</td></tr>
+      <tr><td><strong>A</strong>greeableness</td><td>Cooperative, trusting, helpful</td><td>Competitive, sceptical, challenging</td><td>Teamwork, customer service, nursing</td></tr>
+      <tr><td><strong>N</strong>euroticism</td><td>Anxious, moody, emotionally reactive</td><td>Calm, stable, resilient</td><td>Low N = better stress management</td></tr>
+    </tbody>
+  </table>
+  <div class="exam-tip"><strong>Exam Tip:</strong> <strong>Conscientiousness is the #1 predictor of job performance</strong> across roles &mdash; this is one of the most tested facts in OB. Extraversion predicts leadership emergence. Know these connections.</div>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>Think of your friend group: The one who always plans trips in advance = high <strong>Conscientiousness</strong>. The one who talks to strangers at parties = high <strong>Extraversion</strong>. The one who watches foreign films and reads philosophy = high <strong>Openness</strong>. The one who avoids arguments = high <strong>Agreeableness</strong>. The one who panics before every exam = high <strong>Neuroticism</strong>.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> MBTI &amp; Other Frameworks <span class="difficulty intermediate">Intermediate</span></h2>
+  <h3>MBTI (Myers-Briggs Type Indicator)</h3>
+  <p>16 personality types from 4 dichotomies:</p>
+  <div class="block-diagram" style="gap:10px;">
+    <div class="block"><div class="block-title">E / I</div><div class="block-desc">Extraversion vs Introversion</div></div>
+    <div class="block"><div class="block-title">S / N</div><div class="block-desc">Sensing vs Intuition</div></div>
+    <div class="block"><div class="block-title">T / F</div><div class="block-desc">Thinking vs Feeling</div></div>
+    <div class="block"><div class="block-title">J / P</div><div class="block-desc">Judging vs Perceiving</div></div>
+  </div>
+  <p style="margin-top:10px;"><strong>Popular but limited validity</strong> for job prediction. Good for self-awareness and team discussions; poor for hiring decisions.</p>
+
+  <h3>Dark Triad</h3>
+  <table class="styled-table">
+    <thead><tr><th>Trait</th><th>Definition</th><th>Workplace Impact</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Machiavellianism</strong></td><td>Manipulative, strategic, ends-justify-means</td><td>Effective in politics-heavy organisations; unethical behaviour</td></tr>
+      <tr><td><strong>Narcissism</strong></td><td>Grandiose self-image, need for admiration</td><td>Charismatic but arrogant; takes credit, blames others</td></tr>
+      <tr><td><strong>Psychopathy</strong></td><td>Lack of empathy, impulsive, antisocial</td><td>Risk-taking; can be charming superficially</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Other Important Traits</h3>
+  <table class="styled-table">
+    <thead><tr><th>Trait/Concept</th><th>What It Means</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Core Self-Evaluation (CSE)</strong></td><td>Combination of self-esteem + self-efficacy + locus of control + emotional stability</td></tr>
+      <tr><td><strong>Self-monitoring</strong></td><td>Adjusting behaviour to fit situations (high = social chameleon)</td></tr>
+      <tr><td><strong>Proactive personality</strong></td><td>Takes initiative, creates change rather than waiting</td></tr>
+      <tr><td><strong>Type A personality</strong></td><td>Competitive, time-urgent, aggressive &mdash; vs Type B (relaxed)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Person-Job &amp; Person-Organisation Fit <span class="difficulty intermediate">Intermediate</span></h2>
+  <h3>Holland's RIASEC Model (Person-Job Fit)</h3>
+  <p>John Holland proposed that job satisfaction and turnover depend on matching personality to occupation:</p>
+  <table class="styled-table">
+    <thead><tr><th>Type</th><th>Personality</th><th>Best-Fit Jobs</th></tr></thead>
+    <tbody>
+      <tr><td><strong>R</strong>ealistic</td><td>Practical, hands-on</td><td>Engineer, mechanic, farmer</td></tr>
+      <tr><td><strong>I</strong>nvestigative</td><td>Analytical, intellectual</td><td>Scientist, researcher, doctor</td></tr>
+      <tr><td><strong>A</strong>rtistic</td><td>Creative, expressive</td><td>Writer, designer, musician</td></tr>
+      <tr><td><strong>S</strong>ocial</td><td>Helping, teaching</td><td>Teacher, counsellor, nurse</td></tr>
+      <tr><td><strong>E</strong>nterprising</td><td>Ambitious, competitive</td><td>Manager, lawyer, salesperson</td></tr>
+      <tr><td><strong>C</strong>onventional</td><td>Organised, detail-oriented</td><td>Accountant, analyst, admin</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:10px;"><strong>Person-Organisation Fit:</strong> Beyond the job, does the person's <em>values</em> match the organisation's culture? A creative rebel won't thrive in a rigid bureaucracy, even if the technical job fits.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Values <span class="difficulty intermediate">Intermediate</span></h2>
+  <p><span class="key-term">Values</span> are basic convictions about what is important &mdash; they guide attitudes and behaviour.</p>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Terminal Values (Rokeach)</h4>
+      <p>Desired <strong>end-states</strong> of existence</p>
+      <ul><li>Happiness, Freedom, Self-respect</li><li>Family security, Wisdom</li><li>A comfortable life, Recognition</li></ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Instrumental Values (Rokeach)</h4>
+      <p>Preferred <strong>modes of behaviour</strong></p>
+      <ul><li>Honesty, Ambition, Courage</li><li>Responsibility, Independence</li><li>Helpfulness, Self-control</li></ul>
+    </div>
+  </div>
+
+  <h3>Hofstede's Cultural Dimensions</h3>
+  <table class="styled-table">
+    <thead><tr><th>Dimension</th><th>What It Measures</th><th>India's Position</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Power Distance</strong></td><td>Acceptance of unequal power distribution</td><td>HIGH (77) &mdash; hierarchical culture</td></tr>
+      <tr><td><strong>Individualism vs Collectivism</strong></td><td>Self vs group orientation</td><td>LOW (48) &mdash; collectivist, family/group-oriented</td></tr>
+      <tr><td><strong>Masculinity vs Femininity</strong></td><td>Achievement vs caring orientation</td><td>HIGH (56) &mdash; competitive, success-driven</td></tr>
+      <tr><td><strong>Uncertainty Avoidance</strong></td><td>Tolerance for ambiguity</td><td>LOW (40) &mdash; relatively comfortable with uncertainty</td></tr>
+      <tr><td><strong>Long-term Orientation</strong></td><td>Future vs present focus</td><td>HIGH (51) &mdash; pragmatic, future-oriented</td></tr>
+      <tr><td><strong>Indulgence</strong></td><td>Gratification of desires</td><td>LOW (26) &mdash; restrained culture</td></tr>
+    </tbody>
+  </table>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024-25)</div>
+    <p><strong>Gen Z values vs Boomer values:</strong> Gen Z employees in Indian IT firms prioritise work-life balance, mental health, and purpose over salary and job security. This generational values gap is causing friction &mdash; senior managers expect long hours as "dedication" while Gen Z sees it as "toxic culture." Understanding Hofstede's Indulgence dimension helps explain this shift.</p>
+  </div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 4 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Personality</strong> = heredity + environment + situation</li>
+    <li><strong>Big Five (OCEAN)</strong>: Openness, Conscientiousness (best job predictor), Extraversion, Agreeableness, Neuroticism</li>
+    <li><strong>MBTI</strong>: Popular but low validity; 16 types from 4 dichotomies</li>
+    <li><strong>Dark Triad</strong>: Machiavellianism, Narcissism, Psychopathy</li>
+    <li><strong>CSE</strong>: Self-esteem + self-efficacy + locus of control + emotional stability</li>
+    <li><strong>Holland's RIASEC</strong>: Match personality to job type for satisfaction</li>
+    <li><strong>Person-Org Fit</strong>: Values alignment with culture matters as much as skills</li>
+    <li><strong>Hofstede's 6 dimensions</strong>: Power Distance, Individualism, Masculinity, Uncertainty Avoidance, Long-term Orientation, Indulgence</li>
+  </ul>
+</div>
+
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Managing People &amp; Organizations (MBACCZG511) &bull; Session 4 of 16<br>
+  Source: T1 Ch. 4 (Robbins) &bull; Handout-aligned
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

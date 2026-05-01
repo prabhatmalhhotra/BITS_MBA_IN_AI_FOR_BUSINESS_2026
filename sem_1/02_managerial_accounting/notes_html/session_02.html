@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 — GAAP & Accounting Principles | Managerial Accounting</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #1a0a2e, #2d1b69, #44318d); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #ffd54f; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; flex-wrap: wrap; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #ffd54f; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #1a0a2e, #2d1b69, #44318d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,213,79,.15); color: #ffd54f; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #1a0a2e; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #44318d; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 380px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #44318d; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managerial Accounting</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 2 of 16</div>
+  <h1>GAAP &amp; Accounting Principles</h1>
+  <p class="subtitle">Every financial statement follows a philosophy &mdash; a set of rules that determine how transactions are recorded. Master these rules and you will never be fooled by a company's numbers.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 2 (Maheswari)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~45 min read</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step done"><div class="pt-dot">1</div></div>
+  <div class="pt-step active"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+</div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Satyam Computers: How accounting principles failed &mdash; and why they matter</h3>
+  <p>In 2009, Satyam's chairman Ramalinga Raju confessed to inflating cash balances by &#8377;5,040 crore and overstating revenues for years. The fraud exploited gaps in how accounting rules were applied:</p>
+  <ul style="margin:12px 0; padding-left:22px; color:#4e342e; font-size:.92rem;">
+    <li>The <strong>entity concept</strong> was violated &mdash; personal expenses were charged to the company.</li>
+    <li><strong>Revenue recognition</strong> was manipulated &mdash; fake invoices created sales that never happened.</li>
+    <li>The <strong>conservatism convention</strong> was ignored &mdash; known losses were hidden.</li>
+    <li><strong>Full disclosure</strong> failed &mdash; material information was suppressed from auditors.</li>
+  </ul>
+  <div class="rw-takeaway">Accounting principles are not abstract philosophy. They are the guardrails that prevent fraud, ensure comparability, and protect investors. Understanding them helps you <strong>spot red flags</strong> before they become headlines.</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Accounting Concepts (The "Why") <span class="difficulty beginner">Beginner</span></h2>
+  <p>Concepts are the fundamental <strong>assumptions</strong> on which the entire accounting framework rests. There are 9 key concepts:</p>
+  <table class="styled-table">
+    <thead><tr><th>#</th><th>Concept</th><th>What It Means</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Business Entity</strong></td><td>The business is separate from its owner. Owner's personal transactions are NOT the business's transactions.</td><td>Mukesh Ambani buys a painting for &#8377;50 crore &mdash; it does NOT go on Reliance's books.</td></tr>
+      <tr><td>2</td><td><strong>Money Measurement</strong></td><td>Only transactions that can be expressed in money are recorded.</td><td>A company's amazing culture or brilliant CEO cannot be recorded as an asset.</td></tr>
+      <tr><td>3</td><td><strong>Going Concern</strong></td><td>The business will continue to operate indefinitely (not shutting down tomorrow).</td><td>This justifies recording assets at historical cost, not liquidation (fire-sale) value.</td></tr>
+      <tr><td>4</td><td><strong>Cost (Historical)</strong></td><td>Assets are recorded at acquisition cost, not current market value.</td><td>Tata bought Jaguar Land Rover for $2.3B in 2008 &mdash; on B/S at cost, not today's value.</td></tr>
+      <tr><td>5</td><td><strong>Dual Aspect</strong></td><td>Every transaction has two effects: a debit and a credit. Foundation of double-entry.</td><td>Buy goods for &#8377;10,000 cash: Stock +&#8377;10K (Dr), Cash -&#8377;10K (Cr).</td></tr>
+      <tr><td>6</td><td><strong>Accounting Period</strong></td><td>Financial life is divided into regular intervals (usually April&ndash;March in India).</td><td>Even if a building lasts 50 years, we report its impact year by year via depreciation.</td></tr>
+      <tr><td>7</td><td><strong>Realisation</strong></td><td>Revenue is recognised when earned (goods delivered/service rendered), not when cash received.</td><td>Infosys bills a client &#8377;5 crore for consulting done in March &mdash; recognised in March, even if paid in May.</td></tr>
+      <tr><td>8</td><td><strong>Matching</strong></td><td>Expenses must be matched with the revenue they helped generate in the same period.</td><td>If Maruti sells a car in March, the steel and labour cost of that car must also hit March's P&amp;L.</td></tr>
+      <tr><td>9</td><td><strong>Accrual</strong></td><td>Record events when they occur, not when cash flows.</td><td>Rent due for March but paid in April &mdash; record the expense in March.</td></tr>
+    </tbody>
+  </table>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Entity Concept:</strong> You and your wallet are different entities. If you lend &#8377;5,000 to your friend from personal savings, your freelance "business" should NOT show this as an expense.<br><br><strong>Matching Concept:</strong> You spend &#8377;2,000 on ingredients today to cater a party tomorrow for &#8377;8,000. The &#8377;2,000 expense should be matched against the &#8377;8,000 revenue in the same period.</p>
+  </div>
+  <div class="formula-box">The Accounting Equation (from Dual Aspect): Assets = Liabilities + Equity</div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Accounting Conventions (The "How") <span class="difficulty beginner">Beginner</span></h2>
+  <p>While concepts are the assumptions, conventions are the <strong>practical customs</strong> that guide application:</p>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Consistency</h4>
+      <p>Use the same accounting methods across periods.</p>
+      <ul>
+        <li>If you use Straight-Line Depreciation in Year 1, do not switch to WDV in Year 2 without disclosure</li>
+        <li>Enables meaningful trend analysis</li>
+        <li>Changes must be disclosed in notes</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Conservatism (Prudence)</h4>
+      <p>Anticipate all possible losses, never anticipate gains.</p>
+      <ul>
+        <li>Write down inventory if NRV &lt; cost</li>
+        <li>Do not record expected profit until actually earned</li>
+        <li>Provision for doubtful debts even if not yet bad</li>
+      </ul>
+    </div>
+  </div>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Full Disclosure</h4>
+      <p>All material information must be disclosed in financial statements or notes.</p>
+      <ul>
+        <li>Contingent liabilities (lawsuits pending)</li>
+        <li>Related-party transactions</li>
+        <li>Change in accounting policy</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Materiality</h4>
+      <p>Only significant items need separate treatment.</p>
+      <ul>
+        <li>A &#8377;500 stapler for TCS (&#8377;2.4L crore revenue) &mdash; expense immediately, do not depreciate!</li>
+        <li>But &#8377;500 crore for TCS &mdash; definitely material, needs detailed disclosure</li>
+      </ul>
+    </div>
+  </div>
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2023-25)</div>
+    <p><strong>Adani Group (2023):</strong> When the Hindenburg report alleged accounting irregularities, analysts scrutinised whether Adani had violated the <strong>full disclosure</strong> convention by not adequately disclosing related-party transactions through offshore entities. The <strong>conservatism</strong> principle was also questioned &mdash; were asset valuations overly aggressive? The stock fell 60%+ in days. This shows how accounting conventions are not just theory &mdash; they are what investors trust and markets price.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Why Principles Matter: Bias &amp; Manipulation <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>Accounting rules permit <strong>judgement</strong> in many areas. This creates room for management to introduce bias:</p>
+  <table class="styled-table">
+    <thead><tr><th>Red Flag</th><th>Which Principle is Bent?</th><th>What Management Does</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Aggressive Revenue Recognition</strong></td><td>Realisation, Matching</td><td>Record revenue before delivery; channel stuffing at quarter-end</td></tr>
+      <tr><td><strong>Capitalising Operating Costs</strong></td><td>Matching, Cost</td><td>Record repairs as assets instead of expenses &mdash; inflates profit</td></tr>
+      <tr><td><strong>Off-Balance-Sheet Financing</strong></td><td>Full Disclosure, Entity</td><td>Use SPVs to hide debt from the balance sheet</td></tr>
+      <tr><td><strong>Cookie Jar Reserves</strong></td><td>Conservatism (abused)</td><td>Over-provision in good years, release provisions in bad years</td></tr>
+      <tr><td><strong>Frequent "One-Time" Charges</strong></td><td>Matching, Materiality</td><td>Classify recurring costs as "exceptional" to keep operating profit clean</td></tr>
+    </tbody>
+  </table>
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> A typical 5-10 mark question will describe a business scenario and ask you to identify which accounting concepts and conventions are being applied (or violated). Practice by reading Indian business news and mapping events to principles.
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Concepts vs Conventions &mdash; Summary Tree <span class="difficulty beginner">Beginner</span></h2>
+  <div class="tree">
+    <ul>
+      <li>
+        <span class="node-label" style="background:#44318d;color:#fff;border-color:#44318d;">GAAP</span>
+        <span class="node-desc">Generally Accepted Accounting Principles</span>
+        <ul>
+          <li>
+            <span class="node-label">Concepts (The "Why")</span>
+            <span class="node-desc">Fundamental assumptions</span>
+            <ul>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Business Entity</span><span class="node-desc">Business &#8800; Owner</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Money Measurement</span><span class="node-desc">Only monetary items recorded</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Going Concern</span><span class="node-desc">Business continues indefinitely</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Historical Cost</span><span class="node-desc">Record at acquisition cost</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Dual Aspect</span><span class="node-desc">Every Dr has a Cr</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Accounting Period</span><span class="node-desc">Report at regular intervals</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Realisation</span><span class="node-desc">Revenue when earned</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Matching</span><span class="node-desc">Match expense to revenue</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Accrual</span><span class="node-desc">Record when event occurs</span></li>
+            </ul>
+          </li>
+          <li>
+            <span class="node-label">Conventions (The "How")</span>
+            <span class="node-desc">Practical customs</span>
+            <ul>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Consistency</span><span class="node-desc">Same methods across periods</span></li>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Conservatism</span><span class="node-desc">Anticipate losses, not gains</span></li>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Full Disclosure</span><span class="node-desc">All material info in notes</span></li>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Materiality</span><span class="node-desc">Only significant items need separate treatment</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Conservatism at home:</strong> Your uncle promises to give you &#8377;1 lakh as a gift (not certain). Your employer says your salary will be &#8377;80,000 this month (certain). Under conservatism, you plan your budget assuming only the &#8377;80K. You do not count the uncle's promise until the money is actually in your account.</p>
+  </div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 2 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>9 Accounting Concepts</strong>: Entity, Money Measurement, Going Concern, Historical Cost, Dual Aspect, Accounting Period, Realisation, Matching, Accrual</li>
+    <li><strong>4 Conventions</strong>: Consistency, Conservatism, Full Disclosure, Materiality</li>
+    <li><strong>Concepts = "Why"</strong> (fundamental assumptions); <strong>Conventions = "How"</strong> (practical customs)</li>
+    <li><strong>Dual Aspect</strong> gives us the Accounting Equation: Assets = Liabilities + Equity</li>
+    <li><strong>Accrual vs Cash</strong>: Record when event occurs, not when cash moves</li>
+    <li><strong>Matching</strong>: Match expense to the revenue it generated in the same period</li>
+    <li><strong>Red flags</strong> emerge when management bends these principles</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Managerial Accounting (MBACCZG502) &bull; Session 2 of 16<br>
+  Source: Maheswari T1 Ch. 2 &bull; Handout-aligned &bull; Built for zero-to-advanced understanding
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

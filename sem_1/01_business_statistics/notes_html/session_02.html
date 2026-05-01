@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 — Organising and Analysing Data | Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+    <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 2 of 16</div>
+  <h1>Organising and Analysing Data</h1>
+  <p class="subtitle">Raw data is meaningless noise. This session teaches you how to organise, tabulate, and visualise data so patterns leap off the page.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 2 (Levine)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~50 min read</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step done"><div class="pt-dot">1</div></div>
+  <div class="pt-step active"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+</div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Flipkart's Big Billion Days: Which product categories drove the most sales?</h3>
+  <p>
+    Imagine you have a raw CSV with 50 lakh transaction rows from Flipkart's Big Billion Days sale. Your boss asks: <em>"Show me which categories sold the most, which price ranges were popular, and whether there's a pattern over the 5-day sale window."</em>
+  </p>
+  <ul style="margin:12px 0; padding-left:22px; color:#4e342e; font-size:.92rem;">
+    <li>Product category (Electronics, Fashion, Home) is <strong>categorical</strong> &mdash; needs bar/pie charts.</li>
+    <li>Transaction value (&#8377;299, &#8377;15,999) is <strong>numerical</strong> &mdash; needs histograms and frequency distributions.</li>
+    <li>Sales over 5 days is <strong>time-series</strong> &mdash; needs a line/area chart.</li>
+    <li>Price vs discount % is <strong>two numerical variables</strong> &mdash; needs a scatter plot.</li>
+  </ul>
+  <div class="rw-takeaway">
+    Session 2 gives you the full toolkit to transform raw rows into visual stories that drive decisions &mdash; tables, charts, and cross-tabulations for both categorical and numerical data.
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Organising Categorical Variables <span class="difficulty beginner">Beginner</span></h2>
+  <p>Categorical data consists of labels or names. To make sense of them, we <strong>count</strong> how often each category appears.</p>
+
+  <h3>Summary Table (Frequency Table)</h3>
+  <p>Lists each category and its count (frequency) or percentage.</p>
+  <table class="styled-table">
+    <thead><tr><th>Payment Method</th><th>Frequency</th><th>Percentage</th></tr></thead>
+    <tbody>
+      <tr><td>UPI (PhonePe/GPay)</td><td>23,500</td><td>47.0%</td></tr>
+      <tr><td>Credit Card</td><td>12,000</td><td>24.0%</td></tr>
+      <tr><td>Debit Card</td><td>8,500</td><td>17.0%</td></tr>
+      <tr><td>Cash on Delivery</td><td>4,000</td><td>8.0%</td></tr>
+      <tr><td>Net Banking</td><td>2,000</td><td>4.0%</td></tr>
+      <tr><td><strong>Total</strong></td><td><strong>50,000</strong></td><td><strong>100%</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Cross-tabulation (Contingency Table)</h3>
+  <p>When you have <strong>two categorical variables</strong>, a contingency table shows their joint frequencies. This is the foundation for chi-square tests (Session 11).</p>
+  <table class="styled-table">
+    <thead><tr><th>Payment \ City</th><th>Mumbai</th><th>Delhi</th><th>Bangalore</th><th>Total</th></tr></thead>
+    <tbody>
+      <tr><td><strong>UPI</strong></td><td>8,200</td><td>7,800</td><td>7,500</td><td>23,500</td></tr>
+      <tr><td><strong>Credit Card</strong></td><td>5,000</td><td>4,200</td><td>2,800</td><td>12,000</td></tr>
+      <tr><td><strong>COD</strong></td><td>1,000</td><td>1,500</td><td>1,500</td><td>4,000</td></tr>
+      <tr><td><strong>Total</strong></td><td>14,200</td><td>13,500</td><td>11,800</td><td>39,500</td></tr>
+    </tbody>
+  </table>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>Think of your family's monthly grocery receipt. You mentally group items into categories: <strong>Vegetables, Dairy, Snacks, Cleaning</strong>. Counting how many items (or how much money) went to each group is exactly a summary table. If you further split by <em>which shop</em> (Big Bazaar vs D-Mart vs local kirana), you get a cross-tabulation.</p>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Visualising Categorical Variables <span class="difficulty beginner">Beginner</span></h2>
+  <p>Three main chart types for categorical data:</p>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Bar Chart</h4>
+      <ul>
+        <li>Bars represent categories</li>
+        <li>Height = frequency or percentage</li>
+        <li>Bars are <strong>separated</strong> (gaps between them)</li>
+        <li>Best for comparing categories</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Pie Chart</h4>
+      <ul>
+        <li>Slices of a circle = proportions</li>
+        <li>Must sum to 100%</li>
+        <li>Best for showing "part of whole"</li>
+        <li>Avoid if more than 5-6 categories</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Pareto Chart &mdash; The "Vital Few" Tool</h3>
+  <p>A <span class="key-term">Pareto Chart</span> is a bar chart sorted in <strong>descending order</strong> with a cumulative percentage line overlaid. Named after the 80/20 principle: often ~80% of effects come from ~20% of causes.</p>
+
+  <div class="block-diagram">
+    <div class="block highlight">
+      <div class="block-title">Pareto Chart</div>
+      <div class="block-desc">Bars: descending order</div>
+    </div>
+    <div class="arrow">+</div>
+    <div class="block">
+      <div class="block-title">Cumulative Line</div>
+      <div class="block-desc">Running total %</div>
+    </div>
+    <div class="arrow">=</div>
+    <div class="block highlight">
+      <div class="block-title">"Vital Few" Insight</div>
+      <div class="block-desc">Focus on top causes</div>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>If you track where your monthly salary goes, a Pareto chart might show: Rent (35%) + EMI (25%) + Groceries (15%) = 75% of your spending. These three "vital few" categories dominate your budget. The remaining 25% is spread across 10+ minor categories.</p>
+  </div>
+
+  <h3>Side-by-Side and Stacked Bar Charts</h3>
+  <p>For comparing two categorical variables visually. <strong>Side-by-side</strong>: bars for each sub-group placed next to each other (e.g., payment method by city). <strong>Stacked</strong>: bars subdivided into segments showing the composition of each category.</p>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> BITS exams love asking "which chart is most appropriate for this scenario?" Remember: <strong>Bar chart</strong> for comparing categories, <strong>Pie chart</strong> for part-of-whole (max 5-6 slices), <strong>Pareto</strong> for identifying dominant categories.
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Organising Numerical Variables <span class="difficulty intermediate">Intermediate</span></h2>
+  <p>Unlike categorical data where categories are predefined, numerical data needs to be grouped into <strong>classes (bins)</strong> before you can see the distribution.</p>
+
+  <h3>Building a Frequency Distribution</h3>
+  <div class="flow-vertical">
+    <div class="fv-box">
+      <div class="fv-title">Step 1: Decide Number of Classes</div>
+      <div class="fv-desc">Sturges' Rule: classes = 1 + 3.322 x log10(n)</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Step 2: Compute Class Width</div>
+      <div class="fv-desc">Width = (Max - Min) / Number of classes, round up</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Step 3: Set Class Boundaries</div>
+      <div class="fv-desc">Start from Min; each class = [lower, upper)</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box">
+      <div class="fv-title">Step 4: Count Observations</div>
+      <div class="fv-desc">Tally each data point into its class</div>
+    </div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#c8e6c9;border-color:#43a047;">
+      <div class="fv-title" style="color:#1b5e20;">Frequency Distribution Table</div>
+      <div class="fv-desc" style="color:#2e7d32;">Add relative frequency (%) and cumulative frequency</div>
+    </div>
+  </div>
+
+  <div class="formula-box">
+    Sturges' Rule: k = 1 + 3.322 x log10(n)<br>
+    Class width = (Max - Min) / k &nbsp;&nbsp;(round up to a convenient number)
+  </div>
+
+  <h3>Example: Delivery Times (minutes)</h3>
+  <p>Suppose n = 200 delivery times, Min = 12 min, Max = 58 min.</p>
+  <p>Sturges: k = 1 + 3.322 x log10(200) = 1 + 3.322 x 2.301 = <strong>8.65 &asymp; 9 classes</strong></p>
+  <p>Width = (58 - 12) / 9 = 5.1 &asymp; <strong>5 minutes</strong> per class</p>
+
+  <table class="styled-table">
+    <thead><tr><th>Class (min)</th><th>Frequency</th><th>Relative %</th><th>Cumulative %</th></tr></thead>
+    <tbody>
+      <tr><td>10 - &lt;15</td><td>8</td><td>4.0%</td><td>4.0%</td></tr>
+      <tr><td>15 - &lt;20</td><td>22</td><td>11.0%</td><td>15.0%</td></tr>
+      <tr><td>20 - &lt;25</td><td>38</td><td>19.0%</td><td>34.0%</td></tr>
+      <tr><td>25 - &lt;30</td><td>52</td><td>26.0%</td><td>60.0%</td></tr>
+      <tr><td>30 - &lt;35</td><td>40</td><td>20.0%</td><td>80.0%</td></tr>
+      <tr><td>35 - &lt;40</td><td>20</td><td>10.0%</td><td>90.0%</td></tr>
+      <tr><td>40 - &lt;45</td><td>12</td><td>6.0%</td><td>96.0%</td></tr>
+      <tr><td>45 - &lt;50</td><td>5</td><td>2.5%</td><td>98.5%</td></tr>
+      <tr><td>50 - &lt;60</td><td>3</td><td>1.5%</td><td>100.0%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>When you check your <strong>screen time</strong> app, it shows you a bar chart of daily usage grouped into 1-hour bins (0-1 hr, 1-2 hr, etc.). That is a frequency distribution of your daily phone usage. The app is building a histogram for you behind the scenes.</p>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Visualising Numerical Variables <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <table class="styled-table">
+    <thead><tr><th>Chart</th><th>What It Shows</th><th>Key Feature</th><th>When to Use</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Histogram</strong></td><td>Distribution shape (frequency per bin)</td><td>Bars <strong>touch</strong> (no gaps &mdash; continuous data)</td><td>Understanding spread, skewness, outliers</td></tr>
+      <tr><td><strong>Frequency Polygon</strong></td><td>Same as histogram but lines connecting midpoints</td><td>Easier to overlay multiple distributions</td><td>Comparing two distributions on one chart</td></tr>
+      <tr><td><strong>Ogive (Cumulative)</strong></td><td>"How many observations are below value X?"</td><td>S-shaped curve, always increasing</td><td>Finding percentiles, medians visually</td></tr>
+      <tr><td><strong>Stem-and-Leaf</strong></td><td>Distribution shape preserving actual values</td><td>Good for small datasets (n &lt; 50)</td><td>Quick hand-drawn exploratory view</td></tr>
+    </tbody>
+  </table>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Histogram</h4>
+      <ul>
+        <li>For <strong>numerical</strong> data</li>
+        <li>Bars <strong>TOUCH</strong> each other</li>
+        <li>X-axis = continuous scale</li>
+        <li>Area of bars = proportion</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Bar Chart</h4>
+      <ul>
+        <li>For <strong>categorical</strong> data</li>
+        <li>Bars have <strong>GAPS</strong></li>
+        <li>X-axis = category labels</li>
+        <li>Height of bars = frequency</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> A classic trap question: "Is a histogram the same as a bar chart?" Answer: <strong>No.</strong> Histogram = numerical data, bars touch, x-axis is continuous. Bar chart = categorical data, bars separated, x-axis is labels. Getting this wrong costs easy marks.
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Visualising Two Numerical Variables <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <h3>Scatter Plot</h3>
+  <p>A <span class="key-term">Scatter Plot</span> shows the relationship between two numerical variables. Each dot is one observation plotted by its (X, Y) values.</p>
+
+  <table class="styled-table">
+    <thead><tr><th>Pattern</th><th>Meaning</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Dots go up-right</td><td><strong>Positive linear</strong></td><td>Ad spend vs sales</td></tr>
+      <tr><td>Dots go down-right</td><td><strong>Negative linear</strong></td><td>Price vs demand</td></tr>
+      <tr><td>Random cloud</td><td><strong>No relationship</strong></td><td>Shoe size vs exam marks</td></tr>
+      <tr><td>Curved pattern</td><td><strong>Non-linear</strong></td><td>Fertiliser vs crop yield (diminishing returns)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Time-Series Plot</h3>
+  <p>When one variable is <strong>time</strong>, connect dots with a line. Used to spot trends, seasonality, and anomalies.</p>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024)</div>
+    <p><strong>Zomato's quarterly earnings presentations</strong> use time-series plots extensively &mdash; showing monthly active users, average order value, and adjusted EBITDA over quarters. Their investor deck showed Gross Order Value crossing &#8377;8,500 crore, visualised as a time-series plot with a clear upward trend since the pandemic.</p>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Scatter plot in real life:</strong> Plot your study hours (X) vs your exam marks (Y) for the last 10 tests. If the dots trend upward, studying more is helping. If it is a random cloud, maybe your study method needs improvement, not just the hours.</p>
+  </div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Data Visualisation Best Practices <span class="difficulty advanced">Advanced</span></h2>
+  <p>Bad charts do not just look ugly &mdash; they <strong>mislead</strong>. Here are the most common mistakes:</p>
+
+  <table class="styled-table">
+    <thead><tr><th>Mistake</th><th>Why It Is Bad</th><th>Fix</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Non-zero baseline</strong> on bar chart</td><td>Makes small differences look huge</td><td>Always start Y-axis at 0 for bar charts</td></tr>
+      <tr><td><strong>3D effects</strong></td><td>Distorts perception of bar height and pie slice size</td><td>Use flat 2D charts</td></tr>
+      <tr><td><strong>Too many pie slices</strong></td><td>Slices below 5% become unreadable</td><td>Group small categories into "Other"</td></tr>
+      <tr><td><strong>Missing axis labels</strong></td><td>Reader has no idea what numbers represent</td><td>Label both axes with variable name and units</td></tr>
+      <tr><td><strong>"Chartjunk"</strong></td><td>Excessive gridlines, colours, icons distract from data</td><td>Keep it minimal &mdash; data-ink ratio should be high</td></tr>
+      <tr><td><strong>Dual Y-axes</strong></td><td>Can be manipulated to show false correlations</td><td>Use with caution; prefer separate panels</td></tr>
+    </tbody>
+  </table>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2025)</div>
+    <p><strong>Indian Union Budget infographics:</strong> The "Rupee comes from / Rupee goes to" pie charts are a textbook example of effective categorical visualisation &mdash; simple, clearly labelled, limited categories (8-10), with percentages adding to 100. They have used this format for decades because it works.</p>
+  </div>
+</div>
+
+<!-- SECTION 7 -->
+<div class="section-card">
+  <h2><span class="sec-num">7</span> The Complete Chart Selection Guide</h2>
+  <div class="tree">
+    <ul>
+      <li>
+        <span class="node-label" style="background:#1565c0;color:#fff;border-color:#1565c0;">What type of data?</span>
+        <ul>
+          <li>
+            <span class="node-label">CATEGORICAL</span>
+            <span class="node-desc">Labels / categories</span>
+            <ul>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">One variable</span><span class="node-desc">Bar chart, Pie chart, Pareto chart</span></li>
+              <li><span class="node-label" style="background:#e8f5e9;border-color:#66bb6a;">Two variables</span><span class="node-desc">Cross-tabulation, Side-by-side bar, Stacked bar</span></li>
+            </ul>
+          </li>
+          <li>
+            <span class="node-label">NUMERICAL</span>
+            <span class="node-desc">Numbers / measurements</span>
+            <ul>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">One variable (distribution)</span><span class="node-desc">Histogram, Polygon, Ogive, Stem-and-leaf, Box plot</span></li>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Two variables (relationship)</span><span class="node-desc">Scatter plot</span></li>
+              <li><span class="node-label" style="background:#fff3e0;border-color:#ffa726;">Over time</span><span class="node-desc">Time-series plot (line chart)</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- SECTION 8: Excel/Python -->
+<div class="section-card">
+  <h2><span class="sec-num">8</span> Tools: Excel &amp; Python <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Task</th><th>Excel</th><th>Python</th></tr></thead>
+    <tbody>
+      <tr><td>Frequency distribution</td><td><code>=FREQUENCY(data, bins)</code> (Ctrl+Shift+Enter)</td><td><code>pd.cut(df['col'], bins=9).value_counts()</code></td></tr>
+      <tr><td>Cross-tabulation</td><td>PivotTable (drag row &amp; column fields)</td><td><code>pd.crosstab(df['A'], df['B'])</code></td></tr>
+      <tr><td>Histogram</td><td>Insert &rarr; Chart &rarr; Histogram</td><td><code>sns.histplot(df['col'], bins=9)</code></td></tr>
+      <tr><td>Scatter plot</td><td>Insert &rarr; Chart &rarr; Scatter</td><td><code>sns.scatterplot(x='col1', y='col2', data=df)</code></td></tr>
+      <tr><td>Bar / Pie chart</td><td>Insert &rarr; Chart &rarr; Bar / Pie</td><td><code>df['col'].value_counts().plot(kind='bar')</code></td></tr>
+      <tr><td>Pareto chart</td><td>Sort desc + secondary axis cumulative line</td><td><code>df.sort_values().plot(kind='bar')</code> + cumsum</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 2 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Categorical data</strong>: organise with summary tables and cross-tabulations; visualise with bar, pie, and Pareto charts</li>
+    <li><strong>Numerical data</strong>: build frequency distributions using Sturges' rule (k = 1 + 3.322 log n); visualise with histograms, polygons, ogives</li>
+    <li><strong>Histogram vs bar chart</strong>: histogram = numerical (bars touch), bar chart = categorical (bars separated)</li>
+    <li><strong>Pareto chart</strong> = descending bar + cumulative line &mdash; identifies the "vital few" causes</li>
+    <li><strong>Scatter plot</strong> shows relationship between two numerical variables</li>
+    <li><strong>Time-series plot</strong> tracks a numerical variable over time</li>
+    <li><strong>Avoid</strong>: 3D effects, non-zero baselines, chartjunk, dual axes, too many pie slices</li>
+    <li><strong>Contingency tables</strong> (cross-tabs) are the foundation for chi-square tests later (Session 11)</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 2 of 16<br>
+  Source: Levine T1 Ch. 2 &bull; Handout-aligned &bull; Built for zero-to-advanced understanding
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

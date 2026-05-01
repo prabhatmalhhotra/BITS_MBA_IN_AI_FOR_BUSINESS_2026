@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 15 — Introduction to Linear Programming | Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; } .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; } .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #4caf50; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; } .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; } .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 380px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; } .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; } .compare-grid .cg-card.left h4 { color: #1565c0; } .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; } .compare-grid .cg-card ul { padding-left: 18px; } .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; } .styled-table tbody tr:nth-child(even) { background: #fafafa; } .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; } .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; } .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; } .difficulty.intermediate { background: #fff9c4; color: #f57f17; } .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; } .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+
+  /* ── Progress Bar ── */
+  .progress-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0 10px;
+    position: relative;
+  }
+  .progress-track::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: #e0e0e0;
+    z-index: 0;
+  }
+  .progress-track .pt-step {
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+    cursor: pointer;
+    transition: transform .2s;
+  }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin: 0 auto 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+    <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Comprehensive: S1-16</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 15 of 16</div>
+  <h1>Introduction to Linear Programming</h1>
+  <p class="subtitle">Optimisation under constraints &mdash; how to make the best decision when resources are limited. From product mix to portfolio allocation.</p>
+  <div class="meta-pills"><span class="pill">T2 / Class Notes</span><span class="pill">Comprehensive Exam</span><span class="pill">~50 min read</span></div>
+</div>
+
+<div class="container">
+
+<div class="progress-track" id="auto-stepper"></div>
+
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>Amul: What product mix maximises profit given limited milk supply?</h3>
+  <p>Amul has 10,000 litres of milk daily. They can make butter (profit &#8377;40/kg, needs 5L milk) or cheese (profit &#8377;60/kg, needs 8L milk). Labour is limited to 800 hours. How much of each should they produce to maximise profit?</p>
+  <div class="rw-takeaway">This is a classic Linear Programming problem: maximise profit subject to resource constraints. LP provides the mathematically optimal answer.</div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> LP Setup <span class="difficulty beginner">Beginner</span></h2>
+  <p>Every LP problem has four components:</p>
+
+  <div class="block-diagram">
+    <div class="block"><div class="block-title">Decision Variables</div><div class="block-desc">What to decide (x1, x2, ...)</div></div>
+    <div class="arrow">+</div>
+    <div class="block highlight"><div class="block-title">Objective Function</div><div class="block-desc">Max or Min (linear in variables)</div></div>
+    <div class="arrow">+</div>
+    <div class="block"><div class="block-title">Constraints</div><div class="block-desc">Resource limits (&le;, &ge;, =)</div></div>
+    <div class="arrow">+</div>
+    <div class="block"><div class="block-title">Non-negativity</div><div class="block-desc">x&#7522; &ge; 0</div></div>
+  </div>
+
+  <h3>Standard Form Example</h3>
+  <div class="formula-box">
+    Maximise Z = 40x&#8321; + 30x&#8322; &nbsp; (profit)<br><br>
+    Subject to:<br>
+    4x&#8321; + 5x&#8322; &le; 200 &nbsp; (machine hours)<br>
+    2x&#8321; + 3x&#8322; &le; 100 &nbsp; (labour hours)<br>
+    x&#8321;, x&#8322; &ge; 0
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Graphical Solution (2 Variables) <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="flow-vertical">
+    <div class="fv-box"><div class="fv-title">Step 1: Plot each constraint as a line</div><div class="fv-desc">Convert inequality to equation, find x and y intercepts</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Step 2: Identify feasible region</div><div class="fv-desc">Area satisfying ALL constraints simultaneously</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Step 3: Find corner (extreme) points</div><div class="fv-desc">Intersections of constraint lines within feasible region</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Step 4: Evaluate Z at each corner</div><div class="fv-desc">Plug each corner point into objective function</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box" style="background:#c8e6c9;border-color:#43a047;"><div class="fv-title" style="color:#1b5e20;">Optimal solution = corner with best Z</div><div class="fv-desc" style="color:#2e7d32;">Fundamental Theorem: optimal is always at a corner point</div></div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Meal planning on a budget:</strong> You want to maximise nutrition (protein) from two foods: dal (&#8377;30/kg, 25g protein) and paneer (&#8377;300/kg, 18g protein). Budget constraint: &#8377;600/week. Fridge space constraint: 3 kg max. LP tells you the optimal mix to maximise protein within your budget and fridge limits.</p>
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Sensitivity Analysis <span class="difficulty advanced">Advanced</span></h2>
+
+  <table class="styled-table">
+    <thead><tr><th>Concept</th><th>Meaning</th><th>Business Use</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Shadow Price</strong></td><td>Improvement in Z per unit increase of a binding constraint's RHS</td><td>"How much is one more machine hour worth?"</td></tr>
+      <tr><td><strong>Reduced Cost</strong></td><td>Penalty per unit of a non-basic variable forced into solution</td><td>"How much would profit need to improve for us to produce this product?"</td></tr>
+      <tr><td><strong>Allowable Increase/Decrease</strong></td><td>Range over which current optimal basis stays valid</td><td>"How much can costs change before we need to re-optimise?"</td></tr>
+    </tbody>
+  </table>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2024)</div>
+    <p><strong>Indian Railways uses LP for seat allocation:</strong> IRCTC uses linear programming variants to allocate seats across quotas (General, Tatkal, Ladies, Defence) to maximise revenue while meeting policy constraints. Shadow prices tell them the revenue impact of adding one more seat to a quota &mdash; this guides investment in adding coaches to high-demand routes.</p>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Special Cases <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Case</th><th>What Happens</th><th>How to Detect</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Multiple optimal solutions</strong></td><td>Objective function parallel to a binding constraint</td><td>Two adjacent corners give same Z value</td></tr>
+      <tr><td><strong>Infeasibility</strong></td><td>No point satisfies all constraints</td><td>No feasible region exists</td></tr>
+      <tr><td><strong>Unbounded</strong></td><td>Feasible region is open; Z can increase forever</td><td>Usually a modelling error (missing constraint)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 5 -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Tools: Excel Solver &amp; Python <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Tool</th><th>How to Use</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Excel Solver</strong></td><td>Data &rarr; Solver &rarr; Set Objective (max/min) &rarr; Changing Cells (variables) &rarr; Subject to Constraints &rarr; Solve (Simplex LP)</td></tr>
+      <tr><td><strong>Python (scipy)</strong></td><td><code>scipy.optimize.linprog(c, A_ub, b_ub)</code> (note: linprog minimises, so negate c for max)</td></tr>
+      <tr><td><strong>Python (PuLP)</strong></td><td><code>import pulp; prob = pulp.LpProblem("name", pulp.LpMaximize)</code></td></tr>
+      <tr><td><strong>Online</strong></td><td>PHPSimplex.com for step-by-step graphical and simplex solutions</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> LP questions in the comprehensive exam typically involve: (1) formulating the problem (define variables, objective, constraints), (2) graphical solution for 2-variable problems, (3) interpreting Solver output (shadow prices, reduced costs). Practice formulation from word problems &mdash; that is where most students lose marks.</div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 15 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>LP components</strong>: decision variables, objective function, constraints, non-negativity</li>
+    <li><strong>Graphical method</strong>: plot constraints, find feasible region, evaluate Z at corners</li>
+    <li><strong>Fundamental Theorem</strong>: optimal solution is always at an extreme (corner) point</li>
+    <li><strong>Shadow price</strong> = value of one more unit of a binding constraint</li>
+    <li><strong>Reduced cost</strong> = how much a non-basic variable's coefficient must improve</li>
+    <li><strong>Special cases</strong>: multiple optima, infeasibility, unboundedness</li>
+    <li><strong>Excel Solver</strong> (Simplex LP method) is the primary tool for exams</li>
+  </ul>
+</div>
+
+<div class="page-footer">BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 15 of 16<br>Source: T2 / Class Notes &bull; Comprehensive exam (open book)</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

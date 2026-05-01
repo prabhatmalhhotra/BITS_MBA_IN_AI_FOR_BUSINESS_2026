@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 4 — Basic Probability | Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 380px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+    <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 4 of 16</div>
+  <h1>Basic Probability</h1>
+  <p class="subtitle">The language of uncertainty. Every statistical inference, from confidence intervals to hypothesis tests, is built on probability theory.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 4 (Levine)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+    <span class="pill">~55 min read</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+</div>
+
+<!-- REAL-WORLD -->
+<div class="real-world">
+  <div class="rw-label">Real-World Problem</div>
+  <h3>PhonePe's fraud detection: Is this transaction suspicious?</h3>
+  <p>
+    PhonePe processes over 500 crore transactions per month. Their fraud detection system must decide in milliseconds: <em>"Given that this transaction is from a new device, at an unusual hour, for a large amount &mdash; what is the probability it is fraudulent?"</em>
+  </p>
+  <ul style="margin:12px 0; padding-left:22px; color:#4e342e; font-size:.92rem;">
+    <li>P(Fraud) overall is very low (~0.01%) &mdash; this is the <strong>prior probability</strong></li>
+    <li>P(New device | Fraud) is high (~80%) &mdash; this is the <strong>likelihood</strong></li>
+    <li>P(New device | Not fraud) is moderate (~5%) &mdash; most legitimate users stick to their phone</li>
+    <li>Using <strong>Bayes' theorem</strong>, PhonePe combines these to compute P(Fraud | New device) &mdash; the <strong>posterior</strong></li>
+  </ul>
+  <div class="rw-takeaway">
+    This session teaches you the probability toolkit &mdash; from basic axioms to Bayes' theorem &mdash; that powers decisions under uncertainty.
+  </div>
+</div>
+
+<!-- SECTION 1: Approaches -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Approaches to Probability <span class="difficulty beginner">Beginner</span></h2>
+
+  <table class="styled-table">
+    <thead><tr><th>Approach</th><th>Definition</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Classical (A Priori)</strong></td><td>P(A) = favourable outcomes / total equally likely outcomes</td><td>P(Head) = 1/2; P(rolling 6) = 1/6</td></tr>
+      <tr><td><strong>Empirical (Relative Frequency)</strong></td><td>P(A) = number of times A occurred / total trials</td><td>Out of 10,000 loans, 300 defaulted: P(default) = 3%</td></tr>
+      <tr><td><strong>Subjective</strong></td><td>Degree of belief based on experience</td><td>"I think there is a 70% chance RBI cuts rates next quarter"</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Fundamental Axioms</h3>
+  <div class="formula-box">
+    1. &nbsp; 0 &le; P(A) &le; 1 &nbsp; for any event A<br>
+    2. &nbsp; P(S) = 1 &nbsp; where S is the sample space (all possible outcomes)<br>
+    3. &nbsp; For mutually exclusive A, B: &nbsp; P(A &cup; B) = P(A) + P(B)
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Classical:</strong> Drawing a card from a deck &mdash; P(Ace) = 4/52 = 1/13. <strong>Empirical:</strong> You notice 3 out of your last 10 Swiggy orders were late &mdash; P(late) &asymp; 30%. <strong>Subjective:</strong> "I feel there is a 60% chance it will rain today" based on looking at the clouds.</p>
+  </div>
+</div>
+
+<!-- SECTION 2: Probability Rules -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Probability Rules <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <h3>Complement Rule</h3>
+  <div class="formula-box">P(A') = 1 - P(A)</div>
+  <p>The probability that A does NOT happen. Often easier to compute the complement.</p>
+
+  <h3>Addition Rule (OR)</h3>
+  <div class="formula-box">
+    General: &nbsp; P(A &cup; B) = P(A) + P(B) - P(A &cap; B)<br><br>
+    If Mutually Exclusive: &nbsp; P(A &cup; B) = P(A) + P(B) &nbsp; [since P(A &cap; B) = 0]
+  </div>
+
+  <h3>Multiplication Rule (AND)</h3>
+  <div class="formula-box">
+    General: &nbsp; P(A &cap; B) = P(A|B) &times; P(B)<br><br>
+    If Independent: &nbsp; P(A &cap; B) = P(A) &times; P(B)
+  </div>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Mutually Exclusive</h4>
+      <ul>
+        <li>Events cannot happen together</li>
+        <li>P(A &cap; B) = 0</li>
+        <li>Example: Rolling a 3 AND a 5 on one die</li>
+        <li>Mutually exclusive events are NEVER independent (unless one has P=0)</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Independent</h4>
+      <ul>
+        <li>One event does not affect the other</li>
+        <li>P(A|B) = P(A)</li>
+        <li>Example: Flipping two coins</li>
+        <li>P(A &cap; B) = P(A) &times; P(B)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Addition rule:</strong> What is the probability your Swiggy order is from a Chinese OR South Indian restaurant? If P(Chinese) = 30% and P(South Indian) = 25% and some restaurants serve both (P(both) = 5%), then P(Chinese or South Indian) = 30% + 25% - 5% = 50%.</p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> The most common mistake is forgetting to subtract P(A &cap; B) in the addition rule. If the question says "mutually exclusive," then P(A &cap; B) = 0 and you just add. If it does not say that, you MUST subtract the overlap.
+  </div>
+</div>
+
+<!-- SECTION 3: Conditional Probability -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Conditional Probability <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="formula-box">
+    P(A | B) = P(A &cap; B) / P(B) &nbsp;&nbsp;&nbsp; [given B has occurred]
+  </div>
+
+  <p><span class="key-term">Conditional probability</span> is the probability of A happening <strong>given that B has already happened</strong>. It "shrinks" the sample space to only those outcomes where B is true.</p>
+
+  <h3>Independence Test</h3>
+  <p>Events A and B are independent if and only if:</p>
+  <div class="formula-box">P(A | B) = P(A) &nbsp;&nbsp; OR equivalently &nbsp;&nbsp; P(A &cap; B) = P(A) &times; P(B)</div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p>You are stuck in Bangalore traffic (event B). What is the probability you will be late for your meeting (event A)? P(Late | Traffic) is much higher than P(Late) in general. The condition "traffic" changes the probability dramatically &mdash; that is conditional probability.</p>
+  </div>
+
+  <h3>Contingency Table Approach</h3>
+  <p>Many probability problems are easiest to solve using a 2x2 contingency table:</p>
+
+  <table class="styled-table">
+    <thead><tr><th></th><th>Event B</th><th>Not B</th><th>Total</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Event A</strong></td><td>P(A &cap; B)</td><td>P(A &cap; B')</td><td>P(A)</td></tr>
+      <tr><td><strong>Not A</strong></td><td>P(A' &cap; B)</td><td>P(A' &cap; B')</td><td>P(A')</td></tr>
+      <tr><td><strong>Total</strong></td><td>P(B)</td><td>P(B')</td><td>1.00</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 4: Bayes' Theorem -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Bayes' Theorem <span class="difficulty advanced">Advanced</span></h2>
+
+  <div class="formula-box">
+    P(A&#7522; | B) = P(B | A&#7522;) &times; P(A&#7522;) / &Sigma; P(B | A&#11388;) &times; P(A&#11388;)
+  </div>
+
+  <p>In words: <strong>Posterior = (Likelihood &times; Prior) / Evidence</strong></p>
+
+  <div class="block-diagram">
+    <div class="block">
+      <div class="block-title">Prior P(A)</div>
+      <div class="block-desc">What you believed before</div>
+    </div>
+    <div class="arrow">&times;</div>
+    <div class="block">
+      <div class="block-title">Likelihood P(B|A)</div>
+      <div class="block-desc">How likely is evidence if A true</div>
+    </div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight">
+      <div class="block-title">Posterior P(A|B)</div>
+      <div class="block-desc">Updated belief after evidence</div>
+    </div>
+  </div>
+
+  <h3>Worked Example: Medical Testing</h3>
+  <p>A disease affects 1% of the population. A test has:</p>
+  <ul style="margin:10px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Sensitivity</strong> = P(Positive | Disease) = 99%</li>
+    <li><strong>Specificity</strong> = P(Negative | No Disease) = 95%</li>
+  </ul>
+  <p>If you test positive, what is the probability you actually have the disease?</p>
+
+  <table class="styled-table">
+    <thead><tr><th>Step</th><th>Calculation</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>P(Disease)</td><td>Prior</td><td>0.01</td></tr>
+      <tr><td>P(No Disease)</td><td>1 - 0.01</td><td>0.99</td></tr>
+      <tr><td>P(+ | Disease)</td><td>Sensitivity</td><td>0.99</td></tr>
+      <tr><td>P(+ | No Disease)</td><td>1 - Specificity</td><td>0.05</td></tr>
+      <tr><td>P(+)</td><td>0.99 &times; 0.01 + 0.05 &times; 0.99</td><td>0.0594</td></tr>
+      <tr><td><strong>P(Disease | +)</strong></td><td>(0.99 &times; 0.01) / 0.0594</td><td><strong>16.7%</strong></td></tr>
+    </tbody>
+  </table>
+
+  <p>Despite a 99% accurate test, a positive result only means a 16.7% chance of disease! This counter-intuitive result occurs because the disease is rare (low prior).</p>
+
+  <div class="trending-example">
+    <div class="te-label">Trending Example (2023-2024)</div>
+    <p><strong>COVID rapid antigen tests</strong> were a real-world Bayes' theorem lesson for millions of Indians. When prevalence dropped to very low levels (say 0.5%), even a test with 90% sensitivity and 95% specificity gave a PPV (Positive Predictive Value) of only ~8%. ICMR guidelines recommended RT-PCR confirmation precisely because of this Bayesian math.</p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> Bayes' theorem is almost guaranteed in mid-sem. Practice the 2x2 table approach &mdash; it is much less error-prone than memorising the formula. Fill in the joint probabilities first, then compute the conditional. Common scenarios: medical testing, quality control (defective from Machine A vs B), and spam detection.
+  </div>
+</div>
+
+<!-- SECTION 5: Counting Rules -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Counting Rules <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <h3>Permutations (Order Matters)</h3>
+  <div class="formula-box">P(n, r) = n! / (n - r)!</div>
+  <p>Example: How many ways can 3 winners (Gold, Silver, Bronze) be chosen from 10 athletes? P(10, 3) = 10 &times; 9 &times; 8 = 720.</p>
+
+  <h3>Combinations (Order Does Not Matter)</h3>
+  <div class="formula-box">C(n, r) = n! / [r! &times; (n - r)!]</div>
+  <p>Example: How many ways can a committee of 3 be chosen from 10 people? C(10, 3) = 120.</p>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Permutation</h4>
+      <ul>
+        <li><strong>Order matters</strong></li>
+        <li>Arranging, ranking, sequencing</li>
+        <li>"In how many orders..."</li>
+        <li>P(n,r) &ge; C(n,r) always</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Combination</h4>
+      <ul>
+        <li><strong>Order does NOT matter</strong></li>
+        <li>Selecting, choosing, picking</li>
+        <li>"In how many ways to choose..."</li>
+        <li>Foundation for binomial (Session 5)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Daily Life Example</div>
+    <p><strong>Permutation:</strong> Your phone has a 4-digit PIN from digits 0-9. Number of possible PINs = P(10,4) = 5,040 (if no digit repeats). With repetition allowed: 10&sup4; = 10,000. <strong>Combination:</strong> Choosing 5 toppings from 12 available at Domino's = C(12,5) = 792 combinations.</p>
+  </div>
+</div>
+
+<!-- SECTION 6: Excel/Python -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Tools: Excel &amp; Python <span class="difficulty intermediate">Intermediate</span></h2>
+  <table class="styled-table">
+    <thead><tr><th>Task</th><th>Excel</th><th>Python</th></tr></thead>
+    <tbody>
+      <tr><td>Permutation</td><td><code>=PERMUT(n, r)</code></td><td><code>math.perm(n, r)</code></td></tr>
+      <tr><td>Combination</td><td><code>=COMBIN(n, r)</code></td><td><code>math.comb(n, r)</code></td></tr>
+      <tr><td>Factorial</td><td><code>=FACT(n)</code></td><td><code>math.factorial(n)</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 4 &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Three approaches</strong>: Classical (equally likely), Empirical (relative frequency), Subjective (belief)</li>
+    <li><strong>Complement</strong>: P(A') = 1 - P(A)</li>
+    <li><strong>Addition rule</strong>: P(A &cup; B) = P(A) + P(B) - P(A &cap; B); subtract overlap!</li>
+    <li><strong>Multiplication rule</strong>: P(A &cap; B) = P(A|B) &times; P(B); for independent events = P(A) &times; P(B)</li>
+    <li><strong>Conditional probability</strong>: P(A|B) = P(A &cap; B) / P(B)</li>
+    <li><strong>Independence</strong>: P(A|B) = P(A) &mdash; knowing B does not change A's probability</li>
+    <li><strong>Bayes' theorem</strong>: Posterior = (Likelihood &times; Prior) / Evidence &mdash; key for updating beliefs</li>
+    <li><strong>Counter-intuitive Bayes</strong>: even accurate tests have low PPV when the condition is rare</li>
+    <li><strong>Permutations</strong> = order matters; <strong>Combinations</strong> = order does not matter</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 4 of 16<br>
+  Source: Levine T1 Ch. 4 &bull; Handout-aligned &bull; Built for zero-to-advanced understanding
+</div>
+
+</div>
+<script>
+/* pt-step-click: auto-build and make progress dots clickable */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
