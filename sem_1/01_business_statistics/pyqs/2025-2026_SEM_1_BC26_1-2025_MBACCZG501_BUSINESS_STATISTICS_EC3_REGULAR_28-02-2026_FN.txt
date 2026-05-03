@@ -1,0 +1,238 @@
+
+
+MBA ZG 501
+Business Statitics
+Comprehensive Exam- EC3R
+
+Maximum marks- 45.
+No. of Question-6.
+No of tables-3.
+
+
+==================
+
+	•	Explain in detail (150+ words)-						[12]
+	•	Type-I and Type-II errors with two or more OWN examples, and diagrams.
+	•	Significance level and its purpose.
+	•	How is F-test performed, and its applications
+
+=====================
+	•	ThirdEyeCare, an NGO, has distributed spectacles to 60 workers involved in precision jobs. The details of the spectacles distributed by it are given in the table below- 
+
+
+
+The proportion of workers in the 6 professions is equal.  Is there evidence that the  distribution of spectacles was fair? 
+
+Use alpha=0.05.. Clearly write the hypothesis, all formulas, all steps, and all calculations. Underline the final result.									[6]
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================
+
+	•	Health Regulation Authority (HRA) has received several complaints from the clients of WeighLess Fitness Center’ that its claim of weight loss is not correct.
+	
+HRA’s Investigation Wing has collected data of 7 clients who had underdone WeighLess’s weight loss program. The data is given below (weight in kg)-
+
+ 
+
+Test the hypothesis whether the weight loss program leads to loss of weight. State outcome of the hypothesis test clearly. 	 
+
+Use alpha=0.05.. Clearly write the hypothesis, all formulas, all steps, and all calculations. Underline the final result.									 [6]	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
+
+	•	StartUp Storage Co. has launched a new model of mobile battery. Its advertisement claims that average life of the new model is 600 minutes under standard operating conditions. 
+
+StartUp’s claim has surprised the mobile battery industry. 
+
+The R&D department of MoreLife, the largest manufacturer of mobile phone batteries, purchased StartUp’s 10 batteries and tested them in its lab under standard operating conditions. The results of the tests, and numerical summary measures are given below-
+
+
+Life (minutes)
+
+630
+
+620
+
+650
+
+620
+
+600
+
+590
+
+640
+
+590
+
+580
+
+630
+
+
+Count
+10
+Sum
+6150
+Mean
+615
+Q1
+592.5
+Q2
+620.0
+Q3
+630.0
+Sample variance
+561.11
+Population variance
+505.00
+Skewness
+-0.13
+Kurtosis
+-1.34
+
+
+Test the claim made by StartUp’s advertisement. 
+
+Use alpha=0.05.. Clearly write the hypothesis, all formulas, all steps, and all calculations. Underline the final result.									 [7]
+
+==============================
+
+
+
+
+
+	•	 The latest Weekly Book Sales Statistics released by Book Publishers Association of Planet-B is given below-									 [7]
+Book Title
+Sales Rank
+No of pages
+Price, Rs
+Weight, gms
+ASM
+1
+350
+500
+600
+BITS
+2
+325
+525
+700
+WILP
+3
+400
+375
+800
+KBC
+4
+450
+400
+750
+RRR
+5
+275
+200
+450
+BBC
+6
+300
+250
+800
+H1N1
+7
+225
+300
+650
+ClassMon
+8
+400
+325
+750
+CSK
+9
+425
+450
+775
+WWF
+10
+375
+425
+575
+
+Which variable is a better predictor of sales rank- No. of pages or Price? 
+
+Show all formulas, all steps, and all calculations. Underline the final result(s).				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================
+	•	2WCo produces electric scooters. Its production manager wants to know whether the number of scooters produced in a day and the number of number of workmen reported on the day are statistically related.							[7]
+The number of scooters produced and the attendance of workers on 8 randomly selected days of the this month are given in the table below. 
+
+
+
+Estimate the average production if the number of workers reported in the factory is 60, 80 and 90. 
+Show all formulas, all steps, and all calculations. Underline the final result(s).
+
+
+
+
+
+
+
+
+
