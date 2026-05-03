@@ -3,3 +3,9 @@
 sem_1/*/books/
 sem_1/books/
 sem_1/.archive/
+*.docx
+*.doc
+*.pptx
+*.txt
+sem_1/*/ppts/
+sem_1/*/pyqs/
