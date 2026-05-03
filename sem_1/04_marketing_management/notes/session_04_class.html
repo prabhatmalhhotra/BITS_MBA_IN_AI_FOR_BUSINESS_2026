@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 4 Class Notes — Segmentation &amp; Targeting | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; } .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; } .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #e65100, #ff9800, #ffb74d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; } .hero .subtitle { color: rgba(255,255,255,.9); font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; } .hero .pill { background: rgba(255,255,255,.2); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .prof-tag { text-align: center; padding: 12px; background: #fff3e0; color: #e65100; font-size: .85rem; font-weight: 600; border-bottom: 2px solid #ff9800; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #e65100; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #ffe0b2; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #ff9800; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #e65100; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; } .styled-table tbody tr:nth-child(even) { background: #fff8f0; } .styled-table tbody tr:hover { background: #fff3e0; }
+  .prof-insight { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .prof-insight .pi-label { display: inline-flex; align-items: center; gap: 6px; color: #e65100; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .prof-insight p { font-size: .92rem; color: #4e342e; }
+  .slide-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .slide-example .se-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .slide-example p { font-size: .92rem; color: #33691e; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; } .compare-grid .cg-card.left { background: #fff3e0; border-color: #ffcc80; } .compare-grid .cg-card.right { background: #e8f5e9; border-color: #81c784; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; } .compare-grid .cg-card.left h4 { color: #e65100; } .compare-grid .cg-card.right h4 { color: #2e7d32; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; } .compare-grid .cg-card ul { padding-left: 18px; } .compare-grid .cg-card li { margin-bottom: 4px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 140px; flex: 1; max-width: 200px; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #e65100; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #ffcc80; padding: 0 6px; min-width: 30px; }
+  .summary-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 2px solid #ff9800; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #e65100; margin-bottom: 14px; font-size: 1.1rem; } .summary-box ul { padding-left: 20px; } .summary-box li { font-size: .9rem; color: #4e342e; margin-bottom: 6px; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
+  <a href="session_04.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">AI Notes</a>
+  <a href="session_04_class.html" style="padding:8px 24px;background:#ff9800;color:#fff;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">Class Notes</a>
+</div>
+
+<div class="prof-tag">Based on Prof. Sagar Venkateshwar's lectures | Lecture 4 (Merged AZC411/MBAZC411/MBAZG503/SEZC410)</div>
+
+<div class="hero">
+  <div class="session-tag">Session 4 of 16 &mdash; Class Notes</div>
+  <h1>Segmentation &amp; Targeting</h1>
+  <p class="subtitle">Why segmentation is needed, the four bases of segmentation (Geographic, Demographic, Psychographic, Behavioral), business market segmentation, effective segmentation criteria, and targeting strategies.</p>
+  <div class="meta-pills">
+    <span class="pill">Lecture 4-5 (L4_5) &mdash; First Half</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Learning Objectives</h2>
+  <ol style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>In what ways can a company divide the consumer market into segments?</li>
+    <li>How should business markets be segmented?</li>
+    <li>How should a company choose the most attractive target markets?</li>
+    <li>What are the requirements for effective segmentation?</li>
+    <li>What are the different levels of market segmentation?</li>
+  </ol>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Why is Segmentation Needed?</h2>
+  <p>It is nearly impossible for a company to connect with all customers in large, broad, or diverse markets. They need to identify the market segments they can serve effectively. India alone has <strong>145 crore people</strong> &mdash; you cannot target everyone.</p>
+  <p><strong>Market segment:</strong> A group of customers who share a similar set of needs and wants.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Four Bases of Consumer Market Segmentation</h2>
+  <div class="block-diagram" style="gap:14px; flex-wrap:wrap;">
+    <div class="block"><div class="block-title">Geographic</div><div class="block-desc">Where they live</div></div>
+    <div class="block"><div class="block-title">Demographic</div><div class="block-desc">Who they are</div></div>
+    <div class="block"><div class="block-title">Psychographic</div><div class="block-desc">How they think</div></div>
+    <div class="block"><div class="block-title">Behavioral</div><div class="block-desc">How they act</div></div>
+  </div>
+
+  <h3>a) Geographic Segmentation</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Geographical units: Nations, states, regions, counties, cities, or neighborhoods</li>
+    <li><strong>Nielsen Claritas' PRIZM:</strong> US-based rating of 500,000 neighborhoods into 16 groups and 66 lifestyle segments based on education/affluence, family life cycle, urbanization, race/ethnicity, mobility</li>
+    <li><strong>PRIZM Clusters:</strong> Young Digerati (tech-savvy, affluent urban singles), Beltway Boomers (college-educated, upper-middle-class), The Cosmopolitans (educated, midscale, multiethnic)</li>
+  </ul>
+  <div class="slide-example">
+    <div class="se-label">Indian Examples</div>
+    <p>Nariman Point, Cuffe Parade, Peddar Road (all Mumbai) and Panchsheel Park, Amrita Shergill Marg (all Delhi) may have similar characteristics. A retail chain or school would find such geographic segmentation useful.</p>
+  </div>
+
+  <h3>b) Demographic Segmentation</h3>
+  <p>Variables: Age, Life stage, Gender, Income, Generation, Race &amp; Culture.</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Age &amp; Life-cycle:</strong> Childhood, Adolescence, Adulthood, Middle Age, Old &mdash; wants and abilities change with age</li>
+    <li><strong>Life stage:</strong> Major concerns like job, marriage, children's education</li>
+    <li><strong>Gender:</strong> Men and women have different attitudes and behave differently (Gillette Venus for women)</li>
+    <li><strong>Income:</strong> Long-standing practice for segmentation</li>
+    <li><strong>Generation:</strong> Millennials/Gen Y (1977-1994), Gen X (1964-1978), Baby Boomers (1946-64), Silent Generation (1925-1945) &mdash; each uses different platforms (Facebook/WhatsApp vs Snapchat/Instagram)</li>
+    <li><strong>Race &amp; Culture:</strong> In India &mdash; Linguistic Groups (ads, cuisines, dress, festivals) and Religious Groups (ethnic wear, cuisines)</li>
+  </ul>
+  <div class="slide-example">
+    <div class="se-label">Slide Examples</div>
+    <p><strong>Kinder Joy:</strong> Demographic segmentation for children. <strong>Right Shift Jaggery Ragi Cookies (ITC):</strong> Health-conscious middle-aged adults. <strong>Horlicks:</strong> Age-based segmentation &mdash; Growth Plus (kids), Protein Plus (adults), Mother's Plus (pregnancy), Women's Plus, Diabetes Plus, Strength Plus (elderly). One brand, six demographic segments.</p>
+  </div>
+
+  <h3>c) Psychographic Segmentation</h3>
+  <p>Buyers divided on the basis of <strong>psychological/personality traits, lifestyle, or values</strong>. (Adventure Freaks, Young-at-heart, Geeks)</p>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p><strong>Honda Shine 125 vs Pulsar 125:</strong> Same segment (125cc bike), but targeting completely different psychographic profiles. Honda Shine = reliable commuter. Pulsar = sporty, exciting personality.</p>
+  </div>
+  <h3>VALS Framework (Values, Lifestyle)</h3>
+  <table class="styled-table">
+    <thead><tr><th>Segment</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Innovators</strong></td><td>High income, high self-esteem, image conscious, prefer the finer things</td></tr>
+      <tr><td><strong>Thinkers</strong></td><td>Mature, responsible, well educated, practical, willing to experiment</td></tr>
+      <tr><td><strong>Achievers</strong></td><td>Achievement-motivated</td></tr>
+      <tr><td><strong>Experiencers</strong></td><td>Young, energetic, eager to spend and consume</td></tr>
+      <tr><td><strong>Believers</strong></td><td>Conservative, family centric, brand loyal</td></tr>
+      <tr><td><strong>Strivers</strong></td><td>Achievement-oriented but with fewer resources</td></tr>
+      <tr><td><strong>Makers</strong></td><td>Low income, self-sufficient, family centric, work/recreation</td></tr>
+      <tr><td><strong>Survivors</strong></td><td>Low income, older, stick to their lifestyles</td></tr>
+    </tbody>
+  </table>
+
+  <h3>d) Behavioral Segmentation</h3>
+  <p>Divide buyers on the basis of their <strong>knowledge of, attitude toward, use of, or response to a product</strong>.</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Needs and benefits</strong></li>
+    <li><strong>Decision roles:</strong> Initiator, Influencer, Decider, Buyer, User</li>
+    <li><strong>User &amp; Usage variables:</strong> Occasions, User status, Usage rate, Loyalty status, Buyer-readiness stage, Attitude</li>
+  </ul>
+  <div class="prof-insight">
+    <div class="pi-label">Caselet: Coaching Centre (Rishi)</div>
+    <p><strong>Initiator:</strong> Mother &rarr; Marketing should target parents. <strong>Influencer:</strong> Sister (academic excellence) &rarr; Use good students as influencers. <strong>Decider:</strong> Rishi (child) &rarr; Demo classes must be excellent quality. <strong>Buyer:</strong> Parents &rarr; Offer financing options. <strong>User:</strong> Rishi/friend &rarr; Design product for user needs.</p>
+  </div>
+
+  <h3>User &amp; Usage Variables (Detail)</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Occasion:</strong> Stay in hotel for business (Taj Mahal), leisure (Taj Holiday Village), experience (Oberoi Vilas &mdash; fort). Bicycle?</li>
+    <li><strong>User Status:</strong> Non-user, Ex-user, Potential User, First-time user, Regular user. 5-star hotels offer memberships to non-users. Portals run campaigns for ex-users (LinkedIn).</li>
+    <li><strong>Usage Rate:</strong> Light, Medium, Heavy users</li>
+    <li><strong>Buyer Readiness Stage:</strong> Unaware, Aware, Informed, Interested, Intend to buy</li>
+    <li><strong>Loyalty Status:</strong> Hard core loyals, Split Loyals, Shifting Loyals, Switcher</li>
+    <li><strong>Attitude:</strong> Enthusiastic, Positive, Indifferent, Negative, Hostile</li>
+  </ul>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p><strong>Cadbury's attempt to build around existing habits:</strong> "Kuch accha ho jaye, kuch meetha ho jaye" &mdash; linking chocolate to Indian celebration/sweetness culture. Cadbury Celebrations for Rakhi/festivals &mdash; occasion-based behavioral segmentation.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Marketing Funnel</h2>
+  <p>The funnel shows conversion at each stage: Aware &rarr; Ever Tried &rarr; Recent Trial &rarr; Occasional User &rarr; Regular User &rarr; Most Often Used.</p>
+  <div class="prof-insight">
+    <div class="pi-label">Brand A vs Brand B</div>
+    <p><strong>Brand A:</strong> 96 Aware &rarr; 63 Ever Tried (65%) &rarr; 29 Recent Trial (46%) &rarr; 18 Occasional (62%) &rarr; 12 Regular (67%) &rarr; 6 Most Often (50%). <strong>Brand B:</strong> 97 Aware &rarr; 74 Ever Tried (76%) &rarr; 45 Recent Trial (61%) &rarr; 32 Occasional (71%) &rarr; 24 Regular (75%) &rarr; 15 Most Often (62%). Brand B has better conversion at every stage.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Business Market Segmentation</h2>
+  <table class="styled-table">
+    <thead><tr><th>Variable</th><th>Key Questions</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Demographic</strong></td><td>What industries? What company size? What geographical location?</td></tr>
+      <tr><td><strong>Operating Variables</strong></td><td>What technology? What user status? Customer capability? Few or many needs?</td></tr>
+      <tr><td><strong>Purchasing Approaches</strong></td><td>Centralized/decentralized purchasing? Power structures? Existing relationships? Single purchase or E2E?</td></tr>
+      <tr><td><strong>Situational Factors</strong></td><td>Urgent service? Small/large product slice? Large or small orders?</td></tr>
+      <tr><td><strong>Personal Characteristics</strong></td><td>Similar values? Risk taking/averse? High loyalty to suppliers?</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Market Targeting &amp; Effective Segmentation</h2>
+  <h3>7 Steps in the Segmentation Process</h3>
+  <ol style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Needs-Based Segmentation:</strong> Group customers based on similar needs and benefits</li>
+    <li><strong>Segment Identification:</strong> Determine demographics, lifestyles, usage behaviors making the segment distinct and identifiable</li>
+    <li><strong>Segment Attractiveness:</strong> Market growth, competitive intensity, market access</li>
+    <li><strong>Segment Profitability:</strong> Determine profitability</li>
+    <li><strong>Segment Positioning:</strong> Create value proposition and product-price positioning strategy</li>
+    <li><strong>Segment "Acid Test":</strong> Create segment storyboard to test attractiveness</li>
+    <li><strong>Marketing-Mix Strategy:</strong> Expand to include all 4Ps</li>
+  </ol>
+  <h3>Effective Segmentation Criteria</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Measurable</strong> &mdash; Can you measure the segment size?</li>
+    <li><strong>Substantial</strong> &mdash; Is the segment large enough to be profitable?</li>
+    <li><strong>Accessible</strong> &mdash; Can you effectively reach the segment?</li>
+    <li><strong>Differentiable</strong> &mdash; Is the segment conceptually distinguishable?</li>
+    <li><strong>Actionable</strong> &mdash; Can you formulate effective programs for the segment?</li>
+  </ul>
+  <h3>Porter's 5 Forces (Segment Attractiveness)</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Threat of Rivalry:</strong> Too much competition</li>
+    <li><strong>Threat of New Entrants:</strong> Low entry barrier</li>
+    <li><strong>Threat of Substitutes:</strong> Many alternative products</li>
+    <li><strong>Threat of Buyer Bargaining Power:</strong> Less number of buyers / big buyers</li>
+    <li><strong>Threat of Supplier Bargaining Power:</strong> Too few suppliers, controlling vital resources</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Levels of Segmentation &amp; Targeting</h2>
+  <p>A spectrum from <strong>Mass Market</strong> (Full Market Coverage) &rarr; <strong>Multiple Segments</strong> &rarr; <strong>Single Segments</strong> &rarr; <strong>Individuals as Segments</strong> (Customization).</p>
+  <div class="slide-example">
+    <div class="se-label">Targeting Slide Examples</div>
+    <p><strong>Dove:</strong> Targeted to women who value real beauty and moisturization. <strong>Tide:</strong> Gets its point effortlessly &mdash; mass market targeting. <strong>Thums Up:</strong> "Taste the Thunder" positioning for young, macho, adventurous males. <strong>Pulsar "Definitely Male":</strong> You should know whom NOT to target &mdash; Pulsar explicitly excludes women from its positioning.</p>
+  </div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 4 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li>Segmentation needed because 145 Cr Indians cannot all be targeted</li>
+    <li>4 Bases: Geographic (PRIZM clusters, Indian neighborhoods), Demographic (age, gender, income, generation, race/culture), Psychographic (VALS framework, personality traits), Behavioral (decision roles, occasions, user status, loyalty, attitude)</li>
+    <li>Horlicks: 6 demographic segments from one brand</li>
+    <li>Honda Shine vs Pulsar: same category, different psychographic targets</li>
+    <li>VALS: 8 segments from Innovators to Survivors</li>
+    <li>Decision Roles: Initiator, Influencer, Decider, Buyer, User (coaching centre caselet)</li>
+    <li>Marketing Funnel: Aware &rarr; Tried &rarr; Trial &rarr; Occasional &rarr; Regular &rarr; Most Often Used</li>
+    <li>Business segmentation: Demographic, Operating, Purchasing, Situational, Personal variables</li>
+    <li>7-Step Segmentation Process ending with Marketing-Mix Strategy</li>
+    <li>Effective criteria: Measurable, Substantial, Accessible, Differentiable, Actionable</li>
+    <li>Porter's 5 Forces for segment attractiveness</li>
+    <li>Spectrum: Mass Market &rarr; Customization</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA &bull; Marketing Management &bull; Session 4 Class Notes<br>
+  Based on Prof. Sagar Venkateshwar's Lecture 4-5 slides (first half)
+</div>
+</div>
+</body>
+</html>

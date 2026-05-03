@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 Class Notes — Consumer Behaviour | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; } .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; } .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #e65100, #ff9800, #ffb74d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; } .hero .subtitle { color: rgba(255,255,255,.9); font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; } .hero .pill { background: rgba(255,255,255,.2); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .prof-tag { text-align: center; padding: 12px; background: #fff3e0; color: #e65100; font-size: .85rem; font-weight: 600; border-bottom: 2px solid #ff9800; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #e65100; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #ffe0b2; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #ff9800; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #e65100; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; } .styled-table tbody tr:nth-child(even) { background: #fff8f0; } .styled-table tbody tr:hover { background: #fff3e0; }
+  .formula-box { background: #3e2723; color: #ffe0b2; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; }
+  .prof-insight { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .prof-insight .pi-label { display: inline-flex; align-items: center; gap: 6px; color: #e65100; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .prof-insight p { font-size: .92rem; color: #4e342e; }
+  .slide-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .slide-example .se-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .slide-example p { font-size: .92rem; color: #33691e; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; } .compare-grid .cg-card.left { background: #fff3e0; border-color: #ffcc80; } .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; } .compare-grid .cg-card.left h4 { color: #e65100; } .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; } .compare-grid .cg-card ul { padding-left: 18px; } .compare-grid .cg-card li { margin-bottom: 4px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #ffe0b2; border-color: #ff9800; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #e65100; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #ffcc80; padding: 0 6px; min-width: 30px; }
+  .summary-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 2px solid #ff9800; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #e65100; margin-bottom: 14px; font-size: 1.1rem; } .summary-box ul { padding-left: 20px; } .summary-box li { font-size: .9rem; color: #4e342e; margin-bottom: 6px; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
+  <a href="session_02.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">AI Notes</a>
+  <a href="session_02_class.html" style="padding:8px 24px;background:#ff9800;color:#fff;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">Class Notes</a>
+</div>
+
+<div class="prof-tag">Based on Prof. Sagar Venkateshwar's lectures | Lecture 2 (Merged AZC411/MBAZC411/MBAZG503/SEZC410)</div>
+
+<div class="hero">
+  <div class="session-tag">Session 2 of 16 &mdash; Class Notes</div>
+  <h1>Consumer Behaviour (Part 1)</h1>
+  <p class="subtitle">Understanding what drives consumer choices &mdash; cultural factors, social factors, SEC classification, reference groups, and the family's role in purchase decisions.</p>
+  <div class="meta-pills">
+    <span class="pill">Lecture 2 (L2)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Opening: Ad Analysis</h2>
+  <p>Prof. Sagar opens with two ads for analysis:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>PharmEasy ad (Ad 1):</strong> Featuring Aamir Khan &mdash; think about what consumer behaviour insights drive this ad</li>
+    <li><strong>Ad 2:</strong> A creative illustration (prince and princess) &mdash; analysing the communication strategy</li>
+  </ul>
+  <p>These ads set up the key question: <strong>What influences consumers to behave in certain ways?</strong></p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Customer vs Consumer</h2>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Customer</h4>
+      <p>Who <strong>purchases</strong> your product. The person who pays.</p>
+    </div>
+    <div class="cg-card right">
+      <h4>Consumer</h4>
+      <p>Who <strong>uses</strong> your product. The person who actually consumes.</p>
+    </div>
+  </div>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p>A parent buying diapers: the <strong>parent is the customer</strong> (purchaser) while the <strong>baby is the consumer</strong> (user). This distinction matters because marketing communication may need to target different people.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> What is Consumer Behaviour?</h2>
+  <div class="formula-box">The study of how <strong>individuals</strong>, <strong>groups</strong>, and <strong>organizations</strong> select, buy, use, and dispose of goods, services, ideas, or experiences to satisfy their needs and wants.</div>
+  <p>Consumer behaviour is influenced by <strong>cultural</strong>, <strong>social</strong>, and <strong>personal</strong> factors (cultural and social are <strong>external</strong>; personal is internal).</p>
+  <h3>Learning Objectives (4 Key Questions)</h3>
+  <ol style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>How do consumer characteristics influence buying behavior?</li>
+    <li>What major psychological processes influence consumer responses to the marketing program?</li>
+    <li>How do consumers make purchasing decisions?</li>
+    <li>In what ways do consumers stray from a deliberative, rational decision process?</li>
+  </ol>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Three Areas to Discuss</h2>
+  <div class="block-diagram">
+    <div class="block highlight"><div class="block-title">Influences on Consumer</div><div class="block-desc">Social influences; Personal influences</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block"><div class="block-title">Key Psychological Processes</div><div class="block-desc">Motivation, Perception, Learning, Emotion, Memory</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight"><div class="block-title">Buying Process</div><div class="block-desc">Need Arousal, Info Search, Evaluation, Purchase, Post-purchase</div></div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Cultural Factors</h2>
+  <table class="styled-table">
+    <thead><tr><th>Factor</th><th>Definition</th></tr></thead>
+    <tbody>
+      <tr><td><strong>01. Culture</strong></td><td>Ideas, customs and social behaviour of a particular people or society</td></tr>
+      <tr><td><strong>02. Sub Culture</strong></td><td>A distinct group within a larger society that shares a set of beliefs, values, and customs that differ from the dominant culture</td></tr>
+      <tr><td><strong>03. Social Classes</strong></td><td>A division of society based on economic and social status &mdash; lower, middle class, upper class, rich. Measured through Socio-Economic Classification (SEC)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Social Economic Classification (SEC)</h2>
+  <p>Originally created by <strong>Indian Market Research Bureau (IMRB) in 1988</strong>.</p>
+  <h3>Urban Grid</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Old criteria:</strong> Education and Occupational criteria (9 groups)</li>
+    <li><strong>New criteria (Govt. of India):</strong> Education and ownership of consumer durables (12 groups) &mdash; Electricity, gas connection, ceiling fan, 2-wheeler, CTV, Ref, WM, Computer, Car, Air conditioner, Land</li>
+    <li>Occupation Grid for ISEC-Urban: Unskilled Worker (1), Skilled Worker (2), Petty Traders (3), Shop Owners (4), Businessman/Industrialist without employees (5), with 1-9 employees (6), with 10+ employees (7), Self Employed Professional (8), Clerk/Salesman (9), Supervisory Level (10), Officer/Executive Junior (11), Officer/Executive Middle/Senior (12), Owner Farmer (13), Leased Farmer (14)</li>
+  </ul>
+  <h3>Rural Grid (4 groups)</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Education</li>
+    <li>Type of Dwelling (pucca, semi-pucca, katcha)</li>
+  </ul>
+  <h3>Household Potential Index (HPI)</h3>
+  <p>Calculated for urban consumers by taking into account possession of particular consumer durable items. An item in more common usage (TV) fetched a low score while one less popular (AC) got a higher score. Education was factored into the score.</p>
+  <div class="prof-insight">
+    <div class="pi-label">HPI Data from Slides</div>
+    <p>SEC A1 = 1% of households but 39% of HPITop1%. SEC A2 = 1.8%. SEC E+R3 = 35.3% of households but only 1% of HPITop1%. This shows extreme concentration of purchasing power at the top SEC segments.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Social Factors: What Influences Consumer Behaviour?</h2>
+  <p>Four key social factors:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Reference Groups</strong></li>
+    <li><strong>Cliques</strong></li>
+    <li><strong>Family</strong></li>
+    <li><strong>Roles and Status</strong></li>
+  </ul>
+
+  <h3>What are Reference Groups?</h3>
+  <p>Any individual or group that significantly influences a person's evaluations, aspirations, or behavior. They serve as points of comparison and sources of information, shaping how consumers perceive products, brands, and even their own self-concept.</p>
+
+  <h3>a) Direct Reference Groups</h3>
+  <p>Groups with whom the individual interacts through direct (face to face) or indirect interaction:</p>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>PRIMARY</h4>
+      <p>Family, Friends, Neighbors</p>
+      <ul>
+        <li><em>"I use Nike because all my friends use it."</em></li>
+        <li><em>"I bought an SUV because everyone in my neighborhood has one."</em></li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>SECONDARY</h4>
+      <p>Religious, Professional, Ethnic groups</p>
+      <ul>
+        <li><em>"I buy the medicine the doctor prescribes. I even avoid other brands of the same chemical."</em> (That is why pharma marketing is doctor-centric.)</li>
+        <li><em>"I eat only vegetarian/halal/kosher food because of my religious denomination."</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>b) Indirect Reference Groups</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Aspirational Groups:</strong> Group a person hopes to join. Eg: IIT, Brand Ambassadors</li>
+    <li><strong>Dissociative Groups:</strong> Group a person rejects. Eg: Drug addicts</li>
+    <li><strong>Opinion Leaders:</strong> Person who offers informal advice or information about a specific product. Eg: Dentist for dental hygiene, IT professional for a PC, Painter for paints, Mason for cement/sanitary ware</li>
+  </ul>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p><strong>UltraTech Cement:</strong> "Strong enough to uphold an Engineer's promise" &mdash; "The Engineer's Choice." This ad targets masons and engineers as opinion leaders who recommend cement brands to end consumers (home builders).</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">8</span> Cliques</h2>
+  <p><strong>Cliques are small groups whose members interact frequently</strong>, playing into the law of few:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Professionals:</strong> Doctors in a small city</li>
+    <li><strong>Mavens:</strong> People who are knowledgeable</li>
+    <li><strong>Connectors:</strong> Connect with many people (press)</li>
+    <li><strong>Salesmen:</strong> Persuasive skills (insurance salesmen)</li>
+    <li><strong>Stickiness of Ideas:</strong> An idea that would motivate people to act on it</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">9</span> Application: How to Use Social Factors?</h2>
+  <table class="styled-table">
+    <thead><tr><th>Category</th><th>Who Belongs?</th><th>Normal Reaction</th><th>Marketing Input</th><th>Comment</th></tr></thead>
+    <tbody>
+      <tr><td>Professional</td><td>Other Coaching Teachers, School Teachers</td><td>Negative (Hostile)</td><td>Appoint the most well known teachers of the city</td><td>Costly</td></tr>
+      <tr><td>Mavens</td><td>Bright Students</td><td>Judgmental</td><td>Offer incentives (scholarships etc.)</td><td>Costly</td></tr>
+      <tr><td>Connectors</td><td>Parents</td><td>Judgmental</td><td>Good Service, Communication (PTM)</td><td>Cost Effective</td></tr>
+      <tr><td>Salesmen</td><td>Parents, Group Discounts</td><td>&mdash;</td><td>Very good service, relationship</td><td>Group Discounts could appear over commercial</td></tr>
+      <tr><td>Stickiness of Ideas</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">10</span> Family Role Cannot Be Ignored</h2>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Family of Orientation</h4>
+      <p>Parents and siblings. From parents a person acquires an orientation toward <strong>religion, politics, economics</strong> and a sense of <strong>personal ambition, self-worth, and love</strong>.</p>
+    </div>
+    <div class="cg-card right">
+      <h4>Family of Procreation</h4>
+      <p>Spouse and children &mdash; more direct influence on everyday buying behavior.</p>
+      <ul>
+        <li><strong>Housewife:</strong> Household goods, garments</li>
+        <li><strong>Children as influencers:</strong> Mobile phones, PCs, movies, vacations</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p><strong>Dalda Vanaspati:</strong> Classic Indian ad &mdash; "Mothers who care use Dalda." This ad directly targets the family of procreation, positioning the housewife as the key decision maker for cooking products, appealing to the mother's care for family health.</p>
+  </div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 2 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li>Customer (purchaser) vs Consumer (user) &mdash; critical distinction</li>
+    <li>Consumer behaviour = how individuals/groups/organizations select, buy, use, dispose of goods/services</li>
+    <li>Influenced by Cultural (culture, sub-culture, social class), Social (reference groups, cliques, family, roles/status), and Personal factors</li>
+    <li>SEC Classification: IMRB 1988; Urban (12 groups based on education + consumer durables), Rural (4 groups based on education + dwelling type)</li>
+    <li>HPI measures purchasing power concentration by SEC segment</li>
+    <li>Reference Groups: Direct (Primary = family/friends; Secondary = religious/professional) and Indirect (Aspirational, Dissociative, Opinion Leaders)</li>
+    <li>Cliques: Professionals, Mavens, Connectors, Salesmen, Stickiness of Ideas</li>
+    <li>UltraTech Cement targets engineers/masons as opinion leaders</li>
+    <li>Family: Orientation (parents, religion, values) vs Procreation (spouse, children &mdash; direct buying influence)</li>
+    <li>Dalda ad: targeting housewife as key decision maker in family of procreation</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA &bull; Marketing Management &bull; Session 2 Class Notes<br>
+  Based on Prof. Sagar Venkateshwar's Lecture 2 slides
+</div>
+</div>
+</body>
+</html>

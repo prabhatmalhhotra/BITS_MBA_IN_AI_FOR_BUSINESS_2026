@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 1 Class Notes — Introduction to Marketing | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #e65100, #ff9800, #ffb74d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: rgba(255,255,255,.9); font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.2); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .prof-tag { text-align: center; padding: 12px; background: #fff3e0; color: #e65100; font-size: .85rem; font-weight: 600; border-bottom: 2px solid #ff9800; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #e65100; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #ffe0b2; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #ff9800; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #ffe0b2; border-color: #ff9800; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #e65100; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #ffcc80; padding: 0 6px; min-width: 30px; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #fff3e0; border-color: #ffcc80; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #e65100; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #e65100; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fff8f0; }
+  .styled-table tbody tr:hover { background: #fff3e0; }
+  .key-term { display: inline-block; background: #fff3e0; color: #e65100; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #3e2723; color: #ffe0b2; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .prof-insight { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .prof-insight .pi-label { display: inline-flex; align-items: center; gap: 6px; color: #e65100; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .prof-insight p { font-size: .92rem; color: #4e342e; }
+  .slide-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .slide-example .se-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .slide-example p { font-size: .92rem; color: #33691e; }
+  .summary-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 2px solid #ff9800; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #e65100; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #4e342e; margin-bottom: 6px; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #e65100; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #ffcc80; padding: 4px 0; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } .block-diagram { flex-direction: column; align-items: center; } .block-diagram .arrow { transform: rotate(90deg); } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
+  <a href="session_01.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">AI Notes</a>
+  <a href="session_01_class.html" style="padding:8px 24px;background:#ff9800;color:#fff;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">Class Notes</a>
+</div>
+
+<div class="prof-tag">Based on Prof. Sagar Venkateshwar's lectures | Lecture 1 (Merged AZC411/MBAZC411/MBAZG503/SEZC410)</div>
+
+<div class="hero">
+  <div class="session-tag">Session 1 of 16 &mdash; Class Notes</div>
+  <h1>Introduction to Marketing</h1>
+  <p class="subtitle">Prof. Sagar's opening lecture covering the scope, definition, and foundations of marketing &mdash; from the AMA definition to the product pyramid.</p>
+  <div class="meta-pills">
+    <span class="pill">Lecture 1 (L1)</span>
+    <span class="pill">43 Slides</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Course Outline &amp; Value of Marketing</h2>
+  <p>The course covers: Introduction to Marketing, Marketing Strategies and Plans, Consumer Behaviour, Segmentation Targeting and Positioning, Brand Positioning, Product Management, Pricing, Distribution and Logistics, and Promotion.</p>
+  <h3>What is the Value of Marketing?</h3>
+  <p>Marketing works in <strong>conjunction with other departments</strong> like finance, operations, accounts and other business activities to <strong>generate demand</strong> for products and services so that the firm can earn a profit.</p>
+  <div class="formula-box">Profit = Revenue - Cost<br>Valuation = Shares * Price of shares<br>Eg: 1m shares * 1000 = Rs. 100 crore</div>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p><strong>Unilever (HUL):</strong> Builds its bottom line on the back of its brands &mdash; Lifebuoy, Dove, TRESemme, Lakme, Pepsodent, Rexona, Axe, Pond's, Lux, Fair &amp; Lovely, Toni&amp;Guy, Closeup, Elle 18, Hamam, Pears, Vaseline, Sunsilk, Clinic Plus, Sure, Indulekha, Ayush, Breeze, Liril, Brylcreem.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> What Should Marketing Do For You?</h2>
+  <p>The goal of marketing is to <strong>build brands</strong> and a <strong>loyal customer base</strong> for the company; intangible assets which contribute heavily to the value of a firm.</p>
+  <h3>What is a Brand? (AMA Definition)</h3>
+  <div class="formula-box">"A brand is a name, term, design, symbol, or any other feature that identifies one seller's good or service as distinct from those of other sellers" &mdash; American Marketing Association</div>
+  <div class="prof-insight">
+    <div class="pi-label">Prof. Sagar's Example</div>
+    <p><strong>WhatsApp vs Signal:</strong> Both are messaging apps with similar features, but WhatsApp's brand recognition gives it a massive advantage. Why having a strong brand matters &mdash; it creates differentiation even when the product is similar.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> What is Marketing at its Core?</h2>
+  <p>Marketing is about <strong>identifying</strong> and <strong>meeting</strong> human and social <strong>needs</strong> in a profitable manner for the firm.</p>
+  <h3>Examples from Slides:</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>P&amp;G:</strong> Identifies and meets needs across hundreds of consumer categories</li>
+    <li><strong>Zepto:</strong> Quick commerce meeting the need for instant grocery delivery</li>
+    <li><strong>Edu-tech firms:</strong> Meeting the need for accessible education</li>
+    <li><strong>Go Zero Ice creams, Minimalist skincare:</strong> FMCG meeting new consumer preferences</li>
+    <li><strong>Electrical Vehicles:</strong> Human need (affordable, noise-free transport) + Social need (less pollution)</li>
+  </ul>
+  <p style="margin-top:12px;"><strong>Principles of marketing don't change</strong> &mdash; skilled marketing is a never-ending pursuit involving the art of adaptability through changing customer needs, technology and environmental factors.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Scope of Marketing (AMA Definition)</h2>
+  <div class="formula-box">Marketing is the <strong>activity</strong>, <strong>set of institutions</strong>, and <strong>processes</strong> for creating, communicating, delivering and exchanging offerings that have value for customers, clients, partners and society at large.</div>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Activity:</strong> Advertising, Selling, Product Management (product/package design), Pricing etc.</li>
+    <li><strong>Set of Institutions:</strong> Marketing departments, Ad Agencies, Modelling Agencies, Market Research Firms, Event Management Companies, Transport Companies, Retailers</li>
+    <li><strong>Processes:</strong> Research Inputs &rarr; Product Design &rarr; Product Launch &rarr; Response Measurement etc.</li>
+  </ul>
+  <h3>Two Definitions of Marketing</h3>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Managerial Definition</h4>
+      <p>Marketing is the art and science of <strong>choosing target markets</strong> and <strong>getting, keeping and growing</strong> customers through creating, delivering and communicating superior customer value.</p>
+    </div>
+    <div class="cg-card right">
+      <h4>Societal Definition</h4>
+      <p>Marketing is a societal process by which individuals and groups obtain what they need and want through creating, offering and freely exchanging products and services of value with others.</p>
+    </div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Marketing is NOT Selling</h2>
+  <p>A common management misconception. Selling at best is an <strong>activity associated with marketing</strong>. Marketing is far broader.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">6</span> What is Marketed? (10 Entities)</h2>
+  <table class="styled-table">
+    <thead><tr><th>Entity</th><th>Examples from Slides</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Goods</strong></td><td>Cars, Cosmetics, Medicines</td></tr>
+      <tr><td><strong>Services</strong></td><td>Education, Healthcare</td></tr>
+      <tr><td><strong>Events</strong></td><td>FIFA, A concert, IPL</td></tr>
+      <tr><td><strong>Persons</strong></td><td>A politician, an author</td></tr>
+      <tr><td><strong>Properties</strong></td><td>Real Estate, Gold</td></tr>
+      <tr><td><strong>Information</strong></td><td>Big Data, News</td></tr>
+      <tr><td><strong>Experiences</strong></td><td>Vipassana, Adventure</td></tr>
+      <tr><td><strong>Places</strong></td><td>Kerala, Goa</td></tr>
+      <tr><td><strong>Organizations</strong></td><td>Helpage India</td></tr>
+      <tr><td><strong>Ideas</strong></td><td>Swachh Bharat</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Who Markets? &mdash; Marketers &amp; Prospects</h2>
+  <p>A <strong>marketer</strong> is someone who seeks a response &mdash; attention, purchase, vote or a donation &mdash; from another party called <strong>prospect</strong>.</p>
+  <div class="slide-example">
+    <div class="se-label">Slide Examples</div>
+    <p><strong>Government road safety campaign</strong> (seat belt awareness), <strong>AngelOne</strong> (zero brokerage investment ad), <strong>Swiggy</strong> (Christmas Magic ad). All are marketers seeking different responses from prospects.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">8</span> Types of Demand States (8 Types)</h2>
+  <table class="styled-table">
+    <thead><tr><th>Demand State</th><th>Example from Slides</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Negative Demand</strong></td><td>Preventive healthcare</td></tr>
+      <tr><td><strong>Non-existent Demand</strong></td><td>Courses, mobile phone old versions</td></tr>
+      <tr><td><strong>Latent Demand</strong></td><td>Unbiased news</td></tr>
+      <tr><td><strong>Declining Demand</strong></td><td>Technological products, TV Sets</td></tr>
+      <tr><td><strong>Irregular Demand</strong></td><td>Face Masks</td></tr>
+      <tr><td><strong>Full Demand</strong></td><td>Demand = Supply</td></tr>
+      <tr><td><strong>Excessive Demand</strong></td><td>Demand &gt; Supply (Face Masks, sanitizers during Covid)</td></tr>
+      <tr><td><strong>Unwholesome Demand</strong></td><td>Alcohol, pirated movies, Computer Games</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">9</span> What is a Market Actually?</h2>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Economics Perspective</h4>
+      <p>A collection of buyers and sellers who transact over a particular product or product class.</p>
+    </div>
+    <div class="cg-card right">
+      <h4>Marketing Perspective</h4>
+      <p>Used to describe various groupings of customers. The automobile market = set of people interested in buying an automobile.</p>
+    </div>
+  </div>
+  <h3>Structure of Flows in a Modern Exchange Economy</h3>
+  <p>Five key entities: <strong>Resource Markets</strong> (Land, Labour, Capital) &rarr; <strong>Manufacturer</strong> &rarr; <strong>Government</strong> &rarr; <strong>Consumer</strong> &rarr; <strong>Intermediary</strong>. Money, goods, services, taxes flow between them.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">10</span> Key Customer Markets</h2>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Consumer:</strong> Buyer is the end customer</li>
+    <li><strong>B2B:</strong> Business 1 sells to Business 2 which uses the product to meet its customers' demands</li>
+    <li><strong>Global:</strong> Challenges of customisation, localization (cars in India need high ground clearance; no market for beef burgers in India)</li>
+    <li><strong>Non-profit and Govt Markets:</strong> NGOs (CRY, Helpage), tenders</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">11</span> Needs, Wants &amp; Demands</h2>
+  <div class="block-diagram">
+    <div class="block highlight"><div class="block-title">NEEDS</div><div class="block-desc">Basic Requirements. "I need food."</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block"><div class="block-title">WANTS</div><div class="block-desc">Desire. "I would like Pizza."</div></div>
+    <div class="arrow">&rarr;</div>
+    <div class="block highlight"><div class="block-title">DEMANDS</div><div class="block-desc">What I actually buy. "Two rotis please."</div></div>
+  </div>
+  <h3>5 Types of Needs</h3>
+  <table class="styled-table">
+    <thead><tr><th>Need Type</th><th>Example from Slides</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Stated</strong></td><td>"I need an inexpensive car."</td></tr>
+      <tr><td><strong>Unstated</strong></td><td>"I need good service." (missed by oversight)</td></tr>
+      <tr><td><strong>Real</strong></td><td>"Low operating/fuel/maintenance costs." (customer can't articulate; seller interprets as cheap car)</td></tr>
+      <tr><td><strong>Delight</strong></td><td>"Hey! Is that audio system complimentary?" (unexpected)</td></tr>
+      <tr><td><strong>Secret</strong></td><td>"Am I getting a good deal? I'm an engineer, hopefully I got specs right?" (won't admit)</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">12</span> STP Introduction &amp; Product Pyramid</h2>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Segmentation:</strong> Grouping of customers &mdash; demographic, psychographic etc.</li>
+    <li><strong>Target:</strong> Choosing which segment to serve</li>
+    <li><strong>Positioning:</strong> Volvo = safe cars; BMW = driving pleasure</li>
+  </ul>
+  <div class="prof-insight">
+    <div class="pi-label">Product Pyramid</div>
+    <p><strong>HUL Beauty (differentiable product):</strong> Skin Cleansing has Lifebuoy, Lux, Pears, Dove, Hamam, Rexona, Liril, VWash. Hair Care has Clinic Plus, Dove, Sunsilk, TRESemme, Indulekha.</p>
+    <p style="margin-top:10px;"><strong>Tata Salt (non-differentiable product):</strong> Super Premium (&gt;4.0X), Premium (1.0-3.0X), Popular (1.0X &mdash; Tata Salt, Shuddh), Mass (0.6X &mdash; Tata Salt Crystal, Shakti). Even for a commodity like salt, brand tiers create value.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">13</span> Core Marketing Concepts (Slides 26-43)</h2>
+  <h3>Offerings &amp; Brands</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Value Proposition:</strong> Set of benefits satisfying customer needs (quality medical service; innovative electronics with after-sales)</li>
+    <li><strong>Offering:</strong> Combination of products, services, information, experiences &mdash; gives physical shape to the value proposition (Apollo Hospitals; SONY)</li>
+    <li><strong>Brand:</strong> An offering from a known (identified) source</li>
+  </ul>
+  <h3>Marketing Channels</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Distribution:</strong> Dealers, Distributors, Retailers</li>
+    <li><strong>Service:</strong> Warehouses, Transport companies, Banks, Insurance</li>
+    <li><strong>Communication:</strong> Print, electronic, digital media, stores</li>
+  </ul>
+  <h3>Types of Media</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Paid:</strong> Advertisements</li>
+    <li><strong>Owned:</strong> Company brochures, website</li>
+    <li><strong>Earned:</strong> Word of Mouth</li>
+  </ul>
+  <h3>Impressions &amp; Engagement</h3>
+  <p><strong>Impression</strong> = consumer views a communication. <strong>Engagement</strong> = customer's attention and action involvement (Facebook "likes").</p>
+  <h3>Value and Satisfaction</h3>
+  <p>Value = combination of Features, Quality, Service, Price (<strong>FQSP</strong>) &mdash; the <strong>customer value triad</strong>. Satisfaction = perceived performance vs expectation.</p>
+  <h3>Supply Chain</h3>
+  <p>Raw material &rarr; component &rarr; finished product &rarr; final buyer. Example: Steel &mdash; Coal/Iron ore/Limestone &rarr; Steel Plant &rarr; Stock Yard &rarr; Dealer &rarr; Consumer.</p>
+  <h3>Competition</h3>
+  <p>All actual and potential rival offerings or substitutes. Toyota vs Honda (rival), Tesla vs Honda in India (potential rival), Metro Rail (substitute), Internet (potential substitute).</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">14</span> 4Ps and 7Ps of Marketing</h2>
+  <table class="styled-table">
+    <thead><tr><th>P</th><th>Elements</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Product</strong></td><td>Variety, Quality, Design, Features, Brand Name, Packaging, Sizes, Services, Warranties, Returns</td></tr>
+      <tr><td><strong>Price</strong></td><td>List Price, Discounts, Allowances, Payment Period, Credit Terms</td></tr>
+      <tr><td><strong>Place</strong></td><td>Channels, Coverage, Assortment, Location, Inventory, Transport</td></tr>
+      <tr><td><strong>Promotion</strong></td><td>Sales Promotion, Advertising, Sales Force, PR, Direct Marketing</td></tr>
+      <tr><td><strong>People</strong></td><td rowspan="3">Service Marketing (5th, 6th, 7th Ps)</td></tr>
+      <tr><td><strong>Processes</strong></td></tr>
+      <tr><td><strong>Physical Evidence</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="slide-example">
+    <div class="se-label">Slide Examples</div>
+    <p><strong>Product:</strong> Reynolds pen vs Mont Blanc &mdash; product vs brand.<br>
+    <strong>Price:</strong> Mass (Maruti), Premium (Lamborghini), Penetrative (Jio), Skimming (Movies/Jawan). Factors: Input costs, Logistics, Competition/Grey Markets, Distributor Margins, Profitability.<br>
+    <strong>Place:</strong> Kirana stores, Modern Trade, E-commerce (Flipkart/Amazon), Quick Commerce (Zepto/Dunzo/BigBasket/Blinkit), D2C.<br>
+    <strong>Promotion:</strong> Lifebuoy (health), Thums Up ("Taste the Thunder") &mdash; consistent brand messages over the years.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">15</span> Evolution of Marketing Concepts</h2>
+  <div class="flow-vertical" style="max-width:420px;">
+    <div class="fv-box"><div class="fv-title">Production Concept</div><div class="fv-desc">Cheap &amp; available. Eg: Steel Industry, Chinese companies</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Product Concept</div><div class="fv-desc">Quality &amp; variety. Eg: Apple</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Selling Concept</div><div class="fv-desc">Hard selling needed. Eg: Insurance sector</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Marketing Concept</div><div class="fv-desc">Right product for customer. Superior value delivery.</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Holistic Marketing</div><div class="fv-desc">Internal + Integrated + Performance + Relationship</div></div>
+  </div>
+  <h3>Holistic Marketing Dimensions</h3>
+  <p><strong>Internal</strong> (Marketing dept, Senior mgmt, Other depts) | <strong>Integrated</strong> (Products/services, Communications, Channels, Price) | <strong>Performance</strong> (Sales revenue, Brand equity, Ethics, Social, Legal) | <strong>Relationship</strong> (Customers, Employees, Partners, Financial community)</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">16</span> New Marketing Realities</h2>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>01. Technology:</strong> AI, data, digital transformation</li>
+    <li><strong>02. Globalization:</strong> Tide in USA vs Tide in India &mdash; same brand, different products for different markets</li>
+    <li><strong>03. Social Responsibility:</strong> Mamaearth &mdash; "You buy, we plant" (#PlantGoodness)</li>
+  </ul>
+</div>
+
+<div class="summary-box">
+  <h3>Session 1 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li>Marketing works with all departments to generate demand; Profit = Revenue - Cost</li>
+    <li>Goal: Build brands + loyal customer base (intangible assets driving valuation)</li>
+    <li>AMA Definition: Activity, institutions, processes for creating/communicating/delivering/exchanging value</li>
+    <li>Managerial vs Societal definitions of marketing</li>
+    <li>Marketing is NOT selling</li>
+    <li>10 entities marketed: Goods, Services, Events, Persons, Properties, Information, Experiences, Places, Organizations, Ideas</li>
+    <li>8 demand states: Negative, Non-existent, Latent, Declining, Irregular, Full, Excessive, Unwholesome</li>
+    <li>Market: Economics (buyers &amp; sellers) vs Marketing (customer groupings)</li>
+    <li>4 Customer Markets: Consumer, B2B, Global, Non-profit/Govt</li>
+    <li>Needs &rarr; Wants &rarr; Demands; 5 need types (Stated, Unstated, Real, Delight, Secret)</li>
+    <li>STP: Segmentation, Targeting, Positioning</li>
+    <li>Product Pyramid: HUL (differentiable) vs Tata Salt (non-differentiable)</li>
+    <li>4Ps + 3 = 7Ps for services</li>
+    <li>Evolution: Production &rarr; Product &rarr; Selling &rarr; Marketing &rarr; Holistic</li>
+    <li>New Realities: Technology, Globalization, Social Responsibility</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA &bull; Marketing Management &bull; Session 1 Class Notes<br>
+  Based on Prof. Sagar Venkateshwar's Lecture 1 slides
+</div>
+</div>
+</body>
+</html>

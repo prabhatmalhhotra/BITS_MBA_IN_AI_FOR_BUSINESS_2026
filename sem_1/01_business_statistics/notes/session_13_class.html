@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 13 Class Notes — Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .toggle-bar { display: flex; justify-content: center; gap: 0; margin: 0; background: #1a2a33; padding: 10px 0; }
+  .toggle-bar a { padding: 8px 24px; text-decoration: none; font-size: .85rem; font-weight: 600; }
+  .toggle-bar .toggle-ai { background: #2c3e50; color: #90a4ae; border-radius: 20px 0 0 20px; }
+  .toggle-bar .toggle-class { background: #64ffda; color: #0f2027; border-radius: 0 20px 20px 0; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero .prof-tag { display: inline-block; background: rgba(255,183,77,.2); color: #ffb74d; padding: 4px 16px; border-radius: 20px; font-size: .78rem; font-weight: 600; letter-spacing: .5px; margin-bottom: 16px; margin-left: 8px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .coming-soon {
+    background: #fff;
+    border-radius: 14px;
+    padding: 60px 32px;
+    margin: 40px 0;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    border: 1px solid #e8eaed;
+    text-align: center;
+  }
+  .coming-soon .cs-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e0f2f1, #e0f7fa);
+    border: 3px solid #4dd0e1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  .coming-soon h2 { font-size: 1.4rem; color: #0f2027; margin-bottom: 12px; }
+  .coming-soon p { font-size: 1rem; color: #607d8b; max-width: 480px; margin: 0 auto 20px; }
+  .coming-soon .cs-hint {
+    display: inline-block;
+    background: rgba(100,255,218,.1);
+    color: #00897b;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 600;
+  }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<!-- TOGGLE BAR -->
+<div class="toggle-bar">
+  <a href="session_13.html" class="toggle-ai">AI Notes</a>
+  <a href="session_13_class.html" class="toggle-class">Class Notes</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="session-tag">Session 13 of 16</div>
+  <div class="prof-tag">Based on Prof. Sandeep Kayastha's Lecture</div>
+  <h1>Session 13 &mdash; Class Notes</h1>
+  <p class="subtitle">Class notes for this session will be added after the professor's lecture.</p>
+  <div class="meta-pills">
+    <span class="pill">Coming Soon</span>
+    <span class="pill">Saturday 8:20 AM via MS Teams</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="coming-soon">
+  <div class="cs-icon">&#128218;</div>
+  <h2>Class Notes Coming Soon</h2>
+  <p>No class notes available yet for this session. Check back after the lecture.</p>
+  <div class="cs-hint">In the meantime, check the AI Notes for this session</div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 13 of 16<br>
+  Class Notes from Prof. Sandeep Kayastha (Hyderabad Campus)
+</div>
+
+</div><!-- /container -->
+</body>
+</html>

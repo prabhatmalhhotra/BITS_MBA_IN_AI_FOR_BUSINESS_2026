@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 1 Class Notes — Defining and Collecting Data | Business Statistics</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f0f2f5;
+    padding: 0;
+  }
+
+  /* ── Top Nav Bar ── */
+  .topbar {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge {
+    background: #ff5252;
+    color: #fff;
+    font-size: .7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* ── Toggle Bar ── */
+  .toggle-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin: 0;
+    background: #1a2a33;
+    padding: 10px 0;
+  }
+  .toggle-bar a {
+    padding: 8px 24px;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 600;
+  }
+  .toggle-bar .toggle-ai {
+    background: #2c3e50;
+    color: #90a4ae;
+    border-radius: 20px 0 0 20px;
+  }
+  .toggle-bar .toggle-class {
+    background: #64ffda;
+    color: #0f2027;
+    border-radius: 0 20px 20px 0;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 56px 32px 48px;
+    text-align: center;
+  }
+  .hero .session-tag {
+    display: inline-block;
+    background: rgba(100, 255, 218, .15);
+    color: #64ffda;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero .prof-tag {
+    display: inline-block;
+    background: rgba(255, 183, 77, .2);
+    color: #ffb74d;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .5px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill {
+    background: rgba(255,255,255,.1);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: .78rem;
+    color: #cfd8dc;
+  }
+
+  /* ── Container ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Real World Problem Box ── */
+  .real-world {
+    background: linear-gradient(135deg, #fff3e0, #fff8e1);
+    border-left: 5px solid #ff9800;
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin-bottom: 36px;
+    box-shadow: 0 2px 8px rgba(255,152,0,.12);
+  }
+  .real-world .rw-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff9800;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 14px;
+  }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway {
+    margin-top: 14px;
+    padding: 10px 16px;
+    background: rgba(255,152,0,.1);
+    border-radius: 8px;
+    font-weight: 600;
+    color: #bf360c;
+    font-size: .9rem;
+  }
+
+  /* ── Section Card ── */
+  .section-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    border: 1px solid #e8eaed;
+  }
+  .section-card h2 {
+    font-size: 1.35rem;
+    color: #0f2027;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-card h2 .sec-num {
+    background: #2c5364;
+    color: #fff;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+
+  /* ── Block Diagram ── */
+  .block-diagram {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 24px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .block-diagram .block {
+    background: #e3f2fd;
+    border: 2px solid #90caf9;
+    border-radius: 10px;
+    padding: 14px 18px;
+    text-align: center;
+    min-width: 120px;
+    flex: 1;
+    max-width: 200px;
+  }
+  .block-diagram .block.highlight {
+    background: #bbdefb;
+    border-color: #42a5f5;
+    font-weight: 700;
+  }
+  .block-diagram .block .block-title {
+    font-weight: 700;
+    font-size: .85rem;
+    color: #1565c0;
+    margin-bottom: 4px;
+  }
+  .block-diagram .block .block-desc {
+    font-size: .78rem;
+    color: #37474f;
+  }
+  .block-diagram .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: #90caf9;
+    padding: 0 6px;
+    min-width: 30px;
+  }
+
+  /* ── Vertical flow diagram ── */
+  .flow-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 24px auto;
+    max-width: 340px;
+  }
+  .flow-vertical .fv-box {
+    background: #e8f5e9;
+    border: 2px solid #81c784;
+    border-radius: 10px;
+    padding: 12px 24px;
+    text-align: center;
+    width: 100%;
+  }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+
+  /* ── Split Comparison ── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+  }
+  .compare-grid .cg-card {
+    border-radius: 10px;
+    padding: 18px 16px;
+    border: 2px solid;
+  }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 {
+    font-size: .95rem;
+    margin-bottom: 8px;
+  }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+
+  /* ── Daily Life Example ── */
+  .daily-example {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 5px solid #4caf50;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .daily-example .de-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+  }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+
+  /* ── Latest / Trending Example ── */
+  .trending-example {
+    background: linear-gradient(135deg, #ede7f6, #e8eaf6);
+    border-left: 5px solid #7c4dff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .trending-example .te-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #4a148c;
+    font-weight: 700;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 8px;
+  }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+
+  /* ── Table ── */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: .88rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+
+  /* ── Key Term ── */
+  .key-term {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #0d47a1;
+    padding: 2px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: .88rem;
+  }
+
+  /* ── Formula Box ── */
+  .formula-box {
+    background: #263238;
+    color: #e0f7fa;
+    padding: 16px 22px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: .95rem;
+    margin: 16px 0;
+    text-align: center;
+    letter-spacing: .5px;
+  }
+
+  /* ── Summary / Checklist ── */
+  .summary-box {
+    background: linear-gradient(135deg, #e0f2f1, #e0f7fa);
+    border: 2px solid #4dd0e1;
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin: 30px 0;
+  }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li {
+    font-size: .9rem;
+    color: #004d40;
+    margin-bottom: 6px;
+    list-style-type: none;
+    padding-left: 20px;
+    position: relative;
+  }
+  .summary-box li::before { content: '\2713\00a0\00a0'; color: #00bfa5; font-weight: 700; position: absolute; left: 0; }
+
+  /* ── Difficulty Badge ── */
+  .difficulty {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-left: 10px;
+  }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+
+  /* ── Progress Bar ── */
+  .progress-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 0 10px;
+    position: relative;
+  }
+  .progress-track::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: #e0e0e0;
+    z-index: 0;
+  }
+  .progress-track .pt-step {
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+  }
+  .progress-track .pt-dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    margin: 0 auto 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+
+  /* ── Exam Tip ── */
+  .exam-tip {
+    background: #fff3e0;
+    border: 2px dashed #ff9800;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: .88rem;
+    color: #e65100;
+  }
+  .exam-tip strong { color: #bf360c; }
+
+  /* ── Deferred Note ── */
+  .deferred-note {
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    border-left: 5px solid #e91e63;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin: 22px 0;
+    font-size: .9rem;
+    color: #880e4f;
+  }
+  .deferred-note strong { color: #ad1457; }
+
+  /* ── Footer ── */
+  .page-footer {
+    text-align: center;
+    padding: 28px 20px;
+    color: #90a4ae;
+    font-size: .78rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+  }
+
+  /* ── Tree diagram ── */
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li {
+    position: relative;
+    padding: 6px 0 6px 24px;
+    font-size: .88rem;
+    color: #37474f;
+  }
+  .tree li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #b0bec5;
+  }
+  .tree li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 18px;
+    height: 2px;
+    background: #b0bec5;
+  }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label {
+    display: inline-block;
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-weight: 600;
+    color: #1565c0;
+  }
+  .tree .node-desc {
+    display: block;
+    font-size: .8rem;
+    color: #607d8b;
+    margin-top: 2px;
+    padding-left: 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<!-- TOGGLE BAR -->
+<div class="toggle-bar">
+  <a href="session_01.html" class="toggle-ai">AI Notes</a>
+  <a href="session_01_class.html" class="toggle-class">Class Notes</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="session-tag">Session 1 of 16</div>
+  <div class="prof-tag">Based on Prof. Sandeep Kayastha's Lecture &mdash; 25 Apr 2026</div>
+  <h1>Defining and Collecting Data</h1>
+  <p class="subtitle">Professor's coverage of Chapter 1 from Lecture L-01: What is statistics, why it matters across fields, types of data, measurement scales (NOIR), and applied classification of dataset columns.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 1 (Levine)</span>
+    <span class="pill">L-01 Slides 14-28</span>
+    <span class="pill">Saturday 8:20 AM</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+  <div class="pt-step done"><div class="pt-dot">6</div></div>
+  <div class="pt-step done"><div class="pt-dot">7</div></div>
+</div>
+
+<!-- SECTION 1: TWO BRANCHES -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Two Branches of Statistics <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>Professor began by splitting the entire course into two halves:</p>
+
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Descriptive Statistics</h4>
+      <ul>
+        <li>Summarise data</li>
+        <li>Presentation &amp; visualisation</li>
+        <li>Covered in Chapters 1-2</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Inferential Statistics</h4>
+      <ul>
+        <li>Estimation</li>
+        <li>Hypothesis testing</li>
+        <li>Correlation &amp; Regression</li>
+        <li>Covered in Chapters 3-12</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size:.9rem;color:#546e7a;margin-top:10px;">Professor emphasised that descriptive is about <em>"what happened"</em> while inferential is about <em>"what can we conclude about the larger group."</em></p>
+</div>
+
+<!-- SECTION 2: WHY STATISTICS? -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Why Statistics Matters &mdash; The Foundation <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>Professor presented statistics as the foundation for a very wide range of applications. He listed 15+ use-cases across three categories:</p>
+
+  <h3>Business Applications</h3>
+  <table class="styled-table">
+    <thead>
+      <tr><th>Application</th><th>How Statistics is Used</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Casino</td><td>Probability of winning/losing &mdash; house always has an edge</td></tr>
+      <tr><td>Insurance</td><td>Actuarial tables, risk pricing based on historical claims data</td></tr>
+      <tr><td>Quality Control (QC)</td><td>Sampling from production line to detect defects</td></tr>
+      <tr><td>Portfolio Management</td><td>Risk-return analysis, diversification</td></tr>
+      <tr><td>CIBIL Score</td><td>Credit scoring model based on repayment history</td></tr>
+      <tr><td>Amazon / Netflix</td><td>Recommendation engines based on user behaviour patterns</td></tr>
+      <tr><td>Email Spam Filter</td><td>Bayesian classification of emails</td></tr>
+      <tr><td>Warranty Pricing</td><td>Predicting failure rates from historical data</td></tr>
+      <tr><td>Airline Pricing</td><td>Dynamic pricing based on demand forecasting</td></tr>
+      <tr><td>Railway RAC</td><td>Predicting no-shows to overbook optimally</td></tr>
+      <tr><td>Election Polls</td><td>Sample surveys to predict voter preferences</td></tr>
+      <tr><td>Marketing</td><td>A/B testing, customer segmentation</td></tr>
+      <tr><td>Data Analytics &amp; AI</td><td>Statistics is the backbone of ML/AI algorithms</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Other Fields</h3>
+  <p style="font-size:.9rem;">Clinical trials (pharma), Meteorology (weather forecasts), Genetics (gene expression analysis), Econometrics (economic modelling)</p>
+
+  <h3>Statistical Techniques (Preview)</h3>
+  <p style="font-size:.9rem;">Forecasting, Regression, Classification, Clustering, PCA (Principal Component Analysis) &mdash; professor noted these will be covered in later sessions.</p>
+
+  <div class="trending-example">
+    <div class="te-label">Professor's Diverse Examples</div>
+    <p>
+      The professor listed 15 real-world domains where statistics appears in daily life:
+      <strong>Cricket</strong> (batting averages, run rates), <strong>KBC</strong> (audience poll = mode), <strong>Bollywood</strong> (box office predictions),
+      plus casinos, insurance, quality control, portfolio management, CIBIL scores, Amazon/Netflix recommendations,
+      spam filters, warranty, airline pricing, Railway RAC, polls, and marketing analytics.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 3: THREE DATASETS -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Three Datasets Shown in Class <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>Professor introduced three different real-world datasets to show the variety of data we encounter:</p>
+
+  <div class="block-diagram" style="flex-wrap:wrap; gap:14px;">
+    <div class="block" style="max-width:220px;">
+      <div class="block-title">Properties Sold</div>
+      <div class="block-desc">Real estate transactions with price, area, location etc.</div>
+    </div>
+    <div class="block" style="max-width:220px;">
+      <div class="block-title">Amazon TV Feedback</div>
+      <div class="block-desc">Customer reviews/ratings for television products</div>
+    </div>
+    <div class="block" style="max-width:220px;">
+      <div class="block-title">Goods Sold Invoices</div>
+      <div class="block-desc">Sales transactions with item, quantity, price, date</div>
+    </div>
+  </div>
+
+  <p style="font-size:.9rem;color:#546e7a;">These datasets were used throughout the lecture to demonstrate variable types, measurement scales, and data classification.</p>
+</div>
+
+<!-- SECTION 4: TYPES OF DATASETS -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Types of Datasets <span class="difficulty beginner">Beginner</span></h2>
+
+  <h3>Unstructured vs Structured</h3>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Unstructured</h4>
+      <p>Text, images, videos, social media posts &mdash; no fixed format</p>
+    </div>
+    <div class="cg-card right">
+      <h4>Structured</h4>
+      <p>Rows and columns, databases, spreadsheets &mdash; organised format</p>
+    </div>
+  </div>
+
+  <h3>Population vs Sample</h3>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Population</h4>
+      <p>The <strong>entire group</strong> you want to study.</p>
+      <ul>
+        <li>All 10 IPL teams = Population</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Sample</h4>
+      <p>A <strong>subset</strong> selected for study.</p>
+      <ul>
+        <li>3 IPL teams selected = Sample</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="daily-example">
+    <div class="de-label">Professor's IPL Example</div>
+    <p>
+      <strong>Population:</strong> All 10 IPL teams (CSK, MI, RCB, KKR, DC, SRH, PBKS, RR, GT, LSG).<br>
+      <strong>Sample:</strong> If you pick just 3 teams (say CSK, MI, RCB) for analysis, that is your sample.<br>
+      Measurements on the population are <span class="key-term">Parameters</span>; measurements on the sample are <span class="key-term">Statistics</span>.
+    </p>
+  </div>
+
+  <h3>Time Series vs Cross-Sectional</h3>
+  <div class="compare-grid">
+    <div class="cg-card left">
+      <h4>Time Series</h4>
+      <p>Same variable measured over <strong>time</strong></p>
+      <ul>
+        <li>Monthly sales for 2025</li>
+        <li>Daily stock prices</li>
+      </ul>
+    </div>
+    <div class="cg-card right">
+      <h4>Cross-Sectional</h4>
+      <p>Multiple variables measured at <strong>one point</strong> in time</p>
+      <ul>
+        <li>Survey of 500 customers today</li>
+        <li>Census data snapshot</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: NOIR -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Measurement Scales &mdash; NOIR <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <p>Professor spent significant time on the four measurement scales. He defined each with clear criteria and Indian examples:</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Scale</th><th>Key Property</th><th>Professor's Examples</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Nominal (N)</strong></td>
+        <td>Can be <strong>categorised</strong> but NOT ranked</td>
+        <td>Gender, City, IPL team name, Brand</td>
+      </tr>
+      <tr>
+        <td><strong>Ordinal (O)</strong></td>
+        <td>Can be <strong>ranked</strong> but gaps are not measurable</td>
+        <td>Army ranks, Satisfaction ratings (Poor/Good/Excellent), T-shirt sizes (S/M/L/XL)</td>
+      </tr>
+      <tr>
+        <td><strong>Interval (I)</strong></td>
+        <td><strong>Measured</strong> with equal gaps but NO true zero</td>
+        <td>Temperature in &deg;C/&deg;F, Calendars (year 0 is arbitrary), Shoe sizes (UK vs US), Product ratings (1-5)</td>
+      </tr>
+      <tr>
+        <td><strong>Ratio (R)</strong></td>
+        <td>Measured with equal gaps AND <strong>true zero</strong></td>
+        <td>Weight, Height, Income, Sales, BSE/NSE index values</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Operations &amp; Techniques by Scale</h3>
+  <p>Professor showed a detailed table of which arithmetic operations and statistical techniques apply to each scale:</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Operation / Technique</th><th>Nominal</th><th>Ordinal</th><th>Interval</th><th>Ratio</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Categorise / Count</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Rank / Order</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Add / Subtract (equal intervals)</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Multiply / Divide (true zero)</td><td>No</td><td>No</td><td>No</td><td>Yes</td></tr>
+      <tr><td>Mode</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Median</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Mean</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Std Deviation</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Ratios ("twice as much")</td><td>No</td><td>No</td><td>No</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> Professor emphasised NOIR extensively. Be prepared to classify variables from any given dataset. The key distinction: <strong>Interval has no true zero</strong> (0&deg;C does not mean "no temperature"), while <strong>Ratio has a true zero</strong> (&#8377;0 = no income).
+  </div>
+</div>
+
+<!-- SECTION 6: APPLIED NOIR -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Applied: Classifying Dataset Columns <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <p>Professor applied NOIR to real dataset columns from the <strong>Goods Sold Invoice</strong> data, marking each column as N, O, I, or R:</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Column</th><th>Scale</th><th>Reasoning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Invoice Number</td><td><strong>N</strong> (Nominal)</td><td>Just an identifier, cannot be ranked meaningfully</td></tr>
+      <tr><td>Customer Name</td><td><strong>N</strong> (Nominal)</td><td>Label/category, no inherent order</td></tr>
+      <tr><td>Product Category</td><td><strong>N</strong> (Nominal)</td><td>Categories like Electronics, Clothing &mdash; no natural rank</td></tr>
+      <tr><td>Quantity</td><td><strong>R</strong> (Ratio)</td><td>True zero exists (0 = nothing sold), can say "twice as many"</td></tr>
+      <tr><td>Unit Price</td><td><strong>R</strong> (Ratio)</td><td>True zero (&#8377;0 = free), ratios are meaningful</td></tr>
+      <tr><td>Total Amount</td><td><strong>R</strong> (Ratio)</td><td>Same reasoning as unit price</td></tr>
+      <tr><td>Date</td><td><strong>I</strong> (Interval)</td><td>Equal gaps between days but no "true zero" date</td></tr>
+      <tr><td>Payment Method</td><td><strong>N</strong> (Nominal)</td><td>UPI/Card/Cash &mdash; categories, no rank</td></tr>
+    </tbody>
+  </table>
+
+  <div class="daily-example">
+    <div class="de-label">Classroom Exercise</div>
+    <p>
+      Professor asked students to practice this classification on the <strong>Properties Sold</strong> and <strong>Amazon TV Feedback</strong> datasets as well.
+      For example: Star rating on Amazon = <strong>Ordinal</strong> (1-5 stars, ranked but gaps not guaranteed equal); Price = <strong>Ratio</strong>; Brand = <strong>Nominal</strong>.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 7: DEFERRED -->
+<div class="section-card">
+  <h2><span class="sec-num">7</span> What Was NOT Covered <span class="difficulty beginner">Beginner</span></h2>
+
+  <div class="deferred-note">
+    <strong>Sampling Methods &amp; Survey Methods</strong> &mdash; Deferred to Session 7 per professor.<br><br>
+    Professor explicitly stated: <em>"Sampling methods and survey methods from Chapter 1 will be covered later when we do Chapter 7 &mdash; Sampling Distributions. It makes more sense to learn them together."</em>
+  </div>
+
+  <p style="font-size:.9rem;color:#546e7a;">This means the following topics from the textbook Chapter 1 were <strong>skipped</strong> in this lecture:</p>
+  <ul style="padding-left:22px;font-size:.9rem;color:#546e7a;">
+    <li>Simple Random Sampling (SRS)</li>
+    <li>Systematic Sampling</li>
+    <li>Stratified Sampling</li>
+    <li>Cluster Sampling</li>
+    <li>Non-probability sampling methods</li>
+    <li>Survey methods (Personal interview, Telephone, Mail, Online)</li>
+    <li>Types of errors (Coverage, Non-response, Sampling, Measurement)</li>
+  </ul>
+  <p style="font-size:.85rem;color:#78909c;margin-top:12px;">These topics ARE covered in the AI Notes for Session 1 if you want to read ahead.</p>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 1 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Statistics</strong> = Descriptive (Summarise, Ch 1-2) + Inferential (Estimation, Hypothesis, Correlation, Regression, Ch 3-12)</li>
+    <li>Statistics is the <strong>foundation</strong> for business (13+ applications listed), other fields, and AI/ML techniques</li>
+    <li>Professor showed <strong>3 real datasets</strong>: Properties Sold, Amazon TV Feedback, Goods Sold Invoices</li>
+    <li><strong>Dataset types</strong>: Unstructured vs Structured; Population vs Sample (IPL teams example); Time Series vs Cross-Sectional</li>
+    <li><strong>NOIR scales</strong>: Nominal (categorise) &lt; Ordinal (rank) &lt; Interval (measure, no true zero) &lt; Ratio (true zero)</li>
+    <li>Each scale enables progressively more <strong>arithmetic operations</strong> and statistical techniques</li>
+    <li>Practice: classify every column in a dataset as N, O, I, or R</li>
+    <li><strong>Sampling methods deferred</strong> to Session 7 (Chapter 7: Sampling Distributions)</li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 1 of 16<br>
+  Class Notes from Prof. Sandeep Kayastha's Lecture L-01 (25 Apr 2026) &bull; Slides 14-28
+</div>
+
+</div><!-- /container -->
+<script>
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

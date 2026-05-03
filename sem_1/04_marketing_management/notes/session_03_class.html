@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 3 Class Notes — Consumer Behaviour (Part 2) | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; } .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; } .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #e65100, #ff9800, #ffb74d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; } .hero .subtitle { color: rgba(255,255,255,.9); font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; } .hero .pill { background: rgba(255,255,255,.2); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .prof-tag { text-align: center; padding: 12px; background: #fff3e0; color: #e65100; font-size: .85rem; font-weight: 600; border-bottom: 2px solid #ff9800; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #e65100; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #ffe0b2; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #ff9800; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #e65100; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; } .styled-table tbody tr:nth-child(even) { background: #fff8f0; } .styled-table tbody tr:hover { background: #fff3e0; }
+  .formula-box { background: #3e2723; color: #ffe0b2; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; }
+  .prof-insight { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .prof-insight .pi-label { display: inline-flex; align-items: center; gap: 6px; color: #e65100; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .prof-insight p { font-size: .92rem; color: #4e342e; }
+  .slide-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .slide-example .se-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .slide-example p { font-size: .92rem; color: #33691e; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; } .compare-grid .cg-card.left { background: #fff3e0; border-color: #ffcc80; } .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; } .compare-grid .cg-card.left h4 { color: #e65100; } .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; } .compare-grid .cg-card ul { padding-left: 18px; } .compare-grid .cg-card li { margin-bottom: 4px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 380px; }
+  .flow-vertical .fv-box { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #e65100; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #ffcc80; padding: 4px 0; }
+  .summary-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 2px solid #ff9800; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #e65100; margin-bottom: 14px; font-size: 1.1rem; } .summary-box ul { padding-left: 20px; } .summary-box li { font-size: .9rem; color: #4e342e; margin-bottom: 6px; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } .compare-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
+  <a href="session_03.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">AI Notes</a>
+  <a href="session_03_class.html" style="padding:8px 24px;background:#ff9800;color:#fff;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">Class Notes</a>
+</div>
+
+<div class="prof-tag">Based on Prof. Sagar Venkateshwar's lectures | Lecture 3 (Merged AZC411/MBAZC411/MBAZG503/SEZC410)</div>
+
+<div class="hero">
+  <div class="session-tag">Session 3 of 16 &mdash; Class Notes</div>
+  <h1>Consumer Behaviour (Part 2)</h1>
+  <p class="subtitle">Personal factors, key psychological processes (Motivation, Perception, Learning, Emotions, Memory), the buying decision process, and behavioral economics.</p>
+  <div class="meta-pills">
+    <span class="pill">Lecture 3 (L3)</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Personal Factors Influencing Consumer Behaviour</h2>
+  <h3>Age &amp; Life Cycle</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Childhood &mdash; Cakes, Chocolates, Books, Cartoons</li>
+    <li>Young adults &mdash; Jeans, Bikes, T-shirts, Movies</li>
+    <li>Middle Ages &mdash; Diet, Gym, Sugar-free products</li>
+    <li>Old Age &mdash; Health Care</li>
+  </ul>
+  <h3>Lifecycle Stages</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>First Job &mdash; Insurance, Bike/Car, House</li>
+    <li>Marriage &mdash; Household items</li>
+    <li>Child Birth &mdash; Infant items (diapers, disinfectants)</li>
+  </ul>
+  <h3>Occupation</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Self Improvement Products (Coursera, Udemy)</li>
+    <li>Tools related to occupation (Laptops, Stethoscopes, Calculators)</li>
+  </ul>
+  <h3>Economic Circumstances</h3>
+  <p>Times of boom and recession &mdash; recreational expenses go up during "booms".</p>
+  <h3>Personality &amp; Brand Personality</h3>
+  <p>A set of distinguishing human psychological characteristics that lead to relatively consistent and enduring responses to environmental stimuli. People choose brands consistent with their actual or ideal self-concept.</p>
+  <table class="styled-table">
+    <thead><tr><th>Brand Personality</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>Sincere</td><td>Peter England (the honest shirt)</td></tr>
+      <tr><td>Excitement</td><td>The adventure bike</td></tr>
+      <tr><td>Competence</td><td>Hero Honda (fuel efficient)</td></tr>
+      <tr><td>Sophistication</td><td>Raymond (the complete man)</td></tr>
+      <tr><td>Ruggedness</td><td>Ruf n' Tuf jeans, Bullet</td></tr>
+    </tbody>
+  </table>
+  <h3>Lifestyle Influence</h3>
+  <p>A person's pattern of living as expressed in <strong>activities, interests and opinions</strong>:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Achievers: Personal computers</li>
+    <li>Money constrained: Affordable products (Garib Rath)</li>
+    <li>Time constrained: Packaged food industry, Zomato</li>
+    <li>Core Values: Simple living and high thinking. "Dress is Address" (Santoor)</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Model of Consumer Behaviour</h2>
+  <p>The complete model shows: <strong>Marketing Stimuli</strong> (Products &amp; services, Price, Distribution, Communications) + <strong>Other Stimuli</strong> (Economic, Technological, Political, Cultural) &rarr; <strong>Consumer Psychology</strong> (Motivation, Perception, Learning, Memory) + <strong>Consumer Characteristics</strong> (Cultural, Social, Personal) &rarr; <strong>Buying Decision Process</strong> (Problem Recognition, Information Search, Evaluation, Purchase Decision, Post-purchase Behaviour) &rarr; <strong>Purchase Decision</strong> (Product choice, Brand choice, Dealer choice, Purchase amount, Purchase timing, Payment method).</p>
+  <div class="slide-example">
+    <div class="se-label">Slide Example: Delhi Family Buys SUV</div>
+    <p><strong>Marketing Stimuli:</strong> Cars &amp; SUVs, Rs. 5-15L, Dealerships, TV/Print/Digital Ads. <strong>Other Stimuli:</strong> Low EMI (economy), Connected Car (tech), Ban 10-yr vehicles in Delhi (political), Old style machismo (cultural). <strong>Consumer Characteristics:</strong> Delhi culture, Peers/Neighbours as ref group, Adventure seeking (personal). <strong>Buying Process:</strong> Ageing car (problem), Internet/Car Owners/Ads (search), Evaluation, Purchase (Navratri timing), Cognitive Dissonance/Resonance (post-purchase). <strong>Decision:</strong> 1500cc diesel Maruti Vitara, Arora Motors dealer, One car, 2nd week Oct, EMI from SBI.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Key Psychological Processes</h2>
+  <p>Five processes: <strong>Motivation</strong> (first impression) &rarr; <strong>Perception</strong> &rarr; <strong>Learning</strong> &rarr; <strong>Emotions</strong> &rarr; <strong>Memory</strong> (making impressions last).</p>
+
+  <h3>a. Motivation</h3>
+  <p>A need becomes a motive when it is aroused to a <strong>sufficient level of intensity to drive us to act</strong>.</p>
+  <p>Three theories of motivation:</p>
+  <table class="styled-table">
+    <thead><tr><th>Theory</th><th>Core Idea</th><th>Techniques</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Freud's Theory</strong></td><td>Behavior guided by the Subconscious</td><td>Projective techniques (Sentence Completion, Picture Interpretation, Role Playing), Laddering</td></tr>
+      <tr><td><strong>Maslow's Hierarchy</strong></td><td>Behavior driven by lowest unmet need</td><td>Physiological &rarr; Safety &rarr; Social &rarr; Esteem &rarr; Self-actualization</td></tr>
+      <tr><td><strong>Herzberg's Two-Factor</strong></td><td>Behavior guided by Dissatisfiers and Satisfiers</td><td>Absence of dissatisfier + presence of satisfier</td></tr>
+    </tbody>
+  </table>
+  <div class="prof-insight">
+    <div class="pi-label">Laddering Example: Coaching Centre</div>
+    <p><strong>Why costly coaching?</strong> "I want him to clear IIT and become an engineer." <strong>What's good about engineering?</strong> "Coaching is costly, too many engineers, son plays guitar..." <strong>Why important?</strong> "Want son well settled, respected. Music is risky, drugs in that industry." &mdash; Laddering reveals the subconscious motive: <strong>social status and safety</strong>, not just career.</p>
+  </div>
+  <div class="prof-insight">
+    <div class="pi-label">Herzberg's Theory Applied</div>
+    <p><strong>Workplace:</strong> Dissatisfiers = Salary, Physical Workplace, Colleague relationships, Supervisor relationships. Satisfiers = Performance, Recognition, Job Status, Responsibility.<br>
+    <strong>Hospital:</strong> Dissatisfiers = Physical Workplace, Waiting time, Staff Behaviour. Satisfiers = Quality of Treatment, Affordability.</p>
+  </div>
+
+  <h3>b. Perception</h3>
+  <p>The process by which we <strong>select, organize, and interpret</strong> information inputs to create a meaningful picture of the world.</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Selective Attention:</strong> Relevance (people notice ads for products they want; Google Ads tagged to searches), Anticipate (chocolate not noticeable in a chemist shop), High Deviation (40% off more pronounced than 20%)</li>
+    <li><strong>Selective Distortion:</strong> Consumers distort information to fit prior brand experiences; "loser" brands struggle with this</li>
+    <li><strong>Selective Retention:</strong> Smart one-liners, catchy jingles, memorable imagery</li>
+    <li><strong>Subliminal Perception:</strong> Subconscious messages (soft drinks between movie frames); Colors (light blue/white = peace)</li>
+  </ul>
+
+  <h3>c. Learning</h3>
+  <p>Induces <strong>changes in behavior arising from experience</strong>. (Eg: Tata Motors needs to change customer perception to gain market share.)</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Drive and Cues:</strong> Drive = strong internal impulse (Domino's "Hungry Kya?"); Cue = minor external stimulus. Marketers use drive/cue followed by positive reinforcement.</li>
+    <li><strong>Generalization:</strong> Putting things in broad categories (all car manufacturers offer warranty)</li>
+    <li><strong>Discrimination:</strong> Recognizing differences to induce switch (only Hyundai offers 10 years of mental peace)</li>
+  </ul>
+
+  <h3>d. Emotions</h3>
+  <p>Many different kinds of emotions can be linked to brands:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Axe: created male body wash category by boosting confidence of young men (18-24)</li>
+    <li>Hamara Bajaj: nostalgia and national pride</li>
+    <li>IIT JEE results: emotion of achievement/aspiration</li>
+  </ul>
+
+  <h3>e. Memory</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Short-term vs Long-term memory:</strong> Visual, Verbal, Abstract, Contextual</li>
+    <li><strong>Associative Network Memory Model:</strong> Brand Associations = all thoughts, feelings, perceptions, images associated with a brand (Ford Fiesta = Small Car, Good Gas Mileage, Fun to Drive, Small Back Seat)</li>
+    <li><strong>Memory Encoding:</strong> How consumers process and retain info &mdash; encoding through understanding is more efficient (Nirma "Shuddh Shakti", Oreo, Royal Enfield)</li>
+    <li><strong>Memory Retrieval:</strong> External/internal stimuli that help access stored memories. Time leads to decay. Accessibility at right time matters (near checkout/Point of Sale ads)</li>
+  </ul>
+  <div class="slide-example">
+    <div class="se-label">Slide Example: Apollo Hospital Noida</div>
+    <p>Brand association network: Noida Apollo Hospital &rarr; Friendly, Clean, Responsive, Costly, Small, Under-equipped. The hospital positions itself as "Friendly Neighbourhood Hospital." Marketers manage these brand associations.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> The Buying Decision Process (5 Stages)</h2>
+  <div class="flow-vertical">
+    <div class="fv-box"><div class="fv-title">1. Problem Recognition</div><div class="fv-desc">Need triggered by internal/external stimuli</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">2. Information Search</div><div class="fv-desc">Personal, Commercial, Public, Experiential sources</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">3. Evaluation of Alternatives</div><div class="fv-desc">Total Set &rarr; Awareness &rarr; Consideration &rarr; Choice &rarr; Decision</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">4. Purchase Decision</div><div class="fv-desc">Intervening factors: attitudes of others, unanticipated situations</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">5. Post-Purchase Behaviour</div><div class="fv-desc">Satisfaction, Actions (repeat/abandon), Uses &amp; Disposal</div></div>
+  </div>
+
+  <h3>Information Search Sources</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Personal:</strong> Friends, Relatives, Colleagues (ask a car user)</li>
+    <li><strong>Commercial:</strong> Advertising, Websites, Salespersons</li>
+    <li><strong>Public:</strong> Social Media, Press, Consumer Rating Orgs (Reddit, Quora, Auto Car magazine, JD Power Rating)</li>
+    <li><strong>Experiential:</strong> Handling, Examining, Using the product (Test Drive)</li>
+  </ul>
+
+  <h3>Purchase Decision Models</h3>
+  <p><strong>Compensatory Model (Expectancy-Value):</strong> Weighted scores across attributes. Eg: Laptop with Memory(0.4), Graphics(0.3), Size(0.2), Price(0.1) &mdash; Brand A scores 8.0, Brand B 7.0.</p>
+  <p><strong>Non-Compensatory Models:</strong></p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Conjunctive:</strong> Minimum cutoff for all attributes (Brand B if cutoff is 7)</li>
+    <li><strong>Lexicographic:</strong> Best on most important attribute (Brand C with Memory=10)</li>
+    <li><strong>Elimination-by-aspects:</strong> Compress shortlists by aspects in order of importance (Brand A)</li>
+  </ul>
+
+  <h3>Types of Perceived Risk</h3>
+  <table class="styled-table">
+    <thead><tr><th>Risk Type</th><th>Description</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Functional</strong></td><td>Product does not function up to expectation</td></tr>
+      <tr><td><strong>Physical</strong></td><td>Product poses a physical risk</td></tr>
+      <tr><td><strong>Time</strong></td><td>Product failure means long wait for replacement</td></tr>
+      <tr><td><strong>Financial</strong></td><td>Product is not worth the price paid</td></tr>
+      <tr><td><strong>Psychological</strong></td><td>Affects mental well-being (violent movies; TV sales drop Jan-Feb)</td></tr>
+      <tr><td><strong>Social</strong></td><td>Not socially accepted, causes embarrassment (wardrobe malfunctions)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Post-Purchase Behaviour</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Satisfaction:</strong> Depends on Expectation vs Performance. Be careful about expectations you raise.</li>
+    <li><strong>Actions:</strong> Repeat purchase or abandonment, good or bad Word of Mouth (Michelin Star restaurants)</li>
+    <li><strong>Uses &amp; Disposal:</strong> Keep, Get rid temporarily (rent/lend), Get rid permanently (give away/trade/sell). Platforms: OLX, refurbished laptops/mobile phones.</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Behavioral Economics: Heuristics</h2>
+  <p>Methods of taking decisions based on personal experiences:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Availability Heuristic:</strong> How easily customers remember an outcome (auto company with poor image offers extended warranty)</li>
+    <li><strong>Representativeness Heuristic:</strong> How representative is the product (all 5-star hotels offer discounts; all mall products are expensive)</li>
+    <li><strong>Anchoring &amp; Adjustment:</strong> First impression then adjustments (service industry; first impression of a coaching class)</li>
+    <li><strong>Mental Accounting:</strong> "A meal should cost Rs. 500"; lost movie ticket Rs. 200 vs lost Rs. 200 cash &mdash; different psychological impact</li>
+  </ul>
+  <h3>Consumer Behaviour Patterns</h3>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li>Consumers tend to <strong>segregate gains</strong> (focus on each product feature separately)</li>
+    <li>Consumers tend to <strong>integrate losses</strong> (car accessories sell best at time of new purchase)</li>
+    <li>Consumers tend to <strong>integrate large gains with smaller losses</strong> (EMIs deducted at salary time)</li>
+    <li>Consumers tend to <strong>segregate small gains from large losses</strong> (look for silver lining)</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Low Involvement &amp; Variety-Seeking</h2>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Low-involvement:</strong> Low priced, frequent purchases &mdash; decisions based on peripheral cues (catchy jingle, pretty model). High involvement = more rational.</li>
+    <li><strong>Variety-Seeking:</strong> Consumers switch brands easily for low involvement products. Leader defends by dominating shelf space.</li>
+  </ul>
+</div>
+
+<div class="summary-box">
+  <h3>Session 3 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li>Personal factors: Age, Lifecycle stage, Occupation, Economic circumstances, Personality, Lifestyle</li>
+    <li>Brand Personality: Sincere (Peter England), Excitement, Competence (Hero Honda), Sophistication (Raymond), Ruggedness (Bullet)</li>
+    <li>Complete Consumer Behaviour Model: Stimuli &rarr; Psychology + Characteristics &rarr; Buying Process &rarr; Purchase Decision</li>
+    <li>5 Psychological Processes: Motivation (Freud/Maslow/Herzberg), Perception (selective attention/distortion/retention), Learning (drive/cues, generalization/discrimination), Emotions (Axe, Bajaj), Memory (associative networks, encoding, retrieval)</li>
+    <li>5-Stage Buying Process: Problem Recognition &rarr; Information Search &rarr; Evaluation &rarr; Purchase Decision &rarr; Post-Purchase</li>
+    <li>Decision Models: Compensatory (expectancy-value) vs Non-Compensatory (conjunctive, lexicographic, elimination-by-aspects)</li>
+    <li>6 types of perceived risk: Functional, Physical, Time, Financial, Psychological, Social</li>
+    <li>Behavioral Economics: Availability, Representativeness, Anchoring, Mental Accounting heuristics</li>
+    <li>Consumers segregate gains, integrate losses</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA &bull; Marketing Management &bull; Session 3 Class Notes<br>
+  Based on Prof. Sagar Venkateshwar's Lecture 3 slides
+</div>
+</div>
+</body>
+</html>

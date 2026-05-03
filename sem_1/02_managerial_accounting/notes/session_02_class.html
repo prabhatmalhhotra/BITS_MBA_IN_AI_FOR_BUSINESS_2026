@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 2 Class Notes — Accounting Concepts &amp; Conventions | Managerial Accounting</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #1a0a2e, #2d1b69, #44318d); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #ffd54f; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; flex-wrap: wrap; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #ffd54f; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #1a0a2e, #2d1b69, #44318d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,213,79,.15); color: #ffd54f; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #1a0a2e; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #44318d; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: '✓  '; }
+  .summary-box li::marker { color: #00bfa5; font-weight: 700; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #44318d; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-step { cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .concept-card { background: #f8f9fa; border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px 22px; margin: 16px 0; border-left: 4px solid #44318d; }
+  .concept-card h4 { color: #1a0a2e; font-size: 1rem; margin-bottom: 8px; }
+  .concept-card p { font-size: .9rem; color: #37474f; margin-bottom: 6px; }
+  .concept-card .example { font-size: .85rem; color: #546e7a; font-style: italic; margin-top: 8px; padding: 8px 12px; background: #e8eaf6; border-radius: 6px; }
+  .practice-q { background: #fff8e1; border: 2px solid #ffd54f; border-radius: 10px; padding: 18px 22px; margin: 14px 0; }
+  .practice-q .q-text { font-size: .9rem; color: #37474f; margin-bottom: 8px; }
+  .practice-q .q-answer { font-size: .88rem; color: #1a0a2e; font-weight: 700; }
+  .spoiler { color: transparent; background: #e0e0e0; border-radius: 4px; padding: 0 8px; cursor: pointer; transition: all .3s; user-select: none; }
+  .spoiler:hover, .spoiler.revealed { color: #1a0a2e; background: #c8e6c9; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managerial Accounting</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
+  <a href="session_02.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">AI Notes</a>
+  <a href="session_02_class.html" style="padding:8px 24px;background:#ffd54f;color:#1a0a2e;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">Class Notes</a>
+</div>
+
+<div class="hero">
+  <div class="session-tag">Session 2 of 16 &mdash; Class Notes</div>
+  <h1>Accounting Concepts &amp; Conventions</h1>
+  <p class="subtitle">The 12 foundational accounting concepts that govern how financial information is recorded, reported, and interpreted &mdash; with IFRS 15 / Ind AS 115 revenue recognition rules.</p>
+  <div class="meta-pills">
+    <span class="pill">Prof. Dr. Abhishek Sinha &amp; Prof. Uma Nagarajan</span>
+    <span class="pill">Slides 11&ndash;35</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<div class="container">
+
+<p style="text-align:center;font-size:.82rem;color:#78909c;margin-bottom:24px;font-style:italic;">Compiled from Prof. Dr. Abhishek Sinha &amp; Prof. Uma Nagarajan's lectures</p>
+
+<div class="progress-track">
+</div>
+
+<!-- Section 1: Overview of 12 Concepts -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> The 12 Accounting Concepts &mdash; Overview <span class="difficulty beginner">Beginner</span></h2>
+  <p>The professor listed 12 accounting concepts that form the foundation of all financial reporting. These are the rules and assumptions that every accountant must follow:</p>
+
+  <table class="styled-table">
+    <thead><tr><th>#</th><th>Concept</th><th>One-Line Summary</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Business Entity</td><td>Business is separate from its owner</td></tr>
+      <tr><td>2</td><td>Going Concern</td><td>Business will continue indefinitely</td></tr>
+      <tr><td>3</td><td>Money Measurement</td><td>Only money-quantifiable transactions are recorded</td></tr>
+      <tr><td>4</td><td>Cost</td><td>Assets recorded at acquisition cost</td></tr>
+      <tr><td>5</td><td>Dual Aspect</td><td>Every debit has a corresponding credit</td></tr>
+      <tr><td>6</td><td>Accounting Period</td><td>Life of business split into periodic intervals</td></tr>
+      <tr><td>7</td><td>Conservatism</td><td>Anticipate losses, not profits</td></tr>
+      <tr><td>8</td><td>Realization / Accrual</td><td>Revenue when earned, not when cash received</td></tr>
+      <tr><td>9</td><td>Matching</td><td>Expenses matched with revenue of the period</td></tr>
+      <tr><td>10</td><td>Consistency</td><td>Same policies period to period</td></tr>
+      <tr><td>11</td><td>Full Disclosure</td><td>All relevant information must be disclosed</td></tr>
+      <tr><td>12</td><td>Materiality</td><td>Exception to full disclosure for insignificant items</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Section 2: Concepts 1-3 -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Business Entity, Going Concern &amp; Money Measurement <span class="difficulty beginner">Beginner</span></h2>
+
+  <div class="concept-card">
+    <h4>1. Business Entity Concept</h4>
+    <p>A business is treated as a <strong>separate entity</strong> that is distinct from its owner(s) and hence a distinction should be made between:</p>
+    <ul style="padding-left:22px; margin-top:8px; font-size:.9rem;">
+      <li>(i) Personal transactions and business transactions, and</li>
+      <li>(ii) Transactions of one business entity and those of another business entity</li>
+    </ul>
+    <div class="example">Example: X owns a personal residence costing &#8377;6,00,000 (market value &#8377;9,00,000). During preparation of the business financial statements, this property was ignored and not shown. &rarr; <strong>Business Entity Concept</strong> (personal assets are separate from business assets).</div>
+  </div>
+
+  <div class="concept-card">
+    <h4>2. Going Concern Concept</h4>
+    <p>The enterprise is normally viewed as a <strong>going concern</strong>, i.e. as continuing operations for the foreseeable future. It is assumed that the enterprise has <strong>neither the intention nor the necessity of liquidation</strong>.</p>
+    <div class="example">
+      Examples from professor's slides:<br>
+      &bull; <strong>RIL &mdash; Dhirubai Ambani</strong>: The founder passed away, but Reliance Industries Limited continues to operate.<br>
+      &bull; <strong>Infosys &mdash; Narayana Murthy</strong>: The founder stepped back, but the company continues as a going concern.
+    </div>
+  </div>
+
+  <div class="concept-card">
+    <h4>3. Money Measurement Concept</h4>
+    <p>Only those transactions which are <strong>capable of being expressed in terms of money</strong> are included in the accounting records.</p>
+    <p style="margin-top:10px;"><strong>What CANNOT be recorded</strong> (not quantifiable in money):</p>
+    <ul style="padding-left:22px; margin-top:6px; font-size:.9rem;">
+      <li><strong>Human Capital</strong> &mdash; RCB (cricket team), Barcelona-Messi, Narayana Hrudayalaya - Dr. Devi Prasad Shetty</li>
+      <li>Employee loyalty</li>
+      <li>Customer satisfaction</li>
+      <li>Company reputation</li>
+      <li>Working conditions</li>
+      <li>Employee morale</li>
+    </ul>
+    <div class="example">These are invaluable to the business but cannot appear on the Balance Sheet because they cannot be objectively measured in monetary terms.</div>
+  </div>
+</div>
+
+<!-- Section 3: Concepts 4-6 -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Cost, Dual Aspect &amp; Accounting Period <span class="difficulty beginner">Beginner</span></h2>
+
+  <div class="concept-card">
+    <h4>4. Cost Concept</h4>
+    <p>An asset is recorded in the accounting records at the <strong>price paid to acquire it</strong> at the time of its acquisition (Cost).</p>
+    <ul style="padding-left:22px; margin-top:8px; font-size:.9rem;">
+      <li>The cost becomes the basis for the accounts during subsequent accounting periods (<strong>objectively verifiable</strong>)</li>
+      <li>The cost of an asset is <strong>systematically reduced</strong> from year to year by charging <strong>depreciation</strong> and the asset is shown in the Balance Sheet at <strong>Book Value</strong></li>
+      <li>Closing stock is always valued at <strong>cost price or market price, whichever is less</strong> (in P&amp;L statement)</li>
+    </ul>
+  </div>
+
+  <div class="concept-card">
+    <h4>5. Dual Aspect Concept</h4>
+    <p>Two-fold aspect of a transaction is called <strong>dual aspect or duality</strong> of a transaction. This duality is the <strong>basis of double entry records</strong>.</p>
+    <p style="margin-top:8px;">As the name implies, the entry made for each transaction is composed of two parts &mdash; one for <strong>debit</strong> and another for <strong>credit</strong>.</p>
+    <div class="example">This is the Basis of Accounting. Every transaction affects at least two accounts. If you buy inventory for cash: Inventory (Debit) increases, Cash (Credit) decreases.</div>
+  </div>
+
+  <div class="concept-card">
+    <h4>6. Accounting Period Concept</h4>
+    <p>Also known as <strong>Periodicity Principle</strong> or <strong>Time Period Principle</strong>.</p>
+    <p style="margin-top:8px;">According to this principle, the economic life of an enterprise is artificially split into <strong>periodic intervals</strong> which are known as accounting periods (annual/quarterly), at the end of which an <strong>Income Statement and Balance Sheet</strong> are prepared to ascertain the Financial Performance and position respectively.</p>
+  </div>
+</div>
+
+<!-- Section 4: Conservatism -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Conservatism Concept (Prudence Principle) <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="concept-card">
+    <h4>7. Conservatism Concept</h4>
+    <p>Also called the <strong>Prudence Principle</strong>, this concept states that the business should:</p>
+    <div class="formula-box" style="font-family:'Segoe UI',sans-serif;">"<strong>Anticipate no profit</strong> but provide for all <strong>probable losses</strong>"</div>
+    <p>It requires that in situations of uncertainty and doubt, business transactions should be recorded in such a manner that the <strong>Profits and Assets are not overstated</strong> and the <strong>Losses and Liabilities are not understated</strong>.</p>
+
+    <h3 style="margin-top:16px;">Applications of Conservatism</h3>
+    <ul style="padding-left:22px; margin-top:8px; font-size:.9rem;">
+      <li><strong>Provision for Doubtful Debts</strong> and Discount on Debtors &mdash; even if we are not sure if debts will go bad, we make a provision</li>
+      <li><strong>Closing stock</strong> is always valued at cost price or market price, whichever is less &mdash; this is based on the principle of Conservatism</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 5: Realization / Accrual / IFRS 15 -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Realization &amp; Accrual Concept + IFRS 15 / Ind AS 115 <span class="difficulty advanced">Advanced</span></h2>
+
+  <div class="concept-card">
+    <h4>8a. Accrual Concept</h4>
+    <p>Revenues and Costs are <strong>accrued</strong>, that is, recognised as they are <strong>earned or incurred</strong> (and not as money is received or paid) and recorded in the financial statements of the periods to which they relate.</p>
+    <p style="margin-top:8px;">For companies it is <strong>mandatory</strong> to keep accounts on accrual basis under the <strong>Companies Act, 2013</strong>.</p>
+  </div>
+
+  <div class="concept-card">
+    <h4>8b. Realization Concept / Revenue Recognition Concept</h4>
+    <p>We recognize the revenue from sale of goods or provision of services when such goods are <strong>delivered</strong> or the services are <strong>rendered to customers</strong> (transfer of property in goods), <strong>not when cash is received</strong>.</p>
+    <div class="formula-box" style="font-family:'Segoe UI',sans-serif;">Revenue = recognised when goods delivered / services rendered, <strong>NOT</strong> when cash is received</div>
+  </div>
+
+  <div class="concept-card" style="border-left-color:#ff5252; background:#fff5f5;">
+    <h4 style="color:#c62828;">IFRS 15 / Ind AS 115 &mdash; Revenue Recognition Rules</h4>
+    <p>According to IFRS rules for revenue recognition:</p>
+    <ol style="padding-left:22px; margin-top:10px; font-size:.9rem;">
+      <li style="margin-bottom:8px;"><strong>Identify the customer contract</strong> &mdash; Contract exists if parties have approved it (written / oral / implied)</li>
+      <li style="margin-bottom:8px;"><strong>Identify the obligations</strong> in the customer contract</li>
+      <li style="margin-bottom:8px;"><strong>When control of the promised good or service transfers</strong> to the customer (legal title / physical possession / risk and reward / acceptance)</li>
+      <li style="margin-bottom:8px;"><strong>Over time vs point-in-time recognition</strong></li>
+    </ol>
+
+    <h3 style="margin-top:18px; color:#c62828;">Over Time vs Point-in-Time Recognition</h3>
+    <p style="margin-top:8px;">Revenue is recognised <strong>over time</strong> if ANY one of the following is met:</p>
+    <ul style="padding-left:22px; margin-top:8px; font-size:.9rem;">
+      <li>Customer <strong>simultaneously receives and consumes benefits</strong> (house cleaning / internet)</li>
+      <li>Customer <strong>controls the asset as it is created or enhanced</strong> (house construction)</li>
+      <li>Asset has <strong>no alternative use</strong> AND entity has <strong>enforceable right to payment</strong> (customized products)</li>
+    </ul>
+    <p style="margin-top:12px;">Otherwise &mdash; <strong>point in time</strong> recognition (e.g., sale of goods).</p>
+  </div>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> IFRS 15 / Ind AS 115 revenue recognition is a high-weightage topic. Remember the 4 steps and the 3 conditions for over-time recognition. The professor specifically emphasized the distinction between over-time (services, construction) and point-in-time (sale of goods).
+  </div>
+</div>
+
+<!-- Section 6: Matching Concept -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Matching Concept <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="concept-card">
+    <h4>9. Matching Concept</h4>
+    <p>The expenses incurred in an accounting period should be <strong>matched with the revenues recognised</strong> in that period. It means that, if revenue is recognised on all goods sold during a period, cost of those goods sold should also be charged to that period.</p>
+    <p style="margin-top:10px;">It is wrong to recognise revenue on all sales, but charge expenses only on such sales as are collected in cash till that period.</p>
+    <p style="margin-top:10px;">This concept is <strong>based on accrual concept</strong> since it disregards the timing and the amount of actual cash inflow or cash outflow and concentrates on the occurrence (i.e. accrual) of revenue and expenses.</p>
+  </div>
+</div>
+
+<!-- Section 7: Consistency -->
+<div class="section-card">
+  <h2><span class="sec-num">7</span> Consistency Concept <span class="difficulty beginner">Beginner</span></h2>
+
+  <div class="concept-card">
+    <h4>10. Consistency Concept</h4>
+    <p>It is assumed that accounting policies are <strong>consistent from one period to another</strong>. Whatever accounting practices are selected for a given category of transactions, they should be followed on a <strong>horizontal basis</strong> from one accounting period to another to achieve <strong>comparability</strong>.</p>
+
+    <h3 style="margin-top:14px;">Examples from Slides</h3>
+    <ul style="padding-left:22px; margin-top:8px; font-size:.9rem;">
+      <li>If the inventory is valued on <strong>LIFO basis</strong>, this basis should be followed year after year</li>
+      <li>If a particular asset is depreciated according to <strong>WDV (Written Down Value) method</strong>, this method should be followed year after year</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Section 8: Full Disclosure & Materiality -->
+<div class="section-card">
+  <h2><span class="sec-num">8</span> Full Disclosure &amp; Materiality Concepts <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <div class="concept-card">
+    <h4>11. Full Disclosure Concept</h4>
+    <p>The financial statements must disclose <strong>all the relevant and reliable information</strong> which they purport to represent, so that the information may be useful for the user and they can make a correct assessment about the financial performance and position of the enterprise.</p>
+  </div>
+
+  <div class="concept-card">
+    <h4>12. Materiality Concept</h4>
+    <p>All relatively relevant items, the knowledge of which might influence the decision of the user of the financial statements, should be disclosed in the financial statements.</p>
+    <ul style="padding-left:22px; margin-top:8px; font-size:.9rem;">
+      <li>Which information is more relevant than other is largely a <strong>matter of judgement</strong></li>
+      <li>Materiality depends upon the <strong>amount of item</strong>, the <strong>size of business</strong>, level and <strong>nature of information</strong></li>
+    </ul>
+
+    <h3 style="margin-top:14px;">Relationship: Full Disclosure vs Materiality</h3>
+    <p style="margin-top:8px;">Materiality is basically an <strong>exception to the Full Disclosure Principle</strong>.</p>
+    <p style="margin-top:6px;">The full disclosure principle requires that <strong>all facts</strong> necessary to ensure that the financial statements are not misleading must be disclosed, whereas the materiality principle requires that items or events having an <strong>insignificant economic effect</strong> or not being relevant to the user's need <strong>need not be disclosed</strong>.</p>
+  </div>
+</div>
+
+<!-- Section 9: Practice Questions from Slides -->
+<div class="section-card">
+  <h2><span class="sec-num">9</span> Practice Questions &mdash; From Professor's Slides <span class="difficulty intermediate">Intermediate</span></h2>
+  <p><strong>Instruction:</strong> State the name of the relevant accounting assumption or principle applied. Click on the answer to reveal it.</p>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q1.</strong> X owns a personal residence that cost &#8377;6,00,000 but has a market value of &#8377;9,00,000. During preparation of the financial statement for the business, the entire value of property was ignored and was not shown in the financial statements. Which accounting concept was followed?</div>
+    <div class="q-answer">Answer: <span class="spoiler">Business Entity Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q2.</strong> Appending notes to the financial statements.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Full Disclosure Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q3.</strong> Accounting of a small calculator as an expense and not as an asset.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Materiality Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q4.</strong> Following the WDV method of depreciating a particular asset year after year.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Consistency Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q5.</strong> Valuation of stock at lower of cost or net realisable value.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Conservatism Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q6.</strong> Making provision for bad and doubtful debts.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Conservatism Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q7.</strong> In gold mining, revenue is recognised in the accounting period in which the gold is mined.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Realization Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q8.</strong> Classification of assets as current assets and fixed assets.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Going Concern Concept</span></div>
+  </div>
+
+  <div class="practice-q">
+    <div class="q-text"><strong>Q9.</strong> Transactions are recorded at their original cost.</div>
+    <div class="q-answer">Answer: <span class="spoiler">Cost Concept</span></div>
+  </div>
+</div>
+
+<!-- Section 10: Quick Reference Table -->
+<div class="section-card">
+  <h2><span class="sec-num">10</span> Quick Reference &mdash; All 12 Concepts at a Glance <span class="difficulty beginner">Beginner</span></h2>
+
+  <table class="styled-table">
+    <thead><tr><th>#</th><th>Concept</th><th>Key Rule / Phrase to Remember</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Business Entity</strong></td><td>Owner &#8800; Business; personal residence excluded from business books</td></tr>
+      <tr><td>2</td><td><strong>Going Concern</strong></td><td>Business continues indefinitely; no intention/necessity to liquidate</td></tr>
+      <tr><td>3</td><td><strong>Money Measurement</strong></td><td>Only money-quantifiable; human capital NOT recorded</td></tr>
+      <tr><td>4</td><td><strong>Cost</strong></td><td>Record at acquisition cost; depreciate over time; stock at lower of cost/market</td></tr>
+      <tr><td>5</td><td><strong>Dual Aspect</strong></td><td>Every Debit = Credit; basis of double entry</td></tr>
+      <tr><td>6</td><td><strong>Accounting Period</strong></td><td>Periodicity principle; annual/quarterly intervals</td></tr>
+      <tr><td>7</td><td><strong>Conservatism</strong></td><td>"Anticipate no profit, provide for all probable losses"</td></tr>
+      <tr><td>8</td><td><strong>Realization / Accrual</strong></td><td>Revenue when earned, not when cash received; IFRS 15 / Ind AS 115</td></tr>
+      <tr><td>9</td><td><strong>Matching</strong></td><td>Match expenses with revenue of the same period</td></tr>
+      <tr><td>10</td><td><strong>Consistency</strong></td><td>Same method period to period (LIFO, WDV examples)</td></tr>
+      <tr><td>11</td><td><strong>Full Disclosure</strong></td><td>Disclose all relevant and reliable information</td></tr>
+      <tr><td>12</td><td><strong>Materiality</strong></td><td>Exception to full disclosure; depends on amount/size/nature</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exam-tip">
+    <strong>Exam Tip:</strong> The practice questions (Q1&ndash;Q9) above are directly from the professor's slides. Expect similar scenario-based questions in quizzes and mid-sem where you must identify which accounting concept is being applied. Focus on Conservatism (appears twice), Business Entity, and Realization concepts &mdash; these are the most commonly tested.
+  </div>
+</div>
+
+<div class="summary-box">
+  <h3>Session 2 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>12 Accounting Concepts</strong> form the foundation of all financial reporting</li>
+    <li><strong>Business Entity</strong>: Owner and business are separate legal entities</li>
+    <li><strong>Going Concern</strong>: Business assumed to continue indefinitely (RIL, Infosys examples)</li>
+    <li><strong>Money Measurement</strong>: Only monetary transactions recorded (human capital excluded)</li>
+    <li><strong>Cost Concept</strong>: Assets at acquisition cost, depreciated over time</li>
+    <li><strong>Dual Aspect</strong>: Every debit has a credit &mdash; basis of double entry</li>
+    <li><strong>Conservatism</strong>: "Anticipate no profit, provide for all probable losses" &mdash; provision for doubtful debts, stock at lower of cost/NRV</li>
+    <li><strong>IFRS 15 / Ind AS 115</strong>: 4 steps for revenue recognition; over-time vs point-in-time</li>
+    <li><strong>Matching</strong>: Expenses matched with revenues of the same period</li>
+    <li><strong>Materiality</strong> is an exception to <strong>Full Disclosure</strong></li>
+    <li><strong>Consistency</strong>: Same accounting policies (LIFO, WDV) period to period</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Managerial Accounting (MBACCZG502) &bull; Session 2 of 16 &mdash; Class Notes<br>
+  Source: Session 1 - FMA 2026 lecture slides (Prof. Dr. Abhishek Sinha &amp; Prof. Uma Nagarajan) &bull; Slides 11&ndash;35
+</div>
+
+</div>
+<script>
+/* Spoiler toggle */
+(function(){
+  document.querySelectorAll('.spoiler').forEach(function(el){
+    el.addEventListener('click', function(){ this.classList.toggle('revealed'); });
+  });
+})();
+
+/* pt-step-click */
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

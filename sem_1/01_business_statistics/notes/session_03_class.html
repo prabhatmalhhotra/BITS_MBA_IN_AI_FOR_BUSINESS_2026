@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 3 Class Notes — Numerical Descriptive Measures | Business Statistics</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .toggle-bar { display: flex; justify-content: center; gap: 0; margin: 0; background: #1a2a33; padding: 10px 0; }
+  .toggle-bar a { padding: 8px 24px; text-decoration: none; font-size: .85rem; font-weight: 600; }
+  .toggle-bar .toggle-ai { background: #2c3e50; color: #90a4ae; border-radius: 20px 0 0 20px; }
+  .toggle-bar .toggle-class { background: #64ffda; color: #0f2027; border-radius: 0 20px 20px 0; }
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero .prof-tag { display: inline-block; background: rgba(255,183,77,.2); color: #ffb74d; padding: 4px 16px; border-radius: 20px; font-size: .78rem; font-weight: 600; letter-spacing: .5px; margin-bottom: 16px; margin-left: 8px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .real-world { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 28px 28px 24px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(255,152,0,.12); }
+  .real-world .rw-label { display: inline-flex; align-items: center; gap: 8px; background: #ff9800; color: #fff; padding: 4px 14px; border-radius: 16px; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 14px; }
+  .real-world h3 { font-size: 1.15rem; color: #e65100; margin-bottom: 10px; }
+  .real-world p { color: #4e342e; font-size: .95rem; }
+  .real-world .rw-takeaway { margin-top: 14px; padding: 10px 16px; background: rgba(255,152,0,.1); border-radius: 8px; font-weight: 600; color: #bf360c; font-size: .9rem; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #0f2027; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #2c5364; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .block-diagram { display: flex; align-items: stretch; gap: 0; margin: 24px 0; flex-wrap: wrap; justify-content: center; }
+  .block-diagram .block { background: #e3f2fd; border: 2px solid #90caf9; border-radius: 10px; padding: 14px 18px; text-align: center; min-width: 120px; flex: 1; max-width: 200px; }
+  .block-diagram .block.highlight { background: #bbdefb; border-color: #42a5f5; font-weight: 700; }
+  .block-diagram .block .block-title { font-weight: 700; font-size: .85rem; color: #1565c0; margin-bottom: 4px; }
+  .block-diagram .block .block-desc { font-size: .78rem; color: #37474f; }
+  .block-diagram .arrow { display: flex; align-items: center; justify-content: center; font-size: 1.4rem; color: #90caf9; padding: 0 6px; min-width: 30px; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 340px; }
+  .flow-vertical .fv-box { background: #e8f5e9; border: 2px solid #81c784; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #2e7d32; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #81c784; padding: 4px 0; }
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare-grid .cg-card { border-radius: 10px; padding: 18px 16px; border: 2px solid; }
+  .compare-grid .cg-card.left { background: #e3f2fd; border-color: #64b5f6; }
+  .compare-grid .cg-card.right { background: #fce4ec; border-color: #ef9a9a; }
+  .compare-grid .cg-card h4 { font-size: .95rem; margin-bottom: 8px; }
+  .compare-grid .cg-card.left h4 { color: #1565c0; }
+  .compare-grid .cg-card.right h4 { color: #c62828; }
+  .compare-grid .cg-card p, .compare-grid .cg-card li { font-size: .85rem; color: #37474f; }
+  .compare-grid .cg-card ul { padding-left: 18px; }
+  .compare-grid .cg-card li { margin-bottom: 4px; }
+  .daily-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .daily-example .de-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .daily-example p { font-size: .92rem; color: #33691e; }
+  .trending-example { background: linear-gradient(135deg, #ede7f6, #e8eaf6); border-left: 5px solid #7c4dff; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .trending-example .te-label { display: inline-flex; align-items: center; gap: 6px; color: #4a148c; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .trending-example p { font-size: .92rem; color: #311b92; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+  .key-term { display: inline-block; background: #e3f2fd; color: #0d47a1; padding: 2px 10px; border-radius: 6px; font-weight: 600; font-size: .88rem; }
+  .formula-box { background: #263238; color: #e0f7fa; padding: 16px 22px; border-radius: 10px; font-family: 'Courier New', monospace; font-size: .95rem; margin: 16px 0; text-align: center; letter-spacing: .5px; }
+  .summary-box { background: linear-gradient(135deg, #e0f2f1, #e0f7fa); border: 2px solid #4dd0e1; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #006064; margin-bottom: 14px; font-size: 1.1rem; }
+  .summary-box ul { padding-left: 20px; }
+  .summary-box li { font-size: .9rem; color: #004d40; margin-bottom: 6px; list-style-type: none; padding-left: 20px; position: relative; }
+  .summary-box li::before { content: '\2713\00a0\00a0'; color: #00bfa5; font-weight: 700; position: absolute; left: 0; }
+  .difficulty { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; margin-left: 10px; }
+  .difficulty.beginner { background: #c8e6c9; color: #1b5e20; }
+  .difficulty.intermediate { background: #fff9c4; color: #f57f17; }
+  .difficulty.advanced { background: #ffcdd2; color: #b71c1c; }
+  .progress-track { display: flex; justify-content: space-between; margin: 28px 0 10px; position: relative; }
+  .progress-track::before { content: ''; position: absolute; top: 14px; left: 5%; right: 5%; height: 3px; background: #e0e0e0; z-index: 0; }
+  .progress-track .pt-step { text-align: center; z-index: 1; flex: 1; cursor: pointer; transition: transform .2s; }
+  .progress-track .pt-step:hover { transform: scale(1.15); }
+  .progress-track .pt-step:hover .pt-dot { background: #64ffda !important; color: #0f2027; }
+  .progress-track .pt-dot { width: 30px; height: 30px; border-radius: 50%; background: #e0e0e0; margin: 0 auto 6px; display: flex; align-items: center; justify-content: center; font-size: .7rem; font-weight: 700; color: #fff; }
+  .progress-track .pt-step.active .pt-dot { background: #2c5364; }
+  .progress-track .pt-step.done .pt-dot { background: #4caf50; }
+  .progress-track .pt-label { font-size: .7rem; color: #78909c; }
+  .exam-tip { background: #fff3e0; border: 2px dashed #ff9800; border-radius: 10px; padding: 16px 20px; margin: 18px 0; font-size: .88rem; color: #e65100; }
+  .exam-tip strong { color: #bf360c; }
+  .deferred-note { background: linear-gradient(135deg, #fce4ec, #f8bbd0); border-left: 5px solid #e91e63; border-radius: 12px; padding: 18px 22px; margin: 22px 0; font-size: .9rem; color: #880e4f; }
+  .deferred-note strong { color: #ad1457; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  .tree { margin: 24px 0; }
+  .tree ul { list-style: none; padding-left: 28px; position: relative; }
+  .tree > ul { padding-left: 0; }
+  .tree li { position: relative; padding: 6px 0 6px 24px; font-size: .88rem; color: #37474f; }
+  .tree li::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: #b0bec5; }
+  .tree li::after { content: ''; position: absolute; left: 0; top: 16px; width: 18px; height: 2px; background: #b0bec5; }
+  .tree li:last-child::before { bottom: 16px; }
+  .tree > ul > li::before, .tree > ul > li::after { display: none; }
+  .tree .node-label { display: inline-block; background: #e3f2fd; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 12px; font-weight: 600; color: #1565c0; }
+  .tree .node-desc { display: block; font-size: .8rem; color: #607d8b; margin-top: 2px; padding-left: 2px; }
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .block-diagram { flex-direction: column; align-items: center; }
+    .block-diagram .arrow { transform: rotate(90deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Study Notes</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Mid-Sem: S1-8</span>
+  </div>
+</div>
+
+<!-- TOGGLE BAR -->
+<div class="toggle-bar">
+  <a href="session_03.html" class="toggle-ai">AI Notes</a>
+  <a href="session_03_class.html" class="toggle-class">Class Notes</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="session-tag">Session 3 of 16</div>
+  <div class="prof-tag">Based on Prof. Sandeep Kayastha's Lecture &mdash; 2 May 2026</div>
+  <h1>Numerical Descriptive Measures</h1>
+  <p class="subtitle">Introduction to Chapter 3 from Lecture L-02 (slides 18-30): Summary measures overview, central tendency (Mean, Median, Mode) for raw data, when to use each, and comparison table. Remaining Chapter 3 topics deferred to next class.</p>
+  <div class="meta-pills">
+    <span class="pill">T1 Chapter 3 (Levine)</span>
+    <span class="pill">L-02 Slides 18-30</span>
+    <span class="pill">Saturday 8:20 AM</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+<div class="progress-track">
+  <div class="pt-step active"><div class="pt-dot">1</div></div>
+  <div class="pt-step done"><div class="pt-dot">2</div></div>
+  <div class="pt-step done"><div class="pt-dot">3</div></div>
+  <div class="pt-step done"><div class="pt-dot">4</div></div>
+  <div class="pt-step done"><div class="pt-dot">5</div></div>
+  <div class="pt-step done"><div class="pt-dot">6</div></div>
+</div>
+
+<!-- SECTION 1: CHAPTER OVERVIEW -->
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Chapter 3 Overview &mdash; Topics <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>Professor introduced Chapter 3: Numerical Descriptive Measures with this roadmap (referenced from Levine, Anderson, and Bowerman textbooks &mdash; all Chapter 3):</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>#</th><th>Topic</th><th>Status in L-02</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Central Tendency</strong> (Mean, Median, Mode)</td><td>Covered in this lecture</td></tr>
+      <tr><td>2</td><td><strong>Variation</strong> (Range, Std Dev, CoV, Z-score)</td><td>Deferred to next class</td></tr>
+      <tr><td>3</td><td><strong>Shape</strong> (Skewness, Kurtosis)</td><td>Deferred to next class</td></tr>
+      <tr><td>4</td><td><strong>Exploring Numerical Data</strong> (Quartiles, 5-number summary)</td><td>Deferred to next class</td></tr>
+      <tr><td>5</td><td><strong>Covariance &amp; Coefficient of Correlation</strong></td><td>Will be covered later with Ch 12: Simple Linear Regression</td></tr>
+      <tr><td>6</td><td><strong>Nano Case Study</strong></td><td>Deferred to next class</td></tr>
+    </tbody>
+  </table>
+
+  <div class="deferred-note">
+    <strong>Covariance &amp; Correlation</strong> &mdash; Deferred to Chapter 12 (Simple Linear Regression) per professor.<br>
+    Professor explicitly noted: <em>"Topic 5 will be covered later, with Chapter 12: Simple Linear Regression."</em>
+  </div>
+</div>
+
+<!-- SECTION 2: SUMMARY MEASURES -->
+<div class="section-card">
+  <h2><span class="sec-num">2</span> Summary Measures of a Numeric Dataset <span class="difficulty beginner">Beginner</span></h2>
+
+  <p>Professor presented a dataset (Production/Orders/Accidents/Fires/Runs/Income/# of Beds/Rooms...) and asked: <em>"What summary measures can we compute?"</em></p>
+
+  <div class="real-world">
+    <div class="rw-label">Dataset Used in Class</div>
+    <h3>50 numeric observations (10 x 5 grid)</h3>
+    <p style="font-family:monospace;font-size:.85rem;">
+      475, 475, 250, 475, 175, 425, 175, 250, 250, 250<br>
+      350, 175, 425, 250, 175, 175, 375, 350, 425, 250<br>
+      175, 375, 250, 475, 175, 350, 350, 375, 250, 175<br>
+      400, 175, 425, 175, 425, 250, 175, 250, 250, 425<br>
+      250, 400, 175, 400, 375, 175, 250, 175, 350, 175
+    </p>
+    <div class="rw-takeaway">
+      The professor used the metaphor of <strong>vital signs</strong> (Blood Pressure, Temperature, Respiratory Rate, O2, ECG, Pulse) &mdash; just as a doctor summarises a patient's health with key vital signs, we summarise a dataset with key summary measures.
+    </div>
+  </div>
+
+  <p>The four categories of summary measures:</p>
+  <div class="block-diagram" style="flex-wrap:wrap; gap:10px;">
+    <div class="block highlight" style="max-width:180px;">
+      <div class="block-title">1. Central Tendency</div>
+      <div class="block-desc">Mean, Median, Mode</div>
+    </div>
+    <div class="block" style="max-width:180px;">
+      <div class="block-title">2. Variation</div>
+      <div class="block-desc">Range, Std Dev, CoV, Z-score</div>
+    </div>
+    <div class="block" style="max-width:180px;">
+      <div class="block-title">3. Shape</div>
+      <div class="block-desc">Skewness, Kurtosis</div>
+    </div>
+    <div class="block" style="max-width:180px;">
+      <div class="block-title">4. Quartiles</div>
+      <div class="block-desc">5-number summary</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: MEAN -->
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Central Tendency: Mean <span class="difficulty beginner">Beginner</span></h2>
+
+  <p><span class="key-term">Mean (Average)</span> = Sum of all values / Number of observations</p>
+
+  <div class="formula-box">
+    Mean = (1/N) * &Sigma; x&#7522; = Sum of values / N
+  </div>
+
+  <h3>Professor's Worked Example</h3>
+  <p>Dataset: 8, 9, 1, 4, 3</p>
+  <div class="formula-box">
+    Mean = (8 + 9 + 1 + 4 + 3) / 5 = 25 / 5 = <strong>5</strong>
+  </div>
+
+  <h3>Applied to Class Dataset (50 values)</h3>
+  <table class="styled-table">
+    <thead>
+      <tr><th>Measure</th><th>Value</th><th>MS Excel Function</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Mean</strong></td><td>295.5</td><td>=AVERAGE(Range)</td></tr>
+      <tr><td><strong>Median</strong></td><td>250</td><td>=MEDIAN(Range)</td></tr>
+      <tr><td><strong>Mode</strong></td><td>175</td><td>=MODE(Range)</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:.9rem;color:#546e7a;">Note: Mean (295.5) is pulled up by higher values like 475, while Mode (175) is the most frequently occurring value. The three measures tell different stories about the "centre" of this data.</p>
+</div>
+
+<!-- SECTION 4: MEDIAN -->
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Central Tendency: Median <span class="difficulty beginner">Beginner</span></h2>
+
+  <p><span class="key-term">Median</span> = Value of the middle observation after sorting data in ascending (or descending) order.</p>
+
+  <h3>Professor's Worked Examples</h3>
+  <table class="styled-table">
+    <thead>
+      <tr><th>Sorted Dataset</th><th>n</th><th>Median</th><th>Rule</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1, 3, <strong>4</strong>, 8, 9</td><td>5 (odd)</td><td><strong>4</strong></td><td>Middle value directly</td></tr>
+      <tr><td>11, 22, 30, <strong>40</strong>, 50, 60, 7000000</td><td>7 (odd)</td><td><strong>40</strong></td><td>Middle value directly</td></tr>
+      <tr><td>1, 3, <strong>4, 8</strong>, 95, 123</td><td>6 (even)</td><td><strong>6</strong> = (4+8)/2</td><td>Average of two middle values</td></tr>
+    </tbody>
+  </table>
+
+  <h3>When to Use Median Over Mean?</h3>
+  <p>Professor gave four specific cases:</p>
+
+  <div class="daily-example">
+    <div class="de-label">Case 1: Skewed Data with Outliers</div>
+    <p>
+      Dataset: 2, 5, 6, 7, <strong>8</strong>, 9, 11, 18, <strong>1500</strong><br>
+      Mean = 1566/9 = <strong>174</strong> &mdash; distorted by the outlier 1500.<br>
+      Median = <strong>8</strong> &mdash; a much better measure of the centre.<br><br>
+      Professor noted: <em>"Distribution of wealth, income, salary etc. are generally skewed &mdash; few individuals have enormous wealth. Hence <strong>median income</strong> and <strong>median salary</strong> are preferred over mean income and mean salary."</em>
+    </p>
+  </div>
+
+  <div class="trending-example">
+    <div class="te-label">Case 2: When Mean Cannot Be Computed</div>
+    <p>
+      <strong>Olympic Race Example:</strong> Professor showed the Men's 5000m results from the 2016 Summer Olympics. Some athletes had DNF (Did Not Finish). You cannot compute a mean finishing time when some values are missing/undefined, but you can still find the median of those who finished.
+    </p>
+  </div>
+
+  <p><strong>Case 3:</strong> Median is used in <strong>image processing</strong> to remove noise (median filter), and in <strong>voting theory</strong> (median voter theorem).</p>
+
+  <p><strong>Case 4:</strong> Median is used in the <strong>5-number summary</strong> and <strong>Box Plot</strong> to spot whether the distribution is symmetric.</p>
+
+  <div class="daily-example">
+    <div class="de-label">Light Bulb Life Rating Example</div>
+    <p>
+      Professor showed three types of bulbs: Incandescent (40W), CFL (7W), LED (7W) with different brightness (450 lumens each) and different lifespans (1,000 hrs / 15,000 hrs / 50,000 hrs).<br>
+      <strong>The life rating of the bulbs is the Median value</strong> &mdash; not the mean, because individual bulb lifespans can vary wildly.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 5: MODE -->
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Central Tendency: Mode <span class="difficulty beginner">Beginner</span></h2>
+
+  <p><span class="key-term">Mode</span> = The most frequently occurring value in the data.</p>
+
+  <h3>Professor's Examples</h3>
+  <table class="styled-table">
+    <thead>
+      <tr><th>Dataset</th><th>Mode</th><th>Type</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1, <strong>2, 2</strong>, 3, 4, 5</td><td><strong>2</strong></td><td>Unique Mode (Unimodal)</td></tr>
+      <tr><td>1, <strong>2, 2</strong>, 3, 4, <strong>5, 5</strong>, 6</td><td><strong>2</strong> and <strong>5</strong></td><td>Two Modes (Bimodal)</td></tr>
+      <tr><td>1, 2, 3, 4, 5, 6</td><td>No Mode</td><td>All values appear equally</td></tr>
+    </tbody>
+  </table>
+
+  <h3>When to Use Mode?</h3>
+  <ul style="padding-left:22px;font-size:.9rem;color:#37474f;">
+    <li><strong>Voting:</strong> The candidate who secures the largest number of votes is declared the winner (mode of votes)</li>
+    <li><strong>KBC (Kaun Banega Crorepati):</strong> Audience poll &mdash; the option with the most votes is the mode</li>
+    <li><strong>Random Forest (Machine Learning):</strong> Uses Mode (majority voting) across multiple decision trees</li>
+    <li><strong>SpellCheck / Recommendation Systems:</strong> The top suggested option is the mode (highest probability)</li>
+  </ul>
+
+  <div class="trending-example">
+    <div class="te-label">KBC Audience Poll = Mode</div>
+    <p>
+      Professor showed a KBC screenshot where audience votes were: A = 26%, B = 44%, C = 13%, D = 17%. The mode answer is <strong>B</strong> with the highest percentage. This is how the "audience lifeline" works &mdash; it is simply picking the Mode of the audience responses.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 6: COMPARISON -->
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Mean vs Median vs Mode &mdash; Comparison <span class="difficulty intermediate">Intermediate</span></h2>
+
+  <p>Professor showed a detailed comparison table:</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Feature</th><th>Mean</th><th>Median</th><th>Mode</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Definition</strong></td><td>Average of all values</td><td>Middle value when data is sorted</td><td>Most frequently occurring value</td></tr>
+      <tr><td><strong>Sensitivity to Outliers</strong></td><td>Sensitive &mdash; pulled by extreme values</td><td>Not sensitive</td><td>Not sensitive</td></tr>
+      <tr><td><strong>Calculation</strong></td><td>Add all values, divide by N</td><td>Sort, find middle value</td><td>Find most repeated value</td></tr>
+      <tr><td><strong>Representation</strong></td><td>Value may or may not be in dataset</td><td>Value is always from the dataset</td><td>Value is always from the dataset</td></tr>
+    </tbody>
+  </table>
+
+  <h3>GradSurvey Dataset Example (from HW-01)</h3>
+  <p>Professor applied all three measures to the GradSurvey spending data (50 observations, sorted):</p>
+
+  <table class="styled-table">
+    <thead>
+      <tr><th>Measure</th><th>Value</th><th>Interpretation</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Mean</strong></td><td>$470.7</td><td>= 23535/50 = Sum of observations / 50</td></tr>
+      <tr><td><strong>Median</strong></td><td>$450</td><td>50% observations above, 50% below</td></tr>
+      <tr><td><strong>Mode</strong></td><td>$400</td><td>Most repeated observation (11 times)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="exam-tip">
+    <strong>Professor's Tip:</strong> <em>"Always draw Central Tendency measures on the graph."</em> When you create a histogram or line chart of your data, mark the Mean, Median, and Mode on it. This immediately shows you the relationship between them and whether the data is skewed.
+  </div>
+
+  <div class="deferred-note">
+    <strong>Remaining Chapter 3 topics</strong> &mdash; Professor ended the lecture with: <em>"Remaining chapter will be covered in the next class."</em><br><br>
+    Topics to come: Variation (Range, Standard Deviation, CoV, Z-score), Shape (Skewness, Kurtosis), Quartiles &amp; 5-number summary, and the Nano Case Study.
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary-box">
+  <h3>Session 3 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li><strong>Chapter 3</strong> covers 6 topics: Central Tendency, Variation, Shape, Quartiles, Covariance/Correlation, Nano case study</li>
+    <li><strong>Summary measures</strong> are like vital signs for a dataset &mdash; they tell the health of the data at a glance</li>
+    <li><strong>Mean</strong> = Sum/N. Sensitive to outliers. Excel: =AVERAGE(Range)</li>
+    <li><strong>Median</strong> = Middle value after sorting. Robust to outliers. Preferred for income/salary/wealth data. Excel: =MEDIAN(Range)</li>
+    <li><strong>Mode</strong> = Most frequent value. Used in voting, KBC audience poll, Random Forest ML, spell-check</li>
+    <li><strong>Mean may not exist in the dataset</strong>; Median and Mode always come from actual data values</li>
+    <li><strong>Professor's tip:</strong> Always draw Mean, Median, Mode on your histogram to visualise skewness</li>
+    <li><strong>Covariance &amp; Correlation</strong> deferred to Chapter 12 (Simple Linear Regression)</li>
+    <li><strong>Variation, Shape, Quartiles</strong> deferred to next class</li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  BITS Pilani MBA (S2-25) &bull; Business Statistics (MBACCZG501) &bull; Session 3 of 16<br>
+  Class Notes from Prof. Sandeep Kayastha's Lecture L-02 (2 May 2026) &bull; Slides 18-30
+</div>
+
+</div><!-- /container -->
+<script>
+(function(){
+  var track = document.querySelector(".progress-track");
+  var sections = document.querySelectorAll(".section-card");
+  if(!track || !sections.length) return;
+  if(!track.querySelector(".pt-step")){
+    sections.forEach(function(sec, i){
+      var h2 = sec.querySelector("h2");
+      var fullTitle = "";
+      if(h2){
+        var clone = h2.cloneNode(true);
+        var rm = clone.querySelectorAll(".sec-num, .difficulty");
+        rm.forEach(function(el){ el.remove(); });
+        fullTitle = clone.textContent.trim();
+      }
+      var step = document.createElement("div");
+      step.className = "pt-step done";
+      step.innerHTML = '<div class="pt-dot">'+(i+1)+'</div>';
+      step.title = fullTitle || "Section "+(i+1);
+      track.appendChild(step);
+    });
+  }
+  var steps = track.querySelectorAll(".pt-step");
+  steps.forEach(function(step, i){
+    step.style.cursor = "pointer";
+    step.addEventListener("click", function(){
+      var target = sections[i];
+      if(target){ target.scrollIntoView({behavior:"smooth", block:"start"}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session 5 Class Notes — CVP, Positioning &amp; Customization | Marketing Management</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; } .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; } .topbar .nav-links a { color: #b0bec5; text-decoration: none; } .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge { background: #ff5252; color: #fff; font-size: .7rem; padding: 2px 8px; border-radius: 10px; font-weight: 700; margin-left: 6px; }
+  .hero { background: linear-gradient(135deg, #e65100, #ff9800, #ffb74d); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(255,255,255,.2); color: #fff; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; } .hero .subtitle { color: rgba(255,255,255,.9); font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; } .hero .pill { background: rgba(255,255,255,.2); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #fff; }
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+  .prof-tag { text-align: center; padding: 12px; background: #fff3e0; color: #e65100; font-size: .85rem; font-weight: 600; border-bottom: 2px solid #ff9800; }
+  .section-card { background: #fff; border-radius: 14px; padding: 32px 28px; margin-bottom: 28px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border: 1px solid #e8eaed; }
+  .section-card h2 { font-size: 1.35rem; color: #e65100; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid #ffe0b2; display: flex; align-items: center; gap: 10px; }
+  .section-card h2 .sec-num { background: #ff9800; color: #fff; width: 32px; height: 32px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; font-weight: 700; flex-shrink: 0; }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+  .styled-table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: .88rem; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #e65100; color: #fff; } .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; } .styled-table tbody tr:nth-child(even) { background: #fff8f0; } .styled-table tbody tr:hover { background: #fff3e0; }
+  .prof-insight { background: linear-gradient(135deg, #fff3e0, #fff8e1); border-left: 5px solid #ff9800; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .prof-insight .pi-label { display: inline-flex; align-items: center; gap: 6px; color: #e65100; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .prof-insight p { font-size: .92rem; color: #4e342e; }
+  .slide-example { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 5px solid #4caf50; border-radius: 12px; padding: 22px 24px; margin: 22px 0; }
+  .slide-example .se-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .8rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .slide-example p { font-size: .92rem; color: #33691e; }
+  .flow-vertical { display: flex; flex-direction: column; align-items: center; gap: 0; margin: 24px auto; max-width: 420px; }
+  .flow-vertical .fv-box { background: #fff3e0; border: 2px solid #ffcc80; border-radius: 10px; padding: 12px 24px; text-align: center; width: 100%; }
+  .flow-vertical .fv-box .fv-title { font-weight: 700; color: #e65100; font-size: .9rem; }
+  .flow-vertical .fv-box .fv-desc { font-size: .8rem; color: #455a64; }
+  .flow-vertical .fv-arrow { font-size: 1.3rem; color: #ffcc80; padding: 4px 0; }
+  .summary-box { background: linear-gradient(135deg, #fff3e0, #ffe0b2); border: 2px solid #ff9800; border-radius: 14px; padding: 24px 28px; margin: 30px 0; }
+  .summary-box h3 { color: #e65100; margin-bottom: 14px; font-size: 1.1rem; } .summary-box ul { padding-left: 20px; } .summary-box li { font-size: .9rem; color: #4e342e; margin-bottom: 6px; }
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+  @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } .container { padding: 20px 14px 40px; } .section-card { padding: 22px 18px; } }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a>
+    <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a>
+    <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+    <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span>
+  </div>
+</div>
+
+<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
+  <a href="session_05.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">AI Notes</a>
+  <a href="session_05_class.html" style="padding:8px 24px;background:#ff9800;color:#fff;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">Class Notes</a>
+</div>
+
+<div class="prof-tag">Based on Prof. Sagar Venkateshwar's lectures | Lecture 4-5 continued (Merged AZC411/MBAZC411/MBAZG503/SEZC410)</div>
+
+<div class="hero">
+  <div class="session-tag">Session 5 of 16 &mdash; Class Notes</div>
+  <h1>Customization, Positioning &amp; Ethical Issues</h1>
+  <p class="subtitle">Evaluating and selecting market segments, one-to-one marketing, behavioral segmentation breakdown, and legal/ethical issues in segmentation and targeting.</p>
+  <div class="meta-pills">
+    <span class="pill">Lecture 4-5 (L4_5) &mdash; Second Half</span>
+    <span class="pill">Mid-Sem Syllabus</span>
+  </div>
+</div>
+
+<div class="container">
+
+<div class="section-card">
+  <h2><span class="sec-num">1</span> Evaluating &amp; Selecting Market Segments</h2>
+  <p>Possible levels of segmentation form a spectrum:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Full Market Coverage (Mass Market)</strong> &mdash; target everyone</li>
+    <li><strong>Multiple Segments</strong> &mdash; serve several distinct segments</li>
+    <li><strong>Single Segment</strong> &mdash; niche focus</li>
+    <li><strong>Individuals as Segments (Customization)</strong> &mdash; one-to-one marketing</li>
+  </ul>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">2</span> One-to-One Marketing (Customization)</h2>
+  <p>Example: A salon often practices one-to-one marketing. Hotels also do this.</p>
+  <div class="flow-vertical">
+    <div class="fv-box"><div class="fv-title">Step 1: Identify</div><div class="fv-desc">Identify your prospects and customers</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Step 2: Differentiate</div><div class="fv-desc">Differentiate customers in terms of their needs and value to your company</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Step 3: Interact</div><div class="fv-desc">Interact to improve your knowledge about customers' needs and to build relationships</div></div>
+    <div class="fv-arrow">&#9660;</div>
+    <div class="fv-box"><div class="fv-title">Step 4: Customize</div><div class="fv-desc">Customize products, services, and messages to each customer</div></div>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">3</span> Behavioral Segmentation Breakdown</h2>
+  <p>A detailed tree structure for behavioral segmentation of any target market:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Target Market</strong> splits into:
+      <ul style="padding-left:20px;">
+        <li><strong>Unaware</strong></li>
+        <li><strong>Aware</strong>
+          <ul style="padding-left:20px;">
+            <li><strong>Not Tried:</strong> Negative opinion, Neutral, Favorable opinion</li>
+            <li><strong>Tried:</strong>
+              <ul style="padding-left:20px;">
+                <li>Rejector</li>
+                <li>Not yet repeated &rarr; Loyal to other brand, Switcher</li>
+                <li>Repeated &rarr; Loyal to brand &rarr; Light user, Regular user, Heavy user</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>This tree helps marketers understand exactly where potential customers are in the adoption journey and design targeted interventions for each node.</p>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">4</span> Cadbury: Building Around Existing Habits</h2>
+  <div class="slide-example">
+    <div class="se-label">Slide Example</div>
+    <p><strong>Cadbury Dairy Milk:</strong> "Kuch accha ho jaye, kuch meetha ho jaye" &mdash; replacing traditional Indian sweets (mithai) with chocolate for celebrations. <strong>Cadbury Celebrations:</strong> Designed for Rakhi, Diwali, and other festivals &mdash; an occasion-based segmentation strategy that builds on the existing Indian habit of gifting sweets, substituting chocolate boxes for mithai boxes.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">5</span> Legal &amp; Ethical Issues in Segmentation</h2>
+  <p>Marketers must avoid consumer backlash:</p>
+  <ul style="margin:12px 0; padding-left:22px; font-size:.92rem;">
+    <li><strong>Labeling consumers:</strong> Avoid offensive labels like "Old", "non-performer", "spinsters", "lonely"</li>
+    <li><strong>Vulnerable groups:</strong> Be careful targeting children (soft drinks, unhealthy food)</li>
+    <li><strong>Disadvantaged groups:</strong> Avoid making fun of disabled persons; Racist toys</li>
+    <li><strong>Potentially harmful products:</strong> Marketing cigarettes (Ms Special Filters), alcohol to specific groups</li>
+  </ul>
+  <div class="prof-insight">
+    <div class="pi-label">Prof. Sagar's Point</div>
+    <p>The same ethical issues appear in both L3 (Consumer Behaviour) and L4-5 (Segmentation) slides &mdash; this is a recurring exam theme. Marketers have a social responsibility not to exploit vulnerable segments, even if those segments are profitable.</p>
+  </div>
+</div>
+
+<div class="section-card">
+  <h2><span class="sec-num">6</span> Looking Ahead: Customer Purchase Journey</h2>
+  <p>The lecture ends with a forward-looking question: <strong>"How did customer purchase journey evolve with the internet era?"</strong> This sets up future sessions on digital marketing, omnichannel strategies, and the modern customer journey.</p>
+</div>
+
+<div class="summary-box">
+  <h3>Session 5 Class Notes &mdash; Key Takeaways</h3>
+  <ul>
+    <li>Segmentation levels: Mass Market &rarr; Multiple Segments &rarr; Single Segment &rarr; Customization</li>
+    <li>One-to-one marketing: Identify &rarr; Differentiate &rarr; Interact &rarr; Customize (salons, hotels)</li>
+    <li>Behavioral segmentation breakdown: Unaware/Aware &rarr; Not Tried/Tried &rarr; Rejector/Switcher/Loyal &rarr; Light/Regular/Heavy user</li>
+    <li>Cadbury: Occasion-based segmentation replacing mithai with chocolate for Indian festivals</li>
+    <li>Ethical issues: Avoid labeling, targeting vulnerable/disadvantaged groups, harmful products</li>
+    <li>Customer purchase journey is evolving with the internet era</li>
+  </ul>
+</div>
+
+<div class="page-footer">
+  BITS Pilani MBA &bull; Marketing Management &bull; Session 5 Class Notes<br>
+  Based on Prof. Sagar Venkateshwar's Lecture 4-5 slides (second half)
+</div>
+</div>
+</body>
+</html>
