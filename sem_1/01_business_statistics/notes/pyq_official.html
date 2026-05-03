@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQ — Business Statistics | BITS MBA</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f0f2f5;
+    padding: 0;
+  }
+
+  /* ── Top Nav Bar ── */
+  .topbar {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge {
+    background: #ff5252;
+    color: #fff;
+    font-size: .7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* ── Tab Bar ── */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    background: #1a2a33;
+    padding: 14px 20px;
+  }
+  .tab-bar a {
+    padding: 10px 28px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all .25s;
+    color: #78909c;
+    background: rgba(255,255,255,.06);
+    border: 2px solid transparent;
+  }
+  .tab-bar a:hover {
+    color: #b0bec5;
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.1);
+  }
+  .tab-bar a.active {
+    color: #0f2027;
+    background: #64ffda;
+    border-color: #64ffda;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 56px 32px 48px;
+    text-align: center;
+  }
+  .hero .session-tag {
+    display: inline-block;
+    background: rgba(100, 255, 218, .15);
+    color: #64ffda;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill {
+    background: rgba(255,255,255,.1);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: .78rem;
+    color: #cfd8dc;
+  }
+
+  /* ── Container ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Section Card ── */
+  .section-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    border: 1px solid #e8eaed;
+  }
+  .section-card h2 {
+    font-size: 1.35rem;
+    color: #0f2027;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-card h2 .sec-icon {
+    background: #2c5364;
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+
+  /* ── Exam Meta Box ── */
+  .exam-meta {
+    background: linear-gradient(135deg, #e3f2fd, #e8eaf6);
+    border: 2px solid #90caf9;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+    font-size: .88rem;
+  }
+  .exam-meta .meta-item { display: flex; gap: 8px; }
+  .exam-meta .meta-label { font-weight: 700; color: #1565c0; white-space: nowrap; }
+  .exam-meta .meta-value { color: #37474f; }
+
+  /* ── Question Block ── */
+  .question-block {
+    background: #fafbfc;
+    border: 1px solid #e8eaed;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .question-num {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #0f2027;
+  }
+  .marks-badge {
+    background: #ff5252;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+  .question-block p { font-size: .92rem; color: #37474f; margin-bottom: 10px; }
+  .question-block ul, .question-block ol { padding-left: 22px; margin-bottom: 10px; }
+  .question-block li { font-size: .9rem; color: #37474f; margin-bottom: 6px; }
+  .question-block .note {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: .84rem;
+    color: #e65100;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* ── Table ── */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: .88rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+
+  /* ── Data Note ── */
+  .data-note {
+    background: linear-gradient(135deg, #fff3e0, #fff8e1);
+    border: 2px dashed #ff9800;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 14px 0;
+    font-size: .85rem;
+    color: #e65100;
+    text-align: center;
+  }
+
+  /* ── Footer ── */
+  .page-footer {
+    text-align: center;
+    padding: 28px 20px;
+    color: #90a4ae;
+    font-size: .78rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .exam-meta { grid-template-columns: 1fr; }
+    .question-block { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Business Statistics</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <a href="session_01.html">AI Notes</a>
+  <a href="session_01_class.html">Class Notes</a>
+  <a href="pyq_official.html" class="active">PYQ</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="session-tag">Official BITS PYQ Papers</div>
+  <h1>Business Statistics &mdash; Previous Year Questions</h1>
+  <p class="subtitle">MBACCZG501 &bull; First Semester 2025-26 &bull; Batch BC26 (1-2025)</p>
+  <div class="meta-pills">
+    <span class="pill">2 Papers</span>
+    <span class="pill">EC2 Mid-Sem + EC3 Comprehensive</span>
+    <span class="pill">75% Total Weightage</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════════════════════════════ -->
+<!--            EC2 — MID-SEMESTER TEST            -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section-card">
+  <h2><span class="sec-icon">E2</span> EC2 &mdash; Mid-Semester Test</h2>
+
+  <div class="exam-meta">
+    <div class="meta-item"><span class="meta-label">Course No.:</span><span class="meta-value">MBACCZG501</span></div>
+    <div class="meta-item"><span class="meta-label">Weightage:</span><span class="meta-value">30%</span></div>
+    <div class="meta-item"><span class="meta-label">Duration:</span><span class="meta-value">2 Hours</span></div>
+    <div class="meta-item"><span class="meta-label">Type:</span><span class="meta-value">Closed Book</span></div>
+    <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-value">20 December 2025 (FN)</span></div>
+    <div class="meta-item"><span class="meta-label">Total Marks:</span><span class="meta-value">30 (6 questions &times; 5 marks)</span></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 1</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p>Describe and Compare:</p>
+    <ol type="a">
+      <li>Conditional, Marginal and Joint probabilities</li>
+      <li>Range, Standard deviation and Inter-Quartile Range</li>
+    </ol>
+    <div class="note">
+      <strong>Important:</strong> Describe means describe in detail, draw charts, give examples, applications, etc. Compare means compare in a table with rows and columns, compare several characteristics, etc.
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 2</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p>The bank balance in thousand Rupees of the customers who applied for a housing loan last week are: <strong>22, 6000, 780, 1020, 52, 180, 120, 74, 92, 10, 620, and 1100</strong>.</p>
+    <ol type="A">
+      <li>Draw a big, neat and well-labelled Boxplot chart.</li>
+      <li>Which central tendency measure will be appropriate for this data &mdash; justify your answer.</li>
+      <li>Identify the outliers.</li>
+    </ol>
+    <div class="note">
+      <strong>Important:</strong> Show every calculation/working.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 3</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p>In a large IT company, every applicant for the entry-level jobs undergoes two rounds of the selection process &mdash; a written test and an interview round. Historical data shows:</p>
+    <ul>
+      <li>P(passes written test) = 50%</li>
+      <li>P(passes interview round) = 60%</li>
+      <li>P(passes both written test and interview round) = 40%</li>
+    </ul>
+    <ol type="A">
+      <li>If a candidate has passed the interview round, what is the probability that he also passed the written test?</li>
+      <li>Are the written test and interview round independent &mdash; justify your answer.</li>
+    </ol>
+    <div class="note">
+      <strong>Important:</strong> Show every calculation/working.
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 4</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p>A stock market trader has categorized its customers into three segments (Optimistic, Cautious, and Pessimistic) based on past buy/sell behavior. The summary table is as follows:</p>
+
+    <table class="styled-table">
+      <thead>
+        <tr><th>Segment</th><th>Male</th><th>Female</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Optimistic</strong></td><td>26</td><td>16</td></tr>
+        <tr><td><strong>Cautious</strong></td><td>41</td><td>43</td></tr>
+        <tr><td><strong>Pessimistic</strong></td><td>33</td><td>41</td></tr>
+      </tbody>
+    </table>
+
+    <p>If a customer is selected at random, what is the probability the customer is (provide answers as fractions, not decimals):</p>
+    <ol type="a">
+      <li>Classified as Optimistic or Cautious?</li>
+      <li>Is a Male or is classified as Pessimistic?</li>
+      <li>Is a Male and is classified as Optimistic?</li>
+      <li>Given the customer is female, what is the probability that she is classified as Optimistic?</li>
+    </ol>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 5</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p>A passenger car manufacturer buys car batteries from two suppliers, Supplier-A and Supplier-B.</p>
+    <ul>
+      <li>Supplier-A supplies 65% of the batteries; Supplier-B supplies the remaining requirement.</li>
+      <li>Supplier-A: 99% Good quality, 2% Bad quality (as stated in paper).</li>
+      <li>Supplier-B: 95% Good quality, 5% Bad quality.</li>
+    </ul>
+    <p>The batteries from both suppliers are stocked in the same store. If a battery is selected at random:</p>
+    <ol type="a">
+      <li>What is the probability that it is of Good quality?</li>
+      <li>What is the probability that the battery has been supplied by Supplier-A given that it is of Good quality?</li>
+      <li>What is the probability that the battery has been supplied by Supplier-B given that it is of Bad quality?</li>
+    </ol>
+    <div class="note">
+      <strong>Important:</strong> Show all calculations/procedure/approach/formula. (Bayes' Theorem)
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 6</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p>The result given by AI Google for a query is given below (screenshot included in original paper showing GRE Verbal Reasoning statistics).</p>
+    <p>If the GRE scores for Verbal Reasoning are Normally distributed, then:</p>
+    <ol type="a">
+      <li>What percentage of the people who have taken the GRE test have Verbal Reasoning less than 140?</li>
+      <li>What percentage have Verbal Reasoning scores between 145 and 160?</li>
+      <li>What is the Verbal Reasoning score below which 70% of the people have scored?</li>
+    </ol>
+    <div class="note">
+      <strong>Important:</strong> Show every calculation/working and underline/highlight the final answer.
+    </div>
+    <div class="data-note">
+      Note: The original paper included a screenshot of Google AI's response showing GRE Verbal Reasoning mean and standard deviation. Standard GRE data: Mean &asymp; 150.37, SD &asymp; 8.49.
+    </div>
+  </div>
+
+</div><!-- /section-card EC2 -->
+
+
+<!-- ══════════════════════════════════════════════ -->
+<!--          EC3 — COMPREHENSIVE EXAM             -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section-card">
+  <h2><span class="sec-icon">E3</span> EC3 &mdash; Comprehensive Exam</h2>
+
+  <div class="exam-meta">
+    <div class="meta-item"><span class="meta-label">Course No.:</span><span class="meta-value">MBACCZG501</span></div>
+    <div class="meta-item"><span class="meta-label">Weightage:</span><span class="meta-value">45%</span></div>
+    <div class="meta-item"><span class="meta-label">Duration:</span><span class="meta-value">2 Hours</span></div>
+    <div class="meta-item"><span class="meta-label">Type:</span><span class="meta-value">Open Book</span></div>
+    <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-value">28 February 2026 (FN)</span></div>
+    <div class="meta-item"><span class="meta-label">Total Marks:</span><span class="meta-value">45 (6 questions, 3 tables)</span></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 1</span>
+      <span class="marks-badge">12 marks</span>
+    </div>
+    <p>Explain in detail (150+ words):</p>
+    <ol type="a">
+      <li>Type-I and Type-II errors with two or more OWN examples, and diagrams.</li>
+      <li>Significance level and its purpose.</li>
+      <li>How is F-test performed, and its applications.</li>
+    </ol>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 2</span>
+      <span class="marks-badge">6 marks</span>
+    </div>
+    <p>ThirdEyeCare, an NGO, has distributed spectacles to 60 workers involved in precision jobs. The details of the spectacles distributed by it are given in the table below:</p>
+    <div class="data-note">
+      Note: The original paper included a table showing the distribution of spectacles across 6 professions. The proportion of workers in the 6 professions is equal (10 workers each expected).
+    </div>
+    <p>Is there evidence that the distribution of spectacles was fair?</p>
+    <p>Use &alpha; = 0.05. Clearly write the hypothesis, all formulas, all steps, and all calculations. Underline the final result.</p>
+    <div class="note">
+      <strong>Test type:</strong> Chi-Square Goodness-of-Fit Test.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 3</span>
+      <span class="marks-badge">6 marks</span>
+    </div>
+    <p>Health Regulation Authority (HRA) has received several complaints from the clients of &lsquo;WeighLess Fitness Center&rsquo; that its claim of weight loss is not correct.</p>
+    <p>HRA&rsquo;s Investigation Wing has collected data of 7 clients who had undergone WeighLess&rsquo;s weight loss program. The data is given below (weight in kg):</p>
+    <div class="data-note">
+      Note: The original paper included a table showing &ldquo;Before&rdquo; and &ldquo;After&rdquo; weights for 7 clients.
+    </div>
+    <p>Test the hypothesis whether the weight loss program leads to loss of weight. State outcome of the hypothesis test clearly.</p>
+    <p>Use &alpha; = 0.05. Clearly write the hypothesis, all formulas, all steps, and all calculations. Underline the final result.</p>
+    <div class="note">
+      <strong>Test type:</strong> Paired t-test (dependent samples).
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 4</span>
+      <span class="marks-badge">7 marks</span>
+    </div>
+    <p>StartUp Storage Co. has launched a new model of mobile battery. Its advertisement claims that average life of the new model is 600 minutes under standard operating conditions.</p>
+    <p>The R&amp;D department of MoreLife, the largest manufacturer of mobile phone batteries, purchased StartUp&rsquo;s 10 batteries and tested them in its lab. The results:</p>
+
+    <table class="styled-table">
+      <thead>
+        <tr><th colspan="10">Life (minutes)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>630</td><td>620</td><td>650</td><td>620</td><td>600</td><td>590</td><td>640</td><td>590</td><td>580</td><td>630</td></tr>
+      </tbody>
+    </table>
+
+    <table class="styled-table">
+      <thead>
+        <tr><th>Statistic</th><th>Value</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Count</td><td>10</td></tr>
+        <tr><td>Sum</td><td>6150</td></tr>
+        <tr><td>Mean</td><td>615</td></tr>
+        <tr><td>Q1</td><td>592.5</td></tr>
+        <tr><td>Q2 (Median)</td><td>620.0</td></tr>
+        <tr><td>Q3</td><td>630.0</td></tr>
+        <tr><td>Sample Variance</td><td>561.11</td></tr>
+        <tr><td>Population Variance</td><td>505.00</td></tr>
+        <tr><td>Skewness</td><td>-0.13</td></tr>
+        <tr><td>Kurtosis</td><td>-1.34</td></tr>
+      </tbody>
+    </table>
+
+    <p>Test the claim made by StartUp&rsquo;s advertisement.</p>
+    <p>Use &alpha; = 0.05. Clearly write the hypothesis, all formulas, all steps, and all calculations. Underline the final result.</p>
+    <div class="note">
+      <strong>Test type:</strong> One-sample t-test (testing claimed mean of 600 minutes).
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 5</span>
+      <span class="marks-badge">7 marks</span>
+    </div>
+    <p>The latest Weekly Book Sales Statistics released by Book Publishers Association of Planet-B is given below:</p>
+
+    <table class="styled-table">
+      <thead>
+        <tr><th>Book Title</th><th>Sales Rank</th><th>No. of Pages</th><th>Price (Rs)</th><th>Weight (gms)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ASM</td><td>1</td><td>350</td><td>500</td><td>600</td></tr>
+        <tr><td>BITS</td><td>2</td><td>325</td><td>525</td><td>700</td></tr>
+        <tr><td>WILP</td><td>3</td><td>400</td><td>375</td><td>800</td></tr>
+        <tr><td>KBC</td><td>4</td><td>450</td><td>400</td><td>750</td></tr>
+        <tr><td>RRR</td><td>5</td><td>275</td><td>200</td><td>450</td></tr>
+        <tr><td>BBC</td><td>6</td><td>300</td><td>250</td><td>800</td></tr>
+        <tr><td>H1N1</td><td>7</td><td>225</td><td>300</td><td>650</td></tr>
+        <tr><td>ClassMon</td><td>8</td><td>400</td><td>325</td><td>750</td></tr>
+        <tr><td>CSK</td><td>9</td><td>425</td><td>450</td><td>775</td></tr>
+        <tr><td>WWF</td><td>10</td><td>375</td><td>425</td><td>575</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Which variable is a better predictor of sales rank &mdash; No. of pages or Price?</strong></p>
+    <p>Show all formulas, all steps, and all calculations. Underline the final result(s).</p>
+    <div class="note">
+      <strong>Approach:</strong> Compute correlation coefficient (r) for Sales Rank vs No. of Pages and Sales Rank vs Price. Compare the strength of correlation to determine the better predictor.
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 6</span>
+      <span class="marks-badge">7 marks</span>
+    </div>
+    <p>2WCo produces electric scooters. Its production manager wants to know whether the number of scooters produced in a day and the number of workmen reported on the day are statistically related.</p>
+    <p>The number of scooters produced and the attendance of workers on 8 randomly selected days of this month are given in the table below:</p>
+    <div class="data-note">
+      Note: The original paper included a table with scooter production vs. worker attendance data for 8 days.
+    </div>
+    <p><strong>Estimate the average production if the number of workers reported in the factory is 60, 80 and 90.</strong></p>
+    <p>Show all formulas, all steps, and all calculations. Underline the final result(s).</p>
+    <div class="note">
+      <strong>Approach:</strong> Simple Linear Regression &mdash; find the regression equation (Y = a + bX), then predict for X = 60, 80, 90.
+    </div>
+  </div>
+
+</div><!-- /section-card EC3 -->
+
+<!-- FOOTER -->
+<div class="page-footer">
+  BITS Pilani MBA (S1 2025-26) &bull; Business Statistics (MBACCZG501) &bull; Official PYQ Papers<br>
+  EC2: Mid-Semester (30%, Closed Book) &bull; EC3: Comprehensive (45%, Open Book)
+</div>
+
+</div><!-- /container -->
+</body>
+</html>

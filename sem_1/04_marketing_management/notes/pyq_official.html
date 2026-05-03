@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQ — Marketing Management | BITS MBA</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f0f2f5;
+    padding: 0;
+  }
+
+  /* ── Top Nav Bar ── */
+  .topbar {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+
+  /* ── Tab Bar ── */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    background: #1a2a33;
+    padding: 14px 20px;
+  }
+  .tab-bar a {
+    padding: 10px 28px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all .25s;
+    color: #78909c;
+    background: rgba(255,255,255,.06);
+    border: 2px solid transparent;
+  }
+  .tab-bar a:hover {
+    color: #b0bec5;
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.1);
+  }
+  .tab-bar a.active {
+    color: #0f2027;
+    background: #64ffda;
+    border-color: #64ffda;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 56px 32px 48px;
+    text-align: center;
+  }
+  .hero .session-tag {
+    display: inline-block;
+    background: rgba(100, 255, 218, .15);
+    color: #64ffda;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill {
+    background: rgba(255,255,255,.1);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: .78rem;
+    color: #cfd8dc;
+  }
+
+  /* ── Container ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Section Card ── */
+  .section-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    border: 1px solid #e8eaed;
+  }
+  .section-card h2 {
+    font-size: 1.35rem;
+    color: #0f2027;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-card h2 .sec-icon {
+    background: #2c5364;
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+
+  /* ── Exam Meta Box ── */
+  .exam-meta {
+    background: linear-gradient(135deg, #e3f2fd, #e8eaf6);
+    border: 2px solid #90caf9;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+    font-size: .88rem;
+  }
+  .exam-meta .meta-item { display: flex; gap: 8px; }
+  .exam-meta .meta-label { font-weight: 700; color: #1565c0; white-space: nowrap; }
+  .exam-meta .meta-value { color: #37474f; }
+
+  /* ── Question Block ── */
+  .question-block {
+    background: #fafbfc;
+    border: 1px solid #e8eaed;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .question-num {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #0f2027;
+  }
+  .marks-badge {
+    background: #ff5252;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+  .question-block p { font-size: .92rem; color: #37474f; margin-bottom: 10px; }
+  .question-block ul, .question-block ol { padding-left: 22px; margin-bottom: 10px; }
+  .question-block li { font-size: .9rem; color: #37474f; margin-bottom: 6px; }
+  .question-block .note {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: .84rem;
+    color: #e65100;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* ── Case Study Box ── */
+  .case-box {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 5px solid #4caf50;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 16px 0;
+  }
+  .case-box .case-label {
+    display: inline-block;
+    background: #4caf50;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+  }
+  .case-box p { font-size: .9rem; color: #33691e; margin-bottom: 10px; }
+  .case-box h4 { font-size: .95rem; color: #2e7d32; margin: 16px 0 8px; }
+
+  /* ── Case Study 2 (Purple variant) ── */
+  .case-box-alt {
+    background: linear-gradient(135deg, #ede7f6, #e8eaf6);
+    border-left: 5px solid #7c4dff;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 16px 0;
+  }
+  .case-box-alt .case-label {
+    display: inline-block;
+    background: #7c4dff;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+  }
+  .case-box-alt p { font-size: .9rem; color: #311b92; margin-bottom: 10px; }
+
+  /* ── Table ── */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: .88rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 12px 16px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 10px 16px; border-bottom: 1px solid #eceff1; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+
+  /* ── Footer ── */
+  .page-footer {
+    text-align: center;
+    padding: 28px 20px;
+    color: #90a4ae;
+    font-size: .78rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .exam-meta { grid-template-columns: 1fr; }
+    .question-block { padding: 16px; }
+    .case-box, .case-box-alt { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Marketing Management</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <a href="session_01.html">AI Notes</a>
+  <a href="session_01_class.html">Class Notes</a>
+  <a href="pyq_official.html" class="active">PYQ</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="session-tag">Official BITS PYQ Papers</div>
+  <h1>Marketing Management &mdash; Previous Year Questions</h1>
+  <p class="subtitle">MBACCZG503 &bull; First Semester 2025-26 &bull; Batch BC26 (1-2025)</p>
+  <div class="meta-pills">
+    <span class="pill">2 Papers</span>
+    <span class="pill">EC2 Mid-Sem + EC3 Comprehensive</span>
+    <span class="pill">70% Total Weightage</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════════════════════════════ -->
+<!--            EC2 — MID-SEMESTER TEST            -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section-card">
+  <h2><span class="sec-icon">E2</span> EC2 &mdash; Mid-Semester Test</h2>
+
+  <div class="exam-meta">
+    <div class="meta-item"><span class="meta-label">Course No.:</span><span class="meta-value">MBACCZG503</span></div>
+    <div class="meta-item"><span class="meta-label">Weightage:</span><span class="meta-value">30%</span></div>
+    <div class="meta-item"><span class="meta-label">Duration:</span><span class="meta-value">2 Hours</span></div>
+    <div class="meta-item"><span class="meta-label">Type:</span><span class="meta-value">Closed Book</span></div>
+    <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-value">21 December 2025 (AN)</span></div>
+    <div class="meta-item"><span class="meta-label">Questions:</span><span class="meta-value">3 questions (30 marks)</span></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 1</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p>Ravi wanted to set up a chocolates brand, that would only be available at campus stores. The product was designed in such a way that it is affordable, tasty and accessible to college youth, who are diet conscious and also value conscious. Ravi came up with interesting recipes and could launch five different flavors of chips. To establish his business, Ravi had to sell more volumes, as the pricing was very less.</p>
+    <p><strong>Make necessary assumptions pertinent to competition and come up with a positioning strategy for Ravi.</strong></p>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 2</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p><strong>Explain the four market forces and new capabilities of today&rsquo;s Marketing for a quick commerce company that primarily sells groceries.</strong></p>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 3</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p>Ravish wanted to build his own fast fashion brand. He observed that there were very few fast fashion brands that emanated from India. He observed that urban Indians were interested in apparel that were not so economical but not expensive either, especially that are under Rs. 10,000. He wanted to be sure that he captures only those consumers who have very less disposable income, when compared to Levis, Pepe Jeans etc.</p>
+    <p><strong>Keeping the competition in view, help Ravish with segmentation and targeting for his fast fashion brand.</strong></p>
+  </div>
+
+</div><!-- /section-card EC2 -->
+
+
+<!-- ══════════════════════════════════════════════ -->
+<!--          EC3 — COMPREHENSIVE EXAM             -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section-card">
+  <h2><span class="sec-icon">E3</span> EC3 &mdash; Comprehensive Exam</h2>
+
+  <div class="exam-meta">
+    <div class="meta-item"><span class="meta-label">Course No.:</span><span class="meta-value">MBACCZG503</span></div>
+    <div class="meta-item"><span class="meta-label">Weightage:</span><span class="meta-value">40%</span></div>
+    <div class="meta-item"><span class="meta-label">Duration:</span><span class="meta-value">2 Hours 30 Minutes</span></div>
+    <div class="meta-item"><span class="meta-label">Type:</span><span class="meta-value">Open Book</span></div>
+    <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-value">1 March 2026 (AN)</span></div>
+    <div class="meta-item"><span class="meta-label">Total Marks:</span><span class="meta-value">40 (5 questions)</span></div>
+  </div>
+
+  <!-- ─── CASE STUDY: RUFFLES ─── -->
+  <div class="case-box">
+    <div class="case-label">Case Study &mdash; Ruffles Luxury Chocolates</div>
+    <p>It was 25th December 2016, Vishal was in a peculiar situation. The luxury chocolate &lsquo;Riva&rsquo; that he launched in August of 2015 was a huge hit and was giving him regular income. This chocolate was a unique product with three different components: milk, coco and coffee. The product was something that Indian market had not seen before. Reports have suggested that coffee and chocolate as a combination was never taken well by the Indian market before.</p>
+    <p>However, Vishal wanted to accelerate the growth of the company. This would give him much more flexibility to move things faster, and also repay the loans that he had taken ahead of schedule.</p>
+
+    <h4>Background</h4>
+    <p>Vishal was a graduate from a reputed management institution of India. He was hired by a leading global coco sourcing company in 2005. For the first years, he was posted in Ghana, West Africa. During his stint, he thoroughly understood the nuances of chocolate sourcing and processing, and established cordial relationships with coco farmers and traders. In 2010, Vishal was also asked to head the coffee sourcing vertical. He established relationships with coffee farmers and traders as well.</p>
+    <p>Vishal&rsquo;s clients were senior procurement managers of leading chocolate and coffee companies worldwide. He understood that South Asia had significant market potential for chocolates and confectionaries, especially with increasing disposable income. He also noted that India was one of the largest producers of dairy products.</p>
+    <p>After 10 years in corporate, Vishal moved back to India in 2015 and bought a 10-acre land in Gurgaon for a chocolate processing unit. He invested 25 Million rupees for processing machinery and set aside 10 Million for hiring: five sales people, two production managers, two accounting managers, two experienced chefs, and ten manufacturing staff. The company became closely held, with Vishal handling product and brand management.</p>
+    <p>He established the brand <strong>Ruffles</strong> in January 2015, headquartered in Gurgaon.</p>
+
+    <h4>Value Offerings</h4>
+    <p>Vishal leveraged his contacts for the finest raw materials at low prices. He wanted to manufacture luxury chocolates for Indian consumers, who were not exposed to many brands. <strong>Vineville from Dadbury&rsquo;s</strong> was one product catering to this segment &mdash; other than that, there was no big player. The total addressable market for Ruffles stood at <strong>20 Million USD</strong>.</p>
+    <p>Vishal wanted to first test the market with one product, then launch more in subsequent years. His first chocolate had equal amounts of coco, milk and coffee. The closest competitor, Dadbury&rsquo;s, relied on dark chocolate &mdash; not banking on taste but on the experience of possessing it. Vineville was often used as a gifting option.</p>
+
+    <h4>Table 1: Vineville Product Range</h4>
+    <table class="styled-table">
+      <thead>
+        <tr><th>Product</th><th>Weight</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Vineville Dark Chocolate with Cranberry</td><td>100g</td><td>100/-</td></tr>
+        <tr><td>Vineville Dark Chocolate with Almonds</td><td>100g</td><td>100/-</td></tr>
+        <tr><td>Vineville Dark Chocolate with Cashews</td><td>100g</td><td>100/-</td></tr>
+        <tr><td>Vineville Dark Chocolate with Raisins</td><td>100g</td><td>100/-</td></tr>
+        <tr><td>Vineville Dark Chocolate with Pistachios</td><td>100g</td><td>100/-</td></tr>
+        <tr><td>Vineville Dark Chocolate</td><td>100g</td><td>100/-</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Table 2: Products at Lower Price Segments</h4>
+    <table class="styled-table">
+      <thead>
+        <tr><th>Product</th><th>Weight</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dairy Milk (Dadbury&rsquo;s)</td><td>15g</td><td>10/-</td></tr>
+        <tr><td>Dairy Milk</td><td>7.5g</td><td>5/-</td></tr>
+        <tr><td>7 Stars</td><td>15g</td><td>10/-</td></tr>
+        <tr><td>7 Stars</td><td>8g</td><td>5/-</td></tr>
+        <tr><td>PitPat (Pestle)</td><td>15g</td><td>10/-</td></tr>
+        <tr><td>PitPat</td><td>35g</td><td>20/-</td></tr>
+        <tr><td>Silkybar (Rotte)</td><td>15g</td><td>10/-</td></tr>
+        <tr><td>Silkybar</td><td>35g</td><td>20/-</td></tr>
+        <tr><td>Rocopie</td><td>20g</td><td>20/-</td></tr>
+        <tr><td>Rocopie</td><td>30g</td><td>25/-</td></tr>
+        <tr><td>Rocopie</td><td>50g</td><td>35/-</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Competition &amp; Distribution</h4>
+    <p>Dadbury&rsquo;s operated at multiple price points, making the brand synonymous with all consumers. Pestle and Rotte also enjoyed strong recall and recognition due to financial muscle, long business history, and strong distribution networks covering every last mile.</p>
+    <p>Vishal took a loan of 1 billion rupees to hire 20 more sales staff reporting to the two existing sales leaders (total: 22 in sales and distribution). The plan was to set up operations in Haryana, Punjab, Uttar Pradesh and Uttarakhand.</p>
+    <p>Vishal wanted to differentiate Ruffles by pricing it slightly lower than Vineville &mdash; mulling the option of <strong>Rs. 99/-</strong> (vs Vineville&rsquo;s Rs. 100/-), creating the perception of being comparatively cheaper.</p>
+
+    <h4>Marketing &amp; Growth</h4>
+    <p>Vishal chose <strong>Social Media</strong> for promotion (no budget for ATL activities like print, radio, TV). He believed superior taste would generate positive word of mouth. He built an aesthetically appealing website with e-commerce capability. He wanted Ruffles to be an <strong>eco-friendly brand</strong>, attracting green consumers who use products publicly.</p>
+    <p>Manufacturing started 1st August 2015: over 2,000 chocolates/day. E-commerce launched the same day with at least one order daily (avg ticket size: Rs. 5,000). Monthly revenue from retailers in Haryana, Punjab, Delhi, UP and Uttarakhand: <strong>Rs. 20,00,000</strong>.</p>
+    <p>By February 2016, Ruffles made <strong>revenue of one crore rupees</strong>.</p>
+    <p>By December 2016 (market research): 20% of target audience aware of Ruffles. Of that 20%, 50% willing to try, 25% interested in repeat purchases. Expected 2,000 average repeat purchases/month for the next year.</p>
+    <p>One year in, Vishal wanted to step up. He was ready with another luxury product. Channel partners were excited (Vishal gave huge margins). However, the brand was still not popular enough. The processing unit was at capacity. Banks offered 50 Million rupees loan; Vishal conservatively took 35 Million.</p>
+  </div>
+
+  <!-- Q1 (EC3) -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 1</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p><strong>Using the 6M framework, can you help Vishal come up with a communications plan for the second product that he wants to launch?</strong></p>
+    <div class="note">
+      <strong>6M Framework:</strong> Mission, Market, Message, Media, Money, Measurement.
+    </div>
+  </div>
+
+  <!-- Q2 (EC3) -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 2</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p><strong>How do you think Ruffles can build its channels and expand throughout the country?</strong></p>
+  </div>
+
+  <!-- Q3 (EC3) -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 3</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p><strong>Come up with a price for the second product that Vishal wants to launch. (Steps of Pricing)</strong></p>
+  </div>
+
+  <!-- ─── CASE STUDY 2: RAVI ─── -->
+  <div class="case-box-alt">
+    <div class="case-label">Case Study &mdash; Ravi&rsquo;s Entertainment Platform</div>
+    <p>It was 2nd March, 2020. Ravi, after working with Netflix for five years, quit his job with an intention to come back to India. Prior to Netflix, Ravi worked for Facebook for five years.</p>
+    <p>In the last ten years, after his grad education, Ravi found himself in good stead both in terms of financial competence and technical competence. He wanted to gain entrepreneurial experience and do something on his own in India.</p>
+    <p>Ravi originally hailed from Karimnagar, a popular town in Telangana. He went back by 10th March, 2020. By 22nd March, 2020, the entire country went under lockdown for 21 days.</p>
+    <p>During this period, Ravi understood there was a strong need for a <strong>local entertainment platform like Netflix</strong>. His research found that consumers would find any additional subscription fee a burden, as most Telugu-speaking people under 25 were already subscribers of HotStar, Netflix and Amazon Prime.</p>
+    <p>He only wanted to target the <strong>under-25 group</strong> as they were vulnerable to advertisements and known to build emotional relationships with brands.</p>
+  </div>
+
+  <!-- Q4 (EC3) -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 4</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p><strong>Come up with possible positioning for Ravi&rsquo;s new platform.</strong></p>
+  </div>
+
+  <!-- Q5 (EC3) -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 5</span>
+      <span class="marks-badge">5 marks</span>
+    </div>
+    <p><strong>How would you go about segmentation and targeting for Ravi&rsquo;s new platform based on the inputs given in the case?</strong></p>
+  </div>
+
+</div><!-- /section-card EC3 -->
+
+<!-- FOOTER -->
+<div class="page-footer">
+  BITS Pilani MBA (S1 2025-26) &bull; Marketing Management (MBACCZG503) &bull; Official PYQ Papers<br>
+  EC2: Mid-Semester (30%, Closed Book) &bull; EC3: Comprehensive (40%, Open Book)
+</div>
+
+</div><!-- /container -->
+</body>
+</html>

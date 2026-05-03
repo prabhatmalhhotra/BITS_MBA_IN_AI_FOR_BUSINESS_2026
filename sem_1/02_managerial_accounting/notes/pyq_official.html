@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYQ — Managerial Accounting | BITS MBA</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f0f2f5;
+    padding: 0;
+  }
+
+  /* ── Top Nav Bar ── */
+  .topbar {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 14px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .topbar .badge {
+    background: #ff5252;
+    color: #fff;
+    font-size: .7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* ── Tab Bar ── */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    background: #1a2a33;
+    padding: 14px 20px;
+  }
+  .tab-bar a {
+    padding: 10px 28px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all .25s;
+    color: #78909c;
+    background: rgba(255,255,255,.06);
+    border: 2px solid transparent;
+  }
+  .tab-bar a:hover {
+    color: #b0bec5;
+    background: rgba(255,255,255,.1);
+    border-color: rgba(255,255,255,.1);
+  }
+  .tab-bar a.active {
+    color: #0f2027;
+    background: #64ffda;
+    border-color: #64ffda;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    padding: 56px 32px 48px;
+    text-align: center;
+  }
+  .hero .session-tag {
+    display: inline-block;
+    background: rgba(100, 255, 218, .15);
+    color: #64ffda;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill {
+    background: rgba(255,255,255,.1);
+    padding: 5px 14px;
+    border-radius: 16px;
+    font-size: .78rem;
+    color: #cfd8dc;
+  }
+
+  /* ── Container ── */
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  /* ── Section Card ── */
+  .section-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.06);
+    border: 1px solid #e8eaed;
+  }
+  .section-card h2 {
+    font-size: 1.35rem;
+    color: #0f2027;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-card h2 .sec-icon {
+    background: #2c5364;
+    color: #fff;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .section-card h3 { font-size: 1.05rem; color: #37474f; margin: 20px 0 10px; }
+
+  /* ── Exam Meta Box ── */
+  .exam-meta {
+    background: linear-gradient(135deg, #e3f2fd, #e8eaf6);
+    border: 2px solid #90caf9;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+    font-size: .88rem;
+  }
+  .exam-meta .meta-item { display: flex; gap: 8px; }
+  .exam-meta .meta-label { font-weight: 700; color: #1565c0; white-space: nowrap; }
+  .exam-meta .meta-value { color: #37474f; }
+
+  /* ── Question Block ── */
+  .question-block {
+    background: #fafbfc;
+    border: 1px solid #e8eaed;
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 18px;
+  }
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  .question-num {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #0f2027;
+  }
+  .marks-badge {
+    background: #ff5252;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+  .question-block p { font-size: .92rem; color: #37474f; margin-bottom: 10px; }
+  .question-block ul, .question-block ol { padding-left: 22px; margin-bottom: 10px; }
+  .question-block li { font-size: .9rem; color: #37474f; margin-bottom: 6px; }
+  .question-block .note {
+    background: #fff3e0;
+    border-left: 4px solid #ff9800;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: .84rem;
+    color: #e65100;
+    margin-top: 10px;
+    font-style: italic;
+  }
+
+  /* ── Case Study Box ── */
+  .case-box {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    border-left: 5px solid #4caf50;
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 16px 0;
+  }
+  .case-box .case-label {
+    display: inline-block;
+    background: #4caf50;
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: .72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+  }
+  .case-box p { font-size: .9rem; color: #33691e; margin-bottom: 8px; }
+
+  /* ── Answer Format Box ── */
+  .answer-format {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-size: .84rem;
+    color: #616161;
+  }
+  .answer-format strong { color: #37474f; }
+
+  /* ── Table ── */
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: .85rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  }
+  .styled-table thead { background: #263238; color: #fff; }
+  .styled-table th { padding: 10px 12px; text-align: right; font-weight: 600; font-size: .78rem; white-space: nowrap; }
+  .styled-table th:first-child { text-align: left; }
+  .styled-table td { padding: 8px 12px; border-bottom: 1px solid #eceff1; text-align: right; font-size: .82rem; }
+  .styled-table td:first-child { text-align: left; font-weight: 600; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+  .styled-table tbody tr:hover { background: #e3f2fd; }
+
+  /* ── Scrollable table wrapper ── */
+  .table-scroll { overflow-x: auto; margin: 18px 0; }
+
+  /* ── Footer ── */
+  .page-footer {
+    text-align: center;
+    padding: 28px 20px;
+    color: #90a4ae;
+    font-size: .78rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.5rem; }
+    .container { padding: 20px 14px 40px; }
+    .section-card { padding: 22px 18px; }
+    .exam-meta { grid-template-columns: 1fr; }
+    .question-block { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">BITS MBA <span>Managerial Accounting</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+  </div>
+</div>
+
+<!-- TAB BAR -->
+<div class="tab-bar">
+  <a href="session_01.html">AI Notes</a>
+  <a href="session_01_class.html">Class Notes</a>
+  <a href="pyq_official.html" class="active">PYQ</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="session-tag">Official BITS PYQ Papers</div>
+  <h1>Managerial Accounting &mdash; Previous Year Questions</h1>
+  <p class="subtitle">MBACCZG502 &bull; First Semester 2025-26 &bull; Batch BC26 (1-2025)</p>
+  <div class="meta-pills">
+    <span class="pill">2 Papers</span>
+    <span class="pill">EC2 Mid-Sem + EC3 Comprehensive</span>
+    <span class="pill">70% Total Weightage</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════════════════════════════ -->
+<!--            EC2 — MID-SEMESTER TEST            -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section-card">
+  <h2><span class="sec-icon">E2</span> EC2 &mdash; Mid-Semester Test</h2>
+
+  <div class="exam-meta">
+    <div class="meta-item"><span class="meta-label">Course No.:</span><span class="meta-value">MBA ZC415 / PDFI ZC415</span></div>
+    <div class="meta-item"><span class="meta-label">Weightage:</span><span class="meta-value">30%</span></div>
+    <div class="meta-item"><span class="meta-label">Duration:</span><span class="meta-value">2 Hours</span></div>
+    <div class="meta-item"><span class="meta-label">Type:</span><span class="meta-value">Closed Book</span></div>
+    <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-value">20 December 2025 (AN)</span></div>
+    <div class="meta-item"><span class="meta-label">Questions:</span><span class="meta-value">4 questions</span></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 1</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p>On January 1, 2025, Zensar Ltd. set up Yellow.ai &mdash; An artificial intelligence Company, and concluded the following activities during the first month. Analyze the impact or no effect of the following activities on the Statement of Sources and Application of Funds (Balance Sheet).</p>
+
+    <div class="case-box">
+      <div class="case-label">Transactions</div>
+      <ol type="a">
+        <li>Zensar invested US $30,000 cash in the company&rsquo;s share capital.</li>
+        <li>Bought five laptops for cash, $10,000 for office use.</li>
+        <li>Spent on conveyance (office vehicle) for $1,000 on payment of $800; balance to be paid in two weeks.</li>
+        <li>Received advance payment from a customer (Innowise Group), $22,000.</li>
+        <li>Bought stationeries for office on credit of $2,000.</li>
+        <li>Received cash for services provided $15,000.</li>
+        <li>Billed customer (AE Studio) for services $7,200.</li>
+        <li>Paid office electricity bill of $3,000.</li>
+        <li>Paid the amount due in (c) $200.</li>
+        <li>Collected payment from customers billed in (g) $3,900.</li>
+        <li>Provided services to the customer Innowise Group in (d).</li>
+      </ol>
+    </div>
+
+    <div class="answer-format">
+      <strong>Answer Format:</strong><br>
+      Table with columns: <em>Cash | Trade Receivables | Office Supplies | Fixed Assets | Long-term and Trade Payables | Capital Equity</em><br>
+      Grouped under: Assets (Current Assets + Fixed Assets) | Creditors Liabilities | Capital Equity
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 2</span>
+      <span class="marks-badge">6 marks</span>
+    </div>
+    <p>As a business manager, what would be your learnings when you analyse the following ledgers:</p>
+    <ol type="a">
+      <li>Sales/Revenue Ledger</li>
+      <li>Goods Purchase Ledger</li>
+      <li>Expense Ledger</li>
+    </ol>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 3</span>
+      <span class="marks-badge">6 marks</span>
+    </div>
+    <ol type="a">
+      <li>Define the Going Concern Concept. Why is it important in preparing financial statements?</li>
+      <li>State two reasons why the Business Entity Concept is fundamental to accounting.</li>
+      <li>What is the difference between the Accrual Concept and the Cash Basis of Accounting?</li>
+    </ol>
+  </div>
+
+  <!-- Q4 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 4</span>
+      <span class="marks-badge">6 marks</span>
+    </div>
+    <p>Explain the concept of accounting and its importance.</p>
+    <p>Explain concept, components and significance of financial and management accounting.</p>
+  </div>
+
+</div><!-- /section-card EC2 -->
+
+
+<!-- ══════════════════════════════════════════════ -->
+<!--          EC3 — COMPREHENSIVE EXAM             -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section-card">
+  <h2><span class="sec-icon">E3</span> EC3 &mdash; Comprehensive Exam</h2>
+
+  <div class="exam-meta">
+    <div class="meta-item"><span class="meta-label">Course No.:</span><span class="meta-value">MBACCZG502</span></div>
+    <div class="meta-item"><span class="meta-label">Weightage:</span><span class="meta-value">40%</span></div>
+    <div class="meta-item"><span class="meta-label">Duration:</span><span class="meta-value">2 Hours 30 Minutes</span></div>
+    <div class="meta-item"><span class="meta-label">Type:</span><span class="meta-value">Open Book</span></div>
+    <div class="meta-item"><span class="meta-label">Date:</span><span class="meta-value">28 February 2026 (AN)</span></div>
+    <div class="meta-item"><span class="meta-label">Questions:</span><span class="meta-value">3 questions (2 pages)</span></div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 1</span>
+      <span class="marks-badge">20 marks</span>
+    </div>
+    <p>Match the financial data given in case Exhibit-1 with the list of industries given in case Exhibit-2 and identify organization(s), with appropriate reasons, to their respective industry category provided in Exhibit-2.</p>
+    <div class="note">
+      <strong>Note:</strong> Use financial data, ratios and pattern analysis to identify the industry to which company A, B, C, D, E, F, G, H, I and J belong to.
+    </div>
+
+    <h3>Exhibit-1: Financial Data (Year ended 31st March 2017, Rs. in Million)</h3>
+
+    <div class="table-scroll">
+    <table class="styled-table">
+      <thead>
+        <tr><th style="text-align:left;">Metric</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sales</td><td>123,796</td><td>410,575</td><td>499,185</td><td>94,821</td><td>271,935</td><td>19,295</td><td>443,410</td><td>17,246</td><td>865,789</td><td>1,536,362</td></tr>
+        <tr><td>Total expenses</td><td>118,541</td><td>394,746</td><td>443,101</td><td>85,295</td><td>255,929</td><td>26,137</td><td>367,420</td><td>16,234</td><td>719,517</td><td>1,457,915</td></tr>
+        <tr><td>Raw materials, stores &amp; spares</td><td>20,028</td><td>176,382</td><td>--</td><td>23,442</td><td>184,276</td><td>--</td><td>210</td><td>3,976</td><td>41,961</td><td>--</td></tr>
+        <tr><td>Purchase of finished goods</td><td>2,329</td><td>--</td><td>206</td><td>7,734</td><td>--</td><td>--</td><td>0</td><td>672</td><td>31</td><td>--</td></tr>
+        <tr><td>Total operating expenses</td><td>108,295</td><td>339,964</td><td>328,726</td><td>78,277</td><td>237,881</td><td>15,533</td><td>323,190</td><td>14,839</td><td>629,882</td><td>1,219,964</td></tr>
+        <tr><td>Reported profit after tax</td><td>10,930</td><td>34,608</td><td>66,002</td><td>13,883</td><td>21,091</td><td>-5,898</td><td>101,941</td><td>1,258</td><td>209,257</td><td>108,912</td></tr>
+        <tr><td>Net fixed assets</td><td>55,040</td><td>46,929</td><td>398,782</td><td>35,242</td><td>22,433</td><td>16,974</td><td>57,320</td><td>5,288</td><td>799,242</td><td>77,165</td></tr>
+        <tr><td>Inventories</td><td>11,215</td><td>97,976</td><td>11</td><td>25,112</td><td>6,696</td><td>402</td><td>0</td><td>324</td><td>57,044</td><td>0</td></tr>
+        <tr><td>Sundry debtors &amp; bills receivable</td><td>7,329</td><td>438,029</td><td>46,635</td><td>19,251</td><td>10,008</td><td>1,717</td><td>112,290</td><td>109</td><td>104,287</td><td>315,492</td></tr>
+        <tr><td>Cash &amp; bank balances</td><td>6,034</td><td>118,729</td><td>4,953</td><td>464</td><td>1,175</td><td>444</td><td>250,770</td><td>232</td><td>132,186</td><td>1,325,496</td></tr>
+        <tr><td>Short-term loans &amp; advances</td><td>12,262</td><td>113,321</td><td>293,563</td><td>23,023</td><td>21,318</td><td>16,224</td><td>26,579</td><td>1,299</td><td>683,164</td><td>12,217,092</td></tr>
+        <tr><td>Total assets</td><td>123,517</td><td>843,780</td><td>1,120,348</td><td>142,730</td><td>112,196</td><td>69,373</td><td>532,110</td><td>8,830</td><td>2,228,653</td><td>17,945,700</td></tr>
+        <tr><td>Current liabilities &amp; provisions</td><td>37,463</td><td>487,495</td><td>323,624</td><td>29,538</td><td>53,277</td><td>12,828</td><td>108,160</td><td>2,571</td><td>770,541</td><td>935,751</td></tr>
+        <tr><td>Sundry creditors</td><td>7,093</td><td>94,096</td><td>62,663</td><td>10,069</td><td>22,906</td><td>1,967</td><td>680</td><td>2,204</td><td>82,638</td><td>0</td></tr>
+        <tr><td>Shareholders&rsquo; funds</td><td>76,248</td><td>330,471</td><td>654,451</td><td>100,826</td><td>55,999</td><td>26,891</td><td>421,920</td><td>5,635</td><td>1,229,674</td><td>1,831,005</td></tr>
+        <tr><td>Borrowings</td><td>350</td><td>27,332</td><td>103,054</td><td>9,163</td><td>2,043</td><td>26,906</td><td>0</td><td>144</td><td>1,182,923</td><td>1,831,005</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Key Ratios</h3>
+
+    <div class="table-scroll">
+    <table class="styled-table">
+      <thead>
+        <tr><th style="text-align:left;">Ratio</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Collection period (days)</td><td>21.62</td><td>389.41</td><td>34.10</td><td>74.10</td><td>19.43</td><td>32.47</td><td>92.43</td><td>2.31</td><td>43.97</td><td>74.95</td></tr>
+        <tr><td>Payment period (days)</td><td>115.80</td><td>194.72</td><td>111.57</td><td>117.89</td><td>45.37</td><td>37.21</td><td>1,181.90</td><td>175.07</td><td>718.31</td><td>7.91</td></tr>
+        <tr><td>Days in inventory</td><td>33.08</td><td>87.10</td><td>0.01</td><td>99.68</td><td>8.99</td><td>7.60</td><td>0.00</td><td>6.86</td><td>24.05</td><td>0.00</td></tr>
+        <tr><td>Fixed asset turnover</td><td>2.25</td><td>8.75</td><td>1.25</td><td>2.69</td><td>12.12</td><td>1.14</td><td>7.74</td><td>3.26</td><td>1.08</td><td>19.91</td></tr>
+        <tr><td>Current ratio</td><td>0.96</td><td>1.58</td><td>1.07</td><td>2.30</td><td>0.74</td><td>1.46</td><td>3.60</td><td>0.76</td><td>1.27</td><td>14.81</td></tr>
+        <tr><td>Profit after tax margin</td><td>0.0883</td><td>0.0843</td><td>0.1322</td><td>0.1464</td><td>0.0776</td><td>-0.3057</td><td>0.2299</td><td>0.0729</td><td>0.2417</td><td>0.0709</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>DuPont Analysis</h3>
+
+    <div class="table-scroll">
+    <table class="styled-table">
+      <thead>
+        <tr><th style="text-align:left;">Component</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Profitability margin</td><td>0.0883</td><td>0.0843</td><td>0.1322</td><td>0.1464</td><td>0.0776</td><td>-0.3057</td><td>0.2299</td><td>0.0729</td><td>0.2417</td><td>0.0709</td></tr>
+        <tr><td>Total asset turnover</td><td>1.00</td><td>0.49</td><td>0.45</td><td>0.66</td><td>2.42</td><td>0.28</td><td>0.83</td><td>1.95</td><td>0.39</td><td>0.09</td></tr>
+        <tr><td>Equity multiplier</td><td>1.58</td><td>2.56</td><td>1.69</td><td>1.42</td><td>2.00</td><td>2.58</td><td>1.26</td><td>1.51</td><td>1.81</td><td>9.17</td></tr>
+        <tr><td>Return on equity</td><td>0.1397</td><td>0.1047</td><td>0.0950</td><td>0.1377</td><td>0.3766</td><td>-0.2193</td><td>0.2422</td><td>0.2233</td><td>0.1702</td><td>0.0921</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Exhibit-2: List of Industries</h3>
+
+    <table class="styled-table">
+      <thead>
+        <tr><th style="text-align:left;">Industry</th><th style="text-align:left;">Products/Services Offered</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Cement</td><td style="text-align:left;">Clinker, Grey Cement, Ready-Mix Concrete</td></tr>
+        <tr><td>Retail Food</td><td style="text-align:left;">Bakery Products, Beverages, Desserts, Dips (Service)</td></tr>
+        <tr><td>Oil and Gas</td><td style="text-align:left;">Crude Oil, Natural Gas, LPG, Naphtha, Kerosene</td></tr>
+        <tr><td>Hospitality</td><td style="text-align:left;">Rooms, Restaurants, Other Facilities</td></tr>
+        <tr><td>Automobile (Two-Wheeler)</td><td style="text-align:left;">Motorcycles, Scooters, Spares</td></tr>
+        <tr><td>Telecommunications</td><td style="text-align:left;">Mobile Telephone Services</td></tr>
+        <tr><td>Banking</td><td style="text-align:left;">Financial Services</td></tr>
+        <tr><td>Information Technology</td><td style="text-align:left;">Software Development Services</td></tr>
+        <tr><td>Pharmaceutical</td><td style="text-align:left;">Chemicals, Salts, Liquids, Injections, Tablets, Capsules, Creams</td></tr>
+        <tr><td>Heavy Engineering</td><td style="text-align:left;">Thermal/Hydro/Gas-Based Turnkey Power Projects; Substation Projects; Rehabilitation Projects; Transformers; Compressors; Motors; Valves; Oil Field Equipment; Electrostatic Precipitators; Photovoltaic Equipment; Insulators; Heat Exchangers; Switchgears; Castings and Forgings</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Q2 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 2</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p>The sales and profit of Incubator Ltd. during two years period have been as follows:</p>
+
+    <table class="styled-table">
+      <thead>
+        <tr><th style="text-align:left;">Particulars</th><th>2023-24</th><th>2024-25</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Units sold</td><td>10,000</td><td>15,500</td></tr>
+        <tr><td>Sales</td><td>Rs. 2,50,000</td><td>Rs. 3,87,500</td></tr>
+        <tr><td>Profit / Loss</td><td>Rs. 50,000</td><td>Rs. 80,000</td></tr>
+      </tbody>
+    </table>
+
+    <p>Based on the above information on sales and profit/loss, you are required to determine the following:</p>
+    <ol type="a">
+      <li>The amount of fixed costs incurred by the company.</li>
+      <li>The break-even point (BEP) for the company (in rupee and unit terms).</li>
+      <li>The amount of sales to earn a profit of Rs. 5,00,000.</li>
+    </ol>
+    <div class="note">
+      <strong>Approach:</strong> CVP (Cost-Volume-Profit) Analysis / Break-Even Analysis.
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="question-block">
+    <div class="question-header">
+      <span class="question-num">Question 3</span>
+      <span class="marks-badge">10 marks</span>
+    </div>
+    <p>Explain the concept of, tools and techniques involved in managerial accounting (management accounting). Explain how managerial accounting can help to improve business performance.</p>
+  </div>
+
+</div><!-- /section-card EC3 -->
+
+<!-- FOOTER -->
+<div class="page-footer">
+  BITS Pilani MBA (S1 2025-26) &bull; Managerial Accounting (MBACCZG502) &bull; Official PYQ Papers<br>
+  EC2: Mid-Semester (30%, Closed Book) &bull; EC3: Comprehensive (40%, Open Book)
+</div>
+
+</div><!-- /container -->
+</body>
+</html>
