@@ -138,6 +138,43 @@
   .progress-track .pt-step.done .pt-dot { background: #4caf50; }
   .progress-track .pt-label { font-size: .7rem; color: #78909c; }
 
+
+  /* ── Tab Bar ── */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: #1a2a33;
+    padding: 12px 20px 0;
+  }
+  .tab-bar a {
+    padding: 10px 28px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px 10px 0 0;
+    transition: all .2s;
+    position: relative;
+    color: #607d8b;
+    background: transparent;
+  }
+  .tab-bar a:hover { color: #b0bec5; background: rgba(255,255,255,.05); }
+  .tab-bar a.active {
+    color: #fff;
+    background: #f0f2f5;
+    color: #0f2027;
+  }
+  .tab-bar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #64ffda;
+    border-radius: 3px 3px 0 0;
+  }
+
 </style>
 </head>
 <body>
@@ -149,6 +186,10 @@
     <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Comprehensive: S1-16</span>
   </div>
 </div>
+<div class="tab-bar">
+  <a href="session_11.html" class="active">AI Notes</a>
+  <a href="session_11_class.html">Class Notes</a>
+</div>
 <div class="hero">
   <div class="session-tag">Session 11 of 16</div>
   <h1>Financial Statement Analysis: Tools &amp; Techniques</h1>
@@ -156,10 +197,6 @@
   <div class="meta-pills"><span class="pill">T1 Chapter 18 (Maheswari)</span><span class="pill">Comprehensive Exam</span><span class="pill">~40 min read</span></div>
 </div>
 
-<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
-  <a href="session_11_class.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">Class Notes</a>
-  <a href="session_11.html" style="padding:8px 24px;background:#64ffda;color:#0f2027;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">AI Notes</a>
-</div>
 <div class="container">
 
 <div class="progress-track" id="auto-stepper"></div>

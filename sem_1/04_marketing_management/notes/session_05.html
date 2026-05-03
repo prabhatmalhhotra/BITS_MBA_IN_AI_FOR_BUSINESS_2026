@@ -72,17 +72,54 @@
   .progress-track .pt-step.done .pt-dot { background: #4caf50; }
   .progress-track .pt-label { font-size: .7rem; color: #78909c; }
 
+
+  /* ── Tab Bar ── */
+  .tab-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: #1a2a33;
+    padding: 12px 20px 0;
+  }
+  .tab-bar a {
+    padding: 10px 28px;
+    font-size: .85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px 10px 0 0;
+    transition: all .2s;
+    position: relative;
+    color: #607d8b;
+    background: transparent;
+  }
+  .tab-bar a:hover { color: #b0bec5; background: rgba(255,255,255,.05); }
+  .tab-bar a.active {
+    color: #fff;
+    background: #f0f2f5;
+    color: #0f2027;
+  }
+  .tab-bar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #64ffda;
+    border-radius: 3px 3px 0 0;
+  }
+
 </style>
 </head>
 <body>
 <div class="topbar"><a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">Marketing Management <span>BITS MBA</span></a><div class="nav-links"><a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a> <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a> <a href="#">Mid-Sem <a href="pyq_bank.html" style="color:#ff5252;font-weight:700;">PYQ</a> <span class="badge">Closed Book</span></a></div></div>
+<div class="tab-bar">
+  <a href="session_05.html" class="active">AI Notes</a>
+  <a href="session_05_class.html">Class Notes</a>
+</div>
 <div class="hero"><div class="session-tag">Session 5 of 16</div><h1>Customer Value Proposition &amp; Positioning Intro</h1><p class="subtitle">Why should anyone choose YOUR brand over a hundred alternatives? The CVP answers that question. Positioning plants that answer firmly in the customer's mind.</p><div class="meta-pills"><span class="pill">T1 Chapter 6 (Kotler 16e)</span><span class="pill">R1 Case 9</span><span class="pill">Mid-Sem Syllabus</span></div></div>
 
 
-<div style="display:flex;justify-content:center;gap:0;margin:0;background:#1a2a33;padding:10px 0;">
-  <a href="session_05_class.html" style="padding:8px 24px;background:#2c3e50;color:#90a4ae;text-decoration:none;border-radius:20px 0 0 20px;font-size:.85rem;font-weight:600;">Class Notes</a>
-  <a href="session_05.html" style="padding:8px 24px;background:#64ffda;color:#0f2027;text-decoration:none;border-radius:0 20px 20px 0;font-size:.85rem;font-weight:600;">AI Notes</a>
-</div>
 <div class="container">
 <div class="progress-track"><div class="pt-step done"><div class="pt-dot">1</div></div><div class="pt-step done"><div class="pt-dot">2</div></div><div class="pt-step done"><div class="pt-dot">3</div></div><div class="pt-step done"><div class="pt-dot">4</div></div><div class="pt-step active"><div class="pt-dot">5</div></div><div class="pt-step done"><div class="pt-dot">6</div></div></div>
 
