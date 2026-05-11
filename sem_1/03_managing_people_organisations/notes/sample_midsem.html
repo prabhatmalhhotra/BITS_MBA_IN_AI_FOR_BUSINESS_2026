@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Mid-Sem (with Answers) — Managing People &amp; Organisations | MBA</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1a1a2e; background: #f0f2f5; padding: 0; }
+  .topbar { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 14px 32px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .topbar .brand { font-weight: 700; font-size: 1.05rem; letter-spacing: .5px; }
+  .topbar .brand span { color: #64ffda; }
+  .topbar .nav-links { display: flex; gap: 18px; font-size: .85rem; flex-wrap: wrap; }
+  .topbar .nav-links a { color: #b0bec5; text-decoration: none; transition: color .2s; }
+  .topbar .nav-links a:hover { color: #64ffda; }
+  .tab-bar { display: flex; justify-content: center; gap: 14px; background: #1a2a33; padding: 14px 20px; flex-wrap: wrap; }
+  .tab-bar a { padding: 10px 28px; font-size: .85rem; font-weight: 600; text-decoration: none; border-radius: 25px; transition: all .25s; color: #78909c; background: rgba(255,255,255,.06); border: 2px solid transparent; }
+  .tab-bar a:hover { color: #b0bec5; background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.1); }
+  .tab-bar a.active { color: #0f2027; background: #64ffda; border-color: #64ffda; }
+
+  .hero { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: #fff; padding: 56px 32px 48px; text-align: center; }
+  .hero .session-tag { display: inline-block; background: rgba(100,255,218,.15); color: #64ffda; padding: 4px 16px; border-radius: 20px; font-size: .8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+  .hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+  .hero .subtitle { color: #b0bec5; font-size: 1rem; max-width: 640px; margin: 0 auto; }
+  .hero .meta-pills { margin-top: 20px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .hero .pill { background: rgba(255,255,255,.1); padding: 5px 14px; border-radius: 16px; font-size: .78rem; color: #cfd8dc; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 32px 20px 60px; }
+
+  .paper-jump { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+  .paper-jump a { padding: 8px 18px; background: #fff; border: 1px solid #cfd8dc; border-radius: 20px; font-size: .85rem; color: #37474f; text-decoration: none; font-weight: 600; transition: all .2s; }
+  .paper-jump a:hover { background: #64ffda; border-color: #64ffda; color: #0f2027; }
+
+  .paper-header { background: linear-gradient(135deg, #263238, #455a64); color: #fff; border-radius: 14px; padding: 24px 28px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(0,0,0,.1); }
+  .paper-header .badge { display: inline-block; background: #ffeb3b; color: #1a1a1a; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .paper-header h2 { font-size: 1.4rem; margin-bottom: 8px; }
+  .paper-header .meta { font-size: .85rem; color: #b0bec5; line-height: 1.7; }
+
+  .question-card { background: #fff; border-radius: 12px; padding: 24px 28px; margin-bottom: 22px; box-shadow: 0 1px 6px rgba(0,0,0,.06); border-left: 5px solid #2c5364; }
+  .question-card .q-tag { display: inline-block; background: #2c5364; color: #fff; padding: 3px 12px; border-radius: 12px; font-size: .72rem; font-weight: 700; margin-bottom: 10px; }
+  .question-card .q-marks { float: right; background: #fff3e0; color: #e65100; padding: 3px 10px; border-radius: 10px; font-size: .75rem; font-weight: 700; }
+  .question-card .question { font-size: .98rem; color: #1a1a2e; margin-bottom: 16px; }
+  .question-card .question strong { color: #0f2027; }
+
+  .answer-block { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 4px solid #4caf50; border-radius: 8px; padding: 18px 22px; margin-top: 14px; }
+  .answer-block .a-label { display: inline-flex; align-items: center; gap: 6px; color: #2e7d32; font-weight: 700; font-size: .78rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px; }
+  .answer-block p { font-size: .92rem; color: #1b3318; margin-bottom: 8px; }
+  .answer-block p:last-child { margin-bottom: 0; }
+  .answer-block ul, .answer-block ol { padding-left: 22px; margin: 6px 0; }
+  .answer-block li { font-size: .92rem; color: #1b3318; margin-bottom: 4px; }
+  .answer-block .one-liner { background: #fff; border: 2px dashed #4caf50; padding: 10px 16px; border-radius: 8px; font-weight: 700; color: #2e7d32; text-align: center; font-size: 1rem; }
+  .answer-block strong { color: #1b5e20; }
+
+  .styled-table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .9rem; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .styled-table thead { background: #2c5364; color: #fff; }
+  .styled-table th { padding: 10px 14px; text-align: left; font-weight: 600; font-size: .82rem; }
+  .styled-table td { padding: 9px 14px; border-bottom: 1px solid #eceff1; vertical-align: top; }
+  .styled-table tbody tr:nth-child(even) { background: #fafafa; }
+
+  .case-callout { background: #fff8e1; border-left: 4px solid #ffb300; border-radius: 8px; padding: 16px 20px; margin: 12px 0; font-style: italic; color: #5d4037; font-size: .92rem; }
+
+  .role-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 14px 0; }
+  .role-grid .role-card { background: #fff; border: 2px solid #e0e0e0; border-radius: 10px; padding: 14px 16px; }
+  .role-grid .role-card h4 { font-size: .9rem; color: #2c5364; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #e0e0e0; }
+  .role-grid .role-card ul { padding-left: 16px; }
+  .role-grid .role-card li { font-size: .82rem; margin-bottom: 4px; color: #37474f; }
+  .role-grid .role-card li strong { color: #1565c0; }
+
+  .page-footer { text-align: center; padding: 28px 20px; color: #90a4ae; font-size: .78rem; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.4rem; }
+    .container { padding: 20px 14px 40px; }
+    .question-card { padding: 18px 18px; }
+    .role-grid { grid-template-columns: 1fr; }
+    .topbar { padding: 12px 18px; flex-direction: column; gap: 10px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="../../index.html" class="brand" style="text-decoration:none;color:#fff;">MBA <span>Managing People &amp; Organisations</span></a>
+  <div class="nav-links">
+    <a href="session_01.html">S1</a> <a href="session_02.html">S2</a> <a href="session_03.html">S3</a> <a href="session_04.html">S4</a> <a href="session_05.html">S5</a> <a href="session_06.html">S6</a> <a href="session_07.html">S7</a> <a href="session_08.html">S8</a>
+    <a href="session_09.html">S9</a> <a href="session_10.html">S10</a> <a href="session_11.html">S11</a> <a href="session_12.html">S12</a> <a href="session_13.html">S13</a> <a href="session_14.html">S14</a> <a href="session_15.html">S15</a> <a href="session_16.html">S16</a>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <a href="session_01.html">AI Notes</a>
+  <a href="session_01_class.html">Class Notes</a>
+  <a href="pyq_official.html">PYQ</a>
+  <a href="sample_midsem.html" class="active">Sample Mid-Sem</a>
+</div>
+
+<div class="hero">
+  <div class="session-tag">EC-2 Mid-Sem · With Answer Key</div>
+  <h1>Sample Mid-Semester Papers</h1>
+  <p class="subtitle">Two model papers (Regular &amp; Make-Up) released by the faculty for S2 2025-26 — every question carries a full model answer.</p>
+  <div class="meta-pills">
+    <span class="pill">MBA ZG511</span>
+    <span class="pill">Closed Book · 2 hours · 35% weightage</span>
+    <span class="pill">Sessions 1–8 scope</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="paper-jump">
+    <a href="#regular">📘 EC-2 Regular Paper</a>
+    <a href="#makeup">📗 EC-2 Make-Up Paper</a>
+  </div>
+
+  <!-- ───── REGULAR PAPER ───── -->
+  <div class="paper-header" id="regular">
+    <div class="badge">Regular · AK</div>
+    <h2>EC-2 Mid-Sem (Regular) — Model Paper with Answers</h2>
+    <div class="meta">
+      Birla Institute of Technology &amp; Science, Pilani — WILP Division<br>
+      Second Semester 2025-2026 · MBA ZG511 — Managing People &amp; Organizations<br>
+      Closed Book · 2 Hours · 35% weightage
+    </div>
+  </div>
+
+  <!-- R-Q1: Expectancy Theory case -->
+  <div class="question-card">
+    <span class="q-tag">Q1 · Case Study</span>
+    <span class="q-marks">6 marks</span>
+    <div class="question">
+      <strong>Low Motivation at Axis Electronics.</strong>
+      <div class="case-callout">Axis Electronics came up with a performance-based incentive scheme to increase sales. Sales executives were promised attractive cash bonus and fast-track promotion if they exceeded monthly targets. However, sales performance did not improve meaningfully. Many employees felt the targets were too high and beyond their reach due to limited market demand. Some believed rewards were not always awarded fairly, while others felt the incentives were not attractive enough compared to the extra effort required.</div>
+      Using <strong>Vroom's Expectancy Theory</strong>, explain why the incentive scheme failed to motivate employees.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <p>According to <strong>Vroom's Expectancy Theory</strong>, motivation depends on <strong>Expectancy, Instrumentality, and Valence</strong>. <em>(3 marks)</em></p>
+      <p><strong>Explanation (3 marks):</strong> At Axis Electronics:</p>
+      <ul>
+        <li><strong>Expectancy</strong> was <em>low</em> — employees believed that extra effort would not lead to better performance due to unrealistic targets and external constraints.</li>
+        <li><strong>Instrumentality</strong> was <em>weak</em> — employees were unsure whether good performance would actually result in rewards, owing to lack of trust in the appraisal system.</li>
+        <li><strong>Valence</strong> was <em>low</em> — some employees did not value the incentives enough to justify the additional effort.</li>
+      </ul>
+      <p>Since all three components were weak, overall motivation was low, leading to the failure of the incentive scheme.</p>
+    </div>
+  </div>
+
+  <!-- R-Q2: Mintzberg roles -->
+  <div class="question-card">
+    <span class="q-tag">Q2 · Mintzberg's Roles</span>
+    <span class="q-marks">10 marks</span>
+    <div class="question">
+      <strong>Mr. Amul Kumar — Plant Manager case.</strong>
+      <div class="case-callout">Amul (8 yrs tenure, technically strong) chairs morning production reviews, handles attendance/safety/quality issues, resolves supervisor-worker conflicts, motivates teams. He meets vendors, auditors, clients; attends industry associations. He collects performance data, shares updates with senior management, communicates policy changes. During a machinery breakdown he coordinated maintenance, negotiated with suppliers, and decided to outsource part of production temporarily.</div>
+      Using <strong>Henry Mintzberg's roles</strong>, identify the roles displayed by Mr. Amul. Justify.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer (10 × 1 = 10)</div>
+      <p>The case illustrates that Mr. Amul performs multiple managerial roles as classified by Mintzberg — across <strong>Interpersonal, Informational, and Decisional</strong> categories.</p>
+
+      <div class="role-grid">
+        <div class="role-card">
+          <h4>🤝 Interpersonal</h4>
+          <ul>
+            <li><strong>Figurehead</strong> — represents the company in meetings with vendors, auditors, clients, and industry associations</li>
+            <li><strong>Leader</strong> — motivates workers, resolves conflicts, handles grievances, maintains discipline &amp; morale</li>
+            <li><strong>Liaison</strong> — interacts regularly with internal departments and external stakeholders</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <h4>📡 Informational</h4>
+          <ul>
+            <li><strong>Monitor</strong> — collects performance data, reviews daily reports, observes attendance/safety issues</li>
+            <li><strong>Disseminator</strong> — communicates policy changes, shares updates with employees, passes info to senior management</li>
+            <li><strong>Spokesperson</strong> — represents plant operations in discussions with clients, vendors, auditors</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <h4>⚖️ Decisional</h4>
+          <ul>
+            <li><strong>Entrepreneur</strong> — initiates improvements; outsourced production during breakdown</li>
+            <li><strong>Disturbance Handler</strong> — resolves disputes; handles operational breakdowns</li>
+            <li><strong>Resource Allocator</strong> — approves leave, assigns responsibilities, manages manpower</li>
+            <li><strong>Negotiator</strong> — negotiates with suppliers during breakdowns; ensures cost-effective solutions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- R-Q3: Attribution Theory -->
+  <div class="question-card">
+    <span class="q-tag">Q3 · Attribution Theory</span>
+    <span class="q-marks">6 marks</span>
+    <div class="question">
+      <strong>Meena's manager</strong> observes her sales performance has declined over the past two months. He initially thinks she is not serious about her job. Later, he finds out that market demand has dropped significantly in her region.<br>
+      Using <strong>Attribution Theory</strong>, identify and explain the phenomenon while analysing the manager's initial judgment.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <div class="one-liner">Fundamental Attribution Error</div>
+      <p style="margin-top:12px;"><strong>(3 marks)</strong> This reflects the <strong>Fundamental Attribution Error</strong> — the tendency to underestimate the influence of <em>external factors</em> and overestimate the influence of <em>internal factors</em> when making judgements about the behavior of others. Behaviour is attributed to personal factors rather than situational ones.</p>
+      <p><strong>Explanation (3 marks):</strong> The manager initially made an <em>internal attribution</em> (believed to be under personal control), assuming Meena's poor performance was due to lack of seriousness. Later evidence shows the decline was due to <em>external factors</em> (market demand). According to Attribution Theory, both internal and external causes must be considered before making judgments.</p>
+    </div>
+  </div>
+
+  <!-- R-Q4: Emotional Labour -->
+  <div class="question-card">
+    <span class="q-tag">Q4 · Emotional Labour</span>
+    <span class="q-marks">6 marks</span>
+    <div class="question">
+      <strong>Riya</strong> is a customer service executive in a hotel. A guest speaks rudely to her and blames her for a delay that was not her fault. Although she feels upset and frustrated, she continues to smile, speaks politely, and apologizes as per company policy.<br>
+      Using the concept of <strong>Emotional Labour</strong>, explain Riya's behaviour. Discuss the types of emotional labour involved and its possible impact on employees and organizations.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <p>The situation illustrates <strong>Emotional Labour</strong>.</p>
+      <ul>
+        <li>Emotional labour = managing and regulating emotions to meet organizational expectations during service interactions.</li>
+        <li>Riya <strong>suppresses real feelings</strong> (frustration) and <strong>displays required emotions</strong> (politeness, calmness).</li>
+        <li>This represents <strong>Surface Acting</strong> — employees fake or modify outward expressions without changing internal feelings.</li>
+        <li>If she genuinely tried to feel empathy toward the guest, it would be <strong>Deep Acting</strong>.</li>
+        <li><strong>Impact on employee:</strong> continuous emotional labour may lead to stress, burnout, and emotional exhaustion.</li>
+        <li><strong>Impact on organization:</strong> benefits include maintained customer satisfaction and service quality.</li>
+      </ul>
+      <p>Thus, emotional labour is essential in service roles but must be managed carefully to protect employee well-being.</p>
+    </div>
+  </div>
+
+  <!-- R-Q5: Introversion -->
+  <div class="question-card">
+    <span class="q-tag">Q5 · Personality &amp; Leadership</span>
+    <span class="q-marks">7 marks</span>
+    <div class="question">
+      Extroversion is often considered a "good" quality for a leader to have. Why might <strong>introversion</strong> be considered an equally positive quality? Explain in YOUR OWN WORDS.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <p>While extroversion is often seen as desirable because extroverts tend to be sociable, talkative, and assertive, <strong>introversion also has many positive qualities</strong> that are equally important:</p>
+      <ol>
+        <li><strong>Deep Thinking and Reflection</strong> — introverts are thoughtful and enjoy reflecting on ideas, leading to deep insights and creative problem-solving.</li>
+        <li><strong>Strong Listening Skills</strong> — they listen more attentively, making others feel heard and valued.</li>
+        <li><strong>Independent Work Ability</strong> — comfortable working alone, beneficial for tasks requiring focus and independence.</li>
+        <li><strong>Careful Decision-Making</strong> — they consider options carefully before acting, reducing impulsive mistakes.</li>
+        <li><strong>Quality Over Quantity in Relationships</strong> — they value deeper, more meaningful relationships, contributing to trusted &amp; strong personal connections.</li>
+      </ol>
+      <p><strong>Conclusion:</strong> Introversion, like extroversion, brings unique strengths to individuals and groups. In many situations, the quiet strengths of introverted people are highly valuable and equally positive.</p>
+    </div>
+  </div>
+
+  <!-- ───── MAKE-UP PAPER ───── -->
+  <div class="paper-header" id="makeup" style="background:linear-gradient(135deg,#1b5e20,#388e3c);margin-top:40px;">
+    <div class="badge" style="background:#fff;">Make-Up · AK</div>
+    <h2>EC-2 Mid-Sem (Make-Up) — Model Paper with Answers</h2>
+    <div class="meta">
+      Birla Institute of Technology &amp; Science, Pilani — WILP Division<br>
+      Second Semester 2025-2026 · MBA ZG511 — Managing People &amp; Organizations<br>
+      Closed Book · 2 Hours · 35% weightage
+    </div>
+  </div>
+
+  <!-- M-Q1: Job Rotation vs Job Enrichment -->
+  <div class="question-card">
+    <span class="q-tag">Q1 · Job Design</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      Differentiate between <strong>Job Rotation</strong> and <strong>Job Enrichment</strong> with an example.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <table class="styled-table">
+        <thead><tr><th>Job Rotation</th><th>Job Enrichment</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Periodic movement of employees from one job to another at the <strong>same level</strong></td>
+            <td>Redesigning a job to add more <strong>responsibility, autonomy, and meaning</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Horizontal</strong> movement</td>
+            <td><strong>Vertical</strong> movement</td>
+          </tr>
+          <tr>
+            <td>Adds to skill variety and reduces monotony</td>
+            <td>Provides personal growth and adds to motivation levels</td>
+          </tr>
+        </tbody>
+      </table>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li><strong>Job Rotation:</strong> A bank employee moves between the teller station, new accounts desk, and loan processing department every three months.</li>
+        <li><strong>Job Enrichment:</strong> A marketing assistant is given added responsibility — not just scheduling social media posts, but also creating content strategy and analyzing campaign performance, with authority to make decisions on the campaigns.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M-Q2: OB tools for productivity -->
+  <div class="question-card">
+    <span class="q-tag">Q2 · Applied OB</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      A team in a manufacturing company has recently shown a drop in productivity. The manager notices that employees feel their efforts are <strong>not recognized</strong> and they have <strong>no clarity about their growth path</strong>. Using the key concepts of OB, explain how OB tools or approaches should the manager apply in this situation?
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <p>A drop in productivity due to lack of recognition and unclear growth paths highlights key OB concepts: <strong>motivation, perception, leadership behavior, and job satisfaction</strong>.</p>
+      <ol>
+        <li><strong>Motivation theories</strong> — strengthen motivators such as recognition, achievement, career advancement. Implement regular appreciation, praise, celebrating small wins. <em>Expectancy Theory</em> can ensure a clear effort → performance → reward link.</li>
+        <li><strong>Perception &amp; Communication</strong> — clarify growth opportunities through performance discussions, sharing career paths, providing transparent promotion criteria. Reduces ambiguity, improves confidence.</li>
+        <li><strong>Leadership behavior</strong> — adopt a supportive leadership style: offer feedback, coaching, show concern for employee needs. Builds trust, encourages engagement.</li>
+        <li><strong>Organizational culture &amp; job design</strong> — redesign tasks with more autonomy and variety; provide skill development and cross-training opportunities.</li>
+        <li><strong>Employee development programs</strong> — training workshops, mentoring, structured learning paths reinforce motivation and performance.</li>
+      </ol>
+      <p>By applying motivation theories, communication, supportive leadership, job design, and development systems, the manager can address concerns, improve satisfaction, and restore productivity.</p>
+    </div>
+  </div>
+
+  <!-- M-Q3: OB cannot predict -->
+  <div class="question-card">
+    <span class="q-tag">Q3 · True/False</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      "Organizational behavior cannot offer reasonably accurate explanations of human behavior or make valid predictions." Is this <strong>true or false</strong>?
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <div class="one-liner">FALSE (sample answer — student answers may vary)</div>
+      <p style="margin-top:12px;"><strong>Explanation:</strong> Human beings are complex, and few — if any — simple and universal principles explain organizational behavior. Since human beings are not alike, the ability to make simple, accurate, and sweeping generalizations is limited. <strong>However</strong>, this does not mean one cannot offer <em>reasonably accurate</em> explanations of human behavior or make valid predictions. OB uses systematic study, contingency thinking, and situational analysis to do exactly that.</p>
+    </div>
+  </div>
+
+  <!-- M-Q4: Halo Effect -->
+  <div class="question-card">
+    <span class="q-tag">Q4 · Perception</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      During the annual appraisal, a manager rates <strong>Kavya</strong> as "excellent" in all performance areas because she is always cheerful and respectful. However, her productivity records show average results and delayed submissions. Identify the perceptual shortcut. Explain how it affects appraisal accuracy and suggest measures to avoid such bias.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <div class="one-liner">Halo Effect</div>
+      <ul style="margin-top:12px;">
+        <li>The manager allows <strong>one positive trait</strong> (cheerful and respectful behavior) to influence overall evaluation.</li>
+        <li>Other performance indicators such as productivity and timeliness are ignored.</li>
+        <li>This leads to <strong>biased and inaccurate performance appraisal</strong>.</li>
+        <li>It reduces objectivity in HR decisions.</li>
+        <li>Other employees may feel unfairly treated.</li>
+        <li><strong>To avoid this bias:</strong> use structured appraisal systems, multiple performance criteria, and measurable indicators.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- M-Q5: AET / Rahul -->
+  <div class="question-card">
+    <span class="q-tag">Q5 · Affective Events Theory</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      <strong>Rahul</strong> works in a software company. One morning, his manager publicly appreciates him for completing a difficult project before the deadline — he feels proud and motivated, and performs enthusiastically all week helping teammates. A few days later, the same manager criticizes him harshly in front of colleagues for a minor mistake — he feels embarrassed and upset, motivation drops, he avoids taking initiative.<br>
+      Using <strong>Affective Events Theory</strong>, explain Rahul's reactions. Discuss how workplace events influence emotions and job performance.
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <p>The situation explains <strong>Affective Events Theory (AET)</strong>.</p>
+      <ul>
+        <li>AET states that <strong>workplace events trigger emotional reactions</strong>, which influence employee attitudes and behaviors.</li>
+        <li>Manager's appreciation = <strong>positive work event</strong> → positive emotions (pride, motivation).</li>
+        <li>These improved Rahul's job performance and organizational citizenship behavior (helping teammates).</li>
+        <li>Public criticism = <strong>negative work event</strong> → negative emotions (embarrassment, frustration).</li>
+        <li>These reduced his motivation and initiative.</li>
+        <li>Thus, daily workplace events shape employees' emotional responses, which directly affect job satisfaction, performance, and behavior.</li>
+      </ul>
+      <p><strong>Conclusion:</strong> managers should handle workplace events carefully — emotional reactions significantly influence employee outcomes.</p>
+    </div>
+  </div>
+
+  <!-- M-Q6a: Hofstede -->
+  <div class="question-card">
+    <span class="q-tag">Q6a · Hofstede</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      <strong>Mary</strong> believes that the CEO is no better than the janitor of the organization and neither should receive preferential treatment. Using <strong>Hofstede's Framework</strong>, what can we infer about Mary's culture? <em>(Don't write multiple answers.)</em>
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <div class="one-liner">Low Power Distance</div>
+    </div>
+  </div>
+
+  <!-- M-Q6b: Contrast effect -->
+  <div class="question-card">
+    <span class="q-tag">Q6b · Perceptual Shortcut</span>
+    <span class="q-marks">5 marks</span>
+    <div class="question">
+      You are shopping for a car. The salesman first shows you an expensive model loaded with attractive, advanced features — you love it but wonder why he is showing you something way above your budget. He then leads you to a similar car that is 'on sale' — cheaper than the first but still a little over your budget. Compared to the first car, it's a great deal, and you feel you must buy it before someone else does! Identify the shortcut used. <em>(Don't write multiple answers.)</em>
+    </div>
+    <div class="answer-block">
+      <div class="a-label">✓ Model Answer</div>
+      <div class="one-liner">Contrast Effect</div>
+      <p style="margin-top:12px;">Judgement is made by <strong>comparing the second car to the first car</strong> just evaluated — the inflated "anchor" makes the second option seem like a great deal even though it is over budget.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    Study Portal MBA (S2 2025-26) &bull; Managing People &amp; Organisations (MBA ZG511) &bull; EC-2 Mid-Sem Sample Papers with Answer Key<br>
+    Source: Faculty-released model papers for Second Semester 2025-26. Scope: Sessions 1–8.
+  </div>
+
+</div>
+</body>
+</html>
